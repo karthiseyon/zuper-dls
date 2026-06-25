@@ -498,7 +498,8 @@
 .vs .demohero .sub{font-size:11.5px;color:#606063;margin-top:3px}
 .vs .demohero img{position:absolute;right:12px;bottom:0;height:84px}
 .human-card{position:relative}
-.gcopy{margin-top:2px;font-family:var(--body);font-size:11px;font-weight:600;color:var(--brand-default);background:var(--brand-subtle);border:none;border-radius:7px;padding:5px 12px;cursor:pointer}
+.gcopy{margin-top:2px;font-family:var(--body);font-size:11px;font-weight:600;color:var(--brand-default);background:var(--brand-subtle);border:none;border-radius:7px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.gcopy svg{width:12px;height:12px}
 .gcopy:hover{background:#FFD9C9}
 /* ===== HTML-built product screen mocks ===== */
 .pscreen{font-family:'Inter',system-ui,sans-serif;background:#fff;border:1px solid #E6E6E6;border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(20,4,3,.13);color:#191919;width:100%}
@@ -2029,7 +2030,7 @@ function buildHumans(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const HUMANS=[[GIF_C,"Carrying gear"],[GIF_B,"On the tools"],[GIF_A,"Reaching up"],[GIF_02,"On the job"],[GIF_03,"On the ladder"],[GIF_06,"Ready to work"],[GIF_08,"Inspecting"],[GIF_09,"The crew"]];
-  const gallery=HUMANS.map(x=>`<div class="human-card"><img src="${x[0]}" alt=""><span class="lbl">${x[1]}</span><button class="gcopy">Copy GIF</button></div>`).join("");
+  const gallery=HUMANS.map((x,i)=>`<div class="human-card"><img src="${x[0]}" alt=""><span class="lbl">${x[1]}</span><button class="gcopy dl-btn" data-href="${x[0]}" data-name="zuper-mini-human-${i+1}.gif">${icon("download",12)} Download</button></div>`).join("");
   const why=[
     ["monitor","The product is the hero","Real Zuper screens do the talking — live dashboards, not stock smiles."],
     ["users","The real people who use it","Field techs, crews and customers — the people Zuper is built for, and with."],
@@ -2059,7 +2060,7 @@ function buildHumans(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">02 — The set</p><h2 class="sec">Eight workers</h2>
-    <p class="sec-note">Pixel‑render loops with transparent backgrounds — they sit on any surface (white, orange, dark). <b style="color:var(--text-primary)">Copy a GIF</b> to paste it straight into your design. Keep it small.</p>
+    <p class="sec-note">Pixel‑render loops with transparent backgrounds — they sit on any surface (white, orange, dark). <b style="color:var(--text-primary)">Download a GIF</b> to drop it straight into your design. Keep it small.</p>
     <div class="humans-grid">${gallery}</div>
   </div></section>
 
@@ -2084,15 +2085,14 @@ function buildAssets(){
     ["Horizontal logo","Mark + wordmark side by side — the default lockup for headers and documents.","zuper-horizontal",false],
     ["Vertical logo","Mark stacked above the wordmark — for square and centred placements.","zuper-vertical",true]
   ];
-  const cp=icon("copy",13), dn=icon("download",13);
+  const dn=icon("download",13);
   const logoCard=(key,svg,v)=>{
     const base=`assets/logos/${key}${v[0]}`;
     return `<div class="la-card${v[2]?' dark':''}">
       <div class="la-prev"><img src="${base}.png" alt="Zuper ${key} ${v[1]}" loading="lazy"></div>
       <div class="la-meta"><span class="la-name">${v[1]}</span><div class="la-btns">
-        <button class="la-copy" data-src="${svg?base+'.svg':base+'.png'}" data-fmt="${svg?'svg':'png'}">${cp}Copy</button>
-        ${svg?`<a class="la-dl" href="${base}.svg" download>${dn}SVG</a>`:``}
-        <a class="la-dl" href="${base}.png" download>${dn}PNG</a>
+        ${svg?`<button class="la-dl dl-btn" data-href="${base}.svg">${dn}SVG</button>`:``}
+        <button class="la-dl dl-btn" data-href="${base}.png">${dn}PNG</button>
       </div></div></div>`;
   };
   const families=fams.map(f=>`<div class="la-fam"><h3 class="grp">${f[0]}</h3><p class="grp-note">${f[1]}</p>
@@ -2102,8 +2102,7 @@ function buildAssets(){
       <div class="s-prev"><img src="${src}" alt="${nm}" loading="lazy"></div>
       <div class="s-meta"><div><div class="nm">${nm}</div><div class="dim">${dim}</div></div>
         <div class="s-btns">
-          <button class="la-copy" data-src="${src}" data-fmt="png">${cp}Copy</button>
-          <a class="la-dl" href="${src}" download>${dn}Download</a>
+          <button class="la-dl dl-btn" data-href="${src}">${dn}Download</button>
         </div></div></div>`;
   const zoom=[
     socCard("assets/zoom/zuper-zoom-wordmark.png","Zoom background — wordmark","1920 × 1080 · 16:9"),
@@ -2120,7 +2119,7 @@ function buildAssets(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Downloads</p>
       <h1>Brand assets</h1>
-      <p class="lede">The official Zuper logo set and ready‑made social templates. <b>Copy</b> a logo straight into your design (SVG markup or image) or <b>download</b> the file — every variant in SVG and PNG.</p>
+      <p class="lede">The official Zuper logo set and ready‑made social templates. <b>Download</b> any logo as SVG or PNG, plus Zoom and LinkedIn templates — all on‑brand and ready to use.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip">3 logo lockups · 4 variants</span>
         <span class="chip">SVG + PNG</span>
@@ -2131,7 +2130,7 @@ function buildAssets(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">01 — Logos</p><h2 class="sec">Logo library</h2>
-    <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Click Copy</b> to grab the SVG markup (paste into Figma/code) or the image; <b style="color:var(--text-primary)">Download</b> for the file.</p>
+    <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Download</b> any variant as SVG (for design tools &amp; code) or PNG.</p>
     ${families}
   </div></section>
 
@@ -2233,7 +2232,17 @@ nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
 document.getElementById("menuBtn").addEventListener("click",()=>nav.classList.toggle("open"));
 document.getElementById("brandLogo").innerHTML=logo("white",26);
-stage.addEventListener("click",function(e){var b=e.target.closest(".gcopy");if(!b)return;var img=b.parentElement.querySelector("img");if(!img)return;var t=img.src;var done=function(){var o=b.textContent;b.textContent="Copied \u2713";setTimeout(function(){b.textContent=o;},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){fb(t,done);});}else{fb(t,done);}function fb(x,d){try{var ta=document.createElement("textarea");ta.value=x;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);d();}catch(_){}}});
+function zDownload(url,name){
+  var nm=name||url.split("/").pop();
+  fetch(url).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){
+    var u=URL.createObjectURL(b),a=document.createElement("a");
+    a.href=u;a.download=nm;document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(u);a.remove();},1500);
+  }).catch(function(){
+    var a=document.createElement("a");a.href=url;a.download=nm;document.body.appendChild(a);a.click();a.remove();
+  });
+}
+stage.addEventListener("click",function(e){var b=e.target.closest(".dl-btn");if(!b)return;e.preventDefault();zDownload(b.getAttribute("data-href"),b.getAttribute("data-name"));});
 
 /* in-page section nav + scrollspy */
 function buildSubnav(id){
@@ -2262,18 +2271,6 @@ function spy(){
 let _spyR;window.addEventListener("scroll",()=>{cancelAnimationFrame(_spyR);_spyR=requestAnimationFrame(spy);},{passive:true});
 /* FAQ accordion toggle (delegated) */
 stage.addEventListener("click",e=>{const b=e.target.closest(".copybtn");if(!b)return;const ct=b.parentElement.querySelector(".ct");if(!ct)return;const t=ct.textContent;const done=()=>{b.textContent="Copied ✓";setTimeout(()=>{b.textContent="Copy";},1600);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb);}else{fb();}});
-stage.addEventListener("click",function(e){
-  var b=e.target.closest(".la-copy");if(!b)return;
-  var src=b.getAttribute("data-src"),fmt=b.getAttribute("data-fmt"),orig=b.innerHTML;
-  var ok=function(){b.classList.add("done");b.innerHTML="Copied ✓";setTimeout(function(){b.classList.remove("done");b.innerHTML=orig;},1500);};
-  var fail=function(){try{navigator.clipboard.writeText(new URL(src,location.href).href);}catch(_){}b.innerHTML="Link copied";setTimeout(function(){b.innerHTML=orig;},1500);};
-  if(fmt==="svg"){
-    fetch(src).then(function(r){return r.text();}).then(function(t){return navigator.clipboard.writeText(t);}).then(ok).catch(fail);
-  }else{
-    if(!(navigator.clipboard&&window.ClipboardItem)){return fail();}
-    fetch(src).then(function(r){return r.blob();}).then(function(bl){return navigator.clipboard.write([new ClipboardItem({[bl.type]:bl})]);}).then(ok).catch(fail);
-  }
-});
 stage.addEventListener("click",e=>{const c=e.target.closest(".sw-card");if(!c)return;const hx=c.querySelector(".sw-hex");if(!hx)return;const t=hx.textContent.trim();const flash=()=>{c.classList.add("copied");setTimeout(()=>c.classList.remove("copied"),1000);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);flash();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(flash).catch(fb);}else{fb();}});
 stage.addEventListener("click",e=>{const q=e.target.closest(".acc .q");if(!q)return;const a=q.parentElement.querySelector(".a");const open=a.style.display!=="none"&&a.dataset.c!=="1";if(a.dataset.c==="1"){a.dataset.c="0";a.style.display="block";q.querySelector(".pm").textContent="−";}else{a.dataset.c="1";a.style.display="none";q.querySelector(".pm").textContent="+";}});
 
