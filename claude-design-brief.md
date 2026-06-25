@@ -62,6 +62,9 @@ Paste this whole file into Claude Design (Set up design system → Create here �
 ## 8. Case study (one‑pager)
 Co‑branded customer story: orange‑gradient cover with **Zuper + client lockup** → white body pages with **orange section rules**, **orange run‑in subheads**, **pull‑quotes** (big orange quote mark), a **before/after table**, a **metrics grid**, a **testimonial** with photo, and the co‑brand lockup in the footer of every page.
 
+## 8b. Imagery — mini humans (not stock photos)
+The **product is the hero** — lead with real Zuper screens, never generic stock photography. Add warmth with **mini humans**: small, animated pixel‑render workers (techs, crews, customers) that sit in a corner beside a headline or product screen. Keep them **small** (corner accent, thumb‑sized) and **sparing** (2–3 per deck or page, never repeated on one screen). If you notice the person before the message, scale it down — big reads as stock photography, small reads as Zuper.
+
 ## 9. Voice
 Direct · practical · confident · human · no jargon. Speak to the person in the field. Active voice, real numbers over adjectives.
 

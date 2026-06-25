@@ -3,20 +3,22 @@
 A single, self‑contained HTML styleguide for **Zuper**, built to plug into **Claude Design**.
 
 **Live**
+- Site: https://zuper-dls.vercel.app
 - Repo: https://github.com/karthiseyon/zuper-dls
-- Site: _add your Vercel URL here after deploying (`vercel.com/new` → import this repo)_
 
-Open `index.html` locally, or visit the deployed site.
+Open `index.html` locally, or visit the deployed site. Every push to `main` auto‑deploys via Vercel.
 
 ---
 
 ## What's inside
-A sidebar switches between four systems:
+A sidebar switches between an overview and five systems:
 
-1. **How to use this** — add Zuper to Claude Design (Create here → connect Figma/GitHub or upload assets, or Claude Code), then pick **Zuper** from the Design system dropdown on any project.
-2. **Deck** (PowerPoint) — one contrast rule (orange cover → white interiors, or vice‑versa; **dark = Zuper Sense only**), foundations, atoms, and 15 slide layouts.
-3. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy.
-4. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
+1. **Overview** — the cover: one brand, five systems, with quick links into each.
+2. **How to use this** — connect this GitHub repo to **Claude Design** once, then pick **Zuper** from the Design system dropdown on any project.
+3. **Deck** (PowerPoint) — one contrast rule (orange cover → white interiors, or vice‑versa; **dark = Zuper Sense only**), foundations, atoms, and a library of 16:9 slide layouts.
+4. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
+5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
+6. **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
 
 ## Brand at a glance
 - **Color:** brand orange `#FD5000` (one primary action per view) · ink `#191919` · warm + high‑contrast neutrals · charcoal `#282828` feature sections · Zuper Sense dark `#09090B`.
