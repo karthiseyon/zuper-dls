@@ -1,8 +1,8 @@
 # Zuper Design Language System — Claude Design Brief
 
-Paste this whole file into Claude (or add it as Project knowledge) before asking Claude to design or build any Zuper UI, deck, or case study. It is the condensed, machine‑readable version of the full styleguide.
+Paste this whole file into Claude Design (Set up design system → Create here → upload), or add it as Project knowledge, before asking Claude to design or build any Zuper UI, deck, or case study. It is the condensed, machine‑readable version of the full styleguide.
 
-> Live styleguide: **<your-vercel-url>**  ·  One vivid orange brand, warm + high‑contrast, line icons only.
+> Full styleguide: **https://github.com/karthiseyon/zuper-dls** (open `index.html` or the deployed site)  ·  One vivid orange brand, warm + high‑contrast, line icons only.
 
 ---
 
