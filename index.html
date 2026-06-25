@@ -648,6 +648,10 @@ main{flex:1;min-width:0}
 .ha-crew::after{content:"";position:absolute;left:8%;right:8%;bottom:14px;height:1px;background:linear-gradient(90deg,transparent,#D8CFC2,transparent)}
 .ha-crew img{height:120px;width:auto;position:relative}
 .ha-crew img:nth-child(2){height:150px}
+/* single walking mini human on the hero floor */
+.ha-walker{position:absolute;right:160px;bottom:0;height:122px;width:auto;z-index:1;pointer-events:none}
+@media(max-width:1060px){.ha-walker{right:40px}}
+@media(max-width:680px){.ha-walker{display:none}}
 /* ===== Overview / cover landing ===== */
 .ov-principles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
 .ov-feat{display:flex;align-items:center;gap:24px;border:1px solid var(--border-default);border-radius:18px;background:linear-gradient(118deg,#fff,#FFF3EC 70%,#FFE7DC);padding:26px 28px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;margin-bottom:18px;width:100%;text-align:left}
@@ -1997,7 +2001,7 @@ function buildUse(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Start here · for Claude Design</p>
       <h1>How to use this</h1>
-      <p class="lede">The Zuper Design System is already built and published in <b>Claude Design</b>. Open it, pick <b>Zuper</b> on any project, and everything comes out on‑brand.</p>
+      <p class="lede">The <b>Zuper Design System</b> is already built and published in <b>Claude Design</b>. Open it, pick it on any project, and everything comes out on‑brand.</p>
       <div class="hero-art"><div class="float ha-conn">
         <div class="np"><span class="ci">${icon("cpu",17)}</span>Claude Design</div>
         <div class="wire"></div>
@@ -2011,7 +2015,7 @@ function buildUse(){
     <p class="eyebrow">Open it</p><h2 class="sec">Use the Zuper Design System</h2>
     <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting — decks, web pages, case studies, all on‑brand.</p>
     <a class="cd-open" href="https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b?via=share" target="_blank" rel="noopener">${icon("zap",18)} Open the Zuper Design System in Claude Design <span class="ar">↗</span></a>
-    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper</b> from the <b>Design system</b> dropdown on your project.</p>
+    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on your project.</p>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -2044,10 +2048,8 @@ function buildHumans(){
       <p class="ebm">Brand · Imagery</p>
       <h1>Mini humans</h1>
       <p class="lede">Zuper doesn't sell with stock photography. The <b>product is the hero</b> — and these small, animated workers add the human touch in a corner, never stealing the show. They're the techs, crews and customers Zuper is built for.</p>
-      <div class="hero-art"><div class="ha-crew">
-        <img src="${GIF_C}" alt=""><img src="${GIF_09}" alt=""><img src="${GIF_08}" alt="">
-      </div></div>
     </div>
+    <img class="ha-walker" src="${GIF_C}" alt="">
   </header>
 
   <section class="block"><div class="wrap">
