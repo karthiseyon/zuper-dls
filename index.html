@@ -700,6 +700,12 @@ main{flex:1;min-width:0}
 .s-meta .nm{font:600 14px/1.3 'Inter',sans-serif;color:var(--text-primary)}
 .s-meta .dim{font:500 11px/1 'Geist Mono',monospace;color:var(--text-tertiary);margin-top:4px}
 .s-btns{margin-left:auto;display:flex;gap:8px;flex:0 0 auto}
+.cd-open{display:inline-flex;align-items:center;gap:11px;background:var(--brand-default);color:#fff;font:700 16px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:17px 28px;border-radius:13px;text-decoration:none;box-shadow:0 16px 38px rgba(253,80,0,.28);transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.cd-open:hover{background:var(--brand-hover);transform:translateY(-2px);box-shadow:0 20px 48px rgba(253,80,0,.34)}
+.cd-open svg{width:18px;height:18px}
+.cd-open .ar{font-size:16px;opacity:.9}
+.cd-sub{margin-top:14px;font-size:12.5px;color:var(--text-tertiary)}
+.cd-sub code{font-family:'Geist Mono',monospace;color:var(--text-secondary)}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -1991,28 +1997,21 @@ function buildUse(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Start here · for Claude Design</p>
       <h1>How to use this</h1>
-      <p class="lede">Add Zuper to <b>Claude Design</b> once by connecting this GitHub repo. After that, pick <b>Zuper</b> on any project and everything comes out on‑brand.</p>
+      <p class="lede">The Zuper Design System is already built and published in <b>Claude Design</b>. Open it, pick <b>Zuper</b> on any project, and everything comes out on‑brand.</p>
       <div class="hero-art"><div class="float ha-conn">
         <div class="np"><span class="ci">${icon("cpu",17)}</span>Claude Design</div>
         <div class="wire"></div>
-        <div class="np"><span class="ci">${icon("globe",17)}</span>Zuper DLS</div>
-        <div class="repo">github.com/karthiseyon/zuper-dls</div>
+        <div class="np"><span class="ci">${icon("globe",17)}</span>Zuper Design System</div>
+        <div class="repo">claude.ai/design · Published</div>
       </div></div>
     </div>
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">Setup · 5 steps</p><h2 class="sec">Connect the GitHub repo</h2>
-    <p class="sec-note">Copy the repo, then follow the steps. The whole design system lives in this one repo.</p>
-    <div class="codeblock"><button class="copybtn">Copy</button><pre class="ct">github.com/karthiseyon/zuper-dls</pre></div>
-    <div class="usesteps" style="margin-top:26px">
-      <div class="st"><span class="n">1</span><div class="tx">Open <b>Claude Design</b> → <b>Design systems</b> → <b><code>Set up design system</code></b> (marker ① below).</div></div>
-      <div class="st"><span class="n">2</span><div class="tx">In <b>Add a design system</b>, choose <b><code>Create here</code></b>.</div></div>
-      <div class="st"><span class="n">3</span><div class="tx">Choose <b>Connect GitHub</b> and select the repo <b><code>karthiseyon/zuper-dls</code></b>.</div></div>
-      <div class="st"><span class="n">4</span><div class="tx">Claude builds the system. Turn the <b>Published</b> toggle on and set it as <b>Default</b>.</div></div>
-      <div class="st"><span class="n">5</span><div class="tx">Done. On any project, the <b><code>Design system</code></b> is <b>Zuper</b> (marker ②) — start prompting.</div></div>
-    </div>
-    <img src="${CD_IMG}" alt="Set up the design system, then pick Zuper on any project" style="width:100%;max-width:920px;border-radius:14px;border:1px solid var(--border-default);box-shadow:0 16px 44px rgba(20,4,3,.16);margin-top:24px;display:block">
+    <p class="eyebrow">Open it</p><h2 class="sec">Use the Zuper Design System</h2>
+    <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting — decks, web pages, case studies, all on‑brand.</p>
+    <a class="cd-open" href="https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b?via=share" target="_blank" rel="noopener">${icon("zap",18)} Open the Zuper Design System in Claude Design <span class="ar">↗</span></a>
+    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper</b> from the <b>Design system</b> dropdown on your project.</p>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);

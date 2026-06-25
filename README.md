@@ -14,7 +14,7 @@ Open `index.html` locally, or visit the deployed site. Every push to `main` auto
 A sidebar switches between an overview and five systems:
 
 1. **Overview** — the cover: one brand, five systems, with quick links into each.
-2. **How to use this** — connect this GitHub repo to **Claude Design** once, then pick **Zuper** from the Design system dropdown on any project.
+2. **How to use this** — one button opens the published **Zuper Design System** in **Claude Design**; then pick **Zuper** from the Design system dropdown on any project. *(The repo itself is the source the system was built from.)*
 3. **Deck** (PowerPoint) — one contrast rule (orange cover → white interiors, or vice‑versa; **dark = Zuper Sense only**), foundations, atoms, and a library of 16:9 slide layouts.
 4. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
 5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
