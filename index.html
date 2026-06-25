@@ -2189,13 +2189,18 @@ function buildOverview(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">The systems</p><h2 class="sec">Pick a system to open</h2>
-    <p class="sec-note">Five connected systems sharing one brand. New here? Start with <b style="color:var(--text-primary)">How to use this</b> to connect the repo to Claude Design.</p>
+    <p class="sec-note">Five connected systems sharing one brand, plus a library of ready‑to‑use brand assets. New here? Start with <b style="color:var(--text-primary)">How to use this</b>.</p>
     <button class="ov-feat" onclick="setActive('use')">
       <span class="ic">${icon("cpu",24)}</span>
-      <span class="gx"><span class="tag" style="display:block">Start here · 01</span><h3>How to use this</h3><p>Connect this GitHub repo to Claude Design once — then pick Zuper on any project and everything comes out on‑brand.</p></span>
+      <span class="gx"><span class="tag" style="display:block">Start here · 01</span><h3>How to use this</h3><p>Open the published <b>Zuper Design System</b> in Claude Design, then pick it on any project — everything comes out on‑brand.</p></span>
       <span class="go">Open →</span>
     </button>
     <div class="ov-grid">${cards}</div>
+    <button class="ov-feat" style="margin-top:18px;margin-bottom:0" onclick="setActive('assets')">
+      <span class="ic">${icon("download",24)}</span>
+      <span class="gx"><span class="tag" style="display:block">Downloads · 06</span><h3>Brand assets</h3><p>The official logo library (SVG + PNG) plus Zoom backgrounds and LinkedIn covers — copy‑free, just download.</p></span>
+      <span class="go">Open →</span>
+    </button>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
