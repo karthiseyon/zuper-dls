@@ -1769,46 +1769,49 @@ function buildUse(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Start here · for Claude Design</p>
       <h1>How to use this</h1>
-      <p class="lede">Add the Zuper brand to <b>Claude Design</b> once as a <b>design system</b>. Claude reads your assets, extracts colours, type &amp; components, and every Prototype, Slide, Document or Wireframe after that comes out on‑brand.</p>
-      <div class="chips"><span class="chip">Upload assets</span><span class="chip">Connect Figma / GitHub</span><span class="chip">Claude Code</span></div>
+      <p class="lede">Set Zuper up as a <b>design system</b> in <b>Claude Design</b> once. Claude reads your brand source, generates the system, and every Prototype, Slide, Document or Wireframe after that is on‑brand.</p>
+      <div class="chips"><span class="chip">Connect GitHub</span><span class="chip">Connect Figma</span><span class="chip">Upload assets</span></div>
     </div>
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Set it up</p><h2 class="sec">Add it to Claude Design</h2>
+    <p class="eyebrow">01 — Set it up (once)</p><h2 class="sec">Five steps in Claude Design</h2>
     <div class="usesteps">
-      <div class="st"><span class="n">1</span><div class="tx">Open <b>Claude Design</b> (claude.ai/design) → <b>Design systems</b> tab → <b><code>Set up design system</code></b> (marker ① below).</div></div>
-      <div class="st"><span class="n">2</span><div class="tx">In <b>Add a design system</b>, choose <b><code>Create here</code></b> — connect <b>Figma or GitHub</b>, or <b>upload slides &amp; assets</b>. (Have React components? Use <code>Create using Claude Code</code> for best fidelity.)</div></div>
-      <div class="st"><span class="n">3</span><div class="tx">Give Claude the Zuper brand — <b>upload the assets</b> in §03, or <b>connect the Zuper Figma</b> file.</div></div>
-      <div class="st"><span class="n">4</span><div class="tx">Claude extracts colours, type &amp; components. <b>Review</b> it, turn the <b>Published</b> toggle on, and set it as <b>Default</b>.</div></div>
-      <div class="st"><span class="n">5</span><div class="tx">Done — new projects use Zuper automatically, or pick it from the <b><code>Design system</code></b> dropdown (marker ②).</div></div>
+      <div class="st"><span class="n">1</span><div class="tx">Open <b>Claude Design</b> → <b>Design systems</b> → <b><code>Set up design system</code></b> (marker ① below). Admins do this once for the org.</div></div>
+      <div class="st"><span class="n">2</span><div class="tx">In <b>Add a design system</b>, choose <b><code>Create here</code></b>, then give Claude the brand source — <b>connect GitHub or Figma</b>, or <b>upload assets</b> (see §03). React components? Use <code>Create using Claude Code</code>.</div></div>
+      <div class="st"><span class="n">3</span><div class="tx">Claude <b>analyses</b> the source and generates a system — colour, typography, components, layout. <b>Review</b> it.</div></div>
+      <div class="st"><span class="n">4</span><div class="tx">Turn the <b>Published</b> toggle on and set it as <b>Default</b>.</div></div>
+      <div class="st"><span class="n">5</span><div class="tx">Every new project now uses Zuper — or pick it from the <b><code>Design system</code></b> dropdown (marker ②).</div></div>
     </div>
     ${shot(CD_IMG,"Where to set up and select the design system in Claude Design")}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Two ways to start</p><h2 class="sec">"How would you like to start?"</h2>
-    <p class="sec-note">After <code>Set up design system</code>, Claude asks how to start. Either path works — pick what your team already has.</p>
+    <p class="eyebrow">02 — How would you like to start?</p><h2 class="sec">Create here, or Claude Code</h2>
+    <p class="sec-note">The <b>Add a design system</b> dialog gives two paths — pick what your team already has.</p>
     <div class="cols-2">
       <div class="usecard"><div class="uic">${icon("globe",22)}</div><h4>Create here</h4><div class="sub">Figma · GitHub · assets</div>
-        <ol><li>Connect <b>Figma</b> or <b>GitHub</b>, or drag in <b>slides &amp; assets</b>.</li><li>Claude analyses them and builds the system.</li><li>Easiest for most teams.</li></ol></div>
+        <ol><li>Connect <b>Figma</b> or <b>GitHub</b>, or upload <b>slides &amp; assets</b>.</li><li>Claude analyses them and builds the system.</li><li>Best path for most teams.</li></ol></div>
       <div class="usecard"><div class="uic">${icon("monitor",22)}</div><h4>Create using Claude Code <span style="font-size:10px;color:#1E854B;background:#E7F6EC;border-radius:6px;padding:2px 7px;font-family:'Geist Mono',monospace">BEST FIDELITY</span></h4><div class="sub">React components</div>
-        <ol><li>Point <b>Claude Code</b> at your component repo.</li><li>It reads real code → highest‑fidelity system.</li><li>Best if engineering owns the components.</li></ol></div>
+        <ol><li>Point <b>Claude Code</b> at your component repo.</li><li>Reads real code → highest‑fidelity system.</li><li>Best when engineering owns components.</li></ol></div>
     </div>
     ${shot(CD_DIALOG,"Add a design system — Create here or Create using Claude Code",640)}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — What to give Claude</p><h2 class="sec">Assets that define Zuper</h2>
-    <p class="sec-note">Under <code>Create here → upload</code>, drop any of these. The more you give, the sharper the system.</p>
-    <div class="usecards">
-      <div class="usecard"><div class="uic">${icon("doc",22)}</div><h4>This styleguide</h4><div class="sub">the whole system</div>
-        <ol><li>Open <b>zuper-dls.html</b> and export to <b>PDF</b> (or screenshot each system).</li><li>Upload it — tokens, type, components &amp; rules in one doc.</li></ol></div>
-      <div class="usecard"><div class="uic">${icon("invoice",22)}</div><h4>Real brand files</h4><div class="sub">PPTX · PDF</div>
-        <ol><li>The <b>Zuper for Roofing deck</b> (.pptx).</li><li>The <b>Summit case study</b> (.pdf).</li><li>Logos, colour palette &amp; type specimens.</li></ol></div>
-      <div class="usecard"><div class="uic">${icon("window",22)}</div><h4>Or connect Figma</h4><div class="sub">live library</div>
-        <ol><li>Connect the <b>Zuper Figma</b> file (or GitHub repo).</li><li>Components &amp; variables import directly.</li><li>Keeps design as the source of truth.</li></ol></div>
+    <p class="eyebrow">03 — What to give Claude</p><h2 class="sec">Brand source for the Zuper system</h2>
+    <p class="sec-note">Under <code>Create here</code>, point Claude at any of these. Claude extracts colours, type, components &amp; layout.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+      <div class="usecard"><div class="uic">${icon("doc",22)}</div><h4>Connect GitHub <span style="font-size:10px;color:#FD5000;background:#FFE7DC;border-radius:6px;padding:2px 7px;font-family:'Geist Mono',monospace">RECOMMENDED</span></h4><div class="sub">this styleguide repo</div>
+        <ol><li>Connect <b><code>karthiseyon/zuper-dls</code></b>.</li><li>The whole system lives in <code>index.html</code> — tokens, type, components, rules.</li></ol></div>
+      <div class="usecard"><div class="uic">${icon("window",22)}</div><h4>Connect Figma</h4><div class="sub">live library</div>
+        <ol><li>Connect the <b>Zuper Figma</b> file.</li><li>Components &amp; variables import directly.</li><li>Keeps design as the source of truth.</li></ol></div>
+      <div class="usecard"><div class="uic">${icon("invoice",22)}</div><h4>Upload assets</h4><div class="sub">PPTX · PDF · images</div>
+        <ol><li>The <b>deck</b> (.pptx) &amp; <b>case study</b> (.pdf).</li><li><b>Logos, colour palette &amp; type specimens.</b></li><li>Or a PDF export of this styleguide.</li></ol></div>
+      <div class="usecard"><div class="uic">${icon("cpu",22)}</div><h4>Claude Code</h4><div class="sub">best fidelity</div>
+        <ol><li>Point Claude Code at your <b>React component</b> repo.</li><li>Builds the system from production code.</li></ol></div>
     </div>
+    <p class="sec-note" style="margin-top:20px;font-size:12.5px;color:var(--text-tertiary)">Repo: github.com/karthiseyon/zuper-dls · Setup mirrors Claude Design's design‑system flow.</p>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
