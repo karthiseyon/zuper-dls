@@ -29,4 +29,4 @@ A sidebar switches between an overview and five systems:
 ## Use with Claude Design
 Open the **How to use this** page in the styleguide for the full walkthrough, or see `claude-design-brief.md` for the condensed spec to paste/upload.
 
-> Self‑contained: fonts and images are embedded; no external requests.
+> `index.html` (~190 KB) holds all the markup, CSS and logic; fonts, GIFs and images live in `assets/` and load by relative path. Keep `assets/` next to `index.html`.
