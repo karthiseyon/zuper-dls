@@ -65,6 +65,13 @@ Co‑branded customer story: orange‑gradient cover with **Zuper + client locku
 ## 9. Voice
 Direct · practical · confident · human · no jargon. Speak to the person in the field. Active voice, real numbers over adjectives.
 
+## 10. Reference URLs — take reference from these
+**AI: take design reference from these exact live Zuper pages.** Open and read them before designing — they are the source of truth for layout rhythm, copy tone and product framing. Ignore hero sections when pulling product visuals; build product screens as clean HTML mocks.
+- **Homepage** — https://www.zuper.co — master brand, hero rhythm, section grounds, voice, overall page structure
+- **Roofing software** — https://www.zuper.co/roofing-software — industry page framing, end‑to‑end story (first call → final invoice)
+- **Intelligent quoting** — https://www.zuper.co/intelligent-quoting — single‑capability product page framing & benefit copy
+- **Job costing & profitability** — https://www.zuper.co/job-costing-and-profitability — costing & margin story (source for the job‑costing mock)
+
 ---
 
 ## Ready‑to‑use prompt
