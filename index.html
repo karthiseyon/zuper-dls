@@ -670,6 +670,35 @@ main{flex:1;min-width:0}
 .ov-card h3{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;margin:0;color:var(--text-primary);position:relative;z-index:1}
 .ov-card p{margin:0;font-size:13px;line-height:1.55;color:var(--text-secondary);position:relative;z-index:1}
 .ov-card .go{margin-top:auto;font:600 13px/1 'Inter',sans-serif;color:var(--brand-default);display:flex;align-items:center;gap:6px;position:relative;z-index:1}
+/* ===== Brand assets: logos + social templates ===== */
+.la-fam{margin-top:30px}
+.la-fam h3.grp{font-family:var(--display);font-weight:700;font-size:17px;margin:0 0 3px;color:var(--text-primary);letter-spacing:-.01em}
+.la-fam .grp-note{font-size:12.5px;color:var(--text-secondary);margin:0 0 16px;line-height:1.5}
+.la-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(218px,1fr));gap:16px}
+.la-card{border:1px solid var(--border-default);border-radius:14px;overflow:hidden;background:var(--surface-card);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.la-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,4,3,.08);border-color:var(--brand-default)}
+.la-prev{height:124px;display:flex;align-items:center;justify-content:center;padding:18px;background:#F2ECE3;border-bottom:1px solid var(--border-subtle)}
+.la-card.dark .la-prev{background:#191919}
+.la-prev img{max-height:80px;max-width:84%;width:auto;object-fit:contain}
+.la-meta{padding:13px 14px 14px;display:flex;flex-direction:column;gap:11px}
+.la-name{font:600 13px/1 'Inter',sans-serif;color:var(--text-primary)}
+.la-btns{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.la-copy,.la-dl{font:600 11.5px/1 'Inter',sans-serif;border-radius:8px;padding:8px 11px;cursor:pointer;text-decoration:none;border:1px solid var(--border-default);transition:background .15s,color .15s,border-color .15s;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.la-copy svg,.la-dl svg{width:13px;height:13px}
+.la-copy{background:var(--brand-default);color:#fff;border-color:var(--brand-default)}
+.la-copy:hover{background:var(--brand-hover);border-color:var(--brand-hover)}
+.la-copy.done{background:#1E854B;border-color:#1E854B}
+.la-dl{background:#fff;color:var(--text-primary)}
+.la-dl:hover{border-color:var(--brand-default);color:var(--brand-default)}
+.la-soc{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.s-card{border:1px solid var(--border-default);border-radius:16px;overflow:hidden;background:var(--surface-card);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.s-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(20,4,3,.09);border-color:var(--brand-default)}
+.s-prev{background:#0c0c0c;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-subtle)}
+.s-prev img{width:100%;height:auto;display:block}
+.s-meta{padding:15px 17px;display:flex;align-items:center;gap:12px}
+.s-meta .nm{font:600 14px/1.3 'Inter',sans-serif;color:var(--text-primary)}
+.s-meta .dim{font:500 11px/1 'Geist Mono',monospace;color:var(--text-tertiary);margin-top:4px}
+.s-btns{margin-left:auto;display:flex;gap:8px;flex:0 0 auto}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -1088,7 +1117,10 @@ const ICON={
  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/>',
  doc:'<path d="M6 2.75h7l5 5v13.5H6z"/><path d="M13 2.75V8h5"/>',
  x:'<path d="M6 6l12 12M18 6 6 18"/>',
- scale:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>'
+ scale:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+ copy:'<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
+ download:'<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
+ image:'<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/>'
 };
 function icon(n,s,sw){return `<svg viewBox="0 0 24 24" width="${s||22}" height="${s||22}" fill="none" stroke="currentColor" stroke-width="${sw||1.7}" stroke-linecap="round" stroke-linejoin="round" style="display:block">${ICON[n]||''}</svg>`;}
 
@@ -2035,6 +2067,89 @@ function buildHumans(){
   window.scrollTo(0,0);
 }
 
+/* ============ BRAND ASSETS (logos + social) ============ */
+function buildAssets(){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
+    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
+    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
+    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
+  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+
+  const variants=[["","Full colour",false],["-gray","Gray",false],["-white","White",true],["-inverted","Inverted",true]];
+  const fams=[
+    ["Logomark","The diamond mark on its own — favicons, app icons and tight spaces.","zuper-logomark",true],
+    ["Horizontal logo","Mark + wordmark side by side — the default lockup for headers and documents.","zuper-horizontal",false],
+    ["Vertical logo","Mark stacked above the wordmark — for square and centred placements.","zuper-vertical",true]
+  ];
+  const cp=icon("copy",13), dn=icon("download",13);
+  const logoCard=(key,svg,v)=>{
+    const base=`assets/logos/${key}${v[0]}`;
+    return `<div class="la-card${v[2]?' dark':''}">
+      <div class="la-prev"><img src="${base}.png" alt="Zuper ${key} ${v[1]}" loading="lazy"></div>
+      <div class="la-meta"><span class="la-name">${v[1]}</span><div class="la-btns">
+        <button class="la-copy" data-src="${svg?base+'.svg':base+'.png'}" data-fmt="${svg?'svg':'png'}">${cp}Copy</button>
+        ${svg?`<a class="la-dl" href="${base}.svg" download>${dn}SVG</a>`:``}
+        <a class="la-dl" href="${base}.png" download>${dn}PNG</a>
+      </div></div></div>`;
+  };
+  const families=fams.map(f=>`<div class="la-fam"><h3 class="grp">${f[0]}</h3><p class="grp-note">${f[1]}</p>
+      <div class="la-grid">${variants.map(v=>logoCard(f[2],f[3],v)).join("")}</div></div>`).join("");
+
+  const socCard=(src,nm,dim)=>`<div class="s-card">
+      <div class="s-prev"><img src="${src}" alt="${nm}" loading="lazy"></div>
+      <div class="s-meta"><div><div class="nm">${nm}</div><div class="dim">${dim}</div></div>
+        <div class="s-btns">
+          <button class="la-copy" data-src="${src}" data-fmt="png">${cp}Copy</button>
+          <a class="la-dl" href="${src}" download>${dn}Download</a>
+        </div></div></div>`;
+  const zoom=[
+    socCard("assets/zoom/zuper-zoom-wordmark.png","Zoom background — wordmark","1920 × 1080 · 16:9"),
+    socCard("assets/zoom/zuper-zoom-logomark.png","Zoom background — logomark","1920 × 1080 · 16:9")
+  ].join("");
+  const linkedin=[
+    socCard("assets/linkedin/zuper-linkedin-trades.png","LinkedIn cover — Skilled Trades","1584 × 396"),
+    socCard("assets/linkedin/zuper-linkedin-sense.png","LinkedIn cover — Zuper Sense","1584 × 396")
+  ].join("");
+
+  stage.innerHTML=`
+  <header class="sys-hero">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Brand · Downloads</p>
+      <h1>Brand assets</h1>
+      <p class="lede">The official Zuper logo set and ready‑made social templates. <b>Copy</b> a logo straight into your design (SVG markup or image) or <b>download</b> the file — every variant in SVG and PNG.</p>
+      <div class="chips" style="margin-top:24px">
+        <span class="chip">3 logo lockups · 4 variants</span>
+        <span class="chip">SVG + PNG</span>
+        <span class="chip">Zoom &amp; LinkedIn templates</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 — Logos</p><h2 class="sec">Logo library</h2>
+    <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Click Copy</b> to grab the SVG markup (paste into Figma/code) or the image; <b style="color:var(--text-primary)">Download</b> for the file.</p>
+    ${families}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">02 — Zoom backgrounds</p><h2 class="sec">Video call backgrounds</h2>
+    <p class="sec-note">On‑brand 16:9 virtual backgrounds for Zoom, Meet and Teams. Download and add under <i>Backgrounds &amp; effects</i>.</p>
+    <div class="la-soc">${zoom}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">03 — LinkedIn covers</p><h2 class="sec">LinkedIn cover photos</h2>
+    <p class="sec-note">Profile &amp; company‑page banners at LinkedIn's 1584 × 396 cover size.</p>
+    <div class="la-soc">${linkedin}</div>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
 /* ============ OVERVIEW / COVER ============ */
 function buildOverview(){
   const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
@@ -2087,10 +2202,11 @@ function buildOverview(){
 }
 
 /* ============ NAV ============ */
-const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"}];
+const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
 function setActive(id){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
+  else if(id==="assets")buildAssets();
   else if(id==="deck")buildDeck();
   else if(id==="one-pager")buildOnePager();
   else if(id==="use")buildUse();
@@ -2111,7 +2227,7 @@ function revealSections(){
   _io=new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");_io.unobserve(e.target);}});},{rootMargin:"0px 0px -7% 0px"});
   secs.forEach(s=>_io.observe(s));
 }
-const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc"};
+const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc",assets:"download"};
 nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
   `<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`).join("");
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
@@ -2146,6 +2262,18 @@ function spy(){
 let _spyR;window.addEventListener("scroll",()=>{cancelAnimationFrame(_spyR);_spyR=requestAnimationFrame(spy);},{passive:true});
 /* FAQ accordion toggle (delegated) */
 stage.addEventListener("click",e=>{const b=e.target.closest(".copybtn");if(!b)return;const ct=b.parentElement.querySelector(".ct");if(!ct)return;const t=ct.textContent;const done=()=>{b.textContent="Copied ✓";setTimeout(()=>{b.textContent="Copy";},1600);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb);}else{fb();}});
+stage.addEventListener("click",function(e){
+  var b=e.target.closest(".la-copy");if(!b)return;
+  var src=b.getAttribute("data-src"),fmt=b.getAttribute("data-fmt"),orig=b.innerHTML;
+  var ok=function(){b.classList.add("done");b.innerHTML="Copied ✓";setTimeout(function(){b.classList.remove("done");b.innerHTML=orig;},1500);};
+  var fail=function(){try{navigator.clipboard.writeText(new URL(src,location.href).href);}catch(_){}b.innerHTML="Link copied";setTimeout(function(){b.innerHTML=orig;},1500);};
+  if(fmt==="svg"){
+    fetch(src).then(function(r){return r.text();}).then(function(t){return navigator.clipboard.writeText(t);}).then(ok).catch(fail);
+  }else{
+    if(!(navigator.clipboard&&window.ClipboardItem)){return fail();}
+    fetch(src).then(function(r){return r.blob();}).then(function(bl){return navigator.clipboard.write([new ClipboardItem({[bl.type]:bl})]);}).then(ok).catch(fail);
+  }
+});
 stage.addEventListener("click",e=>{const c=e.target.closest(".sw-card");if(!c)return;const hx=c.querySelector(".sw-hex");if(!hx)return;const t=hx.textContent.trim();const flash=()=>{c.classList.add("copied");setTimeout(()=>c.classList.remove("copied"),1000);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);flash();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(flash).catch(fb);}else{fb();}});
 stage.addEventListener("click",e=>{const q=e.target.closest(".acc .q");if(!q)return;const a=q.parentElement.querySelector(".a");const open=a.style.display!=="none"&&a.dataset.c!=="1";if(a.dataset.c==="1"){a.dataset.c="0";a.style.display="block";q.querySelector(".pm").textContent="−";}else{a.dataset.c="1";a.style.display="none";q.querySelector(".pm").textContent="+";}});
 

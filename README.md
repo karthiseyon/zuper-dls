@@ -19,6 +19,7 @@ A sidebar switches between an overview and five systems:
 4. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
 5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
 6. **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
+7. **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**.
 
 ## Brand at a glance
 - **Color:** brand orange `#FD5000` (one primary action per view) · ink `#191919` · warm + high‑contrast neutrals · charcoal `#282828` feature sections · Zuper Sense dark `#09090B`.
