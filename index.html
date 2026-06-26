@@ -1026,8 +1026,9 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
     <nav class="nav" id="nav"></nav>
     <div class="side-foot">
       Tokens sourced from <b>zuper.co</b> &amp; <b>sense.zuper.co</b>.<br>
-      Decks: <b>Aptos Display / Aptos</b> (PowerPoint).<br>
-      Web: <b>Plus Jakarta Sans</b> · <b>Inter</b>.
+      One orange · <b>#FD5000</b>.<br>
+      Decks: <b>Aptos Display / Aptos</b>.<br>
+      Web, social &amp; email: <b>Plus Jakarta Sans</b> · <b>Inter</b>.
     </div>
   </aside>
   <main><div id="stage"></div></main>
@@ -2557,7 +2558,10 @@ nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
   `<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`).join("");
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
 document.getElementById("menuBtn").addEventListener("click",()=>nav.classList.toggle("open"));
-document.getElementById("brandLogo").innerHTML=logo("white",26);
+var brandLogoEl=document.getElementById("brandLogo");
+brandLogoEl.innerHTML=logo("white",26);
+brandLogoEl.style.cursor="pointer";
+brandLogoEl.addEventListener("click",()=>setActive("overview"));
 function zDownload(url,name){
   var nm=name||url.split("/").pop();
   fetch(url).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){
