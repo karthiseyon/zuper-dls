@@ -713,8 +713,30 @@ main{flex:1;min-width:0}
 .cd-fallback{margin-top:28px;padding:20px 22px;border:1px dashed var(--chip-line,#E7E0D6);border-radius:13px;background:rgba(246,241,235,.5)}
 .cd-fallback .fb-h{font:700 13px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-primary);margin-bottom:8px}
 .cd-fallback p{font-size:13px;line-height:1.6;color:var(--text-secondary);margin:0}
-.cd-fallback a.repo-link{display:inline-flex;align-items:center;gap:9px;margin-top:14px;font:600 13.5px/1 'Geist Mono',monospace;color:var(--brand-default);text-decoration:none;background:#fff;border:1px solid var(--chip-line,#E7E0D6);border-radius:9px;padding:11px 15px;transition:border-color .15s ease,transform .15s ease}
-.cd-fallback a.repo-link:hover{border-color:var(--brand-default);transform:translateY(-1px)}
+.cd-fallback .repo-row{display:flex;align-items:stretch;gap:8px;margin-top:14px;flex-wrap:wrap}
+.cd-fallback .repo-url{flex:1 1 240px;display:flex;align-items:center;gap:9px;min-width:0;font:600 13.5px/1 'Geist Mono',monospace;color:var(--text-primary);background:#fff;border:1px solid var(--chip-line,#E7E0D6);border-radius:9px;padding:0 14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cd-fallback .repo-url .gi{color:var(--brand-default);flex:0 0 auto;display:flex}
+.cd-fallback .url-copy{display:inline-flex;align-items:center;gap:8px;font:700 13.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:var(--brand-default);border:none;border-radius:9px;padding:11px 16px;cursor:pointer;transition:background .15s ease,transform .15s ease;flex:0 0 auto}
+.cd-fallback .url-copy:hover{background:var(--brand-hover);transform:translateY(-1px)}
+.cd-fallback .repo-open{display:inline-flex;align-items:center;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary);text-decoration:none;border:1px solid var(--chip-line,#E7E0D6);background:#fff;border-radius:9px;padding:11px 14px;transition:border-color .15s ease;flex:0 0 auto}
+.cd-fallback .repo-open:hover{border-color:var(--brand-default);color:var(--text-primary)}
+.esig{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:30px;align-items:start;margin-top:8px}
+@media(max-width:820px){.esig{grid-template-columns:1fr}}
+.esig .form{display:flex;flex-direction:column;gap:14px}
+.esig .form .fld label{display:block;font:600 12px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary);margin-bottom:6px}
+.esig .ctl-row{display:flex;flex-direction:column;gap:9px;margin-top:2px}
+.esig .ctl{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-secondary);cursor:pointer}
+.esig .ctl input{accent-color:var(--brand-default);width:16px;height:16px}
+.esig .preview-col{position:sticky;top:22px}
+.esig .pv-label{font:600 11px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
+.esig .pv-card{background:#fff;border:1px solid var(--border-default);border-radius:14px;padding:30px 28px;box-shadow:0 14px 34px rgba(25,25,25,.06);overflow-x:auto}
+.esig .pv-actions{display:flex;gap:11px;margin-top:16px;flex-wrap:wrap}
+.esig .btn-copy{display:inline-flex;align-items:center;gap:9px;background:var(--brand-default);color:#fff;font:700 14px/1 'Plus Jakarta Sans',system-ui,sans-serif;border:none;padding:13px 20px;border-radius:11px;cursor:pointer;box-shadow:0 12px 28px rgba(253,80,0,.26);transition:transform .15s ease,background .15s ease}
+.esig .btn-copy:hover{background:var(--brand-hover);transform:translateY(-1px)}
+.esig .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--text-secondary);font:600 13.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;border:1px solid var(--border-default);padding:13px 18px;border-radius:11px;cursor:pointer;transition:border-color .15s ease}
+.esig .btn-ghost:hover{border-color:var(--brand-default);color:var(--text-primary)}
+.esig .pv-hint{margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--text-tertiary)}
+.esig .pv-hint b{color:var(--text-secondary)}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -1138,7 +1160,10 @@ const ICON={
  download:'<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
  image:'<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/>',
  github:'<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6A4.6 4.6 0 0 0 18.7 6a4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.5 5.4 2.8 5.4 2.8A4.3 4.3 0 0 0 5.3 6 4.6 4.6 0 0 0 4 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
- "git-branch":'<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>'
+ "git-branch":'<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>',
+ mail:'<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/>',
+ phone:'<path d="M5 3.5h3.2l1.6 4-2 1.4a12 12 0 0 0 5.3 5.3l1.4-2 4 1.6V20a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/>',
+ link:'<path d="M9.5 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1.3 1.3"/><path d="M14.5 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1.3-1.3"/>'
 };
 function icon(n,s,sw){return `<svg viewBox="0 0 24 24" width="${s||22}" height="${s||22}" fill="none" stroke="currentColor" stroke-width="${sw||1.7}" stroke-linecap="round" stroke-linejoin="round" style="display:block">${ICON[n]||''}</svg>`;}
 
@@ -2025,11 +2050,112 @@ function buildUse(){
     <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on your project.</p>
     <div class="cd-fallback">
       <p class="fb-h">${icon("git-branch",15)} Claude Design link not working?</p>
-      <p>Point Claude at the repo instead. Paste the link below into Claude and ask it to build your deck or page — it'll read the design language straight from the source and keep everything on‑brand.</p>
-      <a class="repo-link" href="https://github.com/karthiseyon/zuper-dls" target="_blank" rel="noopener">${icon("github",16)} github.com/karthiseyon/zuper-dls <span class="ar">↗</span></a>
+      <p>No problem — copy the repo link below, paste it into <b>Claude</b>, and ask for the <b>Zuper Design System</b>. Claude reads the design language straight from the source and keeps everything on‑brand.</p>
+      <div class="repo-row">
+        <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
+        <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
+        <a class="repo-open" href="https://github.com/karthiseyon/zuper-dls" target="_blank" rel="noopener">Open ↗</a>
+      </div>
     </div>
   </div></section>
   <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
+/* ============ EMAIL SIGNATURE ============ */
+function buildEmailSig(){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
+    "brand-default":"#FD5000","brand-hover":"#E04600","brand-deep":"#B5271C","brand-subtle":"#FFE7DC",
+    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
+    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
+  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+
+  stage.innerHTML=`
+  <header class="sys-hero">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Brand toolkit · for everyone at Zuper</p>
+      <h1>Email signature</h1>
+      <p class="lede">Fill in your details, see it update live, then copy a clean, on‑brand signature straight into Gmail, Outlook or Apple Mail.</p>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Make it yours</p><h2 class="sec">Build your signature</h2>
+    <p class="sec-note">Everything you type updates the preview on the right. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your mail app's signature settings.</p>
+    <div class="esig">
+      <div class="form">
+        <div class="fld"><label>Full name</label><input id="es-name" placeholder="Jane Doe" value="Jane Doe" /></div>
+        <div class="fld"><label>Job title</label><input id="es-title" placeholder="Field Service Consultant" value="Field Service Consultant" /></div>
+        <div class="fld"><label>Email</label><input id="es-email" type="email" placeholder="name@zuper.co" value="name@zuper.co" /></div>
+        <div class="fld"><label>Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="" /></div>
+        <div class="fld"><label>Website</label><input id="es-web" placeholder="zuper.co" value="zuper.co" /></div>
+        <div class="ctl-row">
+          <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
+          <label class="ctl"><input type="checkbox" id="es-tag" checked> Show tagline · "Field Service Management, simplified"</label>
+        </div>
+      </div>
+      <div class="preview-col">
+        <div class="pv-label">Live preview</div>
+        <div class="pv-card"><div id="es-preview"></div></div>
+        <div class="pv-actions">
+          <button class="btn-copy" id="es-copy">${icon("copy",17)} Copy signature</button>
+          <button class="btn-ghost" id="es-copyhtml">${icon("doc",16)} Copy HTML source</button>
+        </div>
+        <p class="pv-hint"><b>Gmail:</b> Settings → See all settings → Signature → paste. &nbsp;<b>Apple Mail / Outlook:</b> paste into the signature box. The logo and colours come along automatically.</p>
+      </div>
+    </div>
+  </div></section>
+  <div style="height:60px"></div>`;
+
+  // ---- signature renderer (inline styles only, so it survives copy/paste) ----
+  const esLogo=LOGO_DARK.replace(/\swidth="[\d.]+"/,"").replace(/\sheight="[\d.]+"/,"").replace("<svg ",`<svg height="36" style="display:block;width:auto" `);
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  function sigHTML(d){
+    const A='color:#FD5000', INK='#191919', SUB='#5b6470';
+    const webUrl=d.web?(/^https?:\/\//.test(d.web)?d.web:"https://"+d.web):"";
+    const webText=d.web.replace(/^https?:\/\//,"");
+    const rows=[];
+    rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:${INK};line-height:1.2">${esc(d.name||"Your Name")}</div>`);
+    if(d.title)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;${A};margin-top:3px">${esc(d.title)}</div>`);
+    if(d.tag)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:${SUB};margin-top:1px">Field Service Management, simplified</div>`);
+    const contact=[];
+    if(d.email)contact.push(`<a href="mailto:${esc(d.email)}" style="color:${SUB};text-decoration:none">${esc(d.email)}</a>`);
+    if(d.phone)contact.push(`<span style="color:${SUB}">${esc(d.phone)}</span>`);
+    if(webUrl)contact.push(`<a href="${esc(webUrl)}" style="${A};text-decoration:none;font-weight:bold">${esc(webText)}</a>`);
+    if(contact.length)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:${SUB};margin-top:11px;line-height:1.8">${contact.join('<span style="color:#d6d0c7"> &nbsp;·&nbsp; </span>')}</div>`);
+    if(d.cta)rows.push(`<div style="margin-top:13px"><a href="${esc(webUrl||"https://zuper.co")}/demo" style="font-family:Arial,Helvetica,sans-serif;display:inline-block;background:#FD5000;color:#ffffff;text-decoration:none;font-size:12px;font-weight:bold;padding:8px 16px;border-radius:7px">Book a demo →</a></div>`);
+    return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse"><tr>`
+      +`<td style="vertical-align:top;padding-right:20px;border-right:2px solid #FD5000">${esLogo}</td>`
+      +`<td style="vertical-align:top;padding-left:20px">${rows.join("")}</td>`
+      +`</tr></table>`;
+  }
+  const $=id=>document.getElementById(id);
+  function read(){return{name:$("es-name").value.trim(),title:$("es-title").value.trim(),email:$("es-email").value.trim(),phone:$("es-phone").value.trim(),web:$("es-web").value.trim(),cta:$("es-cta").checked,tag:$("es-tag").checked};}
+  function render(){$("es-preview").innerHTML=sigHTML(read());}
+  ["es-name","es-title","es-email","es-phone","es-web"].forEach(id=>$(id).addEventListener("input",render));
+  ["es-cta","es-tag"].forEach(id=>$(id).addEventListener("change",render));
+  render();
+
+  // ---- copy handlers ----
+  const flash=(btn,msg)=>{const o=btn.innerHTML;btn.innerHTML=msg;setTimeout(()=>{btn.innerHTML=o;},1700);};
+  function selectAndCopy(node){const r=document.createRange();r.selectNode(node);const s=window.getSelection();s.removeAllRanges();s.addRange(r);let ok=false;try{ok=document.execCommand("copy");}catch(_){}s.removeAllRanges();return ok;}
+  $("es-copy").addEventListener("click",function(){
+    const node=$("es-preview"),html=node.innerHTML,btn=this;
+    const done=()=>flash(btn,'Copied ✓'),fail=()=>{selectAndCopy(node)?done():flash(btn,'Press ⌘/Ctrl+C');};
+    if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){
+      const item=new ClipboardItem({"text/html":new Blob([html],{type:"text/html"}),"text/plain":new Blob([node.innerText],{type:"text/plain"})});
+      navigator.clipboard.write([item]).then(done).catch(fail);
+    }else{fail();}
+  });
+  $("es-copyhtml").addEventListener("click",function(){
+    const html=$("es-preview").innerHTML,btn=this,done=()=>flash(btn,'HTML copied ✓');
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(html).then(done).catch(()=>{});}
+    else{const ta=document.createElement("textarea");ta.value=html;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done();}catch(_){}document.body.removeChild(ta);}
+  });
   window.scrollTo(0,0);
 }
 
@@ -2219,7 +2345,7 @@ function buildOverview(){
 }
 
 /* ============ NAV ============ */
-const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
+const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
 function setActive(id){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
@@ -2227,6 +2353,7 @@ function setActive(id){
   else if(id==="deck")buildDeck();
   else if(id==="one-pager")buildOnePager();
   else if(id==="use")buildUse();
+  else if(id==="email-sig")buildEmailSig();
   else if(id==="humans")buildHumans();
   else if(id==="website")buildWebsite(SYS.find(s=>s.id===id));
   else buildSystem(SYS.find(s=>s.id===id));
@@ -2244,7 +2371,7 @@ function revealSections(){
   _io=new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");_io.unobserve(e.target);}});},{rootMargin:"0px 0px -7% 0px"});
   secs.forEach(s=>_io.observe(s));
 }
-const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc",assets:"download"};
+const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc","email-sig":"mail",assets:"download"};
 nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
   `<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`).join("");
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
@@ -2261,6 +2388,7 @@ function zDownload(url,name){
   });
 }
 stage.addEventListener("click",function(e){var b=e.target.closest(".dl-btn");if(!b)return;e.preventDefault();zDownload(b.getAttribute("data-href"),b.getAttribute("data-name"));});
+stage.addEventListener("click",function(e){var b=e.target.closest(".url-copy");if(!b)return;var t=b.getAttribute("data-copy"),o=b.innerHTML,done=function(){b.innerHTML="Copied ✓";setTimeout(function(){b.innerHTML=o;},1700);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){});}else{var ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done();}catch(_){}document.body.removeChild(ta);}});
 
 /* in-page section nav + scrollspy */
 function buildSubnav(id){
