@@ -552,7 +552,13 @@ body{margin:0;font-family:var(--body);background:var(--canvas);color:#1B1919;-we
 .sidebar{
   position:sticky;top:0;align-self:flex-start;height:100vh;flex:0 0 268px;width:268px;
   background:linear-gradient(176deg,#1C1510 0%,var(--ui-bg) 38%,#120D0B 100%);color:var(--ui-ink);
-  display:flex;flex-direction:column;border-right:1px solid var(--ui-line);overflow-y:auto;z-index:5}
+  display:flex;flex-direction:column;border-right:1px solid var(--ui-line);overflow-y:auto;z-index:5;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.16) transparent;overscroll-behavior:contain}
+.sidebar::-webkit-scrollbar{width:7px}
+.sidebar::-webkit-scrollbar-track{background:transparent}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:10px}
+.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(255,255,255,.26)}
+.sidebar::-webkit-scrollbar-thumb:hover{background:rgba(253,80,0,.55)}
 .brand{padding:26px 24px 18px;border-bottom:1px solid var(--ui-line)}
 .brand .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.02em}
 .brand .dot{width:13px;height:13px;border-radius:50%;background:var(--ui-orange);box-shadow:0 0 0 4px rgba(253,80,0,.18)}
@@ -575,7 +581,7 @@ body{margin:0;font-family:var(--body);background:var(--canvas);color:#1B1919;-we
 .side-foot{margin-top:auto;padding:16px 24px;border-top:1px solid var(--ui-line);font-size:11px;color:var(--ui-mute);line-height:1.5}
 .side-foot b{color:#C9BEB1;font-weight:600}
 
-main{flex:1;min-width:0}
+main{flex:1;min-width:0;overflow-x:clip}
 #stage{min-height:100vh;background:var(--c-canvas,#fff);color:var(--text-primary);transition:background .25s}
 
 /* ---------- Generic section scaffolding ---------- */
