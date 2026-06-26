@@ -737,6 +737,13 @@ main{flex:1;min-width:0}
 .esig .btn-ghost:hover{border-color:var(--brand-default);color:var(--text-primary)}
 .esig .pv-hint{margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--text-tertiary)}
 .esig .pv-hint b{color:var(--text-secondary)}
+.esig .es-banners{display:flex;flex-direction:column;gap:9px}
+.esig .bopt{display:block;cursor:pointer;border:2px solid var(--border-default);border-radius:10px;overflow:hidden;line-height:0;transition:border-color .15s ease}
+.esig .bopt:hover{border-color:#d9b8a8}
+.esig .bopt input{position:absolute;opacity:0;pointer-events:none}
+.esig .bopt img{width:100%;height:auto;display:block}
+.esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:42px;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
+.esig .bopt:has(input:checked){border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 18%,transparent)}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -2094,7 +2101,14 @@ function buildEmailSig(){
         <div class="fld"><label>Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="" /></div>
         <div class="ctl-row">
           <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
-          <label class="ctl"><input type="checkbox" id="es-banner"> Add "Introducing Zuper Sense" banner</label>
+        </div>
+        <div class="fld">
+          <label>Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional — pick one</span></label>
+          <div class="es-banners">
+            <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
+            <label class="bopt"><input type="radio" name="esb" value="sense"><img src="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
+            <label class="bopt"><input type="radio" name="esb" value="trades"><img src="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/assets/email/zuper-emailer-trades.png" alt="The AI Operating System for the Skilled Trades"></label>
+          </div>
         </div>
       </div>
       <div class="preview-col">
@@ -2112,8 +2126,8 @@ function buildEmailSig(){
 
   // ---- signature renderer (inline styles + hosted PNG, so it survives copy/paste into Outlook/Gmail) ----
   const RAW="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/";
-  const esImg=`<img src="${RAW}assets/logos/zuper-vertical.png" alt="Zuper" width="74" height="74" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
-  const esBanner=`<a href="https://www.zuper.co" style="text-decoration:none"><img src="${RAW}assets/linkedin/zuper-linkedin-sense.png" alt="Introducing Zuper Sense — Monitor. Analyze. Predict. Recommend" width="480" height="120" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic;border-radius:8px;max-width:100%" /></a>`;
+  const esImg=`<img src="${RAW}assets/logos/zuper-vertical.png" alt="Zuper" width="96" height="96" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
+  const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense — Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper — The AI Operating System for the Skilled Trades"}};
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function sigHTML(d){
     const A='color:#FD5000', INK='#191919', SUB='#5b6470';
@@ -2126,17 +2140,20 @@ function buildEmailSig(){
     if(contact.length)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:${SUB};margin-top:11px;line-height:1.8">${contact.join('<span style="color:#c9c3ba;padding:0 8px">|</span>')}</div>`);
     if(d.cta)rows.push(`<div style="margin-top:13px"><a href="https://www.zuper.co/contact-us" style="font-family:Arial,Helvetica,sans-serif;display:inline-block;background:#FD5000;color:#ffffff;text-decoration:none;font-size:12px;font-weight:bold;padding:8px 16px;border-radius:7px">Book a demo →</a></div>`);
     const sig=`<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif"><tr>`
-      +`<td style="vertical-align:top;padding:2px 20px 0 0">${esImg}</td>`
-      +`<td style="vertical-align:top;padding:0 0 0 20px;border-left:2px solid #FD5000">${rows.join("")}</td>`
+      +`<td style="vertical-align:middle;padding:0 20px 0 0">${esImg}</td>`
+      +`<td style="vertical-align:middle;padding:0 0 0 20px;border-left:2px solid #FD5000">${rows.join("")}</td>`
       +`</tr></table>`;
-    if(!d.banner)return sig;
-    return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse"><tr><td style="padding:0 0 16px 0">${sig}</td></tr><tr><td>${esBanner}</td></tr></table>`;
+    const b=BAN[d.banner];
+    if(!b)return sig;
+    const esBanner=`<a href="https://www.zuper.co" style="text-decoration:none"><img src="${RAW}${b.u}" alt="${esc(b.a)}" width="380" height="95" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic;border-radius:8px" /></a>`;
+    return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse"><tr><td style="padding:0 0 14px 0">${sig}</td></tr><tr><td>${esBanner}</td></tr></table>`;
   }
   const $=id=>document.getElementById(id);
-  function read(){return{name:$("es-name").value.trim(),title:$("es-title").value.trim(),email:$("es-email").value.trim(),phone:$("es-phone").value.trim(),cta:$("es-cta").checked,banner:$("es-banner").checked};}
+  function read(){const br=document.querySelector('input[name="esb"]:checked');return{name:$("es-name").value.trim(),title:$("es-title").value.trim(),email:$("es-email").value.trim(),phone:$("es-phone").value.trim(),cta:$("es-cta").checked,banner:br?br.value:"none"};}
   function render(){$("es-preview").innerHTML=sigHTML(read());}
   ["es-name","es-title","es-email","es-phone"].forEach(id=>$(id).addEventListener("input",render));
-  ["es-cta","es-banner"].forEach(id=>$(id).addEventListener("change",render));
+  $("es-cta").addEventListener("change",render);
+  [...document.querySelectorAll('input[name="esb"]')].forEach(r=>r.addEventListener("change",render));
   render();
 
   // ---- copy handlers ----
