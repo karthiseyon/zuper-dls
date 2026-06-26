@@ -744,6 +744,7 @@ main{flex:1;min-width:0}
 .esig .bopt img{width:100%;height:auto;display:block}
 .esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:42px;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
 .esig .bopt:has(input:checked){border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 18%,transparent)}
+.adscroll{overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -1170,7 +1171,8 @@ const ICON={
  "git-branch":'<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>',
  mail:'<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/>',
  phone:'<path d="M5 3.5h3.2l1.6 4-2 1.4a12 12 0 0 0 5.3 5.3l1.4-2 4 1.6V20a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/>',
- link:'<path d="M9.5 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1.3 1.3"/><path d="M14.5 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1.3-1.3"/>'
+ link:'<path d="M9.5 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1.3 1.3"/><path d="M14.5 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1.3-1.3"/>',
+ megaphone:'<path d="M3 11v2a1 1 0 0 0 1 1h2l3.5 4V7L6 11H4a1 1 0 0 0-1 0z"/><path d="M9.5 7 18 3.5v17L9.5 17"/><path d="M18 9a3 3 0 0 1 0 6"/>'
 };
 function icon(n,s,sw){return `<svg viewBox="0 0 24 24" width="${s||22}" height="${s||22}" fill="none" stroke="currentColor" stroke-width="${sw||1.7}" stroke-linecap="round" stroke-linejoin="round" style="display:block">${ICON[n]||''}</svg>`;}
 
@@ -2086,19 +2088,19 @@ function buildEmailSig(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand toolkit · for everyone at Zuper</p>
       <h1>Email signature</h1>
-      <p class="lede">Fill in your details, see it update live, then copy a clean, on‑brand signature straight into Gmail, Outlook or Apple Mail.</p>
+      <p class="lede">Fill in your details, see it update live, then copy a clean, on‑brand signature straight into Outlook.</p>
     </div>
   </header>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Make it yours</p><h2 class="sec">Build your signature</h2>
-    <p class="sec-note">Everything you type updates the preview on the right. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your mail app's signature settings.</p>
+    <p class="sec-note">Everything you type updates the preview on the right. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your Outlook signature settings.</p>
     <div class="esig">
       <div class="form">
         <div class="fld"><label>Full name</label><input id="es-name" placeholder="Jane Doe" value="Jane Doe" /></div>
         <div class="fld"><label>Job title</label><input id="es-title" placeholder="Field Service Consultant" value="Field Service Consultant" /></div>
         <div class="fld"><label>Email</label><input id="es-email" type="email" placeholder="name@zuper.co" value="name@zuper.co" /></div>
-        <div class="fld"><label>Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="" /></div>
+        <div class="fld"><label>Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="+1 (555) 000‑0000" /></div>
         <div class="ctl-row">
           <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
         </div>
@@ -2117,7 +2119,7 @@ function buildEmailSig(){
         <div class="pv-actions">
           <button class="btn-copy" id="es-copy">${icon("copy",17)} Copy signature</button>
         </div>
-        <p class="pv-hint"><b>Gmail:</b> Settings → See all settings → Signature → paste. &nbsp;<b>Apple Mail / Outlook:</b> paste into the signature box. The logo and colours come along automatically.</p>
+        <p class="pv-hint"><b>Paste into Outlook:</b> open <b>Settings</b> → <b>Account</b> → <b>Signatures</b> → <b>New signature</b>, click into the signature box and paste (<b>⌘/Ctrl + V</b>). Give it a name and Save. The logo, banner and colours come along automatically.</p>
       </div>
     </div>
   </div></section>
@@ -2127,7 +2129,7 @@ function buildEmailSig(){
   // preview/picker use relative paths (load from same origin as this page); copy rewrites them to absolute raw URLs
   const RAW="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/";
   const toAbs=html=>html.replace(/(src|href)="assets\//g,'$1="'+RAW+'assets/');
-  const esImg=`<img src="assets/logos/zuper-vertical.png" alt="Zuper" width="96" height="96" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
+  const esImg=`<img src="assets/logos/zuper-vertical.png" alt="Zuper" width="112" height="112" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
   const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense — Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper — The AI Operating System for the Skilled Trades"}};
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function sigHTML(d){
@@ -2138,11 +2140,11 @@ function buildEmailSig(){
     const contact=[];
     if(d.email)contact.push(`<a href="mailto:${esc(d.email)}" style="color:${SUB};text-decoration:none">${esc(d.email)}</a>`);
     if(d.phone)contact.push(`<span style="color:${SUB}">${esc(d.phone)}</span>`);
-    if(contact.length)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:${SUB};margin-top:9px;line-height:1.4">${contact.join('<span style="color:#c9c3ba;padding:0 7px">|</span>')}</div>`);
+    if(contact.length)rows.push(`<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:${SUB};margin-top:9px;line-height:1.4">${contact.join('<span style="color:#c9c3ba">&nbsp;|&nbsp;</span>')}</div>`);
     if(d.cta)rows.push(`<div style="margin-top:11px"><a href="https://www.zuper.co/contact-us" style="font-family:Arial,Helvetica,sans-serif;display:inline-block;background:#FD5000;color:#ffffff;text-decoration:none;font-size:12px;font-weight:bold;padding:8px 16px;border-radius:7px">Book a demo →</a></div>`);
     const sig=`<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif"><tr>`
-      +`<td style="vertical-align:middle;padding:0 20px 0 0">${esImg}</td>`
-      +`<td style="vertical-align:middle;padding:0 0 0 20px;border-left:2px solid #FD5000">${rows.join("")}</td>`
+      +`<td style="vertical-align:middle;padding:0 14px 0 0">${esImg}</td>`
+      +`<td style="vertical-align:middle;padding:0 0 0 14px;border-left:2px solid #FD5000">${rows.join("")}</td>`
       +`</tr></table>`;
     const b=BAN[d.banner];
     if(!b)return sig;
@@ -2168,6 +2170,176 @@ function buildEmailSig(){
       navigator.clipboard.write([item]).then(done).catch(fail);
     }else{fail();}
   });
+  window.scrollTo(0,0);
+}
+
+/* ============ SOCIAL & ADS ============ */
+function buildSocial(){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
+    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
+    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
+    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
+  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F4EEE6`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+
+  const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
+  const GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)",INK="#191919",L="assets/logos/";
+  const lbl=t=>`<div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268">${t}</div>`;
+  const col=(t,box)=>`<div style="display:flex;flex-direction:column;gap:8px">${lbl(t)}${box}</div>`;
+
+  const leaderboard=col("Leaderboard · 728 × 90",`<div style="width:728px;height:90px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:22px;padding:0 26px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="Zuper" style="height:40px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1.05;flex:1">Run service from first call to final invoice</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:11px 22px;border-radius:8px;white-space:nowrap">Book a demo</span></div>`);
+
+  const billboard=col("Billboard · 970 × 250",`<div style="width:970px;height:250px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:40px 48px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:14px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:14px">The AI OS for field service</div><div style="font-family:${DISP};font-weight:800;font-size:50px;line-height:1.02;letter-spacing:-.03em;max-width:640px">Win 1 in 3 quotes on-site</div><span style="align-self:flex-start;margin-top:22px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:17px;padding:13px 26px;border-radius:8px">Book a demo →</span><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;top:36px;right:48px;height:30px;width:auto"></div>`);
+
+  const medrect=col("Medium rectangle · 300 × 250",`<div style="width:300px;height:250px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:26px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:8px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:10px">Field service · AI</div><div style="font-family:${DISP};font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em">Run a tighter operation</div><span style="align-self:flex-start;margin-top:18px;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:14px;padding:10px 20px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="Zuper" style="position:absolute;left:26px;bottom:22px;height:18px;width:auto"></div>`);
+
+  const lgrect=col("Large rectangle · 336 × 280",`<div style="width:336px;height:280px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:96px;letter-spacing:-.04em;line-height:.9">28%</div><div style="font-family:${DISP};font-weight:700;font-size:22px;line-height:1.2;margin-top:10px;max-width:240px">less drive time per crew</div><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;left:28px;bottom:24px;height:22px;width:auto"></div>`);
+
+  const halfpage=col("Half page · 300 × 600",`<div style="width:300px;height:600px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:32px 28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:10px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">From first call to invoice</div><div style="font-family:${DISP};font-weight:800;font-size:40px;line-height:1.03;letter-spacing:-.03em">Everything between the call and the cash</div><div style="display:flex;flex-direction:column;gap:10px;margin:22px 0;font-size:14px;font-family:${BODY}"><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Scheduling &amp; dispatch</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Intelligent quoting</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Job costing</div></div><span style="align-self:flex-start;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:12px 24px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="Zuper" style="position:absolute;left:28px;bottom:26px;height:18px;width:auto"></div>`);
+
+  const skyscraper=col("Skyscraper · 160 × 600",`<div style="width:160px;height:600px;box-sizing:border-box;background:linear-gradient(180deg,#FD5000,#DB3602);color:#fff;border-radius:6px;padding:26px 20px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:38px;line-height:1.02;letter-spacing:-.03em">First call to invoice</div><span style="align-self:flex-start;margin-top:18px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px">Demo →</span><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;left:20px;bottom:24px;height:18px;width:auto"></div>`);
+
+  const mobile=col("Mobile · 320 × 100",`<div style="width:320px;height:100px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:14px;padding:0 18px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="Zuper" style="height:34px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:18px;line-height:1.1;letter-spacing:-.02em;flex:1">Run a tighter operation</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:12px;padding:8px 14px;border-radius:6px;white-space:nowrap">Demo</span></div>`);
+
+  const email=`<div style="width:600px;max-width:100%;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px rgba(25,25,25,.12);font-family:${BODY};color:${INK}">
+    <div style="background:${GRAD};padding:28px 40px"><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="height:28px;width:auto;display:block"></div>
+    <div style="padding:44px 40px 8px">
+      <div style="font-family:${MONO};font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">Product update</div>
+      <h1 style="font-family:${DISP};font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.02em;margin:0 0 16px">Win the quote before you leave the driveway</h1>
+      <p style="font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements — so every homeowner sees the premium option, and you send on-site.</p>
+      <a href="#" style="display:inline-block;background:#FD5000;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:13px 26px;border-radius:8px">See what's new →</a>
+    </div>
+    <div style="padding:36px 40px 8px">
+      ${[["Tiered packages, automatically","Every quote presents three tiers — no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect — fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px">${f[0]}</div><div style="font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div>`).join("")}
+    </div>
+    <div style="margin:16px 40px 40px;background:#FFE7DC;border-radius:12px;padding:22px 24px;display:flex;align-items:center;gap:18px">
+      <span style="font-family:${DISP};font-weight:800;font-size:40px;letter-spacing:-.03em;color:#FD5000;line-height:1">42%</span>
+      <span style="font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job — full scope captured the first time.</span>
+    </div>
+    <div style="background:#FBF2EA;border-top:1px solid #F0EAE1;padding:28px 40px">
+      <img src="${L}zuper-horizontal.png" alt="Zuper" style="height:20px;width:auto;display:block;margin-bottom:14px">
+      <p style="font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 12px">The AI operating system for field service — from first call to final invoice.</p>
+      <div style="font-family:${MONO};font-size:11px;color:#7A7268">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration:underline">Unsubscribe</span></div>
+    </div>
+  </div>`;
+
+  // ---- social creatives (real export sizes, scaled down for reference) ----
+  const MH="assets/mini-humans/",SBG="assets/backgrounds/zuper-sense-bg.jpg",WARM="#FBF2EA",BANNER="#FFE7DC",CHAR="#18181B";
+  const sb=(w,h,inner,s)=>{s=s||0.235;return `<div style="width:${Math.round(w*s)}px;height:${Math.round(h*s)}px;overflow:hidden;flex:0 0 auto;border-radius:8px;box-shadow:0 6px 20px rgba(20,4,3,.10)"><div style="width:${w}px;height:${h}px;transform:scale(${s});transform-origin:top left">${inner}</div></div>`;};
+  const cr=(t,w,h,inner,s)=>`<div style="display:flex;flex-direction:column;gap:8px">${lbl(t)}${sb(w,h,inner,s)}</div>`;
+  const creatives=[
+    cr("Instagram · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:${GRAD};color:#fff;padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:32px">Field service · AI</div><div style="font-family:${DISP};font-weight:800;font-size:118px;line-height:1.02;letter-spacing:-.03em;max-width:860px">Win 1 in 3 quotes on-site</div><p style="font-size:34px;line-height:1.45;color:rgba(255,255,255,.92);max-width:740px;margin:36px 0 0">Build a branded estimate in the driveway — and send it before you leave.</p><img src="${L}zuper-horizontal-white.png" style="position:absolute;left:88px;bottom:80px;height:52px;width:auto"><img src="${MH}reaching-up.gif" aria-hidden="true" style="position:absolute;right:88px;bottom:0;height:92px;width:auto;display:block"></div>`),
+    cr("Story / Reel · 1080 × 1920",1080,1920,`<div style="width:1080px;height:1920px;box-sizing:border-box;background:#fff;color:${INK};padding:110px 88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:28px;text-transform:uppercase;letter-spacing:.14em;color:#FD5000;margin-bottom:36px">The AI OS for field service</div><div style="font-family:${DISP};font-weight:800;font-size:130px;line-height:1.02;letter-spacing:-.03em">From first call to final invoice</div><p style="font-size:38px;line-height:1.5;color:#4B5563;max-width:820px;margin:44px 0 56px">Schedule the right tech, win the quote on-site, and get paid faster — with AI doing the busywork.</p><span style="align-self:flex-start;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:36px;padding:26px 52px;border-radius:14px">Book a demo →</span><img src="${L}zuper-horizontal.png" style="position:absolute;left:88px;bottom:96px;height:56px;width:auto"><img src="${MH}ready-to-work.gif" aria-hidden="true" style="position:absolute;right:88px;bottom:0;height:128px;width:auto;display:block"></div>`),
+    cr("LinkedIn / X · 1200 × 630",1200,630,`<div style="width:1200px;height:630px;box-sizing:border-box;background:${CHAR};color:#fff;padding:72px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:20px;text-transform:uppercase;letter-spacing:.14em;color:#FF8B5A;margin-bottom:24px">Zuper Sense</div><div style="font-family:${DISP};font-weight:800;font-size:70px;line-height:1.04;letter-spacing:-.03em;max-width:780px">AI that dispatches, summarizes &amp; spots the margin</div><img src="${L}zuper-horizontal-white.png" style="position:absolute;left:72px;bottom:56px;height:40px;width:auto"><img src="${MH}on-the-job.gif" aria-hidden="true" style="position:absolute;right:72px;bottom:0;height:92px;width:auto;display:block"></div>`),
+    cr("Zuper Sense · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:#09090B url(${SBG}) center/cover;color:#FAFAFA;padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:#FF8B5A;margin-bottom:32px">Zuper Sense</div><div style="font-family:${DISP};font-weight:800;font-size:110px;line-height:1.03;letter-spacing:-.03em;max-width:880px">AI that runs in the background</div><p style="font-size:34px;line-height:1.45;color:#A1A1AA;max-width:780px;margin:36px 0 0">Auto-dispatch, job summaries and margin alerts — before the week is lost.</p><img src="${L}zuper-horizontal-white.png" style="position:absolute;left:88px;bottom:80px;height:52px;width:auto"></div>`),
+    cr("Quote card · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:${WARM};color:${INK};padding:100px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${DISP};font-weight:800;font-size:220px;line-height:.6;color:#FD5000;height:110px">&ldquo;</div><div style="font-family:${DISP};font-weight:700;font-size:60px;line-height:1.28;letter-spacing:-.02em;max-width:860px">Your software blows any software out of the water. For roofing, this is just the best.</div><div style="display:flex;align-items:center;gap:24px;margin-top:56px"><span style="width:88px;height:88px;border-radius:50%;background:#FD5000;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:${DISP};font-weight:700;font-size:32px">CL</span><div><div style="font-weight:700;font-size:34px">Chris Little</div><div style="font-size:28px;color:#4B5563">Office Manager, Dickinson Roofing</div></div></div><img src="${L}zuper-horizontal.png" style="position:absolute;right:100px;bottom:92px;height:44px;width:auto"></div>`),
+    cr("Stat card · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:#fff;color:${INK};padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:#FD5000;margin-bottom:28px">The impact · first 90 days</div><div style="font-family:${DISP};font-weight:800;font-size:360px;line-height:.85;letter-spacing:-.04em;color:#FD5000">28%</div><p style="font-family:${DISP};font-weight:700;font-size:52px;line-height:1.25;letter-spacing:-.02em;max-width:720px;margin:28px 0 0">less drive time per crew, every week</p><img src="${L}zuper-horizontal.png" style="position:absolute;left:88px;bottom:80px;height:48px;width:auto"><img src="${MH}carrying-gear.gif" aria-hidden="true" style="position:absolute;right:88px;bottom:0;height:92px;width:auto;display:block"></div>`),
+    cr("Intelligent Quoting · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:#fff;color:${INK};padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:#FD5000;margin-bottom:28px">Intelligent Quoting</div><div style="font-family:${DISP};font-weight:800;font-size:110px;line-height:1.02;letter-spacing:-.03em;margin:0 0 44px">Good. Better.<br>Best — every time.</div><div style="display:flex;gap:18px"><span style="background:${WARM};color:#4B5563;font-family:${DISP};font-weight:700;font-size:30px;padding:18px 34px;border-radius:12px">Good</span><span style="background:${BANNER};color:#B5271C;font-family:${DISP};font-weight:700;font-size:30px;padding:18px 34px;border-radius:12px">Better</span><span style="background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:30px;padding:18px 34px;border-radius:12px">Best</span></div><img src="${L}zuper-horizontal.png" style="position:absolute;left:88px;bottom:80px;height:48px;width:auto"></div>`),
+    cr("CTA · 1200 × 630",1200,630,`<div style="width:1200px;height:630px;box-sizing:border-box;background:${GRAD};color:#fff;padding:72px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:76px;line-height:1.03;letter-spacing:-.03em;max-width:820px">Ready to run a tighter operation?</div><p style="font-size:28px;color:rgba(255,255,255,.92);margin:22px 0 34px">Set up in a day. No rip-and-replace.</p><span style="align-self:flex-start;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:28px;padding:20px 40px;border-radius:12px">Book a demo →</span><img src="${L}zuper-horizontal-white.png" style="position:absolute;left:72px;bottom:52px;height:38px;width:auto"><img src="${MH}on-the-tools.gif" aria-hidden="true" style="position:absolute;right:72px;bottom:0;height:92px;width:auto;display:block"></div>`),
+    cr("Industries · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:#fff;color:${INK};padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:#FD5000;margin-bottom:28px">Built for your trade</div><div style="font-family:${DISP};font-weight:800;font-size:104px;line-height:1.02;letter-spacing:-.03em;margin:0 0 44px">Tuned to how your crews work</div><div style="display:flex;flex-wrap:wrap;gap:16px;max-width:880px">${["Roofing","HVAC","Plumbing","Electrical","Solar"].map(x=>`<span style="background:${WARM};font-family:${DISP};font-weight:700;font-size:30px;padding:16px 30px;border-radius:999px">${x}</span>`).join("")}</div><img src="${L}zuper-horizontal.png" style="position:absolute;left:88px;bottom:80px;height:48px;width:auto"></div>`)
+  ].join("");
+
+  stage.innerHTML=`
+  <header class="sys-hero">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Social, ads &amp; campaigns</p>
+      <h1>Social &amp; ads</h1>
+      <p class="lede">The campaign side of the brand — social creatives at real export sizes and a full set of display ads at standard IAB sizes. One orange gradient, the logo lockup, a single bold claim and a CTA. Use these as the starting frame for any paid or social push.</p>
+      <div class="chips">
+        <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
+        <span class="chip">Aa Plus Jakarta · display</span>
+        <span class="chip">1080 / 1920 / 1200 social</span>
+        <span class="chip">IAB ad sizes</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Social</p><h2 class="sec">Social media creatives</h2>
+    <p class="docnote">↔ scroll · real export sizes, shown to scale · Instagram square &amp; story, landscape, quote/stat cards, Sense</p>
+    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${creatives}</div></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Display</p><h2 class="sec">Ad banners</h2>
+    <p class="docnote">↔ scroll · standard IAB sizes · orange gradient + logo lockup + one CTA</p>
+    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${leaderboard}${billboard}${medrect}${lgrect}${halfpage}${skyscraper}${mobile}</div></div>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
+/* ============ EMAILER ============ */
+function buildEmailer(){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
+    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
+    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
+    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
+  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F4EEE6`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+
+  const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
+  const GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)",INK="#191919",L="assets/logos/";
+
+  const header=`<div style="background:${GRAD};padding:28px 40px"><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="height:28px;width:auto;display:block"></div>`;
+  const hero=`<div style="padding:36px 40px">
+      <div style="font-family:${MONO};font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">Product update</div>
+      <h1 style="font-family:${DISP};font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.02em;margin:0 0 16px">Win the quote before you leave the driveway</h1>
+      <p style="font-family:${BODY};font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements — so every homeowner sees the premium option.</p>
+      <a href="#" style="display:inline-block;background:#FD5000;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:13px 26px;border-radius:8px">See what's new →</a></div>`;
+  const featureRow=`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">Tiered packages, automatically</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">Every quote presents three tiers — no judgment call for the rep.</div></div></div>`;
+  const statBanner=`<div style="padding:18px 40px"><div style="background:#FFE7DC;border-radius:12px;padding:22px 24px;display:flex;align-items:center;gap:18px"><span style="font-family:${DISP};font-weight:800;font-size:40px;letter-spacing:-.03em;color:#FD5000;line-height:1">42%</span><span style="font-family:${BODY};font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job — full scope captured the first time.</span></div></div>`;
+  const footer=`<div style="background:#FBF2EA;border-top:1px solid #F0EAE1;padding:28px 40px"><img src="${L}zuper-horizontal.png" alt="Zuper" style="height:20px;width:auto;display:block;margin-bottom:14px"><p style="font-family:${BODY};font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 12px">The AI operating system for field service — from first call to final invoice.</p><div style="font-family:${MONO};font-size:11px;color:#7A7268">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration:underline">Unsubscribe</span></div></div>`;
+
+  const blk=(t,inner)=>`<div style="margin-bottom:22px"><div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:8px">${t}</div><div style="width:600px;max-width:100%;background:#fff;border:1px solid #E7E0D6;border-radius:10px;overflow:hidden">${inner}</div></div>`;
+
+  const fullEmail=`<div style="width:600px;max-width:100%;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px rgba(25,25,25,.12)">
+    ${header}
+    <div style="padding:8px 0 0">${hero}</div>
+    <div style="padding:14px 0 8px">${[["Tiered packages, automatically","Every quote presents three tiers — no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect — fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">${f[0]}</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div></div>`).join("")}</div>
+    ${statBanner}
+    ${footer}
+  </div>`;
+
+  stage.innerHTML=`
+  <header class="sys-hero">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Lifecycle · email system</p>
+      <h1>Emailer</h1>
+      <p class="lede">A 600px branded email — orange header lockup, one headline, body, a CTA, feature rows, a stat banner and a footer. Built from a small set of reusable blocks, all inline‑styled so they survive every email client.</p>
+      <div class="chips">
+        <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
+        <span class="chip">600px · inline styles</span>
+        <span class="chip">Aa Plus Jakarta + Inter</span>
+        <span class="chip">client‑safe</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Anatomy</p><h2 class="sec">Building blocks</h2>
+    <p class="sec-note">Mix and match these blocks to build any announcement. Each is a self‑contained, inline‑styled section sized to the 600px email width.</p>
+    <div class="adscroll" style="padding-top:6px">
+      ${blk("01 · Header lockup",header)}
+      ${blk("02 · Hero — eyebrow, headline, body, CTA",hero)}
+      ${blk("03 · Feature row",featureRow)}
+      ${blk("04 · Stat banner",statBanner)}
+      ${blk("05 · Footer",footer)}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Assembled</p><h2 class="sec">Email announcement</h2>
+    <p class="sec-note">The blocks stacked into a complete, ready‑to‑send announcement.</p>
+    <div class="adscroll"><div style="padding:6px 2px 4px">${fullEmail}</div></div>
+  </div></section>
+  <div style="height:60px"></div>`;
   window.scrollTo(0,0);
 }
 
@@ -2312,12 +2484,17 @@ function buildOverview(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const cards=[
+    ["use","cpu","How to use this","START HERE","Open the published Zuper Design System in Claude Design, then pick it on any project — everything comes out on‑brand."],
     ["deck","monitor","Deck","POWERPOINT","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
     ["website","globe","Website DLS","WEB","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
     ["one-pager","doc","Case study","1‑PAGER","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
-    ["humans","users","Mini humans","BRAND","Small animated workers that add warmth in a corner — the product always stays the hero."]
+    ["humans","users","Mini humans","BRAND","Small animated workers that add warmth in a corner — the product always stays the hero."],
+    ["social","megaphone","Social &amp; ads","CAMPAIGN","Social creatives at real export sizes and a full set of display ads at IAB sizes — one orange gradient and a single CTA."],
+    ["emailer","chat","Emailer","LIFECYCLE","A 600px branded email built from reusable blocks — header lockup, hero, feature rows, stat banner and footer. Client‑safe."],
+    ["email-sig","mail","Email signature","TOOLS","Build your own on‑brand Outlook signature in seconds — fill in your details, pick an optional banner, and copy it straight in."],
+    ["assets","download","Brand assets","DOWNLOADS","The official logo library (SVG + PNG) plus Zoom backgrounds and LinkedIn covers — copy‑free, just download."]
   ].map((c,i)=>`<button class="ov-card" onclick="setActive('${c[0]}')">
-      <div class="top"><span class="ic">${icon(c[1],22)}</span><span class="num">0${i+2}</span></div>
+      <div class="top"><span class="ic">${icon(c[1],22)}</span><span class="num">${i<9?"0":""}${i+1}</span></div>
       <div class="tag">${c[3]}</div><h3>${c[2]}</h3><p>${c[4]}</p>
       <span class="go">Open ${c[2]} →</span></button>`).join("");
 
@@ -2327,7 +2504,7 @@ function buildOverview(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Design Language Systems · for Claude Design</p>
       <h1>Brand‑perfect, every time</h1>
-      <p class="lede">Five design systems — decks, the marketing site, case studies and our signature mini humans — already published in <b>Claude Design</b>. Connect once, pick a system, and start prompting.</p>
+      <p class="lede">One home for everything on‑brand at Zuper — decks, the marketing site, case studies, mini humans, social &amp; ads, the emailer and a signature builder. The systems are published in <b>Claude Design</b>; the tools run right here. Pick a tile to start.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>One orange · #FD5000</span>
         <span class="chip">Aa Plus Jakarta + Inter</span>
@@ -2339,25 +2516,15 @@ function buildOverview(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">The systems</p><h2 class="sec">Pick a system to open</h2>
-    <p class="sec-note">Five connected systems sharing one brand, plus a library of ready‑to‑use brand assets. New here? Start with <b style="color:var(--text-primary)">How to use this</b>.</p>
-    <button class="ov-feat" onclick="setActive('use')">
-      <span class="ic">${icon("cpu",24)}</span>
-      <span class="gx"><span class="tag" style="display:block">Start here · 01</span><h3>How to use this</h3><p>Open the published <b>Zuper Design System</b> in Claude Design, then pick it on any project — everything comes out on‑brand.</p></span>
-      <span class="go">Open →</span>
-    </button>
+    <p class="sec-note">Everything you need to design Zuper on‑brand — five connected design systems plus the campaign, email and brand‑asset tools. New here? Start with <b style="color:var(--text-primary)">How to use this</b>.</p>
     <div class="ov-grid">${cards}</div>
-    <button class="ov-feat" style="margin-top:18px;margin-bottom:0" onclick="setActive('assets')">
-      <span class="ic">${icon("download",24)}</span>
-      <span class="gx"><span class="tag" style="display:block">Downloads · 06</span><h3>Brand assets</h3><p>The official logo library (SVG + PNG) plus Zoom backgrounds and LinkedIn covers — copy‑free, just download.</p></span>
-      <span class="go">Open →</span>
-    </button>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
 }
 
 /* ============ NAV ============ */
-const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
+const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
 function setActive(id){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
@@ -2366,6 +2533,8 @@ function setActive(id){
   else if(id==="one-pager")buildOnePager();
   else if(id==="use")buildUse();
   else if(id==="email-sig")buildEmailSig();
+  else if(id==="social")buildSocial();
+  else if(id==="emailer")buildEmailer();
   else if(id==="humans")buildHumans();
   else if(id==="website")buildWebsite(SYS.find(s=>s.id===id));
   else buildSystem(SYS.find(s=>s.id===id));
@@ -2383,7 +2552,7 @@ function revealSections(){
   _io=new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");_io.unobserve(e.target);}});},{rootMargin:"0px 0px -7% 0px"});
   secs.forEach(s=>_io.observe(s));
 }
-const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc","email-sig":"mail",assets:"download"};
+const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",use:"cpu","one-pager":"doc",social:"megaphone",emailer:"chat","email-sig":"mail",assets:"download"};
 nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
   `<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`).join("");
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
