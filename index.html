@@ -710,6 +710,11 @@ main{flex:1;min-width:0}
 .cd-open .ar{font-size:16px;opacity:.9}
 .cd-sub{margin-top:14px;font-size:12.5px;color:var(--text-tertiary)}
 .cd-sub code{font-family:'Geist Mono',monospace;color:var(--text-secondary)}
+.cd-fallback{margin-top:28px;padding:20px 22px;border:1px dashed var(--chip-line,#E7E0D6);border-radius:13px;background:rgba(246,241,235,.5)}
+.cd-fallback .fb-h{font:700 13px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-primary);margin-bottom:8px}
+.cd-fallback p{font-size:13px;line-height:1.6;color:var(--text-secondary);margin:0}
+.cd-fallback a.repo-link{display:inline-flex;align-items:center;gap:9px;margin-top:14px;font:600 13.5px/1 'Geist Mono',monospace;color:var(--brand-default);text-decoration:none;background:#fff;border:1px solid var(--chip-line,#E7E0D6);border-radius:9px;padding:11px 15px;transition:border-color .15s ease,transform .15s ease}
+.cd-fallback a.repo-link:hover{border-color:var(--brand-default);transform:translateY(-1px)}
 
 section.block{padding:54px 0}
 section.block+section.block{border-top:1px solid var(--border-subtle)}
@@ -1131,7 +1136,9 @@ const ICON={
  scale:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
  copy:'<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
  download:'<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
- image:'<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/>'
+ image:'<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/>',
+ github:'<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6A4.6 4.6 0 0 0 18.7 6a4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.5 5.4 2.8 5.4 2.8A4.3 4.3 0 0 0 5.3 6 4.6 4.6 0 0 0 4 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
+ "git-branch":'<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>'
 };
 function icon(n,s,sw){return `<svg viewBox="0 0 24 24" width="${s||22}" height="${s||22}" fill="none" stroke="currentColor" stroke-width="${sw||1.7}" stroke-linecap="round" stroke-linejoin="round" style="display:block">${ICON[n]||''}</svg>`;}
 
@@ -2016,6 +2023,11 @@ function buildUse(){
     <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting — decks, web pages, case studies, all on‑brand.</p>
     <a class="cd-open" href="https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b?via=share" target="_blank" rel="noopener">${icon("zap",18)} Open the Zuper Design System in Claude Design <span class="ar">↗</span></a>
     <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on your project.</p>
+    <div class="cd-fallback">
+      <p class="fb-h">${icon("git-branch",15)} Claude Design link not working?</p>
+      <p>Point Claude at the repo instead. Paste the link below into Claude and ask it to build your deck or page — it'll read the design language straight from the source and keep everything on‑brand.</p>
+      <a class="repo-link" href="https://github.com/karthiseyon/zuper-dls" target="_blank" rel="noopener">${icon("github",16)} github.com/karthiseyon/zuper-dls <span class="ar">↗</span></a>
+    </div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
