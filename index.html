@@ -2453,11 +2453,12 @@ function buildAssets(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Downloads</p>
       <h1>Brand assets</h1>
-      <p class="lede">The official Zuper logo set and ready‑made social templates. <b>Download</b> any logo as SVG or PNG, plus Zoom and LinkedIn templates — all on‑brand and ready to use.</p>
+      <p class="lede">Grab‑and‑go brand files — no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers and a branded Word document. <b>Download</b> and you're on‑brand.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip">3 logo lockups · 4 variants</span>
         <span class="chip">SVG + PNG</span>
         <span class="chip">Zoom &amp; LinkedIn templates</span>
+        <span class="chip">Word .docx</span>
       </div>
     </div>
   </header>
@@ -2478,6 +2479,27 @@ function buildAssets(){
     <p class="eyebrow">03 — LinkedIn covers</p><h2 class="sec">LinkedIn personal cover photos</h2>
     <p class="sec-note">Personal profile banners at LinkedIn's 1584 × 396 cover size.</p>
     <div class="la-soc">${linkedin}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">04 — Document</p><h2 class="sec">Word document template</h2>
+    <p class="sec-note">A branded <b style="color:var(--text-primary)">.docx</b> with the Zuper logo header, orange rule, <i>Page X of Y</i> and a confidentiality footer — Aptos throughout. <b style="color:var(--text-primary)">Download</b> and start typing.</p>
+    <div class="la-soc">
+      <div class="s-card">
+        <div class="s-prev" style="background:#ECEAE6;padding:26px 26px 0">
+          <div style="width:100%;background:#fff;border-radius:6px 6px 0 0;box-shadow:0 8px 22px rgba(20,4,3,.14);padding:18px 18px 22px;font-family:'Inter',sans-serif">
+            <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #FD5000;padding-bottom:9px">${logo("dark",13)}<span style="font:700 8px/1 'Inter',sans-serif;color:#191919">Field Service Operations Brief</span></div>
+            <div style="height:7px;width:34%;background:#FD5000;border-radius:2px;margin:13px 0 9px"></div>
+            <div style="height:9px;width:78%;background:#191919;border-radius:2px;margin-bottom:11px"></div>
+            <div style="height:5px;width:96%;background:#E2DCD3;border-radius:2px;margin-bottom:6px"></div>
+            <div style="height:5px;width:90%;background:#E2DCD3;border-radius:2px;margin-bottom:6px"></div>
+            <div style="height:5px;width:64%;background:#E2DCD3;border-radius:2px"></div>
+          </div>
+        </div>
+        <div class="s-meta"><div><div class="nm">Zuper document template</div><div class="dim">.docx · Aptos · letter</div></div>
+          <div class="s-btns"><button class="la-dl dl-btn" data-href="assets/zuper-document-template.docx" data-name="Zuper-Document.docx">${dn}Download</button></div>
+        </div></div>
+    </div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -2503,7 +2525,7 @@ function buildOverview(){
     ["social","megaphone","Social &amp; ads","CAMPAIGN","Social creatives at real export sizes and a full set of display ads at IAB sizes — one orange gradient and a single CTA."],
     ["emailer","chat","Emailer","LIFECYCLE","A 600px branded email built from reusable blocks — header lockup, hero, feature rows, stat banner and footer. Client‑safe."],
     ["email-sig","mail","Email signature","TOOLS","Build your own on‑brand Outlook signature in seconds — fill in your details, pick an optional banner, and copy it straight in."],
-    ["assets","download","Brand assets","DOWNLOADS","The official logo library (SVG + PNG) plus Zoom backgrounds and LinkedIn covers — copy‑free, just download."]
+    ["assets","download","Brand assets","DOWNLOADS","Grab‑and‑go files — the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc. Just download."]
   ].map((c,i)=>`<button class="ov-card" onclick="setActive('${c[0]}')">
       <div class="top"><span class="ic">${icon(c[1],22)}</span><span class="num">${i<9?"0":""}${i+1}</span></div>
       <div class="tag">${c[3]}</div><h3>${c[2]}</h3><p>${c[4]}</p>
