@@ -544,8 +544,8 @@
   --body:'Inter',system-ui,sans-serif;
   --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
 }
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);background:var(--canvas);color:#1B1919;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:var(--body);background:var(--canvas);color:#1B1919;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100vw}
 
 /* ---------- App shell ---------- */
 .app{display:flex;min-height:100vh}
@@ -2140,7 +2140,7 @@ function buildEmailSig(){
   // preview/picker use relative paths (load from same origin as this page); copy rewrites them to absolute raw URLs
   const RAW="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/";
   const toAbs=html=>html.replace(/(src|href)="assets\//g,'$1="'+RAW+'assets/');
-  const esImg=`<img src="assets/logos/zuper-vertical.png" alt="Zuper" width="112" height="112" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
+  const esImg=`<img src="assets/email/zuper-vertical-tight.png" alt="Zuper" width="100" height="69" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
   const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense — Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper — The AI Operating System for the Skilled Trades"}};
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function sigHTML(d){
