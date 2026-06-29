@@ -2660,7 +2660,7 @@ function buildIcons(){
     .map(s=>`<div style="display:flex;flex-direction:column;align-items:center;gap:10px"><div style="height:40px;display:flex;align-items:center;color:#191919">${icon("zap",s[0],1.7)}</div><div style="font-family:${MONO};font-size:11px;color:#7A7268;letter-spacing:.02em">${s[1]}</div></div>`).join("");
 
   /* full named, copy-ready gallery — colour via parent currentColor */
-  /* search synonyms — Zuper trades & FSM terms → matching Phosphor glyphs */
+  /* search synonyms — Zuper trades & FSM terms → matching glyph names */
   const SYN={roof:["house","house-line"],roofing:["house","house-line"],hvac:["snowflake","fan","thermometer-simple","wind"],ac:["snowflake","fan","wind"],cooling:["snowflake","fan"],heating:["fire","flame","thermometer-simple"],plumbing:["wrench","drop","pipe","faucet"],pipe:["pipe","wrench"],water:["drop","faucet"],electric:["plug","lightning"],electrical:["plug","lightning"],power:["plug","lightning","battery-high"],solar:["solar-panel","sun"],pest:["bug","bug-beetle"],landscaping:["tree","plant","leaf","flower-lotus"],lawn:["tree","plant","leaf"],garden:["plant","flower-lotus","tree"],security:["security-camera","shield-check","lock","siren"],alarm:["siren","bell-ringing"],cleaning:["broom","spray-bottle"],appliance:["washing-machine","oven"],telecom:["broadcast","cell-signal-high","wifi-high"],internet:["wifi-high","globe"],invoice:["invoice","receipt","file-text"],quote:["file-text","receipt"],estimate:["file-text","receipt"],payment:["credit-card","currency-dollar","money","bank"],pay:["credit-card","currency-dollar","money"],schedule:["calendar","calendar-check","calendar-plus","clock"],booking:["calendar-check","clock"],dispatch:["truck","van","navigation-arrow","map-pin"],route:["path","navigation-arrow","map-trifold"],technician:["user-gear","wrench","hard-hat"],tech:["user-gear","wrench"],job:["clipboard-text","wrench","check-square"],task:["check-square","list-checks","clipboard-text"],customer:["user","users","address-book"],contractor:["hard-hat","wrench","toolbox"],tools:["toolbox","wrench","hammer","screwdriver"],warranty:["shield-check","certificate"],report:["chart-bar","chart-line","file-text"],analytics:["chart-bar","chart-line","gauge"],location:["map-pin","navigation-arrow"],ai:["robot","sparkle","cpu"],mobile:["device-mobile","device-mobile-camera"],signature:["signature","scribble-loop"]};
 
   stage.innerHTML=`
@@ -2669,12 +2669,12 @@ function buildIcons(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Iconography</p>
       <h1>One icon set</h1>
-      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b> — one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. Browse the <b>${names.length}-glyph Zuper set</b> or search every Phosphor icon in the studio below.</p>
+      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b> — one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. Search, customise and export any icon in the studio below — every one on‑brand.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>single‑weight outline</span>
         <span class="chip">currentColor</span>
         <span class="chip">256px grid</span>
-        <span class="chip">${names.length} glyphs</span>
+        <span class="chip">searchable library</span>
       </div>
     </div>
   </header>
@@ -2689,7 +2689,7 @@ function buildIcons(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">02 — Studio</p><h2 class="sec">Icon studio</h2>
-    <p class="sec-note">Browse Zuper's set or <b>search every Phosphor glyph</b> — try <i>roof, invoice, truck, solar</i>. Pick one, set the colour, size and background, then copy or download it ready to drop in — everything comes out on‑brand.</p>
+    <p class="sec-note"><b>Search the full icon library</b> — try <i>roof, invoice, truck, solar</i>. Pick one, set the colour and size, then copy or download it ready to drop in — everything comes out on‑brand.</p>
     <div class="icst">
       <div class="icst-side">
         <div class="icst-stage" id="icstStage"></div>
@@ -2718,7 +2718,7 @@ function buildIcons(){
     </div>
   </div></section>
   <div style="height:60px"></div>`;
-  /* ---- icon studio: search (Zuper set + full Phosphor) → customise → export ---- */
+  /* ---- icon studio: search full library → customise → export ---- */
   (function(){
     const $=id=>document.getElementById(id);
     const LOCAL=Object.keys(ICON);
