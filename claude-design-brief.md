@@ -65,6 +65,22 @@ Co‑branded customer story: orange‑gradient cover with **Zuper + client locku
 ## 8b. Imagery — mini humans (not stock photos)
 The **product is the hero** — lead with real Zuper screens, never generic stock photography. Add warmth with **mini humans**: small, animated pixel‑render workers (techs, crews, customers) that sit in a corner beside a headline or product screen. Keep them **small** (corner accent, thumb‑sized) and **sparing** (2–3 per deck or page, never repeated on one screen). If you notice the person before the message, scale it down — big reads as stock photography, small reads as Zuper.
 
+## 8c. Social & display ads
+On‑brand banners across the standard IAB sizes — **leaderboard 728×90 · billboard 970×250 · medium rectangle 300×250 · large rectangle 336×280 · half page 300×600 · skyscraper 160×600 · mobile 320×100**.
+- Two looks: the **orange gradient** ground (`linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)`, white text) and the **white** card (1px `#E7E0D6` border, an 8–10px orange gradient bar across the top, orange eyebrow).
+- Plus Jakarta Sans 800 headline, tight tracking (‑.02 to ‑.04em). One CTA per unit — on orange use a **black** button ("Book a demo"), on white use the **orange** button.
+- White logo lockup on orange grounds, dark logo on white. Headlines stay short and benefit‑led ("Win 1 in 3 quotes on‑site", "First call to invoice").
+
+## 8d. Emailer
+A **600px** branded campaign email, built from reusable **inline‑styled** blocks so it survives every email client:
+`01 header lockup` (orange‑gradient band + white horizontal logo) → `02 hero` (Geist Mono eyebrow → Plus Jakarta 800 headline → Inter body → orange CTA) → `03 feature rows` (hairline `#E7E0D6` dividers) → `04 stat banner` (peach `#FFE7DC` card, big orange number) → `05 footer` (warm `#FBF2EA`, dark logo, mono legal + unsubscribe).
+- Everything inline‑styled (no `<style>` block, no external CSS). Aptos is **not** used here — web stack (Plus Jakarta + Inter + Geist Mono).
+
+## 8e. Email signature
+An Outlook/Gmail‑safe signature, table‑based with **inline styles and Arial/Helvetica** fallbacks (no web fonts in mail clients):
+- Logomark, then a **2px orange left border** rule, then: **name** (17px bold ink) · **title** (13px bold orange) · **email + phone** (12px gray, `|` separators) · optional orange **"Book a demo →"** button.
+- Optional banner image below (`380×95`, rounded). Keep it to logo + rule + text + one optional CTA — never a full marketing layout.
+
 ## 9. Voice
 Direct · practical · confident · human · no jargon. Speak to the person in the field. Active voice, real numbers over adjectives.
 

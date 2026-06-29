@@ -11,15 +11,18 @@ Open `index.html` locally, or visit the deployed site. Every push to `main` auto
 ---
 
 ## What's inside
-A sidebar switches between an overview and five systems:
+A sidebar switches between an overview and ten systems:
 
-1. **Overview** — the cover: one brand, five systems, with quick links into each.
+1. **Overview** — the cover: one brand, ten systems, with quick links into each.
 2. **How to use this** — one button opens the published **Zuper Design System** in **Claude Design**; then pick **Zuper Design System** from the Design system dropdown on any project. *(The repo itself is the source the system was built from.)*
 3. **Deck** (PowerPoint) — one contrast rule (orange cover → white interiors, or vice‑versa; **dark = Zuper Sense only**), foundations, atoms, and a library of 16:9 slide layouts.
 4. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
 5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
 6. **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
-7. **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**.
+7. **Social & ads** — on-brand social and paid layouts (Trades and Zuper Sense looks) showing the orange / dark contrast rules in promo formats.
+8. **Emailer** — campaign email layouts (Trades and Sense) sized for inboxes, matching the website type and colour system.
+9. **Email signature** — a live, editable signature builder (name, title, email, phone, CTA) with copy-ready output and a tight Zuper logo.
+10. **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**, plus a downloadable Word document template and the full design-system `.zip`.
 
 ## Brand at a glance
 - **Color:** brand orange `#FD5000` (one primary action per view) · ink `#191919` · warm + high‑contrast neutrals · charcoal `#282828` feature sections · Zuper Sense dark `#09090B`.
@@ -30,4 +33,4 @@ A sidebar switches between an overview and five systems:
 ## Use with Claude Design
 Open the **How to use this** page in the styleguide for the full walkthrough, or see `claude-design-brief.md` for the condensed spec to paste/upload.
 
-> `index.html` (~190 KB) holds all the markup, CSS and logic; fonts, GIFs and images live in `assets/` and load by relative path. Keep `assets/` next to `index.html`.
+> `index.html` (~250 KB) holds all the markup, CSS and logic; fonts, GIFs and images live in `assets/` and load by relative path. Keep `assets/` next to `index.html`.
