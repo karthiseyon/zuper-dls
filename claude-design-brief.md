@@ -2,7 +2,7 @@
 
 Paste this whole file into Claude Design (Set up design system → Create here → upload), or add it as Project knowledge, before asking Claude to design or build any Zuper UI, deck, or case study. It is the condensed, machine‑readable version of the full styleguide.
 
-> Full styleguide: **https://github.com/karthiseyon/zuper-dls** (open `index.html` or the deployed site)  ·  One vivid orange brand, warm + high‑contrast, line icons only.
+> Full styleguide: **https://github.com/karthiseyon/zuper-dls** (open `index.html` or the deployed site)  ·  One vivid orange brand, warm + high‑contrast, single‑weight outline icons.
 
 ---
 
@@ -40,8 +40,16 @@ Paste this whole file into Claude Design (Set up design system → Create here �
 - **Signature gradient:** `linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)`
 
 ## 4. Icons — IMPORTANT
-**Single‑weight LINE icons only.** `stroke: currentColor`, stroke‑width ~1.7, `fill:none`, rounded caps/joins, 24px grid.
-**Never** use filled icons. **Never** use emoji. (Typographic glyphs like → ✓ · are fine.)
+**Use a single‑weight outline icon set.** Clean outline glyphs on a 256px grid, coloured with `currentColor` so they inherit the surrounding text colour (ink on light, white on dark, orange only as a deliberate accent).
+- **One weight, one library:** the same outline set everywhere — UI, slides, ads, email. **Never** mix weights or fills, a second icon set, emoji or clip‑art. (Typographic glyphs like → ✓ · are still fine.)
+- Use glyphs **as‑drawn** — don't re‑stroke, add fills/tints or shadows. Render at 16–32px on whole pixels.
+The styleguide ships ~150 named glyphs (home, search, check, x, plus, arrow, chevrons, copy, download, upload, link, refresh, filter, list, grid, settings, sliders, edit, trash, eye, lock, bell, info, warning, help, star, heart, tag, pin, clock, calendar, play/pause, doc, folder, clipboard, image, camera, chart/chart‑line/chart‑pie, database, cloud, mail, chat, send, phone, megaphone, share, users, user, card, invoice, receipt, dollar, briefcase, building, truck, wrench, toolbox, hammer, screwdriver, hard‑hat, gauge, target, package, map, cpu, robot, sparkle, zap, monitor, shield, github, git‑branch, code, sun, droplet, leaf, qr, barcode, printer, video, mic, headset …). See the **Iconography** page in the styleguide for the full gallery, names and size ladder.
+
+## 4b. Logo usage
+- **Variants:** Logomark / Horizontal / Vertical, each in Full‑colour / Gray / White / Inverted (SVG + PNG). Full‑colour on light grounds; **white** on charcoal, dark UI or the orange gradient. Never put the full‑colour (dark) logo on a dark or busy ground.
+- **Clear space:** keep padding on all sides ≥ **x**, where x = the height of the Zuper mark — no text, edges or other logos inside that zone.
+- **Minimum size:** horizontal lockup ≥ **100px** (web) / **10mm** (print); logomark ≥ **24px**. Below that, use the logomark alone.
+- **Misuse — never:** stretch/distort, rotate, recolour, add shadows/effects/outlines, reduce opacity/ghost, or place on a low‑contrast or busy background. The mark is fixed artwork — use the supplied files as‑is.
 
 ## 5. Components
 - **Buttons** — base `.cta-btn`: 14px / 600 / radius 8 / 2px border / padding 10×22.
@@ -72,9 +80,20 @@ On‑brand banners across the standard IAB sizes — **leaderboard 728×90 · bi
 - White logo lockup on orange grounds, dark logo on white. Headlines stay short and benefit‑led ("Win 1 in 3 quotes on‑site", "First call to invoice").
 
 ## 8d. Emailer
-A **600px** branded campaign email, built from reusable **inline‑styled** blocks so it survives every email client:
-`01 header lockup` (orange‑gradient band + white horizontal logo) → `02 hero` (Geist Mono eyebrow → Plus Jakarta 800 headline → Inter body → orange CTA) → `03 feature rows` (hairline `#E7E0D6` dividers) → `04 stat banner` (peach `#FFE7DC` card, big orange number) → `05 footer` (warm `#FBF2EA`, dark logo, mono legal + unsubscribe).
-- Everything inline‑styled (no `<style>` block, no external CSS). Aptos is **not** used here — web stack (Plus Jakarta + Inter + Geist Mono).
+A **600px** branded campaign email, built from a kit of reusable **inline‑styled** blocks so it survives every email client. Mix and match:
+- **Header lockup** — orange‑gradient band + white horizontal logo
+- **Hero** — Geist Mono eyebrow → Plus Jakarta 800 headline → Inter body → orange CTA
+- **Product screen** — a clean **HTML product mock** (e.g. an Intelligent Quoting screen with good/better/best tiers + a margin readout), framed in faux browser chrome (peach title bar + traffic‑light dots). **Never** an `<img>` of a background or stock photo — always build the screen in markup so it reads as the real product.
+- **Feature row** — title + body, separated by hairline `#E7E0D6` dividers
+- **Two‑up cards** — side‑by‑side `#FBF7F2` cards with a mono eyebrow
+- **Checklist** — orange `✓` glyphs (typographic, email‑safe), one item per line
+- **Stat banner** — peach `#FFE7DC` card, big orange number + supporting line
+- **Testimonial** — `#FBF7F2` card, 3px orange left rule, big orange quote mark, attribution
+- **CTA banner** — full orange‑gradient band, white headline, **black** button
+- **Button** — standalone centered orange CTA
+- **Divider** — hairline rule with breathing room
+- **Footer** — warm `#FBF2EA`, dark logo, social links, mono legal + unsubscribe / manage‑preferences
+- Everything inline‑styled (no `<style>` block, no external CSS), peach/warm neutrals (`#FBF7F2 #FFE7DC #FBF2EA`), hairlines `#E7E0D6`. Use typographic glyphs (`✓ → "`) rather than SVG icons — they render everywhere. Aptos is **not** used here — web stack (Plus Jakarta + Inter + Geist Mono).
 
 ## 8e. Email signature
 An Outlook/Gmail‑safe signature, table‑based with **inline styles and Arial/Helvetica** fallbacks (no web fonts in mail clients):
@@ -95,4 +114,4 @@ Direct · practical · confident · human · no jargon. Speak to the person in t
 
 ## Ready‑to‑use prompt
 > "Use the **Zuper DLS** (brief above). Build a [landing page / dashboard / slide / case study] for [topic].
-> Brand orange `#FD5000` (one primary action), Plus Jakarta Sans headings + Inter body + Geist Mono uppercase eyebrows, **single‑weight line icons only (no filled icons, no emoji)**, 1200px 12‑col grid, white sections with charcoal `#282828` feature blocks and an orange footer. Keep it on‑brand and accessible."
+> Brand orange `#FD5000` (one primary action), Plus Jakarta Sans headings + Inter body + Geist Mono uppercase eyebrows, **single‑weight outline icons, currentColor, no emoji**, 1200px 12‑col grid, white sections with charcoal `#282828` feature blocks and an orange footer. Keep it on‑brand and accessible."
