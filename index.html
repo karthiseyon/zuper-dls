@@ -1038,23 +1038,38 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 }
 :focus-visible{outline:2px solid var(--ui-orange);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-/* ===== iconography page — colour tabs + gallery ===== */
-.ic-tabs{display:inline-flex;gap:4px;background:#F1ECE4;border:1px solid #E7E0D6;border-radius:13px;padding:4px;margin-bottom:20px}
-.ic-tabs button{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;border:0;background:none;color:#7A7268;padding:8px 15px;border-radius:9px;cursor:pointer;display:flex;align-items:center;gap:8px}
-.ic-tabs button .dot{width:13px;height:13px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
-.ic-tabs button.on{background:#fff;color:#191919;box-shadow:0 1px 3px rgba(20,4,3,.12)}
-.ic-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px}
-.ic-tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:13px;padding:26px 8px 14px;border:1px solid #E7E0D6;border-radius:14px;background:#fff;color:#191919;transition:background .16s,color .16s,border-color .16s}
-.ic-tile .ic-glyph{display:flex;align-items:center;justify-content:center;height:34px}
-.ic-tile .ic-name{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;color:#7A7268;background:none;border:0;padding:0;cursor:pointer;letter-spacing:.02em;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ic-tile .icon-dl{position:absolute;top:7px;right:7px;color:#C3BBAF;background:none;border:0;padding:3px;cursor:pointer;opacity:0;line-height:0;transition:opacity .15s,color .15s}
-.ic-tile:hover .icon-dl{opacity:1}
-.ic-tile .icon-dl:hover{color:#FD5000}
-.ic-gallery.col-white .ic-tile{background:#222226;border-color:#36363d;color:#fff}
-.ic-gallery.col-white .ic-name{color:rgba(255,255,255,.55)}
-.ic-gallery.col-white .icon-dl{color:rgba(255,255,255,.45)}
-.ic-gallery.col-white .icon-dl:hover{color:#FF8B5A}
-.ic-gallery.col-orange .ic-tile{color:#FD5000}
+/* ===== icon studio ===== */
+.icst{display:grid;grid-template-columns:316px 1fr;gap:26px;align-items:start;padding-top:8px}
+@media(max-width:780px){.icst{grid-template-columns:1fr}}
+.icst-side{position:sticky;top:18px;display:flex;flex-direction:column;gap:15px}
+.icst-stage{height:226px;border-radius:16px;display:flex;align-items:center;justify-content:center;border:1px solid #E7E0D6;overflow:hidden;color:#191919;transition:background .15s}
+.icst-name{display:flex;justify-content:space-between;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#191919}
+.icst-name .dim{color:#9a9189}
+.icst-ctl{display:flex;align-items:center;gap:12px}
+.icst-lbl{font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;width:76px;flex:0 0 auto}
+.icst-sws{display:flex;gap:8px;align-items:center}
+.icst-sw{width:24px;height:24px;border-radius:7px;border:1px solid #E7E0D6;cursor:pointer;display:inline-block;padding:0}
+.icst-sw.on{outline:2px solid #FD5000;outline-offset:1px}
+.icst-hexwrap{display:flex;align-items:center;gap:8px;flex:1}
+.icst-chip{position:relative;width:26px;height:26px;border-radius:7px;border:1px solid #E7E0D6;cursor:pointer;flex:0 0 auto;overflow:hidden}
+.icst-chip input{position:absolute;inset:-6px;opacity:0;cursor:pointer}
+.icst-hex{font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;text-transform:uppercase;padding:7px 10px;border:1px solid #E7E0D6;border-radius:8px;width:100%;box-sizing:border-box;color:#191919;background:#fff}
+.icst-hex:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-ctl input[type=range]{flex:1;accent-color:#FD5000}
+.icst-num{width:56px;flex:0 0 auto;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#191919;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px;text-align:center;background:#fff}
+.icst-num:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-exp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:2px}
+.icst-btn{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.03em;border:1px solid #E7E0D6;background:#fff;color:#191919;border-radius:9px;padding:10px 8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.icst-btn:hover{background:#FD5000;border-color:#FD5000;color:#fff}
+.icst-btn.done{background:#1E854B;color:#fff;border-color:#1E854B}
+.icst-pickwrap{display:flex;flex-direction:column;gap:11px}
+.icst-search{font-family:'Inter',system-ui,sans-serif;font-size:14px;padding:12px 14px;border:1px solid #E7E0D6;border-radius:10px;background:#fff;color:#191919;width:100%;box-sizing:border-box}
+.icst-search:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-meta{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;color:#7A7268;letter-spacing:.02em}
+.icst-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:8px;max-height:486px;overflow:auto;padding:6px;border:1px solid #F0EAE1;border-radius:12px;background:#fff}
+.icst-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:9px;cursor:pointer;color:#191919;background:none}
+.icst-cell:hover{background:#F6F1EB}
+.icst-cell.on{border-color:#FD5000;background:#FFF6F1}
 </style>
 
 <div class="app">
@@ -1369,7 +1384,8 @@ const ICON={
  "presentation":'<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"/>',
  "washing-machine":'<path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208ZM128,64a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64Zm0,112a48,48,0,1,1,48-48A48.05,48.05,0,0,1,128,176ZM200,68a12,12,0,1,1-12-12A12,12,0,0,1,200,68Zm-74.34,49.66-16,16a8,8,0,0,1-11.32-11.32l16-16a8,8,0,0,1,11.32,11.32Zm32-3.32a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32l32-32A8,8,0,0,1,157.66,114.34Z"/>',
  "flower":'<path d="M245.83,121.63a15.53,15.53,0,0,0-9.52-7.33,73.51,73.51,0,0,0-22.17-2.22c4-19.85,1-35.55-2.06-44.86a16.15,16.15,0,0,0-18.79-10.88,85.53,85.53,0,0,0-28.55,12.12,94.58,94.58,0,0,0-27.11-33.25,16.05,16.05,0,0,0-19.26,0A94.48,94.48,0,0,0,91.26,68.46,85.53,85.53,0,0,0,62.71,56.34,16.15,16.15,0,0,0,43.92,67.22c-3,9.31-6,25-2.06,44.86a73.51,73.51,0,0,0-22.17,2.22,15.53,15.53,0,0,0-9.52,7.33,16,16,0,0,0-1.6,12.27c3.39,12.57,13.8,36.48,45.33,55.32S113.13,208,128.05,208s42.67,0,74-18.78c31.53-18.84,41.94-42.75,45.33-55.32A16,16,0,0,0,245.83,121.63ZM59.14,72.14a.2.2,0,0,1,.23-.15A70.43,70.43,0,0,1,85.18,83.66,118.65,118.65,0,0,0,80,119.17c0,18.74,3.77,34,9.11,46.28A123.59,123.59,0,0,1,69.57,140C51.55,108.62,55.3,84,59.14,72.14Zm3,103.35C35.47,159.57,26.82,140.05,24,129.7a59.82,59.82,0,0,1,22.5-1.17,129.08,129.08,0,0,0,9.15,19.41,142.28,142.28,0,0,0,34,39.56A114.92,114.92,0,0,1,62.1,175.49ZM128,190.4c-9.33-6.94-32-28.23-32-71.23C96,76.7,118.38,55.24,128,48c9.62,7.26,32,28.72,32,71.19C160,162.17,137.33,183.46,128,190.4ZM170.82,83.66A70.43,70.43,0,0,1,196.63,72a.2.2,0,0,1,.23.15C200.7,84,204.45,108.62,186.43,140a123.32,123.32,0,0,1-19.54,25.48c5.34-12.26,9.11-27.54,9.11-46.28A118.65,118.65,0,0,0,170.82,83.66ZM232,129.72c-2.77,10.25-11.4,29.81-38.09,45.77a114.92,114.92,0,0,1-27.55,12,142.28,142.28,0,0,0,34-39.56,129.08,129.08,0,0,0,9.15-19.41A59.69,59.69,0,0,1,232,129.71Z"/>',
- "pipe-wrench":'<path d="M220.28,55l-.17-.17-44.9-42.28a16,16,0,0,0-22.5.08L108.17,56.87l-1.54-1.56A25,25,0,0,0,71.27,90.58l1.46,1.48L52.69,112a16,16,0,0,0,0,22.63l12.68,12.68a16,16,0,0,0,22.59,0l19.93-19.65L120,140h0l0,0L55.31,205.37a25,25,0,1,0,35.34,35.29l88.67-89.35a16,16,0,0,0,0-22.6L143.63,92.66,156.56,80l.1.09L194,115.4a16,16,0,0,0,22.53-.09l3.71-3.71a40,40,0,0,0,0-56.57ZM76.69,136,64,123.33l20-19.88,12.69,12.86Zm2.62,93.37a9,9,0,1,1-12.65-12.71l64.67-65.37a16,16,0,0,0,0-22.57L82.63,79.31A9,9,0,0,1,95.29,66.6L168,140ZM209,100.28,205.25,104a1.21,1.21,0,0,0-.16-.16L167.69,68.5a16.05,16.05,0,0,0-22.39.12L132.37,81.29,119.43,68.23,164,24l.17.16,44.88,42.26a24,24,0,0,1-.08,33.86Z"/>'
+ "pipe-wrench":'<path d="M220.28,55l-.17-.17-44.9-42.28a16,16,0,0,0-22.5.08L108.17,56.87l-1.54-1.56A25,25,0,0,0,71.27,90.58l1.46,1.48L52.69,112a16,16,0,0,0,0,22.63l12.68,12.68a16,16,0,0,0,22.59,0l19.93-19.65L120,140h0l0,0L55.31,205.37a25,25,0,1,0,35.34,35.29l88.67-89.35a16,16,0,0,0,0-22.6L143.63,92.66,156.56,80l.1.09L194,115.4a16,16,0,0,0,22.53-.09l3.71-3.71a40,40,0,0,0,0-56.57ZM76.69,136,64,123.33l20-19.88,12.69,12.86Zm2.62,93.37a9,9,0,1,1-12.65-12.71l64.67-65.37a16,16,0,0,0,0-22.57L82.63,79.31A9,9,0,0,1,95.29,66.6L168,140ZM209,100.28,205.25,104a1.21,1.21,0,0,0-.16-.16L167.69,68.5a16.05,16.05,0,0,0-22.39.12L132.37,81.29,119.43,68.23,164,24l.17.16,44.88,42.26a24,24,0,0,1-.08,33.86Z"/>',
+ "roofing":'<path fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" d="M40 150 128 58 216 150 M24 150 232 150 M82 126 128 90 174 126 M168 88 168 60 190 60 190 104"/>'
 };
 function icon(n,s){const sz=s||22;return `<svg viewBox="0 0 256 256" width="${sz}" height="${sz}" fill="currentColor" style="display:block">${ICON[n]||""}</svg>`;}
 
@@ -2644,17 +2660,8 @@ function buildIcons(){
     .map(s=>`<div style="display:flex;flex-direction:column;align-items:center;gap:10px"><div style="height:40px;display:flex;align-items:center;color:#191919">${icon("zap",s[0],1.7)}</div><div style="font-family:${MONO};font-size:11px;color:#7A7268;letter-spacing:.02em">${s[1]}</div></div>`).join("");
 
   /* full named, copy-ready gallery — colour via parent currentColor */
-  const tiles=names.map(n=>`<div class="ic-tile">
-      <button class="icon-dl" data-name="${n}" title="Download SVG">${icon("download",15)}</button>
-      <span class="ic-glyph">${icon(n,30)}</span>
-      <button class="url-copy ic-name" data-copy="${n}" title="Copy name">${n}</button>
-    </div>`).join("");
-  const dot=h=>`<span class="dot" style="background:${h}"></span>`;
-  const tabs=`<div class="ic-tabs" id="icTabs">
-      <button data-col="ink" class="on">${dot("#191919")}Ink</button>
-      <button data-col="white">${dot("#FFFFFF")}White</button>
-      <button data-col="orange">${dot("#FD5000")}Orange</button>
-    </div>`;
+  /* search synonyms — Zuper trades & FSM terms → matching Phosphor glyphs */
+  const SYN={roof:["house","house-line"],roofing:["house","house-line"],hvac:["snowflake","fan","thermometer-simple","wind"],ac:["snowflake","fan","wind"],cooling:["snowflake","fan"],heating:["fire","flame","thermometer-simple"],plumbing:["wrench","drop","pipe","faucet"],pipe:["pipe","wrench"],water:["drop","faucet"],electric:["plug","lightning"],electrical:["plug","lightning"],power:["plug","lightning","battery-high"],solar:["solar-panel","sun"],pest:["bug","bug-beetle"],landscaping:["tree","plant","leaf","flower-lotus"],lawn:["tree","plant","leaf"],garden:["plant","flower-lotus","tree"],security:["security-camera","shield-check","lock","siren"],alarm:["siren","bell-ringing"],cleaning:["broom","spray-bottle"],appliance:["washing-machine","oven"],telecom:["broadcast","cell-signal-high","wifi-high"],internet:["wifi-high","globe"],invoice:["invoice","receipt","file-text"],quote:["file-text","receipt"],estimate:["file-text","receipt"],payment:["credit-card","currency-dollar","money","bank"],pay:["credit-card","currency-dollar","money"],schedule:["calendar","calendar-check","calendar-plus","clock"],booking:["calendar-check","clock"],dispatch:["truck","van","navigation-arrow","map-pin"],route:["path","navigation-arrow","map-trifold"],technician:["user-gear","wrench","hard-hat"],tech:["user-gear","wrench"],job:["clipboard-text","wrench","check-square"],task:["check-square","list-checks","clipboard-text"],customer:["user","users","address-book"],contractor:["hard-hat","wrench","toolbox"],tools:["toolbox","wrench","hammer","screwdriver"],warranty:["shield-check","certificate"],report:["chart-bar","chart-line","file-text"],analytics:["chart-bar","chart-line","gauge"],location:["map-pin","navigation-arrow"],ai:["robot","sparkle","cpu"],mobile:["device-mobile","device-mobile-camera"],signature:["signature","scribble-loop"]};
 
   stage.innerHTML=`
   <header class="sys-hero">
@@ -2662,7 +2669,7 @@ function buildIcons(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Iconography</p>
       <h1>One icon set</h1>
-      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b> — one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. ${names.length} glyphs, all named and copy‑ready below.</p>
+      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b> — one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. Browse the <b>${names.length}-glyph Zuper set</b> or search every Phosphor icon in the studio below.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>single‑weight outline</span>
         <span class="chip">currentColor</span>
@@ -2681,10 +2688,23 @@ function buildIcons(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — The set</p><h2 class="sec">${names.length} icons</h2>
-    <p class="sec-note">Pick a colour, then hover any icon to <b>download the SVG</b> in that colour, or tap its name to copy it. In the styleguide an icon is drawn with <code style="font-family:${MONO};font-size:12px;background:#F6F1EB;padding:2px 7px;border-radius:5px">icon("name")</code>; in design tools, match the outline style and colour it with currentColor.</p>
-    ${tabs}
-    <div class="ic-gallery col-ink" id="iconGallery" data-color="ink">${tiles}</div>
+    <p class="eyebrow">02 — Studio</p><h2 class="sec">Icon studio</h2>
+    <p class="sec-note">Browse Zuper's set or <b>search every Phosphor glyph</b> — try <i>roof, invoice, truck, solar</i>. Pick one, set the colour, size and background, then copy or download it ready to drop in — everything comes out on‑brand.</p>
+    <div class="icst">
+      <div class="icst-side">
+        <div class="icst-stage" id="icstStage"></div>
+        <div class="icst-name"><span id="icstName">wrench</span><span class="dim" id="icstDim">96px</span></div>
+        <div class="icst-ctl"><span class="icst-lbl">Colour</span><div class="icst-sws" id="icstSws"><button class="icst-sw on" data-col="#191919" style="background:#191919"></button><button class="icst-sw" data-col="#FFFFFF" style="background:#fff"></button><button class="icst-sw" data-col="#FD5000" style="background:#FD5000"></button></div></div>
+        <div class="icst-ctl"><span class="icst-lbl">Hex</span><div class="icst-hexwrap"><label class="icst-chip" id="icstChip" style="background:#191919" title="Pick a colour"><input type="color" id="icstColor" value="#191919"></label><input type="text" class="icst-hex" id="icstHex" value="#191919" spellcheck="false" maxlength="7"></div></div>
+        <div class="icst-ctl"><span class="icst-lbl">Size</span><input type="range" id="icstSize" min="16" max="256" step="2" value="96"><input type="number" id="icstSizeV" class="icst-num" min="16" max="256" value="96"></div>
+        <div class="icst-exp"><button class="icst-btn" data-exp="svg">${icon("copy",14)} Copy SVG</button><button class="icst-btn" data-exp="copy-png">${icon("copy",14)} Copy PNG</button><button class="icst-btn" data-exp="dl-svg">${icon("download",14)} Download SVG</button><button class="icst-btn" data-exp="dl-png">${icon("download",14)} Download PNG</button></div>
+      </div>
+      <div class="icst-pickwrap">
+        <input class="icst-search" id="icstSearch" placeholder="Search icons — roof, invoice, truck, solar…" autocomplete="off">
+        <div class="icst-meta" id="icstMeta">Loading icons…</div>
+        <div class="icst-pick" id="icstPick"></div>
+      </div>
+    </div>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -2698,8 +2718,50 @@ function buildIcons(){
     </div>
   </div></section>
   <div style="height:60px"></div>`;
-  const tabsEl=document.getElementById("icTabs"),galEl=document.getElementById("iconGallery");
-  if(tabsEl&&galEl)tabsEl.addEventListener("click",e=>{const b=e.target.closest("button[data-col]");if(!b)return;[...tabsEl.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");galEl.className="ic-gallery col-"+b.dataset.col;galEl.setAttribute("data-color",b.dataset.col);});
+  /* ---- icon studio: search (Zuper set + full Phosphor) → customise → export ---- */
+  (function(){
+    const $=id=>document.getElementById(id);
+    const LOCAL=Object.keys(ICON);
+    const st={name:"wrench",color:"#191919",size:96};
+    const stg=$("icstStage"),nm=$("icstName"),dim=$("icstDim"),pick=$("icstPick"),meta=$("icstMeta");
+    if(!stg||!pick)return;
+    const glyph=n=>(window.PHOSPHOR&&window.PHOSPHOR[n])||ICON[n]||"";
+    function lum(h){h=h.replace("#","");if(h.length===3)h=h.split("").map(x=>x+x).join("");const r=parseInt(h.substr(0,2),16),g=parseInt(h.substr(2,2),16),b=parseInt(h.substr(4,2),16);return(0.299*r+0.587*g+0.114*b)/255;}
+    function draw(){stg.style.background=lum(st.color)>0.68?"#2b2b2f":"#F4EEE6";stg.innerHTML=`<svg viewBox="0 0 256 256" width="${st.size}" height="${st.size}" fill="${st.color}" style="display:block">${glyph(st.name)}</svg>`;nm.textContent=st.name;dim.textContent=st.size+"px";}
+    function svgStr(){return `<svg xmlns="http://www.w3.org/2000/svg" width="${st.size}" height="${st.size}" viewBox="0 0 256 256" fill="${st.color}">${glyph(st.name)}</svg>`;}
+    function cells(list){pick.innerHTML=list.map(n=>`<button class="icst-cell${n===st.name?" on":""}" data-n="${n}" title="${n}"><svg viewBox="0 0 256 256" width="26" height="26" fill="currentColor">${glyph(n)}</svg></button>`).join("");}
+    function setMeta(){meta.textContent=window.PHOSPHOR?`${Object.keys(window.PHOSPHOR).length.toLocaleString()} icons · search by name or keyword`:"Loading icons…";}
+    function search(q){q=(q||"").trim().toLowerCase();const src=window.PHOSPHOR?Object.keys(window.PHOSPHOR):LOCAL;const T=window.PHOSPHOR_TAGS||{};
+      if(!q){cells(LOCAL);setMeta();return;}
+      const starts=[],has=[],tag=[];
+      src.forEach(n=>{if(n.indexOf(q)===0)starts.push(n);else if(n.indexOf(q)>0)has.push(n);else if(T[n]&&T[n].indexOf(q)>=0)tag.push(n);});
+      let m=starts.concat(has,tag);
+      Object.keys(SYN).forEach(k=>{if(k.indexOf(q)>=0||q.indexOf(k)>=0){for(const n of SYN[k].slice().reverse()){if(src.indexOf(n)>=0){const i=m.indexOf(n);if(i>=0)m.splice(i,1);m.unshift(n);}}}});
+      const total=m.length;m=m.slice(0,200);
+      meta.textContent=total?`${total} result${total>1?"s":""} for “${q}”${total>200?" · showing 200":""}`:`No icons match “${q}”`;
+      cells(m);}
+    pick.addEventListener("click",e=>{const b=e.target.closest(".icst-cell");if(!b)return;[...pick.children].forEach(c=>c.classList.remove("on"));b.classList.add("on");st.name=b.dataset.n;draw();});
+    $("icstSearch").addEventListener("input",e=>search(e.target.value));
+    const chip=$("icstChip"),hex=$("icstHex"),nat=$("icstColor");
+    function setColor(c,sw){st.color=c;if(chip)chip.style.background=c;if(hex&&document.activeElement!==hex)hex.value=c.toUpperCase();if(nat&&/^#[0-9a-f]{6}$/i.test(c))nat.value=c.toLowerCase();$("icstSws").querySelectorAll(".icst-sw").forEach(x=>x.classList.toggle("on",sw===x));draw();}
+    $("icstSws").addEventListener("click",e=>{const s=e.target.closest(".icst-sw[data-col]");if(!s)return;setColor(s.dataset.col,s);});
+    nat.addEventListener("input",e=>setColor(e.target.value,null));
+    hex.addEventListener("input",e=>{const v=e.target.value.trim().replace(/^#/,"");if(/^[0-9a-fA-F]{6}$/.test(v))setColor("#"+v,null);else if(/^[0-9a-fA-F]{3}$/.test(v))setColor("#"+v.split("").map(x=>x+x).join(""),null);});
+    $("icstSize").addEventListener("input",e=>{st.size=+e.target.value;$("icstSizeV").value=st.size;draw();});
+    $("icstSizeV").addEventListener("input",e=>{let v=parseInt(e.target.value,10);if(isNaN(v))return;if(v>256){v=256;e.target.value=256;}st.size=v;$("icstSize").value=Math.max(16,Math.min(256,v));draw();});
+    $("icstSizeV").addEventListener("blur",e=>{let v=parseInt(e.target.value,10);if(isNaN(v)||v<16)v=16;if(v>256)v=256;e.target.value=v;st.size=v;$("icstSize").value=v;draw();});
+    const flash=b=>{const o=b.innerHTML;b.classList.add("done");b.textContent="Copied ✓";setTimeout(()=>{b.classList.remove("done");b.innerHTML=o;},1400);};
+    function dl(blob,fn){const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download=fn;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(u);a.remove();},1200);}
+    function rasterize(cb){const s=st.size,sc=Math.max(2,Math.ceil(512/s)),cv=document.createElement("canvas");cv.width=s*sc;cv.height=s*sc;const ctx=cv.getContext("2d"),img=new Image();img.onload=()=>{ctx.drawImage(img,0,0,cv.width,cv.height);cv.toBlob(cb);};img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svgStr());}
+    document.querySelector(".icst-exp").addEventListener("click",e=>{const b=e.target.closest(".icst-btn");if(!b)return;const x=b.dataset.exp;
+      if(x==="svg"&&navigator.clipboard){navigator.clipboard.writeText(svgStr());flash(b);}
+      else if(x==="copy-png"){rasterize(bl=>{try{navigator.clipboard.write([new ClipboardItem({"image/png":bl})]).then(()=>flash(b)).catch(()=>{});}catch(_){}});}
+      else if(x==="dl-svg"){dl(new Blob([svgStr()],{type:"image/svg+xml"}),`zuper-${st.name}.svg`);}
+      else if(x==="dl-png"){rasterize(bl=>dl(bl,`zuper-${st.name}.png`));}
+    });
+    cells(LOCAL);draw();setMeta();
+    if(!window.PHOSPHOR&&!window.__phLoad){window.__phLoad=1;const s=document.createElement("script");s.src="assets/phosphor-icons.js";s.onload=()=>{const si=$("icstSearch");if(si&&document.body.contains(si)){setMeta();search(si.value);}};document.body.appendChild(s);}
+  })();
   window.scrollTo(0,0);
 }
 
@@ -2951,7 +3013,7 @@ function buildOverview(){
     ["website","globe","Website DLS","WEB","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
     ["one-pager","doc","Case study","1‑PAGER","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
     ["humans","users","Mini humans","BRAND","Small animated workers that add warmth in a corner — the product always stays the hero."],
-    ["icons","grid","Iconography","FOUNDATION","Zuper's one icon language — a single‑weight outline set. Every glyph named and copy‑ready, plus the rules that keep it consistent everywhere."],
+    ["icons","grid","Iconography","FOUNDATION","Zuper's one icon language — a single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in your colour and size."],
     ["social","megaphone","Social &amp; ads","CAMPAIGN","Social creatives at real export sizes and a full set of display ads at IAB sizes — one orange gradient and a single CTA."],
     ["emailer","chat","Emailer","LIFECYCLE","A 600px branded email built from reusable blocks — header lockup, hero, feature rows, stat banner and footer. Client‑safe."],
     ["email-sig","mail","Email signature","TOOLS","Build your own on‑brand Outlook signature in seconds — fill in your details, pick an optional banner, and copy it straight in."],
