@@ -20,7 +20,7 @@ A sidebar switches between an overview and twelve systems:
 5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
 6. **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
 7. **Iconography** — Zuper's one icon language: a **single‑weight outline set** (clean outline glyphs, 256px grid, `currentColor`). The rules that keep it consistent, a size ladder, every glyph named and copy‑ready, and how colour comes from context.
-8. **Social & ads** — on-brand social creatives at real export sizes (1080 / 1920 / 1200) and a full set of display ads at standard IAB sizes; orange-gradient and dark (Sense) looks, one CTA each.
+8. **Social & ads** — on-brand social creatives at real export sizes (1080 / 1920 / 1200), a full set of display ads at standard IAB sizes, and show templates (e.g. **Raise the Roof** FB Live, 1280×720, with 1/2/3/4-speaker layouts); orange-gradient and dark (Sense) looks, one CTA each.
 9. **Emailer** — a 600px campaign email built from a 12-block kit (header, hero, **HTML product screen**, feature rows, two-up cards, checklist, stat banner, testimonial, CTA banner, button, divider, footer), all inline-styled to survive every client.
 10. **Email signature** — a live, editable signature builder (name, title, email, phone, CTA) with copy-ready output and a tight Zuper logo.
 11. **Logo usage** — how to place the mark: clear space (= `x`, the mark height), minimum sizes (24px mark / 100px lockup / 10mm print), the right variant per background, and a misuse grid (don't stretch, rotate, recolour, add effects, fade, or sit it on low contrast).

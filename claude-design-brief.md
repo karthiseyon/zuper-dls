@@ -37,7 +37,7 @@ Paste this whole file into Claude Design (Set up design system → Create here �
 - **Radius:** sm 6–8 (buttons) · cards 12–16 · pill 999
 - **Layout:** 1200px container · 12 columns · breakpoints sm 480 / md 768 / lg 1024 / xl 1280
 - **Focus ring:** `box-shadow: 0 0 0 3px rgba(253,80,0,.32)` (orange)
-- **Signature gradient:** `linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)`
+- **Signature gradient:** dark top-left → light bottom-right — `linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)` (deep near-black‑red corner easing into bright orange). Use this diagonal flow wherever the orange gradient appears.
 
 ## 4. Icons — IMPORTANT
 **Use a single‑weight outline icon set.** Clean outline glyphs on a 256px grid, coloured with `currentColor` so they inherit the surrounding text colour (ink on light, white on dark, orange only as a deliberate accent).
@@ -75,9 +75,10 @@ The **product is the hero** — lead with real Zuper screens, never generic stoc
 
 ## 8c. Social & display ads
 On‑brand banners across the standard IAB sizes — **leaderboard 728×90 · billboard 970×250 · medium rectangle 300×250 · large rectangle 336×280 · half page 300×600 · skyscraper 160×600 · mobile 320×100**.
-- Two looks: the **orange gradient** ground (`linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)`, white text) and the **white** card (1px `#E7E0D6` border, an 8–10px orange gradient bar across the top, orange eyebrow).
+- Two looks: the **orange gradient** ground (`linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)` — dark top-left → light bottom-right, white text) and the **white** card (1px `#E7E0D6` border, an 8–10px orange gradient bar across the top, orange eyebrow).
 - Plus Jakarta Sans 800 headline, tight tracking (‑.02 to ‑.04em). One CTA per unit — on orange use a **black** button ("Book a demo"), on white use the **orange** button.
 - White logo lockup on orange grounds, dark logo on white. Headlines stay short and benefit‑led ("Win 1 in 3 quotes on‑site", "First call to invoice").
+- **Show templates** (e.g. **Raise the Roof** Facebook Live, **1280×720**): the orange gradient ground (dark top‑left → light bottom‑right), the tilted white "RAISE THE ROOF" sticker badge top‑left, the Zuper logo + event lockup, an orange‑outline `FACEBOOK LIVE` pill, a bold white headline, a date/time row, and a speaker panel on the right. A full‑bleed thin‑line grid frames the layout with small filled 4‑point "sparkle" marks at the intersections. Speakers are shown as **text only — name, role, company** (no speaker logos); photos fill each cell. One layout, four variants by speaker count (1 / 2 / 3 / 4) — keep the chrome fixed, swap the date and speaker details per episode.
 
 ## 8d. Emailer
 A **600px** branded campaign email, built from a kit of reusable **inline‑styled** blocks so it survives every email client. Mix and match:

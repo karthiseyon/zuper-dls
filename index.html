@@ -447,7 +447,7 @@
 .amini{aspect-ratio:auto!important;padding:0!important;border:none!important;box-shadow:none!important;display:block!important;overflow:visible!important;background:transparent!important}
 .amini .dlist-c,.amini .dol,.amini .hbar{margin:0!important}
 .amini.white .dlist-c .ci{background:#FFE7DC;color:#FD5000}
-.atopbar{height:6px;border-radius:3px;background:linear-gradient(90deg,#FFB088,#FD5000,#DB3602);width:100%}
+.atopbar{height:6px;border-radius:3px;background:linear-gradient(90deg,#7E1C0B,#D43A14 55%,#F2864F);width:100%}
 .dpill{display:inline-flex;align-items:center;gap:6px;font-family:'Aptos','Segoe UI',sans-serif;font-weight:700;font-size:11px;letter-spacing:.04em;padding:6px 12px;border-radius:999px;background:#FFE7DC;color:#FD5000}
 .dslide .d2col{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
 .dslide .d2col .h{font-family:'Aptos Display','Aptos',sans-serif;font-weight:700;font-size:17px;margin:0 0 6px}
@@ -649,7 +649,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-fan .sl{position:absolute;left:50%;width:248px;height:139px;border-radius:12px;box-shadow:0 20px 46px rgba(20,4,3,.30);border:1px solid rgba(0,0,0,.06);padding:15px 16px;overflow:hidden}
 .ha-fan .s1{margin-left:-104px;top:2px;transform:rotate(8deg);background:#fff;color:#191919}
 .ha-fan .s2{margin-left:-128px;top:46px;transform:rotate(-4deg);background:#fff;color:#191919}
-.ha-fan .s3{margin-left:-150px;top:92px;transform:rotate(-13deg);background:linear-gradient(135deg,#FF8A4C,#FD5000,#DB3602);color:#fff;border-color:rgba(255,255,255,.4)}
+.ha-fan .s3{margin-left:-150px;top:92px;transform:rotate(-13deg);background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;border-color:rgba(255,255,255,.4)}
 .ha-fan .e{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
 .ha-fan .t{font:700 16px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
 .ha-fan .s3 .e{opacity:.85}
@@ -1721,7 +1721,7 @@ function buildDeck(){
 
   const sw=(n,hex,d)=>`<div class="sw-card"><div class="sw-chip" style="background:${hex}${d?';box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)':''}"></div><div class="sw-body"><div class="sw-name">${n}</div><div class="sw-hex">${hex}</div></div></div>`;
   const ramp=a=>`<div class="swatches">${a.map(x=>sw(x[0],x[1],x[2])).join("")}</div>`;
-  const top=`<div class="topbar" style="background:linear-gradient(90deg,#FFB088,#FD5000,#DB3602)"></div>`;
+  const top=`<div class="topbar" style="background:linear-gradient(90deg,#7E1C0B,#D43A14 55%,#F2864F)"></div>`;
   const obg=` style="background-image:linear-gradient(102deg,rgba(20,4,3,.32),transparent 60%),url(${ORANGE_BG})"`;
   const sbg=` style="background-image:linear-gradient(180deg,rgba(9,9,11,.30),rgba(9,9,11,.72)),url(${SENSE_BG})"`;
   const wm=m=>`<div class="slogo2">${logo(m==="white"?"dark":"white",16)}</div>`;
@@ -2345,7 +2345,7 @@ function buildSocial(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
-  const GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)",INK="#191919",L="assets/logos/";
+  const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
   const lbl=t=>`<div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268">${t}</div>`;
   const col=(t,box)=>`<div style="display:flex;flex-direction:column;gap:8px">${lbl(t)}${box}</div>`;
 
@@ -2401,13 +2401,47 @@ function buildSocial(){
     cr("Industries · 1080 × 1080",1080,1080,`<div style="width:1080px;height:1080px;box-sizing:border-box;background:#fff;color:${INK};padding:88px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:16px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:#FD5000;margin-bottom:28px">Built for your trade</div><div style="font-family:${DISP};font-weight:800;font-size:104px;line-height:1.02;letter-spacing:-.03em;margin:0 0 44px">Tuned to how your crews work</div><div style="display:flex;flex-wrap:wrap;gap:16px;max-width:880px">${["Roofing","HVAC","Plumbing","Electrical","Solar"].map(x=>`<span style="background:${WARM};font-family:${DISP};font-weight:700;font-size:30px;padding:16px 30px;border-radius:999px">${x}</span>`).join("")}</div><img src="${L}zuper-horizontal.png" style="position:absolute;left:88px;bottom:80px;height:48px;width:auto"></div>`)
   ].join("");
 
+  /* ---- Raise the Roof · Facebook Live show templates (1280 × 720, built in HTML) ---- */
+  const SH="assets/shows/",RTRG="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)";
+  const SP=[
+    {n:["John","Doe"],full:"John Doe",t:"Chief Executive Officer",c:"Zuper",img:"speaker-b.png"},
+    {n:["Mike","Aaron"],full:"Mike Aaron",t:"Sr. Director",c:"Acme Cloud Solutions",img:"speaker-c.png"},
+    {n:["Scott","Beechuk"],full:"Scott Beechuk",t:"Partner",c:"Norwest",img:"speaker-b.png"}
+  ];
+  const coTxt=(c,sz)=>`<div style="font-family:${DISP};font-weight:700;font-size:${sz||15}px;line-height:1.1">${c}</div>`;
+  const line=s=>`<div style="position:absolute;background:rgba(255,255,255,.42);${s}"></div>`;
+  const FL=77,FR=1203,FT=67,FB=648,PL=730,PAD=13;
+  const ln=(x1,y1,x2,y2)=>`<div style="position:absolute;left:${Math.min(x1,x2)}px;top:${Math.min(y1,y2)}px;width:${x1===x2?1:Math.abs(x2-x1)}px;height:${y1===y2?1:Math.abs(y2-y1)}px;background:rgba(255,255,255,.4);z-index:1"></div>`;
+  const dia=(x,y)=>`<svg width="13" height="13" viewBox="0 0 16 16" style="position:absolute;left:${x}px;top:${y}px;transform:translate(-50%,-50%);z-index:4"><path d="M8 0 9.2 6.8 16 8 9.2 9.2 8 16 6.8 9.2 0 8 6.8 6.8Z" fill="#fff"/></svg>`;
+  const frameBase=ln(0,FT,1280,FT)+ln(0,FB,1280,FB)+ln(FL,0,FL,720)+ln(FR,0,FR,720)+ln(PL,0,PL,720);
+  const diaBase=dia(FL,FT)+dia(FR,FT)+dia(FL,FB)+dia(FR,FB)+dia(PL,FT)+dia(PL,FB);
+  const pcell=(x,y,w,h,s,o)=>{o=o||{};return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;border-radius:12px;overflow:hidden;background:#333;z-index:2"><img src="${SH}${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">${o.overlay?`<div style="position:absolute;left:0;right:0;bottom:0;padding:${o.sm?"13px 13px 11px":"24px 22px 20px"};background:linear-gradient(transparent,rgba(0,0,0,.86))"><div style="font-family:${DISP};font-weight:800;font-size:${o.sm?21:34}px;line-height:1.0">${o.twoline?s.n[0]+"<br>"+s.n[1]:s.full}</div><div style="font-family:${BODY};font-size:${o.sm?10:15}px;color:rgba(255,255,255,.86);margin-top:4px">${s.t}</div><div style="margin-top:${o.sm?5:9}px">${coTxt(s.c,o.sm?11:16)}</div></div>`:""}</div>`;};
+  const tcell=(x,y,w,h,s,big)=>`<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;display:flex;flex-direction:column;justify-content:space-between;padding:4px 0;z-index:2"><div><div style="font-family:${DISP};font-weight:800;font-size:${big?32:27}px;line-height:1.03">${big?s.n[0]+"<br>"+s.n[1]:s.full}</div><div style="font-family:${BODY};font-size:${big?14:13}px;color:rgba(255,255,255,.86);margin-top:8px;max-width:210px">${s.t}</div></div><div>${coTxt(s.c)}</div></div>`;
+  const badge=`<img src="${SH}raise-the-roof-logo.svg" alt="Raise the Roof" style="position:absolute;left:44px;top:38px;width:256px;height:auto;z-index:3">`;
+  const rpcMark=`<svg width="50" height="48" viewBox="0 0 50 48" fill="none" stroke="#fff" stroke-width="2.4"><path d="M25 4 46 19V39a3 3 0 0 1-3 3H22l-7 5V42H7a3 3 0 0 1-3-3V19Z" stroke-linejoin="round"/><circle cx="25" cy="24" r="6"/><path d="M25 13.5v3.5M25 31v3.5M14.5 24h3.5M31.5 24H35M17.6 16.6l2.5 2.5M29.9 28.9l2.5 2.5M32.4 16.6l-2.5 2.5M20.1 28.9l-2.5 2.5" stroke-width="2"/></svg>`;
+  const rpc=`<div style="display:flex;align-items:center;gap:11px">${rpcMark}<div><div style="font-family:${DISP};font-weight:800;font-size:17px;line-height:.96;letter-spacing:-.01em">Roofing Process<sup style="font-size:7px;font-weight:600;margin-left:3px;opacity:.92">7th Annual</sup></div><div style="font-family:${DISP};font-weight:800;font-size:17px;line-height:.96;letter-spacing:-.01em;margin-top:1px">Conference</div><div style="font-family:${BODY};font-weight:600;font-size:6.5px;letter-spacing:.1em;margin-top:4px;opacity:.92">"BUILDING FOR TOMORROW"</div></div></div>`;
+  const lockup=`<div style="display:flex;align-items:center;gap:20px">${logo("white",32)}<span style="width:1px;height:50px;background:rgba(255,255,255,.4)"></span>${rpc}</div>`;
+  const pill=`<div style="display:inline-flex;align-items:center;border:1.5px solid rgba(255,170,130,.8);border-radius:999px;padding:7px 16px;font-family:${MONO};font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#FFC6A6">Facebook Live</div>`;
+  const headline=`<div style="font-family:${DISP};font-weight:800;font-size:54px;line-height:1.02;letter-spacing:-.02em">Talking all things<br>Roofing process<br>conference</div>`;
+  const dateRow=`<div style="display:flex;align-items:center;gap:26px;font-family:${BODY};font-size:16px;margin-top:30px"><span style="display:flex;align-items:center;gap:9px">${icon("calendar",18)} 26th March</span><span style="display:flex;align-items:center;gap:9px">${icon("clock",18)} 12 PM CST</span></div>`;
+  const leftCol=`<div style="position:absolute;left:96px;top:236px;width:600px;z-index:2"><div style="margin-bottom:34px">${lockup}</div><div style="margin-bottom:24px">${pill}</div>${headline}${dateRow}</div>`;
+  const rtrRight=mode=>{
+    if(mode===1)return pcell(PL+PAD,FT+PAD,FR-PL-2*PAD,FB-FT-2*PAD,SP[1],{overlay:1,co:1});
+    if(mode===4){const mx=(PL+FR)/2,my=(FT+FB)/2,cw=(mx-PL)-PAD-6,ch=(my-FT)-PAD-6;const q=[SP[1],SP[2],SP[1],SP[2]],pos=[[PL+PAD,FT+PAD],[mx+6,FT+PAD],[PL+PAD,my+6],[mx+6,my+6]];
+      return q.map((s,i)=>pcell(pos[i][0],pos[i][1],cw,ch,s,{overlay:1,sm:1,twoline:1})).join("")+ln(mx,FT,mx,FB)+ln(PL,my,FR,my)+dia(mx,FT)+dia(mx,FB)+dia(PL,my)+dia(FR,my)+dia(mx,my);}
+    const list=mode===2?[SP[1],SP[2]]:[SP[0],SP[1],SP[2]],N=list.length,rowH=(FB-FT)/N,pw=mode===2?198:174;
+    return list.map((s,i)=>{const ry=FT+i*rowH,tx=PL+PAD+pw+24;return pcell(PL+PAD,ry+PAD,pw,rowH-2*PAD,s,{})+tcell(tx,ry+PAD,FR-tx-16,rowH-2*PAD,s,mode===2)+(i>0?ln(PL,ry,FR,ry)+dia(PL,ry)+dia(FR,ry):"");}).join("");
+  };
+  const rtr=mode=>`<div style="width:1280px;height:720px;position:relative;overflow:hidden;background:${RTRG};color:#fff;font-family:${BODY}">${frameBase}${rtrRight(mode)}${diaBase}${badge}${leftCol}</div>`;
+  const shows=[[3,"3 speakers"],[2,"2 speakers"],[1,"1 speaker"],[4,"4 speakers"]].map(m=>cr(`Raise the Roof · ${m[1]} · 1280 × 720`,1280,720,rtr(m[0]),0.42)).join("");
+
   stage.innerHTML=`
   <header class="sys-hero">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Social, ads &amp; campaigns</p>
       <h1>Social &amp; ads</h1>
-      <p class="lede">The campaign side of the brand — social creatives at real export sizes and a full set of display ads at standard IAB sizes. One orange gradient, the logo lockup, a single bold claim and a CTA. Use these as the starting frame for any paid or social push.</p>
+      <p class="lede">The campaign side of the brand — social creatives at real export sizes, a full set of display ads at standard IAB sizes, and show templates like Raise the Roof. One orange gradient, the logo lockup, a single bold claim and a CTA. Use these as the starting frame for any paid or social push.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
         <span class="chip">Aa Plus Jakarta · display</span>
@@ -2421,6 +2455,13 @@ function buildSocial(){
     <p class="eyebrow">Social</p><h2 class="sec">Social media creatives</h2>
     <p class="docnote">↔ scroll · real export sizes, shown to scale · Instagram square &amp; story, landscape, quote/stat cards, Sense</p>
     <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${creatives}</div></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Live show</p><h2 class="sec">Raise the Roof — Facebook Live</h2>
+    <p class="docnote">↔ scroll · 1280 × 720 FB Live cover · one template, four speaker layouts</p>
+    <p class="sec-note">The cover for the Raise the Roof roofing podcast. Keep the badge, logo lockup, headline and date fixed; swap the date and each speaker's <b>name, role and company</b> per episode. The layout adapts to <b>one, two, three or four speakers</b> — pick the matching variant.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start;padding:6px 0 4px">${shows}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -2444,7 +2485,7 @@ function buildEmailer(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
-  const GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)",INK="#191919",L="assets/logos/";
+  const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
 
   const header=`<div style="background:${GRAD};padding:28px 40px"><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="height:28px;width:auto;display:block"></div>`;
   const hero=`<div style="padding:36px 40px">
@@ -2549,7 +2590,7 @@ function buildIcons(){
     +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
-  const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)";
+  const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)";
   const names=Object.keys(ICON);
 
   /* the system — single-weight outline set */
@@ -2635,7 +2676,7 @@ function buildLogos(){
     +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
-  const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(110deg,#FF8A4C,#FD5000,#DB3602)",INK="#191919";
+  const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919";
   const cap=t=>`<div style="font-family:${MONO};font-size:11px;color:#7A7268;margin-top:10px;letter-spacing:.02em">${t}</div>`;
 
   /* grounds — approved placements */
