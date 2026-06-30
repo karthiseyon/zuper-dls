@@ -647,9 +647,9 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* deck slide fan */
 .ha-fan{position:relative;height:236px}
 .ha-fan .sl{position:absolute;left:50%;width:248px;height:139px;border-radius:12px;box-shadow:0 20px 46px rgba(20,4,3,.30);border:1px solid rgba(0,0,0,.06);padding:15px 16px;overflow:hidden}
-.ha-fan .s1{margin-left:-104px;top:2px;transform:rotate(8deg);background:#fff;color:#191919}
-.ha-fan .s2{margin-left:-128px;top:46px;transform:rotate(-4deg);background:#fff;color:#191919}
-.ha-fan .s3{margin-left:-150px;top:92px;transform:rotate(-13deg);background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;border-color:rgba(255,255,255,.4)}
+.ha-fan .s1{margin-left:-104px;top:2px;transform:rotate(8deg);background:linear-gradient(135deg,#FF8A4C 0%,#FD5000 70%,#DB3602 100%);color:#fff;border-color:rgba(255,255,255,.35)}
+.ha-fan .s2{margin-left:-128px;top:46px;transform:rotate(-4deg);background:linear-gradient(135deg,#FF8A4C 0%,#FD5000 70%,#DB3602 100%);color:#fff;border-color:rgba(255,255,255,.35)}
+.ha-fan .s3{margin-left:-150px;top:92px;transform:rotate(-13deg);background:#fff;color:#191919}
 .ha-fan .e{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
 .ha-fan .t{font:700 16px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
 .ha-fan .s3 .e{opacity:.85}
@@ -1095,8 +1095,8 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 const SYS = [
 {
   id:"deck-light", name:"Deck · Light", navHex:"#FD5000", navMeta:"slides",
-  tagline:"Light presentation system",
-  lede:"The default deck look: clean white and warm‑cream grounds, black type set in Aptos, and Zuper orange reserved for emphasis. Built for readable, content‑first slides.",
+  tagline:"Primary cover · light system",
+  lede:"The primary deck look — a white cover with orange interiors. Clean white and warm‑cream grounds, black type set in Aptos, and Zuper orange reserved for emphasis. Built for readable, content‑first slides.",
   canvas:"#F8F5F0",
   hero:{bg:"linear-gradient(135deg,#FFFFFF 0%,#FFF3EC 60%,#FFE2D2 100%)",ink:"#1B1919",sub:"#5A554F",kick:"#FD5000",chipBg:"#FFFFFF",chipInk:"#1B1919",chipLine:"#E7E6E3"},
   fonts:{display:"Space Grotesk / 500 · 700",body:"Inter / 400 · 500 · 700"},
@@ -1117,8 +1117,8 @@ const SYS = [
 },
 {
   id:"deck-orange", name:"Deck · Orange", navHex:"#FD5000", navMeta:"slides",
-  tagline:"High‑impact orange system",
-  lede:"Full‑bleed orange for title slides, section breaks and statement moments. White Aptos Display headlines own the frame; everything else gets out of the way.",
+  tagline:"Secondary cover · orange system",
+  lede:"The secondary deck look — an orange cover with white interiors. Full‑bleed orange for title slides, section breaks and statement moments. White Aptos Display headlines own the frame; everything else gets out of the way.",
   canvas:"#FD5000",
   hero:{bg:"linear-gradient(135deg,#FF8A4C 0%,#FD5000 55%,#C22D00 100%)",ink:"#FFFFFF",sub:"#FFE0CE",kick:"#FFFAEA",chipBg:"rgba(255,255,255,.14)",chipInk:"#FFFFFF",chipLine:"rgba(255,255,255,.32)"},
   fonts:{display:"Space Grotesk / 700",body:"Inter / 400 · 600"},
@@ -1833,28 +1833,28 @@ function buildDeck(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="kicker" style="font-family:'Aptos',sans-serif">Presentation system · PowerPoint</p>
       <h1>Deck</h1>
-      <p class="lede">One deck, one contrast rule — built like a system: foundations, atoms and slide layouts. Set in <b style="color:#191919">Aptos Display</b> &amp; <b style="color:#191919">Aptos</b>. <b style="color:#191919">Pick the cover's colour — every interior takes the opposite. Dark is used only for Zuper Sense.</b></p>
+      <p class="lede">One deck, one contrast rule — built like a system: foundations, atoms and slide layouts. Set in <b style="color:#191919">Aptos Display</b> &amp; <b style="color:#191919">Aptos</b>. <b style="color:#191919">Primary: a white cover with orange interiors. Secondary: an orange cover with white interiors. Dark is used only for Zuper Sense.</b></p>
       <div class="chips"><span class="chip">Aa Aptos Display · titles</span><span class="chip">Aa Aptos · body</span><span class="chip">PowerPoint · 16:9</span></div>
       <div class="hero-art"><div class="float ha-fan">
-        <div class="sl s1"><div class="e">Interior · white</div><div class="t">From first call to final invoice</div></div>
-        <div class="sl s2"><div class="e">Interior · white</div><div class="t">Run your service business</div></div>
-        <div class="sl s3"><div class="e">Cover · orange</div><div class="t">The AI operating system</div></div>
+        <div class="sl s1"><div class="e">Interior · orange</div><div class="t">From first call to final invoice</div></div>
+        <div class="sl s2"><div class="e">Interior · orange</div><div class="t">Run your service business</div></div>
+        <div class="sl s3"><div class="e">Cover · white · primary</div><div class="t">The AI operating system</div></div>
       </div></div>
     </div>
   </header>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">01 — The rule</p><h2 class="sec">One deck. One contrast.</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">Choose the cover's colour, and every interior slide takes the opposite.</b> Never mix orange and white interiors in one deck. <b style="color:var(--text-primary)">Dark mode is reserved exclusively for Zuper Sense.</b></p>
+    <p class="sec-note"><b style="color:var(--text-primary)">Choose the cover's colour, and every interior slide takes the opposite.</b> The <b style="color:var(--text-primary)">primary</b> option is a white cover with orange interiors; the <b style="color:var(--text-primary)">secondary</b> option flips it — an orange cover with white interiors. Never mix orange and white interiors in one deck. <b style="color:var(--text-primary)">Dark is reserved exclusively for Zuper Sense.</b></p>
     <div class="modecards">
-      <div class="modecard"><div class="sw" style="background-image:linear-gradient(102deg,#FD5000,#DB3602)"></div><h5>Orange</h5><p>Title slides, dividers, stats, closings.</p></div>
-      <div class="modecard"><div class="sw" style="background:#fff;border:1px solid var(--border-default)"></div><h5>White</h5><p>Interior &amp; content slides; orange accents.</p></div>
+      <div class="modecard"><div class="sw" style="background:#fff;border:1px solid var(--border-default)"></div><h5>White · primary cover</h5><p>The default cover; interiors then run orange.</p></div>
+      <div class="modecard"><div class="sw" style="background-image:linear-gradient(102deg,#FD5000,#DB3602)"></div><h5>Orange · secondary cover</h5><p>The flipped cover; interiors then run white.</p></div>
       <div class="modecard"><div class="sw" style="background:#161616"></div><h5>Dark — Sense only</h5><p>Used exclusively for Zuper Sense content.</p></div>
     </div>
     <div class="rulebar" style="font-size:15px">
-      <span class="tag" style="background:#FD5000;color:#fff">Orange cover</span><span class="arr">→</span><span class="tag" style="background:#fff;color:#1B1919;border:1px solid var(--border-default)">All interiors white</span>
+      <span class="tag" style="background:#fff;color:#1B1919;border:1px solid var(--border-default)">White cover</span><span class="arr">→</span><span class="tag" style="background:#FD5000;color:#fff">All interiors orange</span><span style="opacity:.55;font:600 11px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Primary</span>
       <span style="opacity:.4">·</span>
-      <span class="tag" style="background:#fff;color:#1B1919;border:1px solid var(--border-default)">White cover</span><span class="arr">→</span><span class="tag" style="background:#FD5000;color:#fff">All interiors orange</span>
+      <span class="tag" style="background:#FD5000;color:#fff">Orange cover</span><span class="arr">→</span><span class="tag" style="background:#fff;color:#1B1919;border:1px solid var(--border-default)">All interiors white</span><span style="opacity:.55;font:600 11px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Secondary</span>
       <span style="opacity:.4">·</span>
       <span class="tag" style="background:#161616;color:#fff">Sense only</span><span class="arr">→</span><span class="tag" style="background:#161616;color:#fff">Dark</span>
     </div>
@@ -1885,11 +1885,11 @@ function buildDeck(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">05 — In practice</p><h2 class="sec">The rule, both ways</h2>
-    <p class="sec-note">The same story run as two valid decks. The Zuper Sense slide stays dark in both.</p>
-    ${vhead("Variant A · Orange cover → white interiors","#FD5000","#FFFFFF")}
-    <div class="slidewrap">${variantA}</div>
-    ${vhead("Variant B · White cover → orange interiors","#FFFFFF","#FD5000")}
+    <p class="sec-note">The same story run as two valid decks — primary first. The Zuper Sense slide stays dark in both.</p>
+    ${vhead("Primary · White cover → orange interiors","#FFFFFF","#FD5000")}
     <div class="slidewrap">${variantB}</div>
+    ${vhead("Secondary · Orange cover → white interiors","#FD5000","#FFFFFF")}
+    <div class="slidewrap">${variantA}</div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);

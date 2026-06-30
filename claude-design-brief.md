@@ -63,7 +63,9 @@ The styleguide ships ~190 named glyphs, including a core UI set (home, search, c
 `orange‑gradient hero (white text)` → `white content sections` → `charcoal #282828 feature sections` → **solid orange footer**. Warm peach reserved for product cards & feature banners. Mega‑menus: peach product cards with orange `→`; industries as line‑icon tiles.
 
 ## 7. Decks (PowerPoint) — one contrast rule
-- Choose the **cover colour**; **every interior slide takes the opposite** (orange cover → white interiors, or white cover → orange interiors). Never mix interiors.
+- Choose the **cover colour**; **every interior slide takes the opposite**. Never mix interiors.
+  - **Primary:** white cover → orange interiors (the default).
+  - **Secondary:** orange cover → white interiors.
 - **Dark mode is used ONLY for Zuper Sense** slides (light‑bars background).
 - Aptos Display / Aptos. Logo as a small bottom‑corner mark on every slide.
 

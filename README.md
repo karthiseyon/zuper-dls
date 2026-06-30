@@ -15,7 +15,7 @@ A sidebar switches between an overview and twelve systems:
 
 1. **Overview** — the cover: one brand, twelve systems, with quick links into each.
 2. **How to use this** — one button opens the published **Zuper Design System** in **Claude Design**; then pick **Zuper Design System** from the Design system dropdown on any project. *(The repo itself is the source the system was built from.)*
-3. **Deck** (PowerPoint) — one contrast rule (orange cover → white interiors, or vice‑versa; **dark = Zuper Sense only**), foundations, atoms, and a library of 16:9 slide layouts.
+3. **Deck** (PowerPoint) — one contrast rule (**primary:** white cover → orange interiors; **secondary:** orange cover → white interiors; **dark = Zuper Sense only**), foundations, atoms, and a library of 16:9 slide layouts.
 4. **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
 5. **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
 6. **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
