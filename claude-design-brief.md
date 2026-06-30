@@ -64,10 +64,12 @@ The styleguide ships ~190 named glyphs, including a core UI set (home, search, c
 
 ## 7. Decks (PowerPoint) — one contrast rule
 - Choose the **cover colour**; **every interior slide takes the opposite**. Never mix interiors.
-  - **Primary:** white cover → orange interiors (the default).
-  - **Secondary:** orange cover → white interiors.
-- **Dark mode is used ONLY for Zuper Sense** slides (light‑bars background).
-- Aptos Display / Aptos. Logo as a small bottom‑corner mark on every slide.
+- **Two sanctioned schemes, in order of preference:**
+  - **Primary — white cover, orange interiors.** Hero/title slide on a white ground (orange title text); every other slide on the orange gradient with white text. This is the default — reach for it unless told otherwise. (Template: `pitch-deck-white/`.)
+  - **Secondary — orange cover, white interiors.** Hero/title slide on the orange gradient (white title), with an orange title treatment; every other slide white. (Template: `pitch-deck/`.)
+- **Zuper Sense → black slides, always.** Any time the deck talks about **Zuper Sense**, those slides use the dark/black ground (`#09090B`, light‑bars background, `#FF8B5A` orange‑on‑dark) — regardless of which scheme the rest of the deck uses. Dark mode is reserved for Sense.
+- Aptos Display / Aptos. Logo as a small bottom‑corner mark on every slide — **but on any content‑heavy slide where the mark would crowd the layout, omit the logo** rather than squeeze it in. (Applies to all slide types, not just one.)
+- **Special full‑bleed slides** sit outside the white/orange contrast rule — use them as‑is in any deck, they don't count as "interiors": **Section break** (`slides/section-break.html`, full‑bleed orange "Outcome Era" houses illustration + white headline + `ZUPER CONFIDENTIAL` tag, between major sections), **Zuper Glass** (`slides/glass.html`, full‑bleed AR smart‑glasses photo with a dark scrim — reserved for Zuper Glass topics), and the black **Zuper Sense** slide above. Keep all copy in one corner/column over the scrim so it never overlaps the focal subject.
 
 ## 8. Case study (one‑pager)
 Co‑branded customer story: orange‑gradient cover with **Zuper + client lockup** → white body pages with **orange section rules**, **orange run‑in subheads**, **pull‑quotes** (big orange quote mark), a **before/after table**, a **metrics grid**, a **testimonial** with photo, and the co‑brand lockup in the footer of every page.
