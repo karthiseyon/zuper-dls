@@ -816,6 +816,96 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
 .ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}}
+@keyframes ha-typline{0%{max-width:0}45%{max-width:250px}88%{max-width:250px}100%{max-width:0}}
+/* Color — palette card */
+.ha-pal{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05)}
+.ha-pal .grad{height:122px;border-radius:12px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);display:flex;align-items:flex-end;padding:13px}
+.ha-pal .grad .hx{font:700 13px/1 'Geist Mono',monospace;color:#fff;letter-spacing:.03em}
+.ha-pal .chips6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}
+.ha-pal .chips6 span{aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,0,0,.07);display:block;animation:ha-pop .5s ease-out both}
+.ha-pal .chips6 span:nth-child(1){animation-delay:.05s}.ha-pal .chips6 span:nth-child(2){animation-delay:.12s}.ha-pal .chips6 span:nth-child(3){animation-delay:.19s}.ha-pal .chips6 span:nth-child(4){animation-delay:.26s}.ha-pal .chips6 span:nth-child(5){animation-delay:.33s}.ha-pal .chips6 span:nth-child(6){animation-delay:.4s}
+/* Typography — specimen card */
+.ha-typ{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px 22px;border:1px solid rgba(0,0,0,.05)}
+.ha-typ .big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:80px;line-height:.86;letter-spacing:-.04em;color:#191919}
+.ha-typ .line{margin-top:12px;display:flex;align-items:center;font:600 15px/1.2 'Plus Jakarta Sans',sans-serif;color:#191919}
+.ha-typ .tw{overflow:hidden;white-space:nowrap;max-width:236px;animation:ha-typline 5s steps(28,end) infinite}
+.ha-typ .cr{width:2px;height:15px;background:#FD5000;margin-left:2px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
+.ha-typ .fams{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap}
+.ha-typ .fams span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px}
+/* Voice — speech bubble */
+.ha-voice{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px;border:1px solid rgba(0,0,0,.05)}
+.ha-voice .bub{background:linear-gradient(135deg,#FF8A4C,#FD5000 65%,#DB3602);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 21px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
+.ha-voice .bub .tw{overflow:hidden;white-space:nowrap;max-width:214px;animation:ha-typline 5s steps(24,end) infinite}
+.ha-voice .bub .cr{width:3px;height:20px;background:#fff;margin-left:3px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
+.ha-voice .tag{margin-top:14px;font:600 10px/1.4 'Geist Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:#7A7268}
+/* Product — feature board */
+.ha-prod{background:#fff;border-radius:14px;box-shadow:0 28px 64px rgba(20,4,3,.24);border:1px solid rgba(0,0,0,.05);overflow:hidden}
+.ha-prod .ph{display:flex;align-items:center;gap:6px;padding:12px 15px;background:#F6F1EB;border-bottom:1px solid #ECE6DD}
+.ha-prod .ph .d{width:9px;height:9px;border-radius:50%;background:#D9D2C7;display:block}
+.ha-prod .ph .pt{margin-left:8px;font:600 11px/1 'Geist Mono',monospace;color:#7A7268;letter-spacing:.04em}
+.ha-prod .r{display:flex;align-items:center;gap:11px;padding:12px 14px;border-bottom:1px solid #F0EAE1}
+.ha-prod .r:last-child{border-bottom:0}
+.ha-prod .r .ic{width:30px;height:30px;border-radius:8px;background:#FFE7DC;color:#FD5000;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ha-prod .r .nm{flex:1;font:600 13px/1.2 'Plus Jakarta Sans',sans-serif;color:#191919}
+.ha-prod .r .ck{width:20px;height:20px;border-radius:50%;background:#1E854B;color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto;animation:ha-pop .5s ease-out both}
+.ha-prod .r:nth-child(2) .ck{animation-delay:.25s}.ha-prod .r:nth-child(3) .ck{animation-delay:.5s}.ha-prod .r:nth-child(4) .ck{animation-delay:.75s}.ha-prod .r:nth-child(5) .ck{animation-delay:1s}
+/* Zuper Sense — ask bar on dark fluted ground */
+.ha-sense{position:relative;border-radius:16px;padding:32px 20px 30px;background:#09090B;box-shadow:0 30px 70px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.09);overflow:hidden}
+.ha-sense::before{content:"";position:absolute;left:0;right:0;bottom:0;height:82px;background:repeating-linear-gradient(90deg,#FD5000 0 3px,#7E1C0B 3px 8px);-webkit-mask-image:linear-gradient(180deg,transparent,#000);mask-image:linear-gradient(180deg,transparent,#000);opacity:.85}
+.ha-sense .ask{position:relative;z-index:1;display:flex;align-items:center;gap:10px;background:#EDE9E3;border-radius:14px;padding:16px 14px}
+.ha-sense .ask .mic{width:11px;height:16px;border-radius:6px;border:2px solid #9A938A;flex:0 0 auto}
+.ha-sense .ask .txt{flex:1;display:flex;align-items:center;overflow:hidden}
+.ha-sense .ask .tw{overflow:hidden;white-space:nowrap;max-width:190px;font:500 14px/1.2 'Inter',sans-serif;color:#3A352F;animation:ha-typline 5.5s steps(26,end) infinite}
+.ha-sense .ask .cr{width:2px;height:15px;background:#3A352F;margin-left:2px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
+.ha-sense .ask .send{width:30px;height:30px;border-radius:50%;background:#18181B;color:#fff;display:flex;align-items:center;justify-content:center;font:700 15px/1 system-ui;flex:0 0 auto;animation:ha-tap 3s ease-in-out infinite}
+/* Ad generator — single creative */
+.ha-adgen{background:transparent}
+.ha-adgen .ad{width:236px;margin:0 auto;aspect-ratio:1;border-radius:16px;background:linear-gradient(150deg,#FF8A4C,#FD5000 66%,#DB3602);color:#fff;box-shadow:0 28px 64px rgba(20,4,3,.3);padding:22px;display:flex;flex-direction:column;box-sizing:border-box}
+.ha-adgen .ad .e{font:700 9px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.82}
+.ha-adgen .ad .t{font:700 25px/1.08 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;margin-top:auto}
+.ha-adgen .ad .cta{align-self:flex-start;margin-top:15px;background:#fff;color:#FD5000;font:700 11px/28px 'Inter',sans-serif;height:28px;padding:0 15px;border-radius:7px;animation:ha-tap 3s ease-in-out infinite}
+/* Ad generator — tool layout */
+.adgen{display:grid;grid-template-columns:340px 1fr;gap:26px;align-items:start}
+@media(max-width:820px){.adgen{grid-template-columns:1fr}}
+.adform{display:flex;flex-direction:column;gap:16px}
+.adform .fl{font:600 12px/1 'Inter',sans-serif;color:var(--text-secondary);margin-bottom:7px;display:block}
+.adform input,.adform textarea{width:100%;box-sizing:border-box;border:1px solid var(--border-default);border-radius:10px;padding:11px 13px;font:500 14px/1.4 'Inter',sans-serif;color:#191919;background:#fff;resize:vertical}
+.adform input:focus,.adform textarea:focus{outline:none;border-color:var(--brand-default);box-shadow:0 0 0 3px rgba(253,80,0,.12)}
+.adseg{display:flex;flex-wrap:wrap;gap:8px}
+.adseg button{font:600 12px/1 'Inter',sans-serif;padding:9px 13px;border-radius:9px;border:1px solid var(--border-default);background:#fff;color:var(--text-secondary);cursor:pointer;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.adseg button .sub{font:500 9.5px/1 'Geist Mono',monospace;color:var(--text-tertiary);letter-spacing:.03em}
+.adseg button.on{border-color:var(--brand-default);background:var(--brand-subtle);color:#191919}
+.adseg button.on .sub{color:var(--brand-default)}
+.adprev{display:flex;align-items:flex-start;justify-content:center;background:linear-gradient(150deg,#fff,#F6F1EB);border:1px solid var(--border-default);border-radius:18px;padding:34px;min-height:420px}
+.addl{display:flex;gap:10px;margin-top:4px}
+.addl button{flex:1;font:600 13px/1 'Inter',sans-serif;padding:12px;border-radius:10px;cursor:pointer;border:1px solid var(--border-default);background:#fff;color:#191919;display:flex;align-items:center;justify-content:center;gap:8px}
+.addl button.pri{background:var(--brand-default);color:#fff;border-color:var(--brand-default)}
+/* Agent avatars — mascot cards (orange-gradient frames, 3D mascots) */
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:820px){.agrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.agrid{grid-template-columns:1fr}}
+.acard{border:1px solid var(--border-default);border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.acard .frame{aspect-ratio:1;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.acard .frame img{height:98%;width:auto;object-fit:contain;object-position:bottom}
+.acard .bd{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.acard .meta{min-width:0}
+.acard .nm{font-family:var(--display);font-weight:700;font-size:18px;color:#191919;letter-spacing:-.01em}
+.acard .role{font:600 10px/1.3 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
+.acard .agdl{flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--border-default);background:#fff;color:var(--brand-default);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s}
+.acard .agdl:hover{background:var(--brand-subtle);border-color:var(--brand-default)}
+/* Agent avatars — hero art: cross-fading mascot tile */
+.ha-agents{width:300px;margin-left:auto}
+.ha-agents .tile{position:relative;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.32)}
+.ha-agents .badge{position:absolute;top:13px;left:14px;z-index:3;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 10px}
+.ha-agents .tile img{position:absolute;left:50%;bottom:0;height:97%;width:auto;transform:translateX(-50%);opacity:0;animation:ha-agcycle 18s ease-in-out infinite}
+.ha-agents .tile img:nth-child(2){animation-delay:0s}
+.ha-agents .tile img:nth-child(3){animation-delay:3s}
+.ha-agents .tile img:nth-child(4){animation-delay:6s}
+.ha-agents .tile img:nth-child(5){animation-delay:9s}
+.ha-agents .tile img:nth-child(6){animation-delay:12s}
+.ha-agents .tile img:nth-child(7){animation-delay:15s}
+@keyframes ha-agcycle{0%{opacity:0;transform:translateX(-50%) translateY(16px) scale(.97)}3%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}14%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}17%{opacity:0;transform:translateX(-50%) translateY(-10px) scale(1.01)}100%{opacity:0}}
+@media(max-width:1060px){.ha-agents{width:100%;max-width:300px}}
 /* ===== Overview / cover landing ===== */
 .ov-principles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
 .ov-feat{display:flex;align-items:center;gap:24px;border:1px solid var(--border-default);border-radius:18px;background:linear-gradient(118deg,#fff,#FFF3EC 70%,#FFE7DC);padding:26px 28px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;margin-bottom:18px;width:100%;text-align:left}
@@ -3480,6 +3570,10 @@ function buildOverview(){
 
   const cards=[
     ["use","cpu","How to use this","START HERE","Open the published Zuper Design System in Claude Design, then pick it on any project — everything comes out on‑brand."],
+    ["color","droplet","Colour","FOUNDATION","One vivid orange plus a neutral cast — the palette, the gradient and the grounds each colour is allowed on."],
+    ["type","edit","Typography","FOUNDATION","Two type systems, one voice — Aptos for decks, Plus Jakarta + Inter for everything else, Geist Mono eyebrows."],
+    ["voice","chat-text","Voice &amp; tone","FOUNDATION","How Zuper writes — confident, plain, outcome‑led. Signature lines, say/don't‑say and CTA verbs."],
+    ["agents","sparkle","Agent avatars","FOUNDATION","The faces of Zuper Sense — a caped 3D superhero mascot for each AI agent, framed on a warm ground."],
     ["deck","monitor","Deck","POWERPOINT","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
     ["website","globe","Website DLS","WEB","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
     ["one-pager","doc","Case study","1‑PAGER","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
@@ -3526,8 +3620,319 @@ function buildOverview(){
   window.scrollTo(0,0);
 }
 
+/* ============ FOUNDATIONS: colour · type · voice ============ */
+function foundTheme(canvas){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
+    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
+    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
+    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
+  return Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:${canvas||"#FBF8F4"}`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+}
+
+function buildColor(){
+  stage.style.cssText=foundTheme("#FBF8F4");
+  const copyline=(code)=>`<div style="margin-top:14px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border-default);border-radius:10px;padding:11px 13px"><code class="ct" style="font-family:'Geist Mono',monospace;font-size:12px;color:#191919;flex:1;overflow-x:auto;white-space:nowrap">${code}</code><button class="copybtn" style="font:600 11px/1 'Inter',sans-serif;color:var(--brand-default);background:var(--brand-subtle);border:0;border-radius:7px;padding:8px 11px;cursor:pointer">Copy</button></div>`;
+  const gr=(bg,brd,h5,p)=>`<div class="modecard"><div style="height:56px;border-radius:10px;margin-bottom:12px;${brd};background:${bg}"></div><h5>${h5}</h5><p>${p}</p></div>`;
+  stage.innerHTML=`
+  <header class="sys-hero has-art">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Foundation · Colour</p>
+      <h1>Colour</h1>
+      <p class="lede">One vivid orange carries the whole brand; everything else is a neutral that lets the orange — and the product — do the talking. The same palette holds across decks, the site, email and ads.</p>
+      <div class="chips">
+        <span class="chip"><span class="swt" style="background:#FD5000"></span>One orange · #FD5000</span>
+        <span class="chip">Charcoal #282828</span>
+        <span class="chip">Warm‑peach grounds</span>
+        <span class="chip">click a swatch to copy</span>
+      </div>
+      <div class="hero-art"><div class="float ha-pal">
+        <div class="grad"><span class="hx">#FD5000</span></div>
+        <div class="chips6"><span style="background:#191919"></span><span style="background:#282828"></span><span style="background:#FD5000"></span><span style="background:#FBF2EA"></span><span style="background:#FFE7DC"></span><span style="background:#E7E0D6"></span></div>
+      </div></div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 — The one orange</p><h2 class="sec">#FD5000 does the work</h2>
+    <p class="sec-note">Zuper is a single, high‑energy orange. Use it for <b style="color:var(--text-primary)">one thing at a time</b> — the primary action, a key number, an accent — never as a wash. On light grounds it's the call to action; on the orange gradient it becomes the whole surface.</p>
+    <div class="swatches sem">
+      ${swatch("color/brand/default","#FD5000","brand-default",true)}
+      ${swatch("color/brand/hover","#E04600","brand-hover",true)}
+      ${swatch("color/brand/subtle","#FFE7DC","brand-subtle",true)}
+      ${swatch("color/brand/on-dark","#FF8B5A","brand-on-dark",true)}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">02 — The gradient</p><h2 class="sec">The orange gradient</h2>
+    <p class="sec-note">The signature ground for covers, hero panels and CTAs. <b style="color:var(--text-primary)">The rule: dark at the top‑left, light at the bottom‑right</b> — always this direction and these stops. Don't flip it or invent new gradients.</p>
+    <div style="border-radius:16px;height:150px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);box-shadow:0 18px 44px rgba(20,4,3,.18)"></div>
+    ${copyline("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)")}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">03 — Neutrals</p><h2 class="sec">Ink, neutrals &amp; grounds</h2>
+    <p class="sec-note">The quiet supporting cast. Charcoal carries high‑contrast feature bands; warm peach softens cards; the canvas is a barely‑there off‑white.</p>
+    <div class="swatches">
+      ${swatch("ink","#191919",null,false)}
+      ${swatch("charcoal","#282828",null,false)}
+      ${swatch("body","#4B5563",null,false)}
+      ${swatch("muted","#7A7268",null,false)}
+      ${swatch("border","#E7E0D6",null,false)}
+      ${swatch("warm peach","#FBF2EA",null,false)}
+      ${swatch("peach card","#FFE7DC",null,false)}
+      ${swatch("canvas","#FBF8F4",null,false)}
+      ${swatch("white","#FFFFFF",null,false)}
+      ${swatch("sense black","#09090B",null,false)}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">04 — Grounds</p><h2 class="sec">Where each colour lives</h2>
+    <p class="sec-note">Pick the ground first; the rest follows. Never put body text on the gradient, and keep Sense black for Zuper Sense only.</p>
+    <div class="modecards">
+      ${gr("#fff","border:1px solid var(--border-default)","White","Default page ground — the everyday surface.")}
+      ${gr("#FBF2EA","","Warm peach","Cards and soft feature blocks.")}
+      ${gr("#282828","","Charcoal","High‑contrast feature bands.")}
+      ${gr("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)","","Orange gradient","Covers, hero panels and CTAs.")}
+      ${gr("#09090B","","Sense black","Reserved for Zuper Sense only.")}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">05 — Contrast</p><h2 class="sec">Keep it readable</h2>
+    <p class="sec-note">Orange is a <b style="color:var(--text-primary)">large‑text and UI‑accent</b> colour, not body copy. Body stays ink (#191919) on light and near‑white (#FAFAFA) on dark; on the orange ground, text and the logo go white.</p>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
+function buildType(){
+  stage.style.cssText=foundTheme("#FBF8F4");
+  const MONO="'Geist Mono',ui-monospace,monospace";
+  const spec=(fam,label,meta,big,sample)=>`<div style="border:1px solid var(--border-default);border-radius:16px;padding:26px;background:#fff;margin-bottom:16px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary)">${label}</span><span style="font-family:${MONO};font-size:11px;color:var(--text-tertiary)">${meta}</span></div>
+    <div style="font-family:${fam};font-weight:700;font-size:clamp(32px,6vw,60px);letter-spacing:-.03em;line-height:1.02;margin-top:14px;color:#191919">${big}</div>
+    <div style="font-family:${fam};font-weight:500;font-size:19px;color:#4B5563;margin-top:12px">${sample}</div>
+  </div>`;
+  const pairing=(t,fams,use)=>`<div class="feat"><div class="ic">${icon("edit",20)}</div><h5>${t}</h5><p style="margin-bottom:10px">${use}</p><div style="font-family:${MONO};font-size:11px;color:var(--brand-default);letter-spacing:.04em">${fams}</div></div>`;
+  const scaleRow=(name,px,fam,wt)=>`<div style="display:flex;align-items:baseline;gap:18px;padding:14px 0;border-bottom:1px solid var(--border-subtle)"><span style="font-family:${MONO};font-size:11px;color:var(--text-tertiary);width:150px;flex:0 0 auto">${name}</span><span style="font-family:${fam};font-weight:${wt};font-size:${px}px;line-height:1;letter-spacing:-.02em;color:#191919">Run your service business</span></div>`;
+  stage.innerHTML=`
+  <header class="sys-hero has-art">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Foundation · Type</p>
+      <h1>Typography</h1>
+      <p class="lede">Two type systems, one voice. <b style="color:#191919">Aptos</b> powers the deck — it's the native Office face, so slides render identically anywhere. <b style="color:#191919">Plus Jakarta Sans</b> + <b style="color:#191919">Inter</b> power the site, email and ads. <b style="color:#191919">Geist Mono</b> sets the little uppercase eyebrows that are unmistakably Zuper.</p>
+      <div class="chips">
+        <span class="chip">Aa Aptos · decks</span>
+        <span class="chip">Aa Plus Jakarta · display</span>
+        <span class="chip">Aa Inter · body</span>
+        <span class="chip">&lt;/&gt; Geist Mono · eyebrows</span>
+      </div>
+      <div class="hero-art"><div class="float ha-typ">
+        <div class="big">Ag</div>
+        <div class="line"><span class="tw">Field service, intelligently run</span><span class="cr"></span></div>
+        <div class="fams"><span>Aptos</span><span>Plus Jakarta</span><span>Geist Mono</span></div>
+      </div></div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 — Two systems</p><h2 class="sec">One voice, the right face for each medium</h2>
+    <p class="sec-note">Match the typeface to where the work lives — then never mix the two display faces in one artefact.</p>
+    <div class="cols-2" style="margin-top:6px">
+      ${pairing("Decks","Aptos Display · titles &nbsp;/&nbsp; Aptos · body","PowerPoint is built for Aptos — the native Microsoft face — so every deck renders the same on any machine.")}
+      ${pairing("Web · marketing · email","Plus Jakarta Sans · display &nbsp;/&nbsp; Inter · body","The zuper.co pairing: Plus Jakarta for headlines and Inter for readable body and UI.")}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">02 — Specimens</p><h2 class="sec">The families</h2>
+    ${spec("'Plus Jakarta Sans',sans-serif","Plus Jakarta Sans","Display · 600 / 700","Run your service business","The quick brown fox jumps over the lazy dog · 0123456789")}
+    ${spec("'Aptos Display','Aptos',sans-serif","Aptos Display","Deck titles · 700","From first call to final invoice","The quick brown fox jumps over the lazy dog · 0123456789")}
+    ${spec("'Inter',sans-serif","Inter","Body &amp; UI · 400 / 500 / 700","Schedule, dispatch and invoice from one platform.","The quick brown fox jumps over the lazy dog · 0123456789")}
+    ${spec("'Geist Mono',monospace","Geist Mono","Eyebrows &amp; labels · 400 / 500","FOUNDATION · TYPOGRAPHY","01 — THE RULE · CONFIDENTIAL · 0123456789")}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">03 — The scale</p><h2 class="sec">Hierarchy</h2>
+    <p class="sec-note">Big, tight display for headlines; calm body. Tighten letter‑spacing as size grows.</p>
+    <div style="margin-top:8px">
+      ${scaleRow("Display / H1 · 58","58","'Plus Jakarta Sans',sans-serif",700)}
+      ${scaleRow("Section / H2 · 34","34","'Plus Jakarta Sans',sans-serif",700)}
+      ${scaleRow("Subhead / H3 · 22","22","'Plus Jakarta Sans',sans-serif",600)}
+      ${scaleRow("Body · 16","16","'Inter',sans-serif",400)}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">04 — The signature</p><h2 class="sec">Geist Mono eyebrows</h2>
+    <p class="sec-note">The one detail that instantly reads as Zuper: a small, <b style="color:var(--text-primary)">uppercase, letter‑spaced</b> monospace label above a section or headline. Keep them short — a category, a number, a tag.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px">
+      <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">Foundation · Colour</span>
+      <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">01 — The rule</span>
+      <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">Zuper Confidential</span>
+    </div>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
+function buildVoice(){
+  stage.style.cssText=foundTheme("#FBF8F4");
+  const MONO="'Geist Mono',ui-monospace,monospace";
+  const principle=(t,d)=>`<div class="feat"><div class="ic">${icon("chat-text",20)}</div><h5>${t}</h5><p>${d}</p></div>`;
+  const line=(q)=>`<div style="border:1px solid var(--border-default);border-left:3px solid var(--brand-default);background:#fff;border-radius:0 12px 12px 0;padding:16px 18px;margin-bottom:12px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.01em;color:#191919">${q}</div>`;
+  const sd=(say,dont)=>`<tr><td class="area" style="color:#1E854B;font-weight:600">${say}</td><td style="color:#B4341C">${dont}</td></tr>`;
+  const cta=(t)=>`<span style="display:inline-block;background:var(--brand-default);color:#fff;font:700 14px/1 'Inter',sans-serif;padding:13px 20px;border-radius:9px;margin:0 10px 10px 0">${t}</span>`;
+  const rule=(t)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)"><b style="color:var(--text-primary)">${t.split("—")[0]}</b>${t.includes("—")?"— "+t.split("—").slice(1).join("—"):""}</span></div>`;
+  const banned=["seamless","leverage","unlock","empower","streamline","robust","cutting‑edge","game‑changing","elevate","harness","synergy","ecosystem","holistic","revolutionary","“in today's fast‑paced world”","em dashes","reflexive triads"];
+  stage.innerHTML=`
+  <header class="sys-hero has-art">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Foundation · Voice</p>
+      <h1>Voice &amp; tone</h1>
+      <p class="lede">How Zuper writes — plain‑spoken, warm and confident, from the homepage to a button label. Say what the product does <b style="color:#191919">for the customer</b>, in their words, and get out of the way. If a roofing contractor wouldn't say it at a trade show, it doesn't belong on the page.</p>
+      <div class="chips">
+        <span class="chip">Plain‑spoken</span>
+        <span class="chip">Approachable</span>
+        <span class="chip">Customer‑obsessed</span>
+        <span class="chip">Celebrate field teams</span>
+        <span class="chip">Forward‑looking</span>
+      </div>
+      <div class="hero-art"><div class="float ha-voice">
+        <div class="bub"><span class="tw">Run your service business.</span><span class="cr"></span></div>
+        <div class="tag">Zuper voice · plain · warm · field‑first</div>
+      </div></div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 — The five principles</p><h2 class="sec">How Zuper sounds</h2>
+    <p class="sec-note">Five principles carry every word we write. Each one has a concrete copy rule — and an anti‑pattern to avoid.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:6px">
+      ${principle("Plain‑spoken","Write like you're talking to a friend at a trade show. 8th‑grade words, no hyperbole. Industry terms techs use daily are fine; vendor‑speak isn't.")}
+      ${principle("Approachable","Warm and direct. Use contractions, short sentences, second person. Professional warmth, not startup‑bro.")}
+      ${principle("Customer‑obsessed","Lead with the outcome, then the capability. The customer is the hero of every section — never the product.")}
+      ${principle("Celebrate field teams","Name the roles: field techs, crew leads, installers. Show their real day. Respect them, don't “manage resources.”")}
+      ${principle("Forward‑looking","Confidently optimistic. Future‑tense outcomes (“you'll see…”). No hedging, no hype.")}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">02 — On‑tone vs off‑tone</p><h2 class="sec">The difference in one example</h2>
+    <p class="sec-note">Write to <b style="color:var(--text-primary)">“you,”</b> not “we, we, we.” Lead with the reader's world; use “we” only to show how we help.</p>
+    <div class="cols-2" style="margin-top:6px">
+      <div style="border:1px solid #F0C9C0;background:#FCF3F1;border-radius:14px;padding:20px 22px">
+        <div style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#B4341C;margin-bottom:12px">✕ Off‑tone · generic AI</div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#7A5148">“Leverage our innovative platform to streamline operations and unlock unprecedented efficiency across your entire organization.”</p>
+      </div>
+      <div style="border:1px solid #CDE9D6;background:#F1F9F3;border-radius:14px;padding:20px 22px">
+        <div style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#1E854B;margin-bottom:12px">✓ On‑tone · Zuper voice</div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#1B3A28">“Your office manager stops playing phone tag with crews. Your techs get the job details they need before they leave the truck. And you see every dollar, earned and spent, without waiting for month‑end.”</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">03 — Signature lines &amp; CTAs</p><h2 class="sec">The lines that sound like us</h2>
+    <p class="sec-note">Pulled from the live brand — reuse and adapt these; keep their shape. Headlines make <b style="color:var(--text-primary)">one</b> claim, in sentence case, over a Geist Mono eyebrow.</p>
+    ${line("The AI operating system to run your service business.")}
+    ${line("Your software should work for you, not the other way around.")}
+    ${line("From the first call to the final payment.")}
+    ${line("Deploy agents. Get the work done.")}
+    <p class="sec-note" style="margin-top:22px">One primary action per surface — use the brand's own verbs:</p>
+    <div style="margin-top:6px">${cta("Book a demo")}${cta("Test drive Zuper")}${cta("Schedule a demo")}${cta("Start free trial")}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">04 — Say / don't say</p><h2 class="sec">Trade jargon for outcomes</h2>
+    <div style="overflow-x:auto"><table class="cstable"><thead><tr><th>Say this</th><th>Not this</th></tr></thead><tbody>
+      ${sd("You see every job and every dollar from your phone","We leverage robust analytics to unlock efficiency")}
+      ${sd("You'll see better margins in your first month","Our platform is proven to drive operational efficiencies")}
+      ${sd("Field techs, crews, installers","Resources, workforce, headcount")}
+      ${sd("One system, not six tools","A best‑in‑class unified ecosystem")}
+      ${sd("Book a demo","Begin your transformation journey")}
+    </tbody></table></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">05 — Words we never use</p><h2 class="sec">The AI &amp; jargon tells</h2>
+    <p class="sec-note">These read as robotic or salesy — and break the plain‑spoken rule. When three or more land on a page, the copy stops sounding human. Skip <b style="color:var(--text-primary)">em dashes</b> too (use commas, colons or parentheses).</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+      ${banned.map(w=>`<span style="font:500 12.5px/1 'Inter',sans-serif;color:#B4341C;background:#FCEEEA;border:1px solid #F2D3CB;border-radius:8px;padding:9px 12px;text-decoration:line-through;text-decoration-color:rgba(180,52,28,.45)">${w}</span>`).join("")}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">06 — The litmus test</p><h2 class="sec">Before it ships</h2>
+    <p class="sec-note">Read it out loud. If a crew‑lead peer wouldn't say it, rewrite it. Then check the five:</p>
+    <div style="margin-top:4px">
+      ${rule("Plain‑spoken? — would you say this to a friend? Any word a 14‑year‑old wouldn't get (roofing terms aside)?")}
+      ${rule("Approachable? — does it read like a conversation or a legal filing? Are there contractions?")}
+      ${rule("Customer‑obsessed? — is the customer the hero of every section? Does each feature earn a “so what”?")}
+      ${rule("Celebrate field teams? — would a crew lead feel respected, or managed?")}
+      ${rule("Forward‑looking? — does it project confidence without hedging or hype?")}
+    </div>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
+/* ============ FOUNDATIONS: agent avatars ============ */
+/* Imported from Claude Design · foundations/brand-agents.html — caped 3D superhero mascots, one per AI agent. */
+const AGENTS=[
+  ["front-office","CSR Agent","Dispatch · support"],
+  ["field-technician","Field Agent","On the job"],
+  ["business-analyst","Business Analyst","Insights"],
+  ["sales-coach","Sales Coach","Training officer"],
+  ["review-analyser","Review Analyser","Reputation"],
+  ["weather","Weather Forecast","Scheduling"]
+];
+function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
+function buildAgents(){
+  stage.style.cssText=foundTheme("#FBF8F4");
+  const card=(a)=>`<div class="acard">${agentFrame(a)}<div class="bd"><div class="meta"><div class="nm">${a[1]}</div><div class="role">${a[2]}</div></div><button class="dl-btn agdl" data-href="assets/agents/${a[0]}.png" data-name="zuper-${a[0]}.png" aria-label="Download ${a[1]}">${icon("download",16)}</button></div></div>`;
+  const rule=(t)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)">${t}</span></div>`;
+  stage.innerHTML=`
+  <header class="sys-hero has-art">
+    <div class="inner">
+      <div style="margin-bottom:22px">${logo("dark",30)}</div>
+      <p class="ebm">Foundation · Agents</p>
+      <h1>Agent avatars</h1>
+      <p class="lede">The faces of <b style="color:#191919">Zuper Sense</b> — one caped 3D superhero mascot per AI agent. Each agent keeps a single, consistent avatar across product, deck and web, framed on the orange gradient so the character pops.</p>
+      <div class="chips">
+        <span class="chip">Caped 3D mascots</span>
+        <span class="chip">One avatar per agent</span>
+        <span class="chip">Orange‑gradient ground</span>
+        <span class="chip">Bottom‑aligned in frame</span>
+      </div>
+      <div class="hero-art"><div class="float ha-agents"><div class="tile">
+        <span class="badge">Agents</span>
+        ${AGENTS.map(a=>`<img src="assets/agents/${a[0]}.png" alt="">`).join("")}
+      </div></div></div>
+    </div>
+  </header>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 — The line‑up</p><h2 class="sec">Meet the agents</h2>
+    <p class="sec-note">Zuper Sense ships as a team of agents. Always use the mascot with the agent's name and its role label.</p>
+    <div class="agrid">
+      ${AGENTS.map(card).join("")}
+    </div>
+  </div></section>
+  <div style="height:60px"></div>`;
+  window.scrollTo(0,0);
+}
+
 /* ============ NAV ============ */
-const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:""},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems"}];
+const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:""},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"color",name:"Colour",hex:"#FD5000",meta:"palette",grp:"Foundations"},{id:"type",name:"Typography",hex:"#FD5000",meta:"type",grp:"Foundations"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations"},{id:"voice",name:"Voice & tone",hex:"#FD5000",meta:"voice",grp:"Foundations"},{id:"agents",name:"Agent avatars",hex:"#FD5000",meta:"agents",grp:"Foundations"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems"}];
 function setActive(id){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
@@ -3541,6 +3946,10 @@ function setActive(id){
   else if(id==="humans")buildHumans();
   else if(id==="icons")buildIcons();
   else if(id==="logo-usage")buildLogos();
+  else if(id==="color")buildColor();
+  else if(id==="type")buildType();
+  else if(id==="voice")buildVoice();
+  else if(id==="agents")buildAgents();
   else if(id==="website")buildWebsite(SYS.find(s=>s.id===id));
   else buildSystem(SYS.find(s=>s.id===id));
   buildSubnav(id);
@@ -3557,7 +3966,7 @@ function revealSections(){
   _io=new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");_io.unobserve(e.target);}});},{rootMargin:"0px 0px -7% 0px"});
   secs.forEach(s=>_io.observe(s));
 }
-const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",icons:"grid",use:"cpu","one-pager":"doc",social:"megaphone",emailer:"chat","email-sig":"mail","logo-usage":"shield",assets:"download"};
+const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",icons:"grid",use:"cpu","one-pager":"doc",social:"megaphone",emailer:"chat","email-sig":"mail","logo-usage":"shield",assets:"download",color:"droplet",type:"edit",voice:"chat-text",agents:"sparkle"};
 nav.innerHTML=(function(){var g="",out="";ALL.forEach(function(a){if(a.grp&&a.grp!==g){out+=`<div class="lbl">${a.grp}</div>`;g=a.grp;}out+=`<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`;});return out;})();
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
 document.getElementById("menuBtn").addEventListener("click",()=>nav.classList.toggle("open"));
