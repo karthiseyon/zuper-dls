@@ -685,6 +685,137 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-walker{position:absolute;right:160px;bottom:0;height:122px;width:auto;z-index:1;pointer-events:none}
 @media(max-width:1060px){.ha-walker{right:40px}}
 @media(max-width:680px){.ha-walker{display:none}}
+/* email signature: mini sig card */
+.ha-sig{background:#fff;border-radius:14px;box-shadow:0 28px 64px rgba(20,4,3,.24);padding:22px 24px;border:1px solid rgba(0,0,0,.05)}
+.ha-sig .nm{font:700 18px/1.05 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.01em}
+.ha-sig .rl{font:500 12px/1.3 'Inter',sans-serif;color:#7A7268;margin-top:4px}
+.ha-sig .dv{height:2px;width:54px;background:#FD5000;border-radius:2px;margin:15px 0 13px}
+.ha-sig .ct{font:500 12px/1 'Geist Mono',monospace;color:#4B5563;margin-bottom:9px;display:flex;align-items:center;gap:9px}
+.ha-sig .ct svg{color:#FD5000;flex:0 0 auto}
+.ha-sig .lg{margin-top:15px;padding-top:14px;border-top:1px solid #EFEAE2}
+/* social & ads: creative fan */
+.ha-ads{position:relative;height:236px}
+.ha-ads .ad{position:absolute;border-radius:13px;box-shadow:0 20px 46px rgba(20,4,3,.28);overflow:hidden;padding:15px 16px}
+.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#FF8A4C,#FD5000 68%,#DB3602);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.ha-ads .a2{width:186px;height:120px;left:112px;top:78px;transform:rotate(6deg);background:#fff;color:#191919;border:1px solid rgba(0,0,0,.06)}
+.ha-ads .e{font:700 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+.ha-ads .t{font:700 17px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
+.ha-ads .cta{margin-top:13px;display:inline-block;font:600 9px/22px 'Inter',sans-serif;height:22px;padding:0 13px;border-radius:6px}
+.ha-ads .a1 .cta{background:#fff;color:#FD5000}
+.ha-ads .a2 .cta{background:#FD5000;color:#fff}
+/* emailer: 600px email preview */
+.ha-mail{width:212px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 28px 64px rgba(20,4,3,.26);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+.ha-mail .top{padding:11px 14px;border-bottom:1px solid #EFEAE2}
+.ha-mail .band{background:linear-gradient(135deg,#FF8A4C,#FD5000 68%,#DB3602);padding:20px 16px;color:#fff}
+.ha-mail .band .t{font:700 16px/1.08 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em}
+.ha-mail .band .s{font:500 10px/1.4 'Inter',sans-serif;opacity:.92;margin-top:6px}
+.ha-mail .bd{padding:15px 16px}
+.ha-mail .l{height:7px;border-radius:4px;background:#E7E0D6;margin-bottom:7px}
+.ha-mail .l.s{width:62%}
+.ha-mail .btn{margin-top:13px;height:26px;width:100px;border-radius:6px;background:#FD5000}
+.ha-mail .ft{background:#F6F1EB;padding:11px 16px;font:500 8px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9A9088}
+/* one icon set: icon studio (search + results) */
+.ha-studio{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05)}
+.ha-studio .sbar{display:flex;align-items:center;gap:9px;border:1px solid #E7E0D6;border-radius:11px;padding:12px 13px;background:#FBF8F4}
+.ha-studio .sbar svg{color:#FD5000;flex:0 0 auto}
+.ha-studio .sbar .q{font:600 13px/1 'Geist Mono',monospace;color:#191919;white-space:nowrap;overflow:hidden;max-width:80px;animation:ha-type 5s ease-in-out infinite}
+.ha-studio .sbar .cr{width:2px;height:14px;background:#FD5000;flex:0 0 auto;margin-left:-4px;animation:ha-caret 1s steps(1) infinite}
+.ha-studio .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.ha-studio .si{aspect-ratio:1;border-radius:12px;background:#FBF8F4;border:1px solid #EFEAE2;display:flex;align-items:center;justify-content:center;color:#FD5000;animation:ha-pop .5s ease-out both}
+.ha-studio .si:nth-child(1){animation-delay:.05s}.ha-studio .si:nth-child(2){animation-delay:.12s}.ha-studio .si:nth-child(3){animation-delay:.19s}.ha-studio .si:nth-child(4){animation-delay:.26s}.ha-studio .si:nth-child(5){animation-delay:.33s}.ha-studio .si:nth-child(6){animation-delay:.40s}
+.ha-studio .si.sel{background:#FD5000;color:#fff;border-color:#FD5000;animation:ha-pop .5s ease-out .12s both,ha-pulse 2.4s ease-in-out 1.2s infinite}
+.ha-studio .sfoot{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:#9A9088}
+.ha-studio .sfoot .dot{width:3px;height:3px;border-radius:50%;background:#D8CFC2}
+/* logo usage: clear-space frame */
+.ha-logo{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.2);padding:30px 34px;border:1px solid rgba(0,0,0,.05);position:relative}
+.ha-logo .frame{border:1.5px dashed #E0D8CD;border-radius:11px;padding:40px 30px;display:flex;align-items:center;justify-content:center}
+.ha-logo .x{position:absolute;font:700 11px/1 'Geist Mono',monospace;color:#FD5000}
+.ha-logo .x.t{top:16px;left:50%;transform:translateX(-50%)}
+.ha-logo .x.b{bottom:16px;left:50%;transform:translateX(-50%)}
+.ha-logo .x.l{left:15px;top:50%;transform:translateY(-50%)}
+.ha-logo .x.r{right:15px;top:50%;transform:translateY(-50%)}
+/* brand assets: download stack */
+.ha-assets{display:flex;flex-direction:column;gap:11px}
+.ha-assets .f{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;box-shadow:0 16px 38px rgba(20,4,3,.16);border:1px solid rgba(0,0,0,.05);padding:13px 15px}
+.ha-assets .ic{width:38px;height:38px;border-radius:9px;background:#FFE7DC;color:#FD5000;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ha-assets .meta{flex:1;min-width:0}
+.ha-assets .nm{font:700 13px/1.15 'Plus Jakarta Sans',sans-serif;color:#191919}
+.ha-assets .mt{font:600 9px/1 'Geist Mono',monospace;color:#9A9088;margin-top:5px;text-transform:uppercase;letter-spacing:.09em}
+.ha-assets .dl{color:#FD5000;flex:0 0 auto}
+/* overview: systems hub grid */
+.ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:16px;border:1px solid rgba(0,0,0,.05);display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.ha-hub .t{border-radius:12px;padding:15px 14px;border:1px solid #EFEAE2;background:#FBF8F4}
+.ha-hub .t.on{background:linear-gradient(150deg,#FF8A4C,#FD5000 68%,#DB3602);border-color:transparent}
+.ha-hub .t .ic{color:#FD5000;margin-bottom:11px}
+.ha-hub .t.on .ic{color:#fff}
+.ha-hub .t .nm{font:700 13px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.01em}
+.ha-hub .t.on .nm{color:#fff}
+.ha-hub .t .mt{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9A9088;margin-top:6px}
+.ha-hub .t.on .mt{color:rgba(255,255,255,.85)}
+/* ===== hero-art micro-animations (purposeful motion per illustration) ===== */
+@keyframes ha-caret{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes ha-type{0%{max-width:0}35%{max-width:80px}80%{max-width:80px}100%{max-width:0}}
+@keyframes ha-pop{0%{opacity:0;transform:scale(.5)}70%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@keyframes ha-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes ha-flow{to{background-position:0 20px}}
+@keyframes ha-tap{0%,85%,100%{transform:scale(1)}90%{transform:scale(.92)}95%{transform:scale(1)}}
+@keyframes ha-write{0%{transform:scaleX(0)}22%{transform:scaleX(1)}82%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+/* Deck fan — cards deal in, then sway gently */
+@keyframes ha-deal1{0%{opacity:0;transform:translate(-46px,26px) rotate(-6deg)}100%{opacity:1;transform:rotate(8deg)}}
+@keyframes ha-deal2{0%{opacity:0;transform:translate(-30px,34px) rotate(4deg)}100%{opacity:1;transform:rotate(-4deg)}}
+@keyframes ha-deal3{0%{opacity:0;transform:translate(-14px,42px) rotate(2deg)}100%{opacity:1;transform:rotate(-13deg)}}
+@keyframes ha-fs1{0%,100%{transform:rotate(8deg)}50%{transform:rotate(5.5deg)}}
+@keyframes ha-fs2{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(-1.5deg)}}
+@keyframes ha-fs3{0%,100%{transform:rotate(-13deg)}50%{transform:rotate(-15.5deg)}}
+.ha-fan .s1{animation:ha-deal1 .6s cubic-bezier(.2,.8,.25,1) .05s both,ha-fs1 4.2s ease-in-out .8s infinite}
+.ha-fan .s2{animation:ha-deal2 .6s cubic-bezier(.2,.8,.25,1) .18s both,ha-fs2 4.6s ease-in-out .9s infinite}
+.ha-fan .s3{animation:ha-deal3 .6s cubic-bezier(.2,.8,.25,1) .31s both,ha-fs3 4.4s ease-in-out 1s infinite}
+/* Case study doc — the body lines write in, the metric pops */
+.ha-doc .l{transform-origin:left;animation:ha-write 4s ease-in-out infinite}
+.ha-doc .l:nth-child(3){animation-delay:.1s}.ha-doc .l:nth-child(4){animation-delay:.35s}.ha-doc .l:nth-child(5){animation-delay:.6s}.ha-doc .l:nth-child(6){animation-delay:.85s}
+.ha-doc .m b{display:inline-block;transform-origin:left bottom;animation:ha-stat 4s ease-in-out infinite}
+@keyframes ha-stat{0%,20%{transform:scale(.8);opacity:.35}32%{transform:scale(1.14);opacity:1}42%,82%{transform:scale(1);opacity:1}100%{transform:scale(.8);opacity:.35}}
+/* Website window — analytics bars load in a wave, CTA taps */
+.ha-win .bars span{transform-origin:bottom;animation:ha-rise 3.4s ease-in-out infinite}
+@keyframes ha-rise{0%{transform:scaleY(0)}22%{transform:scaleY(1)}86%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+.ha-win .bars span:nth-child(1){animation-delay:0s}.ha-win .bars span:nth-child(2){animation-delay:.12s}.ha-win .bars span:nth-child(3){animation-delay:.24s}.ha-win .bars span:nth-child(4){animation-delay:.36s}.ha-win .bars span:nth-child(5){animation-delay:.48s}
+.ha-win .btn{animation:ha-tap 3.4s ease-in-out infinite}
+/* How-to connect — data flows down the wire, source node pulses */
+.ha-conn .wire{border-left:0;width:2px;background:repeating-linear-gradient(180deg,#FD5000 0 5px,transparent 5px 10px);background-size:2px 20px;animation:ha-flow 1s linear infinite}
+.ha-conn .np:first-of-type .ci{animation:ha-pulse 2.2s ease-in-out infinite}
+/* Email signature — the address types in with a caret */
+.ha-sig .type{display:inline-block;overflow:hidden;white-space:nowrap;max-width:170px;animation:ha-sigtype 5s steps(22,end) infinite}
+@keyframes ha-sigtype{0%{max-width:0}42%{max-width:170px}88%{max-width:170px}100%{max-width:0}}
+.ha-sig .cr{width:2px;height:12px;background:#FD5000;display:inline-block;vertical-align:-1px;margin-left:2px;animation:ha-caret 1s steps(1) infinite}
+/* Social ads — creatives sway for depth, CTAs tap */
+@keyframes ha-sway1{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(-3.5deg)}}
+@keyframes ha-sway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(2.5deg)}}
+.ha-ads .a1{animation:ha-sway1 4s ease-in-out infinite}
+.ha-ads .a2{animation:ha-sway2 4.6s ease-in-out infinite}
+.ha-ads .cta{animation:ha-tap 3.2s ease-in-out infinite}
+.ha-ads .a2 .cta{animation-delay:.6s}
+/* Emailer — body lines write in, CTA taps */
+.ha-mail .l{transform-origin:left;animation:ha-write 3.4s ease-in-out infinite}
+.ha-mail .l:nth-child(2){animation-delay:.18s}.ha-mail .l:nth-child(3){animation-delay:.36s}
+.ha-mail .btn{animation:ha-tap 3s ease-in-out infinite}
+/* Logo usage — the mark pulses inside a measuring frame */
+.ha-logo .frame svg{animation:ha-pulse 3.2s ease-in-out infinite}
+.ha-logo .x{opacity:.3;animation:ha-mark 3.2s ease-in-out infinite}
+@keyframes ha-mark{0%,100%{opacity:.3}50%{opacity:1}}
+.ha-logo .x.t{animation-delay:0s}.ha-logo .x.r{animation-delay:.4s}.ha-logo .x.b{animation-delay:.8s}.ha-logo .x.l{animation-delay:1.2s}
+/* Brand assets — files download, row flashes done */
+.ha-assets .dl{animation:ha-dl 2.2s ease-in-out infinite}
+@keyframes ha-dl{0%{transform:translateY(-5px);opacity:0}25%{opacity:1}70%{opacity:1}100%{transform:translateY(7px);opacity:0}}
+.ha-assets .f{animation:ha-flash 2.2s ease-in-out infinite}
+@keyframes ha-flash{0%,58%,100%{background:#fff}72%{background:#FFF3EC}}
+.ha-assets .f:nth-child(2) .dl,.ha-assets .f:nth-child(2){animation-delay:.35s}
+.ha-assets .f:nth-child(3) .dl,.ha-assets .f:nth-child(3){animation-delay:.7s}
+/* Overview hub — tiles rise in a wave, active icon pulses */
+@keyframes ha-liftwave{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.ha-hub .t{animation:ha-liftwave 3s ease-in-out infinite}
+.ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
+.ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}}
 /* ===== Overview / cover landing ===== */
 .ov-principles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
 .ov-feat{display:flex;align-items:center;gap:24px;border:1px solid var(--border-default);border-radius:18px;background:linear-gradient(118deg,#fff,#FFF3EC 70%,#FFE7DC);padding:26px 28px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;margin-bottom:18px;width:100%;text-align:left}
@@ -1704,7 +1835,7 @@ function buildOnePager(){
   </div></div>`;
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Case study · one‑pager system</p>
@@ -1724,12 +1855,6 @@ function buildOnePager(){
       </div></div>
     </div>
   </header>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">The deliverable</p><h2 class="sec">A 5‑page co‑branded story</h2>
-    <p class="docnote">↔ scroll the pages · A4 · Zuper + client lockup on every page</p>
-    <div class="docstrip">${coverPage}${challengePage}${enabledPage}${impactPage}${resultsPage}</div>
-  </div></section>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Anatomy</p><h2 class="sec">The building blocks</h2>
@@ -1787,6 +1912,12 @@ function buildOnePager(){
         </div>
       </div>
     </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">The deliverable</p><h2 class="sec">A 5‑page co‑branded story</h2>
+    <p class="docnote">↔ scroll the pages · A4 · Zuper + client lockup on every page</p>
+    <div class="docstrip">${coverPage}${challengePage}${enabledPage}${impactPage}${resultsPage}</div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -2345,12 +2476,20 @@ function buildEmailSig(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand toolkit · for everyone at Zuper</p>
       <h1>Email signature</h1>
       <p class="lede">Fill in your details, see it update live, then copy a clean, on‑brand signature straight into Outlook.</p>
+      <div class="hero-art"><div class="float ha-sig">
+        <div class="nm">Superstar Rajinikanth</div>
+        <div class="rl">Visual Design Manager · Zuper</div>
+        <div class="dv"></div>
+        <div class="ct">${icon("mail",13)} <span class="type">superstar@zuper.co</span><span class="cr"></span></div>
+        <div class="ct">${icon("globe",13)} zuper.co</div>
+        <div class="lg">${logo("dark",16)}</div>
+      </div></div>
     </div>
   </header>
 
@@ -2791,7 +2930,7 @@ function buildSocial(){
   const shows=[[3,"3 speakers"],[2,"2 speakers"],[1,"1 speaker"],[4,"4 speakers"]].map(m=>cr(`Raise the Roof · ${m[1]} · 1280 × 720`,1280,720,rtr(m[0]),0.42)).join("");
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Social, ads &amp; campaigns</p>
@@ -2803,6 +2942,10 @@ function buildSocial(){
         <span class="chip">1080 / 1920 / 1200 social</span>
         <span class="chip">IAB ad sizes</span>
       </div>
+      <div class="hero-art"><div class="float ha-ads">
+        <div class="ad a1"><div class="e">Sponsored</div><div class="t">Run your service business</div><span class="cta">Book a demo</span></div>
+        <div class="ad a2"><div class="e">Display · 300×250</div><div class="t">The AI operating system</div><span class="cta">Learn more</span></div>
+      </div></div>
     </div>
   </header>
 
@@ -2891,7 +3034,7 @@ function buildEmailer(){
   </div>`;
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Lifecycle · email system</p>
@@ -2903,6 +3046,12 @@ function buildEmailer(){
         <span class="chip">Aa Plus Jakarta + Inter</span>
         <span class="chip">client‑safe</span>
       </div>
+      <div class="hero-art"><div class="float ha-mail">
+        <div class="top">${logo("dark",15)}</div>
+        <div class="band"><div class="t">From first call to final invoice</div><div class="s">One platform to run your service business.</div></div>
+        <div class="bd"><div class="l"></div><div class="l"></div><div class="l s"></div><div class="btn"></div></div>
+        <div class="ft">Zuper · Unsubscribe</div>
+      </div></div>
     </div>
   </header>
 
@@ -2965,7 +3114,7 @@ function buildIcons(){
   const SYN={roof:["house","house-line"],roofing:["house","house-line"],hvac:["snowflake","fan","thermometer-simple","wind"],ac:["snowflake","fan","wind"],cooling:["snowflake","fan"],heating:["fire","flame","thermometer-simple"],plumbing:["wrench","drop","pipe","faucet"],pipe:["pipe","wrench"],water:["drop","faucet"],electric:["plug","lightning"],electrical:["plug","lightning"],power:["plug","lightning","battery-high"],solar:["solar-panel","sun"],pest:["bug","bug-beetle"],landscaping:["tree","plant","leaf","flower-lotus"],lawn:["tree","plant","leaf"],garden:["plant","flower-lotus","tree"],security:["security-camera","shield-check","lock","siren"],alarm:["siren","bell-ringing"],cleaning:["broom","spray-bottle"],appliance:["washing-machine","oven"],telecom:["broadcast","cell-signal-high","wifi-high"],internet:["wifi-high","globe"],invoice:["invoice","receipt","file-text"],quote:["file-text","receipt"],estimate:["file-text","receipt"],payment:["credit-card","currency-dollar","money","bank"],pay:["credit-card","currency-dollar","money"],schedule:["calendar","calendar-check","calendar-plus","clock"],booking:["calendar-check","clock"],dispatch:["truck","van","navigation-arrow","map-pin"],route:["path","navigation-arrow","map-trifold"],technician:["user-gear","wrench","hard-hat"],tech:["user-gear","wrench"],job:["clipboard-text","wrench","check-square"],task:["check-square","list-checks","clipboard-text"],customer:["user","users","address-book"],contractor:["hard-hat","wrench","toolbox"],tools:["toolbox","wrench","hammer","screwdriver"],warranty:["shield-check","certificate"],report:["chart-bar","chart-line","file-text"],analytics:["chart-bar","chart-line","gauge"],location:["map-pin","navigation-arrow"],ai:["robot","sparkle","cpu"],mobile:["device-mobile","device-mobile-camera"],signature:["signature","scribble-loop"]};
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Iconography</p>
@@ -2977,6 +3126,18 @@ function buildIcons(){
         <span class="chip">256px grid</span>
         <span class="chip">searchable library</span>
       </div>
+      <div class="hero-art"><div class="float ha-studio">
+        <div class="sbar">${icon("search",15)}<span class="q">dispatch</span><span class="cr"></span></div>
+        <div class="sgrid">
+          <span class="si">${icon("truck",22)}</span>
+          <span class="si sel">${icon("pin",22)}</span>
+          <span class="si">${icon("map",22)}</span>
+          <span class="si">${icon("calendar",22)}</span>
+          <span class="si">${icon("users",22)}</span>
+          <span class="si">${icon("bell",22)}</span>
+        </div>
+        <div class="sfoot"><span>1,500+ glyphs</span><span class="dot"></span><span>currentColor</span></div>
+      </div></div>
     </div>
   </header>
 
@@ -3100,7 +3261,7 @@ function buildLogos(){
   ].map(d=>`<div><div style="position:relative;background:${d[2]};border:1px solid #E7E0D6;border-radius:14px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:94px;overflow:hidden"><span style="position:absolute;top:9px;right:9px;width:22px;height:22px;border-radius:50%;background:#C42121;color:#fff;display:flex;align-items:center;justify-content:center">${icon("x",13)}</span>${d[1]}</div>${cap(d[0])}</div>`).join("");
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Brand</p>
@@ -3112,6 +3273,10 @@ function buildLogos(){
         <span class="chip">min 24px · 100px</span>
         <span class="chip">currentColor grounds</span>
       </div>
+      <div class="hero-art"><div class="float ha-logo">
+        <span class="x t">x</span><span class="x b">x</span><span class="x l">x</span><span class="x r">x</span>
+        <div class="frame">${logo("dark",26)}</div>
+      </div></div>
     </div>
   </header>
 
@@ -3240,7 +3405,7 @@ function buildAssets(){
   ].join("");
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Downloads</p>
@@ -3252,6 +3417,11 @@ function buildAssets(){
         <span class="chip">Zoom &amp; LinkedIn templates</span>
         <span class="chip">Word .docx</span>
       </div>
+      <div class="hero-art"><div class="float ha-assets">
+        <div class="f"><div class="ic">${icon("users",20)}</div><div class="meta"><div class="nm">LinkedIn cover photo</div><div class="mt">1584 × 396</div></div><div class="dl">${icon("download",18)}</div></div>
+        <div class="f"><div class="ic">${icon("camera",20)}</div><div class="meta"><div class="nm">Zoom background</div><div class="mt">1920 × 1080</div></div><div class="dl">${icon("download",18)}</div></div>
+        <div class="f"><div class="ic">${icon("invoice",20)}</div><div class="meta"><div class="nm">Branded Word doc</div><div class="mt">.docx</div></div><div class="dl">${icon("download",18)}</div></div>
+      </div></div>
     </div>
   </header>
 
@@ -3326,7 +3496,7 @@ function buildOverview(){
       <span class="go">Open ${c[2]} →</span></button>`).join("");
 
   stage.innerHTML=`
-  <header class="sys-hero">
+  <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Design Language Systems · for Claude Design</p>
@@ -3338,6 +3508,12 @@ function buildOverview(){
         <span class="chip">&lt;/&gt; Geist Mono eyebrows</span>
         <span class="chip">Outline icons</span>
       </div>
+      <div class="hero-art"><div class="float ha-hub">
+        <div class="t on"><div class="ic">${icon("image",22)}</div><div class="nm">Deck</div><div class="mt">PPT</div></div>
+        <div class="t"><div class="ic">${icon("globe",22)}</div><div class="nm">Website</div><div class="mt">Web</div></div>
+        <div class="t"><div class="ic">${icon("mail",22)}</div><div class="nm">Emailer</div><div class="mt">Email</div></div>
+        <div class="t"><div class="ic">${icon("download",22)}</div><div class="nm">Assets</div><div class="mt">Brand</div></div>
+      </div></div>
     </div>
   </header>
 
@@ -3351,7 +3527,7 @@ function buildOverview(){
 }
 
 /* ============ NAV ============ */
-const ALL=[{id:"overview",name:"Overview",hex:"#FD5000",meta:"home"},{id:"use",name:"How to use this",hex:"#FD5000",meta:"start"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail"},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos"}];
+const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:""},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems"}];
 function setActive(id){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
@@ -3382,8 +3558,7 @@ function revealSections(){
   secs.forEach(s=>_io.observe(s));
 }
 const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",icons:"grid",use:"cpu","one-pager":"doc",social:"megaphone",emailer:"chat","email-sig":"mail","logo-usage":"shield",assets:"download"};
-nav.innerHTML=`<div class="lbl">Systems</div>`+ALL.map(a=>
-  `<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`).join("");
+nav.innerHTML=(function(){var g="",out="";ALL.forEach(function(a){if(a.grp&&a.grp!==g){out+=`<div class="lbl">${a.grp}</div>`;g=a.grp;}out+=`<button data-id="${a.id}"><span class="nic" style="color:${a.hex}">${icon(NAVIC[a.id]||"home",17,1.7)}</span>${a.name}<span class="meta">${a.meta}</span></button>`;});return out;})();
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
 document.getElementById("menuBtn").addEventListener("click",()=>nav.classList.toggle("open"));
 var brandLogoEl=document.getElementById("brandLogo");
@@ -3408,11 +3583,11 @@ stage.addEventListener("click",function(e){var b=e.target.closest(".url-copy");i
 function buildSubnav(id){
   nav.querySelectorAll(".subnav").forEach(n=>n.remove());
   const btn=nav.querySelector(`button[data-id="${id}"]`);
-  const secs=[...stage.querySelectorAll("section.block")];
-  if(!btn||!secs.length)return;
+  const secs=[...stage.querySelectorAll("section.block")].filter(s=>s.querySelector("h2.sec"));
+  if(!btn||secs.length<2)return;
   const sub=document.createElement("div");sub.className="subnav";
   secs.forEach((sec,i)=>{
-    const hh=sec.querySelector("h2.sec");if(!hh)return;
+    const hh=sec.querySelector("h2.sec");
     const sid=`s-${id}-${i}`;sec.id=sid;sec.style.scrollMarginTop="22px";
     const a=document.createElement("a");a.href="#"+sid;
     a.textContent=hh.textContent.replace(/^\s*\d+\s*[·—\-]\s*/,"");
