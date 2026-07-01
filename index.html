@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zuper · Design Language Systems</title>
-<meta name="description" content="The Zuper Design Language System — one brand across ten systems: decks, website, case studies, mini-humans, social, email and brand assets. Built to plug into Claude Design.">
+<meta name="description" content="The Zuper Design Language System, one brand across ten systems: decks, website, case studies, mini-humans, social, email and brand assets. Built to plug into Claude Design.">
 <link rel="icon" type="image/svg+xml" href="assets/logos/zuper-logomark.svg">
 <link rel="icon" type="image/png" href="assets/logos/zuper-logomark.png">
 <link rel="apple-touch-icon" href="assets/logos/zuper-logomark.png">
@@ -32,7 +32,7 @@
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-700.woff2) format('woff2');}
 @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/geist-mono-400.woff2) format('woff2');}
 @font-face{font-family:'Geist Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/geist-mono-500.woff2) format('woff2');}
-/* ===== Deck system — one deck, three modes ===== */
+/* ===== Deck system, one deck, three modes ===== */
 .modecards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
 @media(max-width:760px){.modecards{grid-template-columns:1fr}}
 .modecard{border:1px solid var(--border-default);border-radius:14px;padding:18px;background:var(--surface-card)}
@@ -114,7 +114,7 @@
 .statbig{border:1px solid var(--border-default);border-radius:16px;padding:24px;background:var(--surface-cream)}
 .statbig .n{font-family:var(--display);font-weight:700;font-size:52px;letter-spacing:-.03em;color:var(--brand-default);line-height:1}
 .statbig .l{font-size:14px;color:var(--text-secondary);margin-top:6px}
-/* ===== Case study — realistic document pages ===== */
+/* ===== Case study, realistic document pages ===== */
 .cs-ribbon{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .cs-ribbon .r{flex:1;min-width:150px;border:1px solid var(--border-default);border-radius:14px;padding:16px 18px;background:var(--surface-card)}
 .cs-ribbon .r .n{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:-.02em;color:var(--brand-default);line-height:1}
@@ -162,7 +162,7 @@
 @media(max-width:760px){.anat{grid-template-columns:1fr}.page{width:300px}}
 .anat .ac{border:1px solid var(--border-default);border-radius:14px;padding:20px;background:var(--surface-card)}
 .anat .ac .lbl{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin:0 0 14px}
-/* ===== Website DLS — extended components ===== */
+/* ===== Website DLS, extended components ===== */
 .annbar{display:flex;align-items:center;justify-content:center;gap:11px;background:#282828;color:#fff;border-radius:11px;padding:12px 16px;font-size:13.5px;flex-wrap:wrap}
 .annbar .tp{background:var(--brand-default);color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 9px;border-radius:999px;font-family:'Geist Mono',ui-monospace,monospace}
 .annbar a{color:#FF9B6B;text-decoration:none;font-weight:600}
@@ -273,7 +273,7 @@
 .dslide .dlist-i{list-style:none;padding:0;margin:13px 0 0;display:flex;flex-direction:column;gap:10px}
 .dslide .dlist-i li{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.3}
 .dslide .dlist-i li>svg{flex:0 0 auto;margin-top:1px;opacity:.92}
-/* ===== Website — usage, states & anatomy ===== */
+/* ===== Website, usage, states & anatomy ===== */
 .states{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .states .st{border:1px solid var(--border-default);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:13px;background:var(--surface-card)}
 .states .st .lab{font-family:'Geist Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary)}
@@ -759,7 +759,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 @keyframes ha-flow{to{background-position:0 20px}}
 @keyframes ha-tap{0%,85%,100%{transform:scale(1)}90%{transform:scale(.92)}95%{transform:scale(1)}}
 @keyframes ha-write{0%{transform:scaleX(0)}22%{transform:scaleX(1)}82%{transform:scaleX(1)}100%{transform:scaleX(0)}}
-/* Deck fan — cards deal in, then sway gently */
+/* Deck fan, cards deal in, then sway gently */
 @keyframes ha-deal1{0%{opacity:0;transform:translate(-46px,26px) rotate(-6deg)}100%{opacity:1;transform:rotate(8deg)}}
 @keyframes ha-deal2{0%{opacity:0;transform:translate(-30px,34px) rotate(4deg)}100%{opacity:1;transform:rotate(-4deg)}}
 @keyframes ha-deal3{0%{opacity:0;transform:translate(-14px,42px) rotate(2deg)}100%{opacity:1;transform:rotate(-13deg)}}
@@ -769,61 +769,61 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-fan .s1{animation:ha-deal1 .6s cubic-bezier(.2,.8,.25,1) .05s both,ha-fs1 4.2s ease-in-out .8s infinite}
 .ha-fan .s2{animation:ha-deal2 .6s cubic-bezier(.2,.8,.25,1) .18s both,ha-fs2 4.6s ease-in-out .9s infinite}
 .ha-fan .s3{animation:ha-deal3 .6s cubic-bezier(.2,.8,.25,1) .31s both,ha-fs3 4.4s ease-in-out 1s infinite}
-/* Case study doc — the body lines write in, the metric pops */
+/* Case study doc, the body lines write in, the metric pops */
 .ha-doc .l{transform-origin:left;animation:ha-write 4s ease-in-out infinite}
 .ha-doc .l:nth-child(3){animation-delay:.1s}.ha-doc .l:nth-child(4){animation-delay:.35s}.ha-doc .l:nth-child(5){animation-delay:.6s}.ha-doc .l:nth-child(6){animation-delay:.85s}
 .ha-doc .m b{display:inline-block;transform-origin:left bottom;animation:ha-stat 4s ease-in-out infinite}
 @keyframes ha-stat{0%,20%{transform:scale(.8);opacity:.35}32%{transform:scale(1.14);opacity:1}42%,82%{transform:scale(1);opacity:1}100%{transform:scale(.8);opacity:.35}}
-/* Website window — analytics bars load in a wave, CTA taps */
+/* Website window, analytics bars load in a wave, CTA taps */
 .ha-win .bars span{transform-origin:bottom;animation:ha-rise 3.4s ease-in-out infinite}
 @keyframes ha-rise{0%{transform:scaleY(0)}22%{transform:scaleY(1)}86%{transform:scaleY(1)}100%{transform:scaleY(0)}}
 .ha-win .bars span:nth-child(1){animation-delay:0s}.ha-win .bars span:nth-child(2){animation-delay:.12s}.ha-win .bars span:nth-child(3){animation-delay:.24s}.ha-win .bars span:nth-child(4){animation-delay:.36s}.ha-win .bars span:nth-child(5){animation-delay:.48s}
 .ha-win .btn{animation:ha-tap 3.4s ease-in-out infinite}
-/* How-to connect — data flows down the wire, source node pulses */
+/* How-to connect, data flows down the wire, source node pulses */
 .ha-conn .wire{border-left:0;width:2px;background:repeating-linear-gradient(180deg,#FD5000 0 5px,transparent 5px 10px);background-size:2px 20px;animation:ha-flow 1s linear infinite}
 .ha-conn .np:first-of-type .ci{animation:ha-pulse 2.2s ease-in-out infinite}
-/* Email signature — the address types in with a caret */
+/* Email signature, the address types in with a caret */
 .ha-sig .type{display:inline-block;overflow:hidden;white-space:nowrap;max-width:170px;animation:ha-sigtype 5s steps(22,end) infinite}
 @keyframes ha-sigtype{0%{max-width:0}42%{max-width:170px}88%{max-width:170px}100%{max-width:0}}
 .ha-sig .cr{width:2px;height:12px;background:#FD5000;display:inline-block;vertical-align:-1px;margin-left:2px;animation:ha-caret 1s steps(1) infinite}
-/* Social ads — creatives sway for depth, CTAs tap */
+/* Social ads, creatives sway for depth, CTAs tap */
 @keyframes ha-sway1{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(-3.5deg)}}
 @keyframes ha-sway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(2.5deg)}}
 .ha-ads .a1{animation:ha-sway1 4s ease-in-out infinite}
 .ha-ads .a2{animation:ha-sway2 4.6s ease-in-out infinite}
 .ha-ads .cta{animation:ha-tap 3.2s ease-in-out infinite}
 .ha-ads .a2 .cta{animation-delay:.6s}
-/* Emailer — body lines write in, CTA taps */
+/* Emailer, body lines write in, CTA taps */
 .ha-mail .l{transform-origin:left;animation:ha-write 3.4s ease-in-out infinite}
 .ha-mail .l:nth-child(2){animation-delay:.18s}.ha-mail .l:nth-child(3){animation-delay:.36s}
 .ha-mail .btn{animation:ha-tap 3s ease-in-out infinite}
-/* Logo usage — the mark pulses inside a measuring frame */
+/* Logo usage, the mark pulses inside a measuring frame */
 .ha-logo .frame svg{animation:ha-pulse 3.2s ease-in-out infinite}
 .ha-logo .x{opacity:.3;animation:ha-mark 3.2s ease-in-out infinite}
 @keyframes ha-mark{0%,100%{opacity:.3}50%{opacity:1}}
 .ha-logo .x.t{animation-delay:0s}.ha-logo .x.r{animation-delay:.4s}.ha-logo .x.b{animation-delay:.8s}.ha-logo .x.l{animation-delay:1.2s}
-/* Brand assets — files download, row flashes done */
+/* Brand assets, files download, row flashes done */
 .ha-assets .dl{animation:ha-dl 2.2s ease-in-out infinite}
 @keyframes ha-dl{0%{transform:translateY(-5px);opacity:0}25%{opacity:1}70%{opacity:1}100%{transform:translateY(7px);opacity:0}}
 .ha-assets .f{animation:ha-flash 2.2s ease-in-out infinite}
 @keyframes ha-flash{0%,58%,100%{background:#fff}72%{background:#FFF3EC}}
 .ha-assets .f:nth-child(2) .dl,.ha-assets .f:nth-child(2){animation-delay:.35s}
 .ha-assets .f:nth-child(3) .dl,.ha-assets .f:nth-child(3){animation-delay:.7s}
-/* Overview hub — tiles rise in a wave, active icon pulses */
+/* Overview hub, tiles rise in a wave, active icon pulses */
 @keyframes ha-liftwave{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .ha-hub .t{animation:ha-liftwave 3s ease-in-out infinite}
 .ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
 .ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}}
 @keyframes ha-typline{0%{max-width:0}45%{max-width:250px}88%{max-width:250px}100%{max-width:0}}
-/* Color — palette card */
+/* Color, palette card */
 .ha-pal{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05)}
 .ha-pal .grad{height:122px;border-radius:12px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);display:flex;align-items:flex-end;padding:13px}
 .ha-pal .grad .hx{font:700 13px/1 'Geist Mono',monospace;color:#fff;letter-spacing:.03em}
 .ha-pal .chips6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}
 .ha-pal .chips6 span{aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,0,0,.07);display:block;animation:ha-pop .5s ease-out both}
 .ha-pal .chips6 span:nth-child(1){animation-delay:.05s}.ha-pal .chips6 span:nth-child(2){animation-delay:.12s}.ha-pal .chips6 span:nth-child(3){animation-delay:.19s}.ha-pal .chips6 span:nth-child(4){animation-delay:.26s}.ha-pal .chips6 span:nth-child(5){animation-delay:.33s}.ha-pal .chips6 span:nth-child(6){animation-delay:.4s}
-/* Typography — specimen card */
+/* Typography, specimen card */
 .ha-typ{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px 22px;border:1px solid rgba(0,0,0,.05)}
 .ha-typ .big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:80px;line-height:.86;letter-spacing:-.04em;color:#191919}
 .ha-typ .line{margin-top:12px;display:flex;align-items:center;font:600 15px/1.2 'Plus Jakarta Sans',sans-serif;color:#191919}
@@ -831,14 +831,14 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-typ .cr{width:2px;height:15px;background:#FD5000;margin-left:2px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
 .ha-typ .fams{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap}
 .ha-typ .fams span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px}
-/* Voice — speech bubble */
+/* Voice, speech bubble */
 .ha-voice{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px;border:1px solid rgba(0,0,0,.05)}
 .ha-voice .bub{background:linear-gradient(135deg,#FF8A4C,#FD5000 65%,#DB3602);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 18px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
 .ha-voice .bub .tw{overflow:hidden;white-space:nowrap;max-width:270px;animation:ha-voicetype 5s steps(26,end) infinite}
 @keyframes ha-voicetype{0%{max-width:0}45%{max-width:270px}88%{max-width:270px}100%{max-width:0}}
 .ha-voice .bub .cr{width:3px;height:20px;background:#fff;margin-left:3px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
 .ha-voice .tag{margin-top:14px;font:600 10px/1.4 'Geist Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:#7A7268}
-/* Agent avatars — mascot cards (orange-gradient frames, 3D mascots) */
+/* Agent avatars, mascot cards (orange-gradient frames, 3D mascots) */
 .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:820px){.agrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.agrid{grid-template-columns:1fr}}
@@ -851,7 +851,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .acard .role{font:600 10px/1.3 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
 .acard .agdl{flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--border-default);background:#fff;color:var(--brand-default);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s}
 .acard .agdl:hover{background:var(--brand-subtle);border-color:var(--brand-default)}
-/* Agent avatars — hero art: cross-fading mascot tile */
+/* Agent avatars, hero art: cross-fading mascot tile */
 .ha-agents{width:300px;margin-left:auto}
 .ha-agents .tile{position:relative;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.32)}
 .ha-agents .badge{position:absolute;top:13px;left:14px;z-index:3;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 10px}
@@ -1064,7 +1064,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .web-hero h3{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,44px);line-height:1.03;letter-spacing:-.03em;margin:0;max-width:16ch;color:var(--text-primary);text-wrap:balance}
 .web-hero p{font-size:15.5px;color:var(--text-secondary);max-width:48ch;margin:16px 0 24px;line-height:1.55}
 
-/* ===== Website DLS — atoms & molecules ===== */
+/* ===== Website DLS, atoms & molecules ===== */
 .wbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 22px;font-size:14px;font-weight:600;border-radius:8px;border:2px solid transparent;cursor:pointer;line-height:1;transition:all .2s ease;text-decoration:none;font-family:var(--body)}
 .wbtn:active{transform:translateY(1px)}
 .wbtn-primary{background:var(--brand-default);color:#fff}
@@ -1160,7 +1160,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .type-scale .ts .mt{font-family:var(--mono);font-size:11px;color:var(--text-tertiary);min-width:128px}
 @media(max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}.statrow{grid-template-columns:1fr}.ctaband{flex-direction:column;align-items:flex-start}.ctaband .sp{margin-left:0}}
 
-/* ===== Website DLS v2 — real zuper.co system ===== */
+/* ===== Website DLS v2, real zuper.co system ===== */
 .ebm{font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-default);margin:0 0 12px}
 .ebm.on-dark{color:#FF9B6B}
 .wbtn-dark{background:#1B1B1B;color:#fff;border-color:#1B1B1B}
@@ -1297,7 +1297,7 @@ const SYS = [
 {
   id:"deck-light", name:"Deck · Light", navHex:"#FD5000", navMeta:"slides",
   tagline:"Primary cover · light system",
-  lede:"The primary deck look — a white cover with orange interiors. Clean white and warm‑cream grounds, black type set in Aptos, and Zuper orange reserved for emphasis. Built for readable, content‑first slides.",
+  lede:"The primary deck look, a white cover with orange interiors. Clean white and warm‑cream grounds, black type set in Aptos, and Zuper orange reserved for emphasis. Built for readable, content‑first slides.",
   canvas:"#F8F5F0",
   hero:{bg:"linear-gradient(135deg,#FFFFFF 0%,#FFF3EC 60%,#FFE2D2 100%)",ink:"#1B1919",sub:"#5A554F",kick:"#FD5000",chipBg:"#FFFFFF",chipInk:"#1B1919",chipLine:"#E7E6E3"},
   fonts:{display:"Space Grotesk / 500 · 700",body:"Inter / 400 · 500 · 700"},
@@ -1319,7 +1319,7 @@ const SYS = [
 {
   id:"deck-orange", name:"Deck · Orange", navHex:"#FD5000", navMeta:"slides",
   tagline:"Secondary cover · orange system",
-  lede:"The secondary deck look — an orange cover with white interiors. Full‑bleed orange for title slides, section breaks and statement moments. White Aptos Display headlines own the frame; everything else gets out of the way.",
+  lede:"The secondary deck look, an orange cover with white interiors. Full‑bleed orange for title slides, section breaks and statement moments. White Aptos Display headlines own the frame; everything else gets out of the way.",
   canvas:"#FD5000",
   hero:{bg:"linear-gradient(135deg,#FF8A4C 0%,#FD5000 55%,#C22D00 100%)",ink:"#FFFFFF",sub:"#FFE0CE",kick:"#FFFAEA",chipBg:"rgba(255,255,255,.14)",chipInk:"#FFFFFF",chipLine:"rgba(255,255,255,.32)"},
   fonts:{display:"Space Grotesk / 700",body:"Inter / 400 · 600"},
@@ -1338,7 +1338,7 @@ const SYS = [
   charts:[["white","#FFFFFF"],["cream","#FFFAEA"],["peach","#FFD9C9"],["glow","#FFB088"],["deep","#C22D00"]]
 },
 {
-  id:"sense-dark", name:"Deck · Dark — Zuper Sense", navHex:"#E85D3A", navMeta:"AI",
+  id:"sense-dark", name:"Deck · Dark. Zuper Sense", navHex:"#E85D3A", navMeta:"AI",
   tagline:"Dark, AI‑native system",
   lede:"The Zuper Sense look: a zinc near‑black canvas, glassy surfaces, and a multi‑hue accent set led by orange. Made for the AI product narrative and data‑rich, low‑light slides.",
   canvas:"#09090B",
@@ -1668,8 +1668,8 @@ function buildSystem(s){
 
   const webBlock = s.web ? `
     <section class="block"><div class="wrap">
-      <p class="eyebrow">06 — Web patterns</p><h2 class="sec">Marketing surfaces</h2>
-      <p class="sec-note">Navigation and hero patterns as they appear on zuper.co — warm gradient grounds with a single orange call‑to‑action.</p>
+      <p class="eyebrow">06 · Web patterns</p><h2 class="sec">Marketing surfaces</h2>
+      <p class="sec-note">Navigation and hero patterns as they appear on zuper.co, warm gradient grounds with a single orange call‑to‑action.</p>
       <div class="web-nav">
         <div class="wlogo">${logo("dark",22)}</div>
         <div class="links"><span>Product</span><span>Solutions</span><span>Pricing</span><span>Resources</span></div>
@@ -1679,7 +1679,7 @@ function buildSystem(s){
       </div>
       <div class="web-hero">
         <h3>Field service, intelligently automated</h3>
-        <p>Schedule, dispatch and invoice from one platform — with AI that turns every job into data your team can act on.</p>
+        <p>Schedule, dispatch and invoice from one platform, with AI that turns every job into data your team can act on.</p>
         <div class="row"><button class="btn btn-primary">Start free trial</button><button class="btn btn-secondary">Watch overview</button></div>
       </div>
     </div></section>`:"";
@@ -1710,34 +1710,34 @@ function buildSystem(s){
         <span class="chip">Aa ${esc(fl.body)} · body</span>
         <span class="chip">canvas ${s.canvas}</span>
       </div>
-      ${s.id==="sense-dark"?`<div class="hero-note">Canvas set on the Zuper Sense signature light‑bars background — embedded here and reused on every dark slide.</div>`:``}
+      ${s.id==="sense-dark"?`<div class="hero-note">Canvas set on the Zuper Sense signature light‑bars background, embedded here and reused on every dark slide.</div>`:``}
     </div>
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Primitives</p><h2 class="sec">Primitive palette</h2>
-    <p class="sec-note">Raw, named color values — the single source of truth. Semantic tokens below alias these.</p>
+    <p class="eyebrow">01 · Primitives</p><h2 class="sec">Primitive palette</h2>
+    <p class="sec-note">Raw, named color values, the single source of truth. Semantic tokens below alias these.</p>
     ${prim}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Semantic tokens</p><h2 class="sec">Semantic tokens</h2>
-    <p class="sec-note">Every semantic token aliases a primitive and is consumed as <code style="font-family:var(--mono);color:var(--text-brand)">var(--token-name)</code>. Swap a theme by re‑pointing these — components never change.</p>
+    <p class="eyebrow">02 · Semantic tokens</p><h2 class="sec">Semantic tokens</h2>
+    <p class="sec-note">Every semantic token aliases a primitive and is consumed as <code style="font-family:var(--mono);color:var(--text-brand)">var(--token-name)</code>. Swap a theme by re‑pointing these, components never change.</p>
     ${sem}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — Typography</p><h2 class="sec">Type system</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">${esc(fl.display)}</b> for display &amp; headlines · <b style="color:var(--text-primary)">${esc(fl.body)}</b> for body &amp; UI.${fl.accent?` · ${esc(fl.accent)} accent.`:``}${fl.ppt?` Built for PowerPoint — Aptos is the native Microsoft Office face, so decks render identically on any M365 machine.`:``}${fl.hero?` Hero headlines are set in ${esc(fl.hero)}.`:``}</p>
+    <p class="eyebrow">03 · Typography</p><h2 class="sec">Type system</h2>
+    <p class="sec-note"><b style="color:var(--text-primary)">${esc(fl.display)}</b> for display &amp; headlines · <b style="color:var(--text-primary)">${esc(fl.body)}</b> for body &amp; UI.${fl.accent?` · ${esc(fl.accent)} accent.`:``}${fl.ppt?` Built for PowerPoint. Aptos is the native Microsoft Office face, so decks render identically on any M365 machine.`:``}${fl.hero?` Hero headlines are set in ${esc(fl.hero)}.`:``}</p>
     <div class="type-row"><div class="tag">Display / 56</div><div class="demo type-sample" style="font-size:56px">Field service, reimagined</div></div>
     <div class="type-row"><div class="tag">Display / 34</div><div class="demo type-sample" style="font-size:34px">Built for the people in the field</div></div>
     <div class="type-row"><div class="tag">Heading / 22</div><div class="demo type-sample" style="font-size:22px;font-weight:500">Scheduling, dispatch & invoicing</div></div>
-    <div class="type-row"><div class="tag">Body / 16</div><div class="demo body-sample" style="font-size:16px;color:var(--text-secondary);max-width:62ch;line-height:1.6">Zuper connects your back office and your field teams on one platform — so the right technician, with the right parts, shows up at the right time.</div></div>
+    <div class="type-row"><div class="tag">Body / 16</div><div class="demo body-sample" style="font-size:16px;color:var(--text-secondary);max-width:62ch;line-height:1.6">Zuper connects your back office and your field teams on one platform, so the right technician, with the right parts, shows up at the right time.</div></div>
     <div class="type-row"><div class="tag">Label / 12</div><div class="demo body-sample" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary);font-weight:600">Work order · #ZW‑4821</div></div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — Foundations</p><h2 class="sec">Spacing, radius, elevation</h2>
+    <p class="eyebrow">04 · Foundations</p><h2 class="sec">Spacing, radius, elevation</h2>
     <div class="found-grid">
       <div>
         <h3 class="grp">Spacing scale (4px base)</h3>
@@ -1759,7 +1759,7 @@ function buildSystem(s){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">05 — Components</p><h2 class="sec">Components in this theme</h2>
+    <p class="eyebrow">05 · Components</p><h2 class="sec">Components in this theme</h2>
     <p class="sec-note">Every component below reads only semantic tokens, so it inherits the active theme automatically.</p>
     <div class="comp-grid">
       <div class="panel">
@@ -1782,7 +1782,7 @@ function buildSystem(s){
       </div>
       <div class="panel">
         <h4>Status messages</h4>
-        <div class="alert" style="background:var(--status-success-bg);color:var(--status-success-fg)"><span class="ic">✓</span><div>Invoice sent — payment expected in 3 days.</div></div>
+        <div class="alert" style="background:var(--status-success-bg);color:var(--status-success-fg)"><span class="ic">✓</span><div>Invoice sent, payment expected in 3 days.</div></div>
         <div class="alert" style="background:var(--status-warning-bg);color:var(--status-warning-fg)"><span class="ic">!</span><div>Technician is running 15 minutes late.</div></div>
         <div class="alert" style="background:var(--status-error-bg);color:var(--status-error-fg)"><span class="ic">×</span><div>Job failed to sync. Retry needed.</div></div>
       </div>
@@ -1836,26 +1836,26 @@ function buildOnePager(){
       <p class="cv-tag">Customer story · Roofing</p>
       <div style="margin-top:auto">
         <div class="cv-h">From spreadsheets to scale<span class="sub">How Summit Roofing runs a smarter operation with Zuper</span></div>
-        <p class="cp">Summit Roofing &amp; Construction is a family‑owned roofer across the region — residential &amp; commercial.</p>
+        <p class="cp">Summit Roofing &amp; Construction is a family‑owned roofer across the region, residential &amp; commercial.</p>
         <p class="cp">Running production on spreadsheets and a legacy CRM, they knew something had to change. That's when they found Zuper.</p>
       </div>
     </div></div>`;
 
   const challengePage=`<div class="page"><div class="pad">
     <div class="psech"><h6>The Challenge</h6><span class="ru"></span></div>
-    <p class="ri">Before Zuper, Summit relied on a legacy CRM — and it created as many problems as it solved.</p>
-    <p class="ri"><b>Scheduling was flying blind.</b> The dispatch board showed a job existed, but not its size, pitch or status — so the team kept a separate spreadsheet.</p>
+    <p class="ri">Before Zuper, Summit relied on a legacy CRM, and it created as many problems as it solved.</p>
+    <p class="ri"><b>Scheduling was flying blind.</b> The dispatch board showed a job existed, but not its size, pitch or status, so the team kept a separate spreadsheet.</p>
     <p class="ri"><b>Upsells were left on the table.</b> Reps filtered out premium options before presenting them, so high‑margin products were rarely sold.</p>
-    <p class="ri"><b>Field docs were scattered.</b> Notes lived in the CRM, photos in a separate app — neither talked to the other.</p>
+    <p class="ri"><b>Field docs were scattered.</b> Notes lived in the CRM, photos in a separate app, neither talked to the other.</p>
     <p class="ri"><b>Finance ran on friction.</b> The manager drove to the bank daily just to deposit checks.</p>
     ${foot(2)}
   </div></div>`;
 
   const enabledPage=`<div class="page"><div class="pad">
     <div class="psech"><h6>What Zuper Enabled</h6><span class="ru"></span></div>
-    <div class="ftile"><span class="mk">${icon('invoice',14)}</span><div><div class="t">Intelligent Quoting</div><div class="d">Every quote now offers good‑better‑best automatically — on track for a 4× lift in premium sales.</div></div></div>
-    <div class="ftile"><span class="mk">${icon('pin',14)}</span><div><div class="t">Smart Dispatch Board</div><div class="d">Job size, pitch and status at a glance — the scheduling spreadsheet is gone for good.</div></div></div>
-    <div class="ftile"><span class="mk">${icon('check',14)}</span><div><div class="t">Guided Field Workflows</div><div class="d">New hires run jobs perfectly within weeks — nothing missed, everything documented.</div></div></div>
+    <div class="ftile"><span class="mk">${icon('invoice',14)}</span><div><div class="t">Intelligent Quoting</div><div class="d">Every quote now offers good‑better‑best automatically, on track for a 4× lift in premium sales.</div></div></div>
+    <div class="ftile"><span class="mk">${icon('pin',14)}</span><div><div class="t">Smart Dispatch Board</div><div class="d">Job size, pitch and status at a glance, the scheduling spreadsheet is gone for good.</div></div></div>
+    <div class="ftile"><span class="mk">${icon('check',14)}</span><div><div class="t">Guided Field Workflows</div><div class="d">New hires run jobs perfectly within weeks, nothing missed, everything documented.</div></div></div>
     <div class="ftile"><span class="mk">${icon('card',14)}</span><div><div class="t">Zuper Pay &amp; AI Expenses</div><div class="d">Mobile check deposit and an AI receipt scanner replaced the daily bank run.</div></div></div>
     ${foot(3)}
   </div></div>`;
@@ -1876,8 +1876,8 @@ function buildOnePager(){
 
   const resultsPage=`<div class="page"><div class="pad">
     <div class="psech"><h6>What's Next</h6><span class="ru"></span></div>
-    <p class="ri">Zuper Connect is rolling out to the whole team — call masking, AI call summaries and after‑hours response. QuickBooks integration and an instant‑estimate website widget are next.</p>
-    <div class="pquote"><div class="q">Your software blows any software out of the water. For roofing, this is just the best.</div><div class="a">— Jordan Reyes, Office Manager</div></div>
+    <p class="ri">Zuper Connect is rolling out to the whole team, call masking, AI call summaries and after‑hours response. QuickBooks integration and an instant‑estimate website widget are next.</p>
+    <div class="pquote"><div class="q">Your software blows any software out of the water. For roofing, this is just the best.</div><div class="a">. Jordan Reyes, Office Manager</div></div>
     <div class="tcard-sm"><div class="ph" style="background:url(${CHRIS_IMG}) center 14%/cover"></div><div><div class="q">"It's crazy what's been possible in just two months."</div><div class="a"><b>Jordan Reyes</b> · Office Manager · Summit Roofing</div></div></div>
     ${foot(5)}
   </div></div>`;
@@ -1888,7 +1888,7 @@ function buildOnePager(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Case study · one‑pager system</p>
       <h1>Case Study</h1>
-      <p class="lede">Zuper's co‑branded customer story — a print‑ready document, not a slide. An orange‑gradient cover opens it; white body pages carry orange section rules, run‑in subheads, pull‑quotes, a before/after table and a testimonial. Shown live with the Summit Roofing story.</p>
+      <p class="lede">Zuper's co‑branded customer story, a print‑ready document, not a slide. An orange‑gradient cover opens it; white body pages carry orange section rules, run‑in subheads, pull‑quotes, a before/after table and a testimonial. Shown live with the Summit Roofing story.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
         <span class="chip">Aa Plus Jakarta · headings</span>
@@ -1906,7 +1906,7 @@ function buildOnePager(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Anatomy</p><h2 class="sec">The building blocks</h2>
-    <p class="sec-note">The components every case study is composed from. Headings &amp; quotes are Plus Jakarta; body is Inter; one orange does the accenting. Line icons throughout — single weight; photos are filled.</p>
+    <p class="sec-note">The components every case study is composed from. Headings &amp; quotes are Plus Jakarta; body is Inter; one orange does the accenting. Line icons throughout, single weight; photos are filled.</p>
     <div class="anat">
       <div class="ac">
         <p class="lbl">Section heading + rule</p>
@@ -1915,15 +1915,15 @@ function buildOnePager(){
       </div>
       <div class="ac">
         <p class="lbl">Pull‑quote</p>
-        <div class="pullq"><div class="q">Before, the sales guys wouldn't have even offered it — then the homeowner said, "that's only a little more a month."</div><div class="a"><b>Jordan Reyes</b>, Office Manager</div></div>
+        <div class="pullq"><div class="q">Before, the sales guys wouldn't have even offered it, then the homeowner said, "that's only a little more a month."</div><div class="a"><b>Jordan Reyes</b>, Office Manager</div></div>
       </div>
       <div class="ac">
         <p class="lbl">Callout box</p>
-        <div class="callout"><span class="mk"></span><div class="bd"><p><b>The shift:</b> Zuper doesn't patch holes — it replaces the patchwork entirely with one system that runs operations end to end.</p></div></div>
+        <div class="callout"><span class="mk"></span><div class="bd"><p><b>The shift:</b> Zuper doesn't patch holes. It replaces the patchwork entirely with one system that runs operations end to end.</p></div></div>
       </div>
       <div class="ac">
         <p class="lbl">Stat callout</p>
-        <div class="statbig"><div class="n">4×</div><div class="l">premium product sales — driven by removing friction, not hiring</div></div>
+        <div class="statbig"><div class="n">4×</div><div class="l">premium product sales, driven by removing friction, not hiring</div></div>
       </div>
       <div class="ac">
         <p class="lbl">Metric + sparkline</p>
@@ -1953,7 +1953,7 @@ function buildOnePager(){
         <div class="tcard">
           <div class="photo" style="background:#3a352f url(${CHRIS_IMG}) center 16%/cover"></div>
           <div class="body">
-            <p>“It's crazy to think what's been possible in two months. Your software blows any software out of the water — for roofing, this is just the best.”</p>
+            <p>“It's crazy to think what's been possible in two months. Your software blows any software out of the water, for roofing, this is just the best.”</p>
             <div class="who"><b>Jordan Reyes</b>, Office Manager</div>
             <div style="margin-top:14px"><span class="cobrand-foot">${logo("dark",20)}<span class="div"></span><span class="clogo">SUMMIT ROOFING</span></span></div>
           </div>
@@ -1996,30 +1996,30 @@ function buildDeck(){
   const sTitle=(m,mini)=>fig(m,"Title slide",`<p class="deyebrow">Zuper for Roofing</p><h3 class="big">${m==="white"?'Welcome to the <span class="hl">Outcome Era.</span>':'The AI Operating System for Roofing'}</h3>`,null,mini);
   const sDivider=m=>fig(m,"Section divider",`<p class="deyebrow">Section 02</p><div class="dnum">02</div><h3 style="margin-top:8px">Why field service is changing</h3>`);
   const sAgenda=m=>fig(m,"Agenda (numbered)",`<p class="deyebrow">Agenda</p><h3>What we'll cover</h3>${olist(["Intros","Challenges","Why Zuper?","Demo","Questions & next steps"])}`,null,null,true);
-  const sContent=(m,mini)=>fig(m,"Content — bullets",`<p class="deyebrow">The platform</p><h3>From first call to final invoice</h3>${ilist([["calendar","Smart scheduling & dispatch"],["pin","Mobile‑first field app"],["invoice","Instant invoicing & payments"]])}`,null,mini,true);
+  const sContent=(m,mini)=>fig(m,"Content, bullets",`<p class="deyebrow">The platform</p><h3>From first call to final invoice</h3>${ilist([["calendar","Smart scheduling & dispatch"],["pin","Mobile‑first field app"],["invoice","Instant invoicing & payments"]])}`,null,mini,true);
   const DISP=`<div class="pscreen"><div class="pscreen-hd"><span class="d"></span><span class="d"></span><span class="d"></span><span class="pt">Dispatch board</span></div><div class="pscreen-bd disp"><div class="jr"><div style="flex:1"><div class="nm">Roof replacement</div><div class="meta">412 Oak St · A. Rivera</div></div><span class="pill" style="background:#E7F6EC;color:#1E854B"><span class="pill-dot"></span>Scheduled</span></div><div class="jr"><div style="flex:1"><div class="nm">Gutter install</div><div class="meta">88 Pine Rd · M. Khan</div></div><span class="pill" style="background:#FEF3DC;color:#A66A00"><span class="pill-dot"></span>En route</span></div><div class="jr"><div style="flex:1"><div class="nm">Inspection</div><div class="meta">5 Elm Ct · J. Doe</div></div><span class="pill" style="background:#F2F0EC;color:#666"><span class="pill-dot"></span>Queued</span></div></div></div>`;
-  const sCheck=fig("white","Content — split + product",`<div class="txt"><p class="deyebrow">Scheduling &amp; Dispatch</p><h3>Assign the right crew in seconds</h3>${ilist([["calendar","Smart dispatch board"],["users","Match skills to the job"]])}</div><div class="imgp">${DISP}</div>`,"split",null,true);
+  const sCheck=fig("white","Content, split + product",`<div class="txt"><p class="deyebrow">Scheduling &amp; Dispatch</p><h3>Assign the right crew in seconds</h3>${ilist([["calendar","Smart dispatch board"],["users","Match skills to the job"]])}</div><div class="imgp">${DISP}</div>`,"split",null,true);
   const sStat=m=>fig(m,"Stat",`<p class="deyebrow">Outcome</p><div class="dstat"${m==="white"?' style="color:#FD5000"':''}>31%</div><div class="dbody" style="opacity:1;font-weight:700;margin-top:8px">fewer truck‑rolls in the first quarter</div>`);
   const sBignum=m=>fig(m,"Big‑number grid",`<p class="deyebrow">The impact</p><h3 style="font-size:24px">Two months in</h3><div class="dbig"><div><div class="n">4×</div><div class="l">premium sales</div></div><div><div class="n">98%</div><div class="l">first‑time fix</div></div><div><div class="n">2 mo</div><div class="l">to value</div></div></div>`);
-  const sData=m=>fig(m,"Data — bar chart",`<p class="deyebrow">Zuper Sense insights · 30 days</p><h3 style="font-size:23px">What roofers ask, ranked</h3>${hbar(m,[["Sales performance",25],["Where's the money",18],["A person, by name",15],["Build a report",13]])}`,null,null,true);
-  const sCompare=m=>fig(m,"Comparison — before/after",`<p class="deyebrow">Before & after</p><h3 style="font-size:22px">From patchwork to one platform</h3><div class="dsplit"><div class="col" style="background:${m==='white'?'#F5F5F5':'rgba(255,255,255,.14)'}"><div class="h" style="opacity:.7">Before</div>${ilist([["clock","Spreadsheets + CRM"],["camera","Photos elsewhere"]])}</div><div class="col" style="background:${m==='white'?'#FFF1EA':'rgba(255,255,255,.2)'}"><div class="h" style="color:${m==='white'?'#FD5000':'#fff'}">After</div>${ilist([["calendar","One dispatch board"],["check","Guided workflows"]])}</div></div>`,null,null,true);
-  const sTimeline=m=>fig(m,"Timeline",`<p class="deyebrow">Rollout</p><h3 style="font-size:22px">Live in two months</h3><div class="dtl"><div class="m"><span class="dot"></span><div><div class="t">Week 1 — Kickoff</div><div class="d">Workflows configured</div></div></div><div class="m"><span class="dot"></span><div><div class="t">Week 4 — Go live</div><div class="d">Board replaces the spreadsheet</div></div></div><div class="m"><span class="dot"></span><div><div class="t">Month 2 — Scale</div><div class="d">4× premium sales</div></div></div></div>`);
+  const sData=m=>fig(m,"Data, bar chart",`<p class="deyebrow">Zuper Sense insights · 30 days</p><h3 style="font-size:23px">What roofers ask, ranked</h3>${hbar(m,[["Sales performance",25],["Where's the money",18],["A person, by name",15],["Build a report",13]])}`,null,null,true);
+  const sCompare=m=>fig(m,"Comparison, before/after",`<p class="deyebrow">Before & after</p><h3 style="font-size:22px">From patchwork to one platform</h3><div class="dsplit"><div class="col" style="background:${m==='white'?'#F5F5F5':'rgba(255,255,255,.14)'}"><div class="h" style="opacity:.7">Before</div>${ilist([["clock","Spreadsheets + CRM"],["camera","Photos elsewhere"]])}</div><div class="col" style="background:${m==='white'?'#FFF1EA':'rgba(255,255,255,.2)'}"><div class="h" style="color:${m==='white'?'#FD5000':'#fff'}">After</div>${ilist([["calendar","One dispatch board"],["check","Guided workflows"]])}</div></div>`,null,null,true);
+  const sTimeline=m=>fig(m,"Timeline",`<p class="deyebrow">Rollout</p><h3 style="font-size:22px">Live in two months</h3><div class="dtl"><div class="m"><span class="dot"></span><div><div class="t">Week 1. Kickoff</div><div class="d">Workflows configured</div></div></div><div class="m"><span class="dot"></span><div><div class="t">Week 4. Go live</div><div class="d">Board replaces the spreadsheet</div></div></div><div class="m"><span class="dot"></span><div><div class="t">Month 2. Scale</div><div class="d">4× premium sales</div></div></div></div>`);
   const s2col=m=>fig(m,"Two‑column",`<p class="deyebrow">The shift</p><h3 style="font-size:22px">Stop running a Frankenstein stack</h3><div class="d2col"><div><div class="h">The old way</div><p>A patchwork of tools forces your team to do the heavy lifting between systems.</p></div><div><div class="h">The Zuper way</div><p>One AI system runs operations, thinks ahead and acts in the field.</p></div></div>`,null,null,true);
   const sQuote=m=>fig(m,"Quote",`<p class="deyebrow">Customer · Maven Roofing</p><div class="dquote">“One platform replaced our multiple roofing tools.”</div><div style="margin-top:14px"><div style="font-weight:700;font-size:15px">Maven Roofing</div><div style="font-size:13px;opacity:.78">Modernized operations with Zuper</div></div>`);
-  const sSense=()=>fig("dark","Zuper Sense — the only dark slide",`<p class="deyebrow">Zuper Sense</p><h3>The AI intelligence layer</h3>${ilist([["bell","Monitor — always‑on sensing"],["chart","Predict — demand & churn"],["cpu","Recommend — next‑best actions"],["search","Analyze — ranked insights"]])}`,null,null,true);
+  const sSense=()=>fig("dark","Zuper Sense, the only dark slide",`<p class="deyebrow">Zuper Sense</p><h3>The AI intelligence layer</h3>${ilist([["bell","Monitor, always‑on sensing"],["chart","Predict, demand & churn"],["cpu","Recommend, next‑best actions"],["search","Analyze, ranked insights"]])}`,null,null,true);
   const sClose=(m,mini)=>fig(m,"Closing",`<p class="deyebrow">Thank you</p><h3 class="big" style="margin-top:auto">Let's get to the demo.</h3><div class="dbody" style="opacity:1;font-weight:700;margin-top:6px">zuper.co</div>`,null,mini);
   /* full-bleed photo grounds */
   const photoSlide=(bg,grad,cap,inner)=>`<div class="dfig"><div class="dslide dark photo" style="background-image:${grad},url(${bg})">${inner}${wm("dark")}</div><div class="dcap">${cap}</div></div>`;
   const sBreaker=()=>photoSlide(BREAKER_BG,
     "linear-gradient(180deg,rgba(20,4,3,.16) 0%,rgba(20,4,3,.06) 34%,rgba(20,4,3,.82) 100%)",
-    "Section breaker — full‑bleed photo",
-    `<div style="margin-top:auto"><p class="deyebrow" style="color:#FFD9C9">The shift</p><h3 class="big" style="margin-top:8px">Welcome to the Outcome Era.</h3><div class="dbody" style="opacity:1;font-weight:600;margin-top:10px;max-width:30ch">The question is no longer “should we use AI?” — it's “what does it actually deliver?”</div></div>`);
+    "Section breaker, full‑bleed photo",
+    `<div style="margin-top:auto"><p class="deyebrow" style="color:#FFD9C9">The shift</p><h3 class="big" style="margin-top:8px">Welcome to the Outcome Era.</h3><div class="dbody" style="opacity:1;font-weight:600;margin-top:10px;max-width:30ch">The question is no longer “should we use AI?” It's “what does it actually deliver?”</div></div>`);
   const glassGrad="linear-gradient(90deg,rgba(7,11,20,.94) 0%,rgba(7,11,20,.80) 30%,rgba(7,11,20,.34) 50%,rgba(7,11,20,0) 68%),linear-gradient(180deg,rgba(7,11,20,.34),transparent 24%)";
   const sGlass=()=>`<div class="dfig"><div class="dslide dark photo glass" style="background-image:${glassGrad},url(${GLASS_BG})">
        <div class="ghead"><h3 style="margin:0">Zuper Glass</h3><span class="gpill">V2 Beta in Q3</span></div>
        <div class="dbody gsub">Smart glasses for the field crew, paired with your phone and connected to Zuper.</div>
        ${ilist([["mic","Voice activation, hands‑free"],["camera","Photo & video capture, phone‑free"],["check","AI checklists for field docs"],["cpu","Field Agent on your glasses"]])}
-       </div><div class="dcap">Zuper Glass — full‑bleed product slide</div></div>`;
+       </div><div class="dcap">Zuper Glass, full‑bleed product slide</div></div>`;
 
   /* layout library (one of each, modes varied) */
   const layouts=[sTitle("orange",GIF_A),sTitle("white"),sBreaker(),sDivider("orange"),sAgenda("white"),sContent("white",GIF_B),sCheck,sStat("orange"),sBignum("orange"),sData("white"),sCompare("white"),sTimeline("orange"),s2col("white"),sQuote("white"),sSense(),sGlass(),sClose("white",GIF_C)].join("");
@@ -2033,7 +2033,7 @@ function buildDeck(){
   const atoms=`<div class="deckatoms">
     <div class="ac2"><span class="lbl">Eyebrow</span><p style="font-family:'Aptos','Segoe UI',sans-serif;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#FD5000;margin:0">Q3 Business Review</p></div>
     <div class="ac2"><span class="lbl">Title / 42 · Section / 24</span><div style="font-family:'Aptos Display','Aptos',sans-serif;font-weight:700;font-size:30px;letter-spacing:-.02em;color:#1B1919;line-height:1">Run your business</div><div style="font-family:'Aptos Display','Aptos',sans-serif;font-weight:700;font-size:18px;color:#1B1919;margin-top:8px">Section heading</div></div>
-    <div class="ac2"><span class="lbl">Body</span><p style="font-family:'Aptos','Segoe UI',sans-serif;font-size:14px;color:#4B5563;line-height:1.5;margin:0">One platform for the whole job — from first call to final invoice.</p></div>
+    <div class="ac2"><span class="lbl">Body</span><p style="font-family:'Aptos','Segoe UI',sans-serif;font-size:14px;color:#4B5563;line-height:1.5;margin:0">One platform for the whole job, from first call to final invoice.</p></div>
     <div class="ac2"><span class="lbl">Bulleted list (line icons)</span>${mini("white",ilist([["calendar","Scheduling & dispatch"],["invoice","Instant invoicing"]]))}</div>
     <div class="ac2"><span class="lbl">Numbered list</span>${mini("white",olist(["Intros","Challenges"]))}</div>
     <div class="ac2"><span class="lbl">Stat number</span><div style="font-family:'Aptos Display','Aptos',sans-serif;font-weight:700;font-size:54px;color:#FD5000;letter-spacing:-.03em;line-height:1">31%</div></div>
@@ -2050,7 +2050,7 @@ function buildDeck(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="kicker" style="font-family:'Aptos',sans-serif">Presentation system · PowerPoint</p>
       <h1>Deck</h1>
-      <p class="lede">One deck, one contrast rule — built like a system: foundations, atoms and slide layouts. Set in <b style="color:#191919">Aptos Display</b> &amp; <b style="color:#191919">Aptos</b>. <b style="color:#191919">Primary: a white cover with orange interiors. Secondary: an orange cover with white interiors. Dark is used only for Zuper Sense.</b></p>
+      <p class="lede">One deck, one contrast rule, built like a system: foundations, atoms and slide layouts. Set in <b style="color:#191919">Aptos Display</b> &amp; <b style="color:#191919">Aptos</b>. <b style="color:#191919">Primary: a white cover with orange interiors. Secondary: an orange cover with white interiors. Dark is used only for Zuper Sense.</b></p>
       <div class="chips"><span class="chip">Aa Aptos Display · titles</span><span class="chip">Aa Aptos · body</span><span class="chip">PowerPoint · 16:9</span></div>
       <div class="hero-art"><div class="float ha-fan">
         <div class="sl s1"><div class="e">Interior · orange</div><div class="t">From first call to final invoice</div></div>
@@ -2061,12 +2061,12 @@ function buildDeck(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — The rule</p><h2 class="sec">One deck. One contrast.</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">Choose the cover's colour, and every interior slide takes the opposite.</b> The <b style="color:var(--text-primary)">primary</b> option is a white cover with orange interiors; the <b style="color:var(--text-primary)">secondary</b> option flips it — an orange cover with white interiors. Never mix orange and white interiors in one deck. <b style="color:var(--text-primary)">Dark is reserved exclusively for Zuper Sense.</b></p>
+    <p class="eyebrow">01 · The rule</p><h2 class="sec">One deck. One contrast.</h2>
+    <p class="sec-note"><b style="color:var(--text-primary)">Choose the cover's colour, and every interior slide takes the opposite.</b> The <b style="color:var(--text-primary)">primary</b> option is a white cover with orange interiors; the <b style="color:var(--text-primary)">secondary</b> option flips it, an orange cover with white interiors. Never mix orange and white interiors in one deck. <b style="color:var(--text-primary)">Dark is reserved exclusively for Zuper Sense.</b></p>
     <div class="modecards">
       <div class="modecard"><div class="sw" style="background:#fff;border:1px solid var(--border-default)"></div><h5>White · primary cover</h5><p>The default cover; interiors then run orange.</p></div>
       <div class="modecard"><div class="sw" style="background-image:linear-gradient(102deg,#FD5000,#DB3602)"></div><h5>Orange · secondary cover</h5><p>The flipped cover; interiors then run white.</p></div>
-      <div class="modecard"><div class="sw" style="background:#161616"></div><h5>Dark — Sense only</h5><p>Used exclusively for Zuper Sense content.</p></div>
+      <div class="modecard"><div class="sw" style="background:#161616"></div><h5>Dark. Sense only</h5><p>Used exclusively for Zuper Sense content.</p></div>
     </div>
     <div class="rulebar" style="font-size:15px">
       <span class="tag" style="background:#fff;color:#1B1919;border:1px solid var(--border-default)">White cover</span><span class="arr">→</span><span class="tag" style="background:#FD5000;color:#fff">All interiors orange</span><span style="opacity:.55;font:600 11px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Primary</span>
@@ -2078,31 +2078,31 @@ function buildDeck(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Foundations</p><h2 class="sec">Palette, type &amp; icons</h2>
+    <p class="eyebrow">02 · Foundations</p><h2 class="sec">Palette, type &amp; icons</h2>
     <h3 class="grp">Orange (brand)</h3>${ramp([["orange/300","#FFB088"],["orange/400","#FF8A4C"],["orange/500","#FD5000"],["orange/600","#DB3602"],["orange/700","#B42E00"]])}
     <h3 class="grp">Neutral</h3>${ramp([["white","#FFFFFF"],["paper","#F8F5F0"],["slate","#6E675F"],["ink","#1B1919"],["black","#000000"]])}
-    <h3 class="grp">Dark — Sense only</h3>${ramp([["bg","#09090B",1],["surface","#141417",1],["text","#FAFAFA"],["orange‑on‑dark","#FF8B5A"]])}
-    <h3 class="grp">Type — Aptos</h3>
+    <h3 class="grp">Dark. Sense only</h3>${ramp([["bg","#09090B",1],["surface","#141417",1],["text","#FAFAFA"],["orange‑on‑dark","#FF8B5A"]])}
+    <h3 class="grp">Type. Aptos</h3>
     <div class="type-row"><div class="tag">Display / 48</div><div class="demo" style="font-family:'Aptos Display','Aptos',sans-serif;font-weight:700;font-size:48px;letter-spacing:-.02em;color:var(--text-primary)">Run your service business</div></div>
     <div class="type-row"><div class="tag">Body / 15</div><div class="demo" style="font-family:'Aptos','Segoe UI',sans-serif;font-size:15px;color:var(--text-secondary);max-width:60ch;line-height:1.55">Aptos is Microsoft Office's native typeface, so decks built here look the same in PowerPoint on any machine.</div></div>
-    <h3 class="grp">Icons — single‑weight outline</h3>${iconRow}
+    <h3 class="grp">Icons, single‑weight outline</h3>${iconRow}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — Atoms</p><h2 class="sec">Slide building blocks</h2>
-    <p class="sec-note">The elements every slide is composed from — set in Aptos, with line icons and one orange accent. <b style="color:var(--text-primary)">The footer logo mark sits in a clear bottom corner — but on content‑heavy slides, drop it to avoid clutter.</b></p>
+    <p class="eyebrow">03 · Atoms</p><h2 class="sec">Slide building blocks</h2>
+    <p class="sec-note">The elements every slide is composed from, set in Aptos, with line icons and one orange accent. <b style="color:var(--text-primary)">The footer logo mark sits in a clear bottom corner, but on content‑heavy slides, drop it to avoid clutter.</b></p>
     ${atoms}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — Layouts</p><h2 class="sec">Slide layouts</h2>
-    <p class="sec-note">↔ Scroll the library. Seventeen 16:9 layouts — title, full‑bleed section breaker, divider, agenda, content, split, stat, big‑number grid, data, comparison, timeline, two‑column, quote, Sense, Zuper Glass and closing. <b style="color:var(--text-primary)">On content‑heavy slides the footer logo mark is dropped</b> so it never crowds the layout.</p>
+    <p class="eyebrow">04 · Layouts</p><h2 class="sec">Slide layouts</h2>
+    <p class="sec-note">↔ Scroll the library. Seventeen 16:9 layouts, title, full‑bleed section breaker, divider, agenda, content, split, stat, big‑number grid, data, comparison, timeline, two‑column, quote, Sense, Zuper Glass and closing. <b style="color:var(--text-primary)">On content‑heavy slides the footer logo mark is dropped</b> so it never crowds the layout.</p>
     <div class="slidewrap">${layouts}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">05 — In practice</p><h2 class="sec">The rule, both ways</h2>
-    <p class="sec-note">The same story run as two valid decks — primary first. The Zuper Sense slide stays dark in both.</p>
+    <p class="eyebrow">05 · In practice</p><h2 class="sec">The rule, both ways</h2>
+    <p class="sec-note">The same story run as two valid decks, primary first. The Zuper Sense slide stays dark in both.</p>
     ${vhead("Primary · White cover → orange interiors","#FFFFFF","#FD5000")}
     <div class="slidewrap">${variantB}</div>
     ${vhead("Secondary · Orange cover → white interiors","#FD5000","#FFFFFF")}
@@ -2142,7 +2142,7 @@ function buildWebsite(s){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Marketing website system</p>
       <h1>Website DLS</h1>
-      <p class="lede">The real zuper.co system — sourced by walking the live pages: home, FSM, roofing, the product &amp; industries mega‑menus, and Zuper Sense. Bold orange‑gradient heroes, crisp white sections, charcoal feature blocks, warm‑peach cards and monospace eyebrows.</p>
+      <p class="lede">The real zuper.co system, sourced by walking the live pages: home, FSM, roofing, the product &amp; industries mega‑menus, and Zuper Sense. Bold orange‑gradient heroes, crisp white sections, charcoal feature blocks, warm‑peach cards and monospace eyebrows.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>--color-primary #FD5000</span>
         <span class="chip">Aa Plus Jakarta · display</span>
@@ -2162,7 +2162,7 @@ function buildWebsite(s){
 
   <section class="block"><div class="wrap">
     <p class="ebm">Foundations</p><h2 class="sec">01 · Color</h2>
-    <p class="sec-note">One vivid orange brand. Pages alternate three grounds — white, charcoal <code style="font-family:'Geist Mono',monospace;color:var(--text-secondary)">#282828</code>, and orange‑gradient — with warm‑peach reserved for product cards and feature banners. <b style="color:var(--text-primary)">Click any swatch to copy its hex.</b></p>
+    <p class="sec-note">One vivid orange brand. Pages alternate three grounds, white, charcoal <code style="font-family:'Geist Mono',monospace;color:var(--text-secondary)">#282828</code>, and orange‑gradient, with warm‑peach reserved for product cards and feature banners. <b style="color:var(--text-primary)">Click any swatch to copy its hex.</b></p>
     <h3 class="grp">Brand</h3>${grid([["Primary","#FD5000","--color-primary"],["Primary hover","#E04600","--color-primary-hover"],["Deep red","#B5271C","--color-red"]])}
     <h3 class="grp">Grounds</h3>${grid([["White","#FFFFFF","surface"],["Subtle grey","#F5F5F5","surface-subtle"],["Charcoal","#282828","dark-section",1],["Ink","#191919","--color-secondary",1]])}
     <h3 class="grp">Warm tints (cards & banners)</h3>${grid([["Peach card","#F8F0EB","surface-peach"],["Banner peach","#FCE9E1","surface-banner"],["Cream","#FFFAEA","surface-cream"],["Brand subtle","#FFE7DC","brand-subtle"]])}
@@ -2175,11 +2175,11 @@ function buildWebsite(s){
     <p class="ebm">Foundations</p><h2 class="sec">02 · Typography</h2>
     <p class="sec-note"><b style="color:var(--text-primary)">Plus Jakarta Sans</b> for hero &amp; headings · <b style="color:var(--text-primary)">Inter</b> for body · <b style="color:var(--text-primary)">Geist Mono</b> for eyebrows &amp; labels (uppercase, the site's signature). Secondary: IBM Plex Sans.</p>
     <div style="background:var(--surface-subtle);border:1px solid var(--border-default);border-radius:14px;padding:24px;margin-bottom:24px">
-      <p class="ebm">The shift ·  this is the eyebrow style</p>
+      <p class="ebm">The shift · this is the eyebrow style</p>
       <div style="font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;line-height:1.04;color:var(--text-primary)">From a <span class="hl">Frankenstein</span> stack to a unified <span class="hlo">AI operating system</span>.</div>
     </div>
     <div class="type-scale">${typeScale}</div>
-    <h3 class="grp" style="margin-top:30px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary)">Iconography — single‑weight outline</h3>
+    <h3 class="grp" style="margin-top:30px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary)">Iconography, single‑weight outline</h3>
     <div class="iconset">${[["calendar","Schedule"],["pin","Dispatch"],["invoice","Invoice"],["card","Payments"],["users","Team"],["chart","Reports"],["camera","Capture"],["cpu","AI"],["bell","Alerts"],["search","Search"],["truck","Fleet"],["home","Trades"]].map(x=>`<div class="it" style="color:var(--brand-default)">${icon(x[0],24)}<span style="color:var(--text-secondary)">${x[1]}</span></div>`).join("")}</div>
   </div></section>
 
@@ -2193,14 +2193,14 @@ function buildWebsite(s){
         <div class="shadows"><div class="sh" style="box-shadow:0 1px 2px rgba(0,0,0,.06)">card</div><div class="sh" style="box-shadow:0 20px 50px rgba(0,0,0,.12)">menu</div><div class="sh" style="box-shadow:0 0 0 3px #fd50001a;border-color:var(--brand-default)">focus</div></div>
       </div>
     </div>
-    <h3 class="grp" style="margin-top:30px">Layout grid — 1200px container · 12 columns</h3>
+    <h3 class="grp" style="margin-top:30px">Layout grid, 1200px container · 12 columns</h3>
     <div class="gridcols">${Array(12).fill('<div class="col"></div>').join("")}</div>
     <div class="bps"><span class="bp"><b>sm</b> 480</span><span class="bp"><b>md</b> 768</span><span class="bp"><b>lg</b> 1024</span><span class="bp"><b>xl</b> 1280</span></div>
   </div></section>
 
   <section class="block"><div class="wrap">
     <p class="ebm">Atoms</p><h2 class="sec">04 · Buttons & eyebrows</h2>
-    <p class="sec-note">Built to the live <code style="font-family:'Geist Mono',monospace;color:var(--brand-default)">.cta-btn</code> — 14px / 600 / radius 8, 2px border. Orange primary on light; <b style="color:var(--text-primary)">dark</b> primary on orange/photo heroes; white outline on dark.</p>
+    <p class="sec-note">Built to the live <code style="font-family:'Geist Mono',monospace;color:var(--brand-default)">.cta-btn</code>, 14px / 600 / radius 8, 2px border. Orange primary on light; <b style="color:var(--text-primary)">dark</b> primary on orange/photo heroes; white outline on dark.</p>
     <div class="comp-grid">
       <div class="panel"><h4>On light</h4>
         <div class="row"><button class="wbtn wbtn-primary">Book a demo</button><button class="wbtn wbtn-outline">Sign in</button><button class="wbtn wbtn-ghost">See pricing →</button></div>
@@ -2233,7 +2233,7 @@ function buildWebsite(s){
       </div>
       <div class="panel"><h4>Pills & status</h4>
         <div class="row"><span class="pill pill-brand"><span class="pill-dot"></span>New</span><span class="pill" style="background:#E7F6EC;color:#1E854B"><span class="pill-dot"></span>Completed</span><span class="pill" style="background:var(--surface-subtle);color:var(--text-secondary)">v2.4</span></div>
-        <h4 style="margin-top:18px">Icon tiles — line icons</h4>
+        <h4 style="margin-top:18px">Icon tiles, line icons</h4>
         <div class="row"><span class="icontile"><span class="sq">${icon('home',18)}</span>Roofing</span><span class="icontile"><span class="sq">${icon('sun',18)}</span>Solar</span></div>
       </div>
     </div>
@@ -2266,7 +2266,7 @@ function buildWebsite(s){
 
   <section class="block"><div class="wrap">
     <p class="ebm">Molecules</p><h2 class="sec">07 · Section grounds</h2>
-    <p class="sec-note">The page rhythm: an orange‑gradient hero, white content sections, and charcoal feature blocks — each opening with a mono eyebrow.</p>
+    <p class="sec-note">The page rhythm: an orange‑gradient hero, white content sections, and charcoal feature blocks, each opening with a mono eyebrow.</p>
     <div class="ground orange" style="background:linear-gradient(102deg,rgba(20,4,3,.40),transparent 60%),${ORANGE_BG_CSS};margin-bottom:18px"><img class="web-mini" src="${GIF_C}" alt="">
       <p class="ebm on-dark" style="color:#FFE0CE">Now launched · Zuper Sense</p>
       <h4>The AI operating system to run your service business</h4>
@@ -2298,7 +2298,7 @@ function buildWebsite(s){
     <p class="ebm">Molecules</p><h2 class="sec">08 · Cards</h2>
     <div class="comp-grid">
       <div class="feat"><div class="ic">${icon('calendar',20)}</div><h5>Smart scheduling</h5><p>Auto‑assign the closest qualified tech and cut windshield time across the crew.</p></div>
-      <div class="feat"><div class="ic">${icon('pin',20)}</div><h5>Live dispatch</h5><p>Every job, vehicle and status on one map — re‑route in a tap.</p></div>
+      <div class="feat"><div class="ic">${icon('pin',20)}</div><h5>Live dispatch</h5><p>Every job, vehicle and status on one map, re‑route in a tap.</p></div>
       <div class="feat"><div class="ic">${icon('invoice',20)}</div><h5>Instant invoicing</h5><p>Send invoices from the field the moment a job is complete.</p></div>
     </div>
     <div class="cols-2" style="margin-top:20px">
@@ -2313,7 +2313,7 @@ function buildWebsite(s){
   <section class="block"><div class="wrap">
     <p class="ebm">Molecules</p><h2 class="sec">09 · More components</h2>
     <p class="sec-note">Product‑surface UI, all reading the same tokens. Outline icons throughout.</p>
-    <div class="annbar"><span class="tp">New</span><span>Zuper Sense is live — the AI layer for field service</span><a href="#" onclick="return false">Learn more →</a></div>
+    <div class="annbar"><span class="tp">New</span><span>Zuper Sense is live, the AI layer for field service</span><a href="#" onclick="return false">Learn more →</a></div>
     <div class="comp-grid" style="margin-top:20px">
       <div class="panel"><h4>Segmented control</h4><div class="seg"><button class="on">Monthly</button><button>Annual</button></div></div>
       <div class="panel"><h4>Tabs</h4><div class="tabs"><button class="on">Work orders</button><button>Scheduling</button><button>Invoicing</button></div></div>
@@ -2349,7 +2349,7 @@ function buildWebsite(s){
 
   <section class="block"><div class="wrap">
     <p class="ebm">Guidelines</p><h2 class="sec">10 · Usage, states &amp; anatomy</h2>
-    <p class="sec-note">The part that turns a component gallery into a system — interaction states, usage rules and component specs.</p>
+    <p class="sec-note">The part that turns a component gallery into a system, interaction states, usage rules and component specs.</p>
 
     <h3 class="grp">Button states</h3>
     <div class="states">
@@ -2367,30 +2367,30 @@ function buildWebsite(s){
       </div></div>
       <div class="c dont"><div class="hd">${icon('x',17)} Don't</div><div class="bd">
         <div class="demo" style="background:var(--brand-default)"><div style="color:#FFD9C9;margin-bottom:10px;font-size:12.5px;line-height:1.5">Cut truck‑rolls by 31% with smarter dispatch, unified workflows and real‑time visibility across every job…</div><button class="wbtn wbtn-sm" style="background:#fff;color:var(--brand-default)">Book a demo</button></div>
-        <p>Don't set long body copy on a full orange fill — it hurts legibility and dilutes the call to action.</p>
+        <p>Don't set long body copy on a full orange fill. It hurts legibility and dilutes the call to action.</p>
       </div></div>
     </div>
 
-    <h3 class="grp" style="margin-top:30px">Anatomy — work order card</h3>
+    <h3 class="grp" style="margin-top:30px">Anatomy, work order card</h3>
     <div class="annwrap">
       <div class="jobcard">
         <div style="display:flex;justify-content:space-between;align-items:center"><span class="pill" style="background:#E7F6EC;color:#1E854B"><span class="pill-dot"></span>Completed</span><span class="badge-n">1</span></div>
-        <div style="font-family:var(--display);font-weight:700;font-size:16px;color:var(--text-primary);margin-top:12px">Roof replacement — 412 Oak St<span class="badge-n">2</span></div>
+        <div style="font-family:var(--display);font-weight:700;font-size:16px;color:var(--text-primary);margin-top:12px">Roof replacement, 412 Oak St<span class="badge-n">2</span></div>
         <div style="font-size:13px;color:var(--text-secondary);margin-top:7px;display:flex;align-items:center;gap:7px">${icon('users',15)} A. Rivera<span style="opacity:.5">·</span>${icon('clock',15)} 2.5 hrs<span class="badge-n">3</span></div>
         <button class="wbtn wbtn-outline wbtn-sm" style="margin-top:15px">View job<span class="badge-n">4</span></button>
       </div>
       <ol class="annlegend">
-        <li><span class="n">1</span><div><b>Status pill</b> — semantic colour (green / amber / red), never the brand orange.</div></li>
-        <li><span class="n">2</span><div><b>Title</b> — Plus Jakarta 700, 16px, kept to one line where possible.</div></li>
-        <li><span class="n">3</span><div><b>Metadata</b> — Inter 13px with 15px line icons, 7px gap.</div></li>
-        <li><span class="n">4</span><div><b>Action</b> — secondary by default; reserve orange for the screen's single primary action.</div></li>
+        <li><span class="n">1</span><div><b>Status pill</b>, semantic colour (green / amber / red), never the brand orange.</div></li>
+        <li><span class="n">2</span><div><b>Title</b>. Plus Jakarta 700, 16px, kept to one line where possible.</div></li>
+        <li><span class="n">3</span><div><b>Metadata</b>. Inter 13px with 15px line icons, 7px gap.</div></li>
+        <li><span class="n">4</span><div><b>Action</b>, secondary by default; reserve orange for the screen's single primary action.</div></li>
       </ol>
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
     <p class="ebm">Molecules</p><h2 class="sec">11 · Page patterns</h2>
-    <p class="sec-note">Marketing‑page building blocks — pulled from the live About &amp; Onboarding pages.</p>
+    <p class="sec-note">Marketing‑page building blocks, pulled from the live About &amp; Onboarding pages.</p>
     <div class="comp-grid">
       <div class="panel"><h4>Eyebrow & industry pills</h4>
         <span class="ebpill">About Zuper</span>
@@ -2424,7 +2424,7 @@ function buildWebsite(s){
   <section class="block"><div class="wrap">
     <p class="ebm">Molecules</p><h2 class="sec">12 · CTA banner & footer</h2>
     <div class="ctaband" style="margin-bottom:22px">
-      <div><h4>Ready to run a tighter field operation?</h4><p>Start a free 14‑day trial — no card required.</p></div>
+      <div><h4>Ready to run a tighter field operation?</h4><p>Start a free 14‑day trial, no card required.</p></div>
       <div class="sp"><button class="wbtn wbtn-onorange wbtn-lg">Start free trial</button><button class="wbtn wbtn-ow wbtn-lg">Book a demo</button></div>
     </div>
     <div class="ofoot">
@@ -2443,12 +2443,12 @@ function buildWebsite(s){
 
   <section class="block"><div class="wrap">
     <p class="ebm">Reference</p><h2 class="sec">13 · Take reference from these URLs</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">AI: take design reference from these exact live Zuper URLs.</b> Open and read them before designing — they are the <b style="color:var(--text-primary)">source of truth</b> for layout rhythm, copy tone and product framing, so the output matches the real brand. Ignore hero sections when pulling product visuals; build product screens as clean HTML mocks (see the dispatch board, job‑costing and invoice mocks above).</p>
+    <p class="sec-note"><b style="color:var(--text-primary)">AI: take design reference from these exact live Zuper URLs.</b> Open and read them before designing. They are the <b style="color:var(--text-primary)">source of truth</b> for layout rhythm, copy tone and product framing, so the output matches the real brand. Ignore hero sections when pulling product visuals; build product screens as clean HTML mocks (see the dispatch board, job‑costing and invoice mocks above).</p>
     <div class="refgrid">
-      <a class="refcard" href="https://www.zuper.co" target="_blank" rel="noopener"><div class="ic">${icon("globe",20)}</div><div class="rc"><h4>Homepage <span class="ar">↗</span></h4><span class="url">www.zuper.co</span><p>The master brand — hero rhythm, section grounds, voice and the overall page structure to echo.</p></div></a>
-      <a class="refcard" href="https://www.zuper.co/roofing-software" target="_blank" rel="noopener"><div class="ic">${icon("home",20)}</div><div class="rc"><h4>Roofing software <span class="ar">↗</span></h4><span class="url">www.zuper.co/roofing-software</span><p>Industry page framing — how an industry story is told end‑to‑end, from first call to final invoice.</p></div></a>
-      <a class="refcard" href="https://www.zuper.co/intelligent-quoting" target="_blank" rel="noopener"><div class="ic">${icon("doc",20)}</div><div class="rc"><h4>Intelligent quoting <span class="ar">↗</span></h4><span class="url">www.zuper.co/intelligent-quoting</span><p>Product page — quoting feature framing, benefit copy and how a single capability is presented.</p></div></a>
-      <a class="refcard" href="https://www.zuper.co/job-costing-and-profitability" target="_blank" rel="noopener"><div class="ic">${icon("chart",20)}</div><div class="rc"><h4>Job costing &amp; profitability <span class="ar">↗</span></h4><span class="url">www.zuper.co/job-costing-and-profitability</span><p>Product page — costing &amp; margin story; the source for the job‑costing mock used in this system.</p></div></a>
+      <a class="refcard" href="https://www.zuper.co" target="_blank" rel="noopener"><div class="ic">${icon("globe",20)}</div><div class="rc"><h4>Homepage <span class="ar">↗</span></h4><span class="url">www.zuper.co</span><p>The master brand, hero rhythm, section grounds, voice and the overall page structure to echo.</p></div></a>
+      <a class="refcard" href="https://www.zuper.co/roofing-software" target="_blank" rel="noopener"><div class="ic">${icon("home",20)}</div><div class="rc"><h4>Roofing software <span class="ar">↗</span></h4><span class="url">www.zuper.co/roofing-software</span><p>Industry page framing, how an industry story is told end‑to‑end, from first call to final invoice.</p></div></a>
+      <a class="refcard" href="https://www.zuper.co/intelligent-quoting" target="_blank" rel="noopener"><div class="ic">${icon("doc",20)}</div><div class="rc"><h4>Intelligent quoting <span class="ar">↗</span></h4><span class="url">www.zuper.co/intelligent-quoting</span><p>Product page, quoting feature framing, benefit copy and how a single capability is presented.</p></div></a>
+      <a class="refcard" href="https://www.zuper.co/job-costing-and-profitability" target="_blank" rel="noopener"><div class="ic">${icon("chart",20)}</div><div class="rc"><h4>Job costing &amp; profitability <span class="ar">↗</span></h4><span class="url">www.zuper.co/job-costing-and-profitability</span><p>Product page, costing &amp; margin story; the source for the job‑costing mock used in this system.</p></div></a>
     </div>
   </div></section>
   <div style="height:60px"></div>`;
@@ -2484,14 +2484,14 @@ function buildUse(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Open it</p><h2 class="sec">Use the Zuper Design System</h2>
-    <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting — decks, web pages, case studies, all on‑brand.</p>
+    <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting, decks, web pages, case studies, all on‑brand.</p>
     <a class="cd-open" href="https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b?via=share" target="_blank" rel="noopener">${icon("zap",18)} Open the Zuper Design System in Claude Design <span class="ar">↗</span></a>
-    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on your project.</p>
+    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on the project.</p>
     <div class="cd-fallback">
       <p class="fb-h">${icon("git-branch",15)} Link not opening? Two fallbacks</p>
       <p><b style="color:var(--text-primary)">1 · Upload it yourself.</b> If the chat link above doesn't work, download the design system, unzip it, and upload the <b>full folder</b> as a new <b>Design system</b> in Claude.</p>
       <a class="dl-zip" href="assets/zuper-design-system.zip" download="Zuper Design System.zip">${icon("download",16)} Download the Zuper Design System (.zip)</a>
-      <p style="margin-top:20px"><b style="color:var(--text-primary)">2 · Use the repo.</b> For <b>Claude Code</b> and <b>Claude chat</b>, point them at the GitHub repo — paste the link and ask for the Zuper Design System.</p>
+      <p style="margin-top:20px"><b style="color:var(--text-primary)">2 · Use the repo.</b> For <b>Claude Code</b> and <b>Claude chat</b>, point them at the GitHub repo, paste the link and ask for the Zuper Design System.</p>
       <div class="repo-row">
         <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
         <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
@@ -2501,12 +2501,12 @@ function buildUse(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Claude Design → Claude Code</p><h2 class="sec">Use it straight from Claude Design to Claude Code</h2>
-    <p class="sec-note">Working in <b style="color:var(--text-primary)">Claude Code</b>? Skip the download. Paste the prompt below — Claude pulls the published Zuper Design System over the <code>claude_design</code> MCP, then designs and builds on‑brand from it.</p>
+    <p class="sec-note">Working in <b style="color:var(--text-primary)">Claude Code</b>? Skip the download. Paste the prompt below. Claude pulls the published Zuper Design System over the <code>claude_design</code> MCP, then designs and builds on‑brand from it.</p>
     <div class="cc-prompt">
       <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:&#10;https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b&#10;&#10;Implement: the designs in this project in claude code and use the design system">${icon("copy",15)} Copy prompt</button></div>
       <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
     </div>
-    <p class="cd-sub">First time? Authenticate once with <code>/design-login</code> — after that the import works in any project, on any machine signed into your Claude account.</p>
+    <p class="cd-sub">First time? Authenticate once with <code>/design-login</code>, after that the import works in any project, on any machine signed into your Claude account.</p>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -2554,7 +2554,7 @@ function buildEmailSig(){
           <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
         </div>
         <div class="fld">
-          <label>Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional — pick one</span></label>
+          <label>Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
           <div class="es-banners">
             <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
             <label class="bopt"><input type="radio" name="esb" value="sense"><img src="assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
@@ -2579,7 +2579,7 @@ function buildEmailSig(){
   const RAW="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/";
   const toAbs=html=>html.replace(/(src|href)="assets\//g,'$1="'+RAW+'assets/');
   const esImg=`<img src="assets/email/zuper-vertical-tight.png" alt="Zuper" width="100" height="69" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
-  const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense — Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper — The AI Operating System for the Skilled Trades"}};
+  const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense. Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper. The AI Operating System for the Skilled Trades"}};
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function sigHTML(d){
     const A='color:#FD5000', INK='#191919', SUB='#5b6470';
@@ -2657,19 +2657,19 @@ function buildSocial(){
     <div style="padding:44px 40px 8px">
       <div style="font-family:${MONO};font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">Product update</div>
       <h1 style="font-family:${DISP};font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.02em;margin:0 0 16px">Win the quote before you leave the driveway</h1>
-      <p style="font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements — so every homeowner sees the premium option, and you send on-site.</p>
+      <p style="font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements, so every homeowner sees the premium option, and you send on-site.</p>
       <a href="#" style="display:inline-block;background:#FD5000;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:13px 26px;border-radius:8px">See what's new →</a>
     </div>
     <div style="padding:36px 40px 8px">
-      ${[["Tiered packages, automatically","Every quote presents three tiers — no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect — fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px">${f[0]}</div><div style="font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div>`).join("")}
+      ${[["Tiered packages, automatically","Every quote presents three tiers, no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect, fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px">${f[0]}</div><div style="font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div>`).join("")}
     </div>
     <div style="margin:16px 40px 40px;background:#FFE7DC;border-radius:12px;padding:22px 24px;display:flex;align-items:center;gap:18px">
       <span style="font-family:${DISP};font-weight:800;font-size:40px;letter-spacing:-.03em;color:#FD5000;line-height:1">42%</span>
-      <span style="font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job — full scope captured the first time.</span>
+      <span style="font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job, full scope captured the first time.</span>
     </div>
     <div style="background:#FBF2EA;border-top:1px solid #F0EAE1;padding:28px 40px">
       <img src="${L}zuper-horizontal.png" alt="Zuper" style="height:20px;width:auto;display:block;margin-bottom:14px">
-      <p style="font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 12px">The AI operating system for field service — from first call to final invoice.</p>
+      <p style="font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 12px">The AI operating system for field service, from first call to final invoice.</p>
       <div style="font-family:${MONO};font-size:11px;color:#7A7268">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration:underline">Unsubscribe</span></div>
     </div>
   </div>`;
@@ -2682,7 +2682,7 @@ function buildSocial(){
     cr("Instagram · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 32px;">Field service · AI</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 118px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 860px; text-wrap: balance;">Win 1 in 3 quotes on-site</h2>
-      <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 740px; margin: 36px 0 0;">Build a branded estimate in the driveway — and send it before you leave.</p>
+      <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 740px; margin: 36px 0 0;">Build a branded estimate in the driveway, and send it before you leave.</p>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
       <img src="assets/mini-humans/reaching-up.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
@@ -2690,7 +2690,7 @@ function buildSocial(){
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 28px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 36px;">The AI OS for field service</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 130px; line-height: 1.02; letter-spacing: -.03em; margin: 0;">From first call to final invoice</h2>
-      <p style="font-size: 38px; line-height: 1.5; color: #4B5563; max-width: 820px; margin: 44px 0 56px;">Schedule the right tech, win the quote on-site, and get paid faster — with AI doing the busywork.</p>
+      <p style="font-size: 38px; line-height: 1.5; color: #4B5563; max-width: 820px; margin: 44px 0 56px;">Schedule the right tech, win the quote on-site, and get paid faster, with AI doing the busywork.</p>
       <span style="display: inline-flex; align-self: flex-start; background: #FD5000; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 36px; padding: 26px 52px; border-radius: 14px;">Book a demo →</span>
       <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
       <img src="assets/mini-humans/ready-to-work.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 128px; width: auto; display: block;">
@@ -2714,7 +2714,7 @@ function buildSocial(){
     cr("Zuper Sense · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B url(assets/backgrounds/zuper-sense-bg.jpg) center/cover; color: #FAFAFA; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 32px;">Zuper Sense</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">AI that runs in the background</h2>
-      <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Auto-dispatch, job summaries and margin alerts — before the week is lost.</p>
+      <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Auto-dispatch, job summaries and margin alerts, before the week is lost.</p>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
     </div>`),
     cr("Stat card · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
@@ -2734,7 +2734,7 @@ function buildSocial(){
     cr("Intelligent Quoting · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">Intelligent Quoting</div>
-      <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.02; letter-spacing: -.03em; margin: 0 0 44px;">Good. Better.<br>Best — every time.</h2>
+      <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.02; letter-spacing: -.03em; margin: 0 0 44px;">Good. Better.<br>Best, every time.</h2>
       <div style="display: flex; gap: 18px;">
         <span style="background: #FBF2EA; color: #4B5563; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 18px 34px; border-radius: 12px;">Good</span>
         <span style="background: #FFE7DC; color: #B5271C; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 18px 34px; border-radius: 12px;">Better</span>
@@ -2763,13 +2763,13 @@ function buildSocial(){
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">Intelligent Quoting</div>
       <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 360px; line-height: .85; letter-spacing: -.04em; color: #FD5000;">4×</div>
-      <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 720px; margin: 28px 0 0;">premium product sales — no new hires</p>
+      <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 720px; margin: 28px 0 0;">premium product sales, no new hires</p>
       <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
     </div>`),
     cr("Hiring story · 1080 × 1920",1080,1920,`<div style="width: 1080px; height: 1920px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 110px 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 28px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 36px;">We're hiring</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 128px; line-height: 1.02; letter-spacing: -.03em; margin: 0;">Join a crew that runs on Zuper</h2>
-      <p style="font-size: 38px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 820px; margin: 44px 0 56px;">New hires run clean jobs in weeks — guided workflows do the heavy lifting.</p>
+      <p style="font-size: 38px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 820px; margin: 44px 0 56px;">New hires run clean jobs in weeks, guided workflows do the heavy lifting.</p>
       <span style="align-self: flex-start; background: #191919; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 36px; padding: 26px 52px; border-radius: 14px;">See open roles →</span>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
       <img src="assets/mini-humans/ready-to-work.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 130px; width: auto; display: block;">
@@ -2777,7 +2777,7 @@ function buildSocial(){
     cr("Zuper Sense · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B url(assets/backgrounds/zuper-sense-bg.jpg) center/cover; color: #FAFAFA; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 32px;">Zuper Sense</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">It dispatches the nearest qualified tech</h2>
-      <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Sense reads the job, the location and the load — and routes the right crew.</p>
+      <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Sense reads the job, the location and the load, and routes the right crew.</p>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
     </div>`),
     cr("Industries · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
@@ -2797,7 +2797,7 @@ function buildSocial(){
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 14px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 20px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 22px;">Scheduling &amp; Dispatch</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 68px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 820px; text-wrap: balance;">One board for every crew, every job</h2>
-      <p style="font-size: 26px; color: #4B5563; margin: 20px 0 0; max-width: 720px;">Drag a job, reassign a tech — the customer gets an updated ETA automatically.</p>
+      <p style="font-size: 26px; color: #4B5563; margin: 20px 0 0; max-width: 720px;">Drag a job, reassign a tech, the customer gets an updated ETA automatically.</p>
       <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 72px; bottom: 52px; height: 38px; width: auto;">
       <img src="assets/mini-humans/carrying-gear.gif" alt="" aria-hidden="true" style="position: absolute; right: 72px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
@@ -2806,16 +2806,16 @@ function buildSocial(){
         <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 24px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 24px;">Scheduling &amp; Dispatch</div>
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 92px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 900px; text-wrap: balance;">Dispatch on autopilot</h2>
       </div>
-      <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(20,8,2,.42);background:#fff;border-radius:20px;padding:22px 26px;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:4px 6px 18px"><div style="display:flex;align-items:center;gap:9px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#7A7268;margin-left:10px">Dispatch board · Today</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#9A938A">Tue, Jun 25</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">8:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Tear-off — 14 Maple Ave</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#E6F4EA;color:#1E854B;padding:9px 18px;border-radius:999px;white-space:nowrap">Completed</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">9:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Roof inspection — Summit Plaza</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">M. Reyes</div></div><span style="font-weight:700;font-size:19px;background:#E7EEFB;color:#3B5BDB;padding:9px 18px;border-radius:999px;white-space:nowrap">En route</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">11:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Leak repair — 9 Oak Court</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew B</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">13:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Gutter install — 220 Pine St</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">15:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Estimate — 5 Birch Ln</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Unassigned</div></div><span style="font-weight:700;font-size:19px;background:#EFEEEC;color:#7A7268;padding:9px 18px;border-radius:999px;white-space:nowrap">Unassigned</span></div></div>
+      <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(20,8,2,.42);background:#fff;border-radius:20px;padding:22px 26px;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:4px 6px 18px"><div style="display:flex;align-items:center;gap:9px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#7A7268;margin-left:10px">Dispatch board · Today</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#9A938A">Tue, Jun 25</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">8:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Tear-off, 14 Maple Ave</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#E6F4EA;color:#1E854B;padding:9px 18px;border-radius:999px;white-space:nowrap">Completed</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">9:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Roof inspection. Summit Plaza</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">M. Reyes</div></div><span style="font-weight:700;font-size:19px;background:#E7EEFB;color:#3B5BDB;padding:9px 18px;border-radius:999px;white-space:nowrap">En route</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">11:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Leak repair, 9 Oak Court</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew B</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">13:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Gutter install, 220 Pine St</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">15:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Estimate, 5 Birch Ln</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Unassigned</div></div><span style="font-weight:700;font-size:19px;background:#EFEEEC;color:#7A7268;padding:9px 18px;border-radius:999px;white-space:nowrap">Unassigned</span></div></div>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
     </div>`),
     cr("Product · Quoting · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #FBF2EA; color: #191919; padding: 80px; position: relative; display: flex; flex-direction: column; justify-content: center; gap: 56px; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div>
         <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 24px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 22px;">Intelligent Quoting</div>
-        <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 88px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">Good, better, best — in under a minute</h2>
+        <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 88px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">Good, better, best, in under a minute</h2>
       </div>
-      <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(120,40,0,.16);background:#fff;border-radius:20px;overflow:hidden;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 30px;border-bottom:1px solid #F0EAE1"><div style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-weight:700;font-size:24px;margin-left:8px">Intelligent Quoting</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.1em;color:#A66A00;background:#FEF3DC;padding:7px 16px;border-radius:999px">Draft</span></div><div style="padding:30px 32px 34px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:#7A7268;margin-bottom:8px">Summit Roofing · 2,400 sq ft</div><div style="font-weight:800;font-size:40px;letter-spacing:-.02em;margin-bottom:26px">Roof replacement — asphalt</div><div style="display:flex;gap:18px"><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Good</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$9,200</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">Architectural shingles</div></div><div style="flex:1;border:2px solid #FD5000;background:#FFF6F1;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#FD5000;margin-bottom:12px">Better</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$11,800</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ synthetic underlayment</div></div><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Best</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$14,500</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ 50-yr workmanship warranty</div></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;padding-top:24px;border-top:1px solid #F0EAE1"><div><span style="font-family:'Inter',system-ui,sans-serif;font-size:20px;color:#7A7268">Est. gross margin</span><span style="font-weight:800;font-size:28px;color:#1E854B;margin-left:12px">42%</span></div><span style="font-weight:700;font-size:22px;color:#fff;background:#FD5000;padding:14px 28px;border-radius:12px">Send quote →</span></div></div></div>
+      <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(120,40,0,.16);background:#fff;border-radius:20px;overflow:hidden;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 30px;border-bottom:1px solid #F0EAE1"><div style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-weight:700;font-size:24px;margin-left:8px">Intelligent Quoting</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.1em;color:#A66A00;background:#FEF3DC;padding:7px 16px;border-radius:999px">Draft</span></div><div style="padding:30px 32px 34px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:#7A7268;margin-bottom:8px">Summit Roofing · 2,400 sq ft</div><div style="font-weight:800;font-size:40px;letter-spacing:-.02em;margin-bottom:26px">Roof replacement, asphalt</div><div style="display:flex;gap:18px"><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Good</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$9,200</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">Architectural shingles</div></div><div style="flex:1;border:2px solid #FD5000;background:#FFF6F1;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#FD5000;margin-bottom:12px">Better</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$11,800</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ synthetic underlayment</div></div><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Best</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$14,500</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ 50-yr workmanship warranty</div></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;padding-top:24px;border-top:1px solid #F0EAE1"><div><span style="font-family:'Inter',system-ui,sans-serif;font-size:20px;color:#7A7268">Est. gross margin</span><span style="font-weight:800;font-size:28px;color:#1E854B;margin-left:12px">42%</span></div><span style="font-weight:700;font-size:22px;color:#fff;background:#FD5000;padding:14px 28px;border-radius:12px">Send quote →</span></div></div></div>
       <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
     </div>`),
     cr("Product · Job costing · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; background: #18181B; color: #fff; padding: 64px; position: relative; display: flex; align-items: center; gap: 56px; border-radius: 6px; overflow: hidden;">
@@ -2830,7 +2830,7 @@ function buildSocial(){
       <div>
         <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 28px;">The mobile app</div>
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 104px; line-height: 1.02; letter-spacing: -.03em; margin: 0 0 24px; max-width: 880px; text-wrap: balance;">Built mobile-first for the crew</h2>
-        <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 760px; margin: 0 auto;">Everything a tech needs on the job — checklists, photos, costs and sign-off — in one app.</p>
+        <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 760px; margin: 0 auto;">Everything a tech needs on the job, checklists, photos, costs and sign-off, in one app.</p>
       </div>
       <div style="height: 1000px; display: flex; align-items: center; justify-content: center;">
         <div style="transform:scale(1.6);transform-origin:center;filter:drop-shadow(0 40px 80px rgba(20,8,2,.5));width:300px;background:#0E0E10;border-radius:40px;padding:9px;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="background:#fff;border-radius:32px;overflow:hidden;text-align:left"><div style="background:linear-gradient(135deg,#C0341A,#E8784A);color:#fff;padding:16px 18px 18px"><div style="display:flex;justify-content:space-between;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;margin-bottom:14px"><span>9:41</span><span>Zuper</span></div><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:5px">CURRENT JOB</div><div style="font-weight:800;font-size:24px;letter-spacing:-.02em">Leak repair</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:13px;color:rgba(255,255,255,.9);margin-top:4px">9 Oak Court · 11:00 AM</div></div><div style="padding:16px 18px 18px"><div style="display:flex;gap:10px;margin-bottom:16px"><span style="flex:1;text-align:center;background:#FFE7DC;color:#C23A14;font-weight:700;font-size:13px;padding:11px 0;border-radius:10px">Navigate</span><span style="flex:1;text-align:center;background:#F1EFEC;color:#191919;font-weight:700;font-size:13px;padding:11px 0;border-radius:10px">Call</span></div><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;color:#9A938A;margin-bottom:10px">CHECKLIST</div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;background:#FD5000;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px">&check;</span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#A7A097;text-decoration:line-through">Inspect flashing</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;background:#FD5000;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px">&check;</span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#A7A097;text-decoration:line-through">Photo before</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;border:2px solid #D8D2C8;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px"></span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#191919">Seal & replace</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;border:2px solid #D8D2C8;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px"></span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#191919">Photo after</span></div><div style="margin-top:14px;background:#FD5000;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:13px 0;border-radius:12px">Complete job</div></div></div></div>
@@ -2844,7 +2844,7 @@ function buildSocial(){
       </div>
       <div style="flex: 1; padding: 8px 72px 70px; display: flex; flex-direction: column; justify-content: center; gap: 26px;">
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 92px; line-height: .98; letter-spacing: -.035em; margin: 0; text-wrap: balance;">See it. Say it. Get it done.</h2>
-        <p style="font-size: 31px; line-height: 1.45; color: #A1A1AA; max-width: 760px; margin: 0;">AI smart glasses built for the trades — damage detection and job context, hands-free.</p>
+        <p style="font-size: 31px; line-height: 1.45; color: #A1A1AA; max-width: 760px; margin: 0;">AI smart glasses built for the trades, damage detection and job context, hands-free.</p>
         <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
           <span style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 28px; color: #FF8B5A;">Explore Zuper Glass →</span>
           <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 40px; width: auto;">
@@ -2855,13 +2855,13 @@ function buildSocial(){
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">Guided selling</div>
       <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 340px; line-height: .85; letter-spacing: -.04em; color: #FD5000;">98%</div>
-      <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 760px; margin: 28px 0 0;">faster new-hire ramp-up — selling like a pro on day one</p>
+      <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 760px; margin: 28px 0 0;">faster new-hire ramp-up, selling like a pro on day one</p>
       <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
       <img src="assets/mini-humans/waving.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 96px; width: auto; display: block;">
     </div>`),
     cr("Testimonial · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 100px; position: relative; display: flex; flex-direction: column; justify-content: space-between; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 24px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.8);">Customer story</div>
-      <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 92px; line-height: 1.08; letter-spacing: -.03em; margin: 0; text-wrap: balance;">Zuper took the operational noise out of the business&nbsp;— so we could focus on growth.</blockquote>
+      <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 92px; line-height: 1.08; letter-spacing: -.03em; margin: 0; text-wrap: balance;">Zuper took the operational noise out of the business&nbsp;, so we could focus on growth.</blockquote>
       <div>
         <div style="height: 3px; width: 130px; background: rgba(255,255,255,.55); margin-bottom: 30px;"></div>
         <div style="display: flex; align-items: flex-end; justify-content: space-between;">
@@ -2872,7 +2872,7 @@ function buildSocial(){
     </div>`),
     cr("Testimonial · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #FBF2EA; color: #191919; padding: 96px; position: relative; display: flex; flex-direction: column; justify-content: center; gap: 56px; border-radius: 6px; overflow: hidden;">
       <div style="position: relative; background: #fff; border: 1px solid #E7E0D6; border-radius: 34px; padding: 66px 64px; box-shadow: 0 24px 60px rgba(120,40,0,.10);">
-        <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 56px; line-height: 1.3; letter-spacing: -.02em; margin: 0; text-wrap: balance;">It&rsquo;s mobile-first — and for the guys out in the field, that&rsquo;s where it really shines.</blockquote>
+        <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 56px; line-height: 1.3; letter-spacing: -.02em; margin: 0; text-wrap: balance;">It&rsquo;s mobile-first, and for the guys out in the field, that&rsquo;s where it really shines.</blockquote>
         <div style="position: absolute; left: 96px; bottom: -27px; width: 54px; height: 54px; background: #fff; border-right: 1px solid #E7E0D6; border-bottom: 1px solid #E7E0D6; transform: rotate(45deg);"></div>
       </div>
       <div style="display: flex; align-items: center; gap: 24px; padding-left: 30px;">
@@ -2921,7 +2921,7 @@ function buildSocial(){
         </div>
         <div style="flex: 1; background: #fff; border: 1px solid #E7E0D6; border-radius: 18px; padding: 34px; display: flex; flex-direction: column; gap: 18px;">
           <div style="color: #FD5000; font-size: 20px; letter-spacing: 3px;">★★★★★</div>
-          <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 27px; line-height: 1.34; letter-spacing: -.01em; margin: 0;">A huge load off our office — every job is faster, and inspections are safer and more professional.</blockquote>
+          <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 27px; line-height: 1.34; letter-spacing: -.01em; margin: 0;">A huge load off our office, every job is faster, and inspections are safer and more professional.</blockquote>
           <div style="display: flex; align-items: center; gap: 14px; margin-top: auto;"><span style="width: 50px; height: 50px; border-radius: 50%; background: #FD5000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 19px;">LC</span><div><div style="font-weight: 700; font-size: 19px;">Lisa Crocker</div><div style="font-size: 15px; color: #4B5563;">Roof Doctors</div></div></div>
         </div>
       </div>
@@ -2936,7 +2936,7 @@ function buildSocial(){
         <div style="margin-top: 24px; font-size: 26px; color: rgba(255,255,255,.9);"><strong>Cooper Knutson</strong> · Russell's Quality Roofing</div>
       </div>
       <div style="background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 22px; padding: 44px;">
-        <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 38px; line-height: 1.32; margin: 0;">Zuper Glass has already saved my life once — both hands free, I caught myself on a wet roof.</blockquote>
+        <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 38px; line-height: 1.32; margin: 0;">Zuper Glass has already saved my life once, both hands free, I caught myself on a wet roof.</blockquote>
         <div style="margin-top: 24px; font-size: 26px; color: rgba(255,255,255,.9);"><strong>John Marrah</strong> · Marasun</div>
       </div>
       <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 64px; height: 44px; width: auto;">
@@ -2983,7 +2983,7 @@ function buildSocial(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Social, ads &amp; campaigns</p>
       <h1>Social &amp; ads</h1>
-      <p class="lede">The campaign side of the brand — social creatives at real export sizes, a full set of display ads at standard IAB sizes, and show templates like Raise the Roof. One orange gradient, the logo lockup, a single bold claim and a CTA. Use these as the starting frame for any paid or social push.</p>
+      <p class="lede">The campaign side of the brand, social creatives at real export sizes, a full set of display ads at standard IAB sizes, and show templates like Raise the Roof. One orange gradient, the logo lockup, a single bold claim and a CTA. Use these as the starting frame for any paid or social push.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
         <span class="chip">Aa Plus Jakarta · display</span>
@@ -3004,9 +3004,9 @@ function buildSocial(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">Live show</p><h2 class="sec">Raise the Roof — Facebook Live</h2>
+    <p class="eyebrow">Live show</p><h2 class="sec">Raise the Roof. Facebook Live</h2>
     <p class="docnote">↔ scroll · 1280 × 720 FB Live cover · one template, four speaker layouts</p>
-    <p class="sec-note">The cover for the Raise the Roof roofing podcast. Keep the badge, logo lockup, headline and date fixed; swap the date and each speaker's <b>name, role and company</b> per episode. The layout adapts to <b>one, two, three or four speakers</b> — pick the matching variant.</p>
+    <p class="sec-note">The cover for the Raise the Roof roofing podcast. Keep the badge, logo lockup, headline and date fixed; swap the date and each speaker's <b>name, role and company</b> per episode. The layout adapts to <b>one, two, three or four speakers</b>, pick the matching variant.</p>
     <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start;padding:6px 0 4px">${shows}</div>
   </div></section>
 
@@ -3037,14 +3037,14 @@ function buildEmailer(){
   const hero=`<div style="padding:36px 40px">
       <div style="font-family:${MONO};font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">Product update</div>
       <h1 style="font-family:${DISP};font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.02em;margin:0 0 16px">Win the quote before you leave the driveway</h1>
-      <p style="font-family:${BODY};font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements — so every homeowner sees the premium option.</p>
+      <p style="font-family:${BODY};font-size:16px;line-height:1.6;color:#4B5563;margin:0 0 24px">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements, so every homeowner sees the premium option.</p>
       <a href="#" style="display:inline-block;background:#FD5000;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:13px 26px;border-radius:8px">See what's new →</a></div>`;
-  const featureRow=`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">Tiered packages, automatically</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">Every quote presents three tiers — no judgment call for the rep.</div></div></div>`;
-  const statBanner=`<div style="padding:18px 40px"><div style="background:#FFE7DC;border-radius:12px;padding:22px 24px;display:flex;align-items:center;gap:18px"><span style="font-family:${DISP};font-weight:800;font-size:40px;letter-spacing:-.03em;color:#FD5000;line-height:1">42%</span><span style="font-family:${BODY};font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job — full scope captured the first time.</span></div></div>`;
-  const footer=`<div style="background:#FBF2EA;border-top:1px solid #F0EAE1;padding:28px 40px"><img src="${L}zuper-horizontal.png" alt="Zuper" style="height:20px;width:auto;display:block;margin-bottom:14px"><p style="font-family:${BODY};font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 14px">The AI operating system for field service — from first call to final invoice.</p><div style="margin-bottom:14px">${["LinkedIn","X","YouTube"].map(s=>`<a href="#" style="display:inline-block;font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#7A7268;text-decoration:none;margin-right:16px">${s}</a>`).join("")}</div><div style="font-family:${MONO};font-size:11px;color:#7A7268">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration:underline">Unsubscribe</span> · <span style="text-decoration:underline">Manage preferences</span></div></div>`;
+  const featureRow=`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">Tiered packages, automatically</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">Every quote presents three tiers, no judgment call for the rep.</div></div></div>`;
+  const statBanner=`<div style="padding:18px 40px"><div style="background:#FFE7DC;border-radius:12px;padding:22px 24px;display:flex;align-items:center;gap:18px"><span style="font-family:${DISP};font-weight:800;font-size:40px;letter-spacing:-.03em;color:#FD5000;line-height:1">42%</span><span style="font-family:${BODY};font-size:14px;line-height:1.5;color:${INK}">gross margin on a recent $41k insurance job, full scope captured the first time.</span></div></div>`;
+  const footer=`<div style="background:#FBF2EA;border-top:1px solid #F0EAE1;padding:28px 40px"><img src="${L}zuper-horizontal.png" alt="Zuper" style="height:20px;width:auto;display:block;margin-bottom:14px"><p style="font-family:${BODY};font-size:13px;line-height:1.55;color:#7A7268;margin:0 0 14px">The AI operating system for field service, from first call to final invoice.</p><div style="margin-bottom:14px">${["LinkedIn","X","YouTube"].map(s=>`<a href="#" style="display:inline-block;font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#7A7268;text-decoration:none;margin-right:16px">${s}</a>`).join("")}</div><div style="font-family:${MONO};font-size:11px;color:#7A7268">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration:underline">Unsubscribe</span> · <span style="text-decoration:underline">Manage preferences</span></div></div>`;
 
   /* additional reusable blocks */
-  /* product screen — built in HTML (never a background image) */
+  /* product screen, built in HTML (never a background image) */
   const screen=`<div style="background:#fff">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:1px solid #F0EAE1">
       <div style="display:flex;align-items:center;gap:10px"><img src="${L}zuper-logomark.png" alt="" style="height:18px;width:auto;display:block"><span style="font-family:${DISP};font-weight:700;font-size:14px;color:${INK}">Intelligent Quoting</span></div>
@@ -3052,7 +3052,7 @@ function buildEmailer(){
     </div>
     <div style="padding:18px 20px">
       <div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#7A7268;margin-bottom:5px">Summit Roofing · 2,400 sq ft</div>
-      <div style="font-family:${DISP};font-weight:800;font-size:20px;color:${INK};letter-spacing:-.02em;margin-bottom:16px">Roof replacement — asphalt</div>
+      <div style="font-family:${DISP};font-weight:800;font-size:20px;color:${INK};letter-spacing:-.02em;margin-bottom:16px">Roof replacement, asphalt</div>
       <div style="display:flex;gap:12px">${[["Good","$9,200","Architectural shingles",false],["Better","$11,800","+ synthetic underlayment",true],["Best","$14,500","+ 50-yr workmanship warranty",false]].map(t=>`<div style="flex:1;border:1.5px solid ${t[3]?"#FD5000":"#E7E0D6"};background:${t[3]?"#FFF6F1":"#fff"};border-radius:12px;padding:14px 12px"><div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:${t[3]?"#FD5000":"#7A7268"};margin-bottom:8px">${t[0]}</div><div style="font-family:${DISP};font-weight:800;font-size:21px;color:${INK};letter-spacing:-.02em">${t[1]}</div><div style="font-family:${BODY};font-size:11px;line-height:1.4;color:#7A7268;margin-top:6px">${t[2]}</div></div>`).join("")}</div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:15px;border-top:1px solid #F0EAE1">
         <div><span style="font-family:${BODY};font-size:12px;color:#7A7268">Est. gross margin</span><span style="font-family:${DISP};font-weight:800;font-size:16px;color:#1E854B;margin-left:8px">42%</span></div>
@@ -3063,7 +3063,7 @@ function buildEmailer(){
   const shot=`<div style="padding:6px 40px 4px"><div style="border:1px solid #E7E0D6;border-radius:12px;overflow:hidden"><div style="background:#F6F1EB;padding:10px 14px;border-bottom:1px solid #E7E0D6">${["#E0584A","#E9B23C","#56B36B"].map(c=>`<span style="width:9px;height:9px;border-radius:50%;background:${c};display:inline-block;margin-right:6px"></span>`).join("")}</div>${screen}</div></div>`;
   const twoUp=`<div style="padding:6px 40px 4px"><div style="display:flex;gap:16px">${[["Faster quotes","Good / better / best in one tap, built straight from the measurements."],["Bigger margins","See the profit on a job before you ever commit a crew to it."]].map(c=>`<div style="flex:1;background:#FBF7F2;border:1px solid #E7E0D6;border-radius:12px;padding:20px"><div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:10px">Zuper</div><div style="font-family:${DISP};font-weight:700;font-size:16px;color:${INK};margin-bottom:5px">${c[0]}</div><div style="font-family:${BODY};font-size:13px;line-height:1.5;color:#4B5563">${c[1]}</div></div>`).join("")}</div></div>`;
   const checklist=`<div style="padding:6px 40px 8px"><div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#FD5000;margin-bottom:12px">What you get</div>${["Scheduling &amp; dispatch","Intelligent quoting","Job costing &amp; invoicing"].map(x=>`<div style="padding:7px 0;font-family:${BODY};font-size:15px;color:${INK}"><span style="color:#FD5000;font-weight:800;font-size:16px;margin-right:12px">&check;</span>${x}</div>`).join("")}</div>`;
-  const quote=`<div style="padding:10px 40px"><div style="background:#FBF7F2;border-left:3px solid #FD5000;border-radius:0 12px 12px 0;padding:22px 26px"><div style="font-family:${DISP};font-weight:800;font-size:42px;color:#FD5000;line-height:.5;margin-bottom:6px">&ldquo;</div><p style="font-family:${DISP};font-weight:600;font-size:18px;line-height:1.4;color:${INK};margin:0 0 14px">We win more jobs on the first visit — the quote is done before we pack up the ladder.</p><div style="font-family:${BODY};font-size:13px;color:#7A7268">Dana R. · Operations Lead, Summit Roofing</div></div></div>`;
+  const quote=`<div style="padding:10px 40px"><div style="background:#FBF7F2;border-left:3px solid #FD5000;border-radius:0 12px 12px 0;padding:22px 26px"><div style="font-family:${DISP};font-weight:800;font-size:42px;color:#FD5000;line-height:.5;margin-bottom:6px">&ldquo;</div><p style="font-family:${DISP};font-weight:600;font-size:18px;line-height:1.4;color:${INK};margin:0 0 14px">We win more jobs on the first visit, the quote is done before we pack up the ladder.</p><div style="font-family:${BODY};font-size:13px;color:#7A7268">Dana R. · Operations Lead, Summit Roofing</div></div></div>`;
   const ctaBand=`<div style="padding:14px 40px"><div style="background:${GRAD};border-radius:14px;padding:30px 28px;text-align:center"><div style="font-family:${DISP};font-weight:800;font-size:24px;line-height:1.15;color:#fff;margin-bottom:16px">See it on your own jobs</div><a href="#" style="display:inline-block;background:#191919;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:13px 28px;border-radius:8px">Book a demo →</a></div></div>`;
   const button=`<div style="padding:4px 40px 30px;text-align:center"><a href="#" style="display:inline-block;background:#FD5000;color:#fff;text-decoration:none;font-family:${BODY};font-weight:600;font-size:15px;padding:14px 34px;border-radius:8px">Book a demo →</a></div>`;
   const divider=`<div style="padding:12px 40px"><div style="border-top:1px solid #E7E0D6"></div></div>`;
@@ -3074,7 +3074,7 @@ function buildEmailer(){
     ${header}
     ${hero}
     ${shot}
-    <div style="padding:14px 0 4px">${[["Tiered packages, automatically","Every quote presents three tiers — no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect — fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">${f[0]}</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div></div>`).join("")}</div>
+    <div style="padding:14px 0 4px">${[["Tiered packages, automatically","Every quote presents three tiers, no judgment call for the rep."],["Carrier-aligned line items","Estimates mirror what adjusters expect, fewer denials, faster approvals."],["Built from measurements","Enter the roof; quantities, waste factor and pricing auto-populate."]].map(f=>`<div style="padding:0 40px"><div style="border-top:1px solid #E7E0D6;padding:22px 0"><div style="font-family:${DISP};font-weight:700;font-size:17px;margin-bottom:5px;color:${INK}">${f[0]}</div><div style="font-family:${BODY};font-size:14px;line-height:1.55;color:#4B5563">${f[1]}</div></div></div>`).join("")}</div>
     ${statBanner}
     ${quote}
     ${ctaBand}
@@ -3087,7 +3087,7 @@ function buildEmailer(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Lifecycle · email system</p>
       <h1>Emailer</h1>
-      <p class="lede">A 600px branded email, built from a kit of reusable blocks — header lockup, hero, product shot, feature rows, cards, checklist, stat banner, testimonial, CTA banner, button, divider and footer. All inline‑styled so they survive every email client.</p>
+      <p class="lede">A 600px branded email, built from a kit of reusable blocks, header lockup, hero, product shot, feature rows, cards, checklist, stat banner, testimonial, CTA banner, button, divider and footer. All inline‑styled so they survive every email client.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>brand #FD5000</span>
         <span class="chip">600px · inline styles</span>
@@ -3108,7 +3108,7 @@ function buildEmailer(){
     <p class="sec-note">Mix and match these blocks to build any announcement. Each is a self‑contained, inline‑styled section sized to the 600px email width.</p>
     <div class="adscroll" style="padding-top:6px">
       ${blk("01 · Header lockup",header)}
-      ${blk("02 · Hero — eyebrow, headline, body, CTA",hero)}
+      ${blk("02 · Hero, eyebrow, headline, body, CTA",hero)}
       ${blk("03 · Product screen",shot)}
       ${blk("04 · Feature row",featureRow)}
       ${blk("05 · Two‑up cards",twoUp)}
@@ -3145,20 +3145,20 @@ function buildIcons(){
   const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)";
   const names=Object.keys(ICON);
 
-  /* the system — single-weight outline set */
+  /* the system, single-weight outline set */
   const rules=[
-    ["sparkle","One weight, one set","Every glyph is a single‑weight clean outline on a 256px grid. One consistent weight across the whole set — never mix weights, fills or a second icon library."],
-    ["droplet","currentColor — never hard‑coded","Glyphs are coloured with <b>currentColor</b>, so they inherit the surrounding text colour: ink on light, white on dark, orange only as a deliberate accent. One token, every ground."],
-    ["check","Even optical weight","Consistent corners and line weight are what make the set read as one family. Use glyphs as‑drawn — don't restyle, re‑stroke or add detail."],
-    ["x","One set, no emoji","No emoji, no clip‑art, no second library. One outline set everywhere — UI, slides, ads and email — so an icon means the same thing in every surface."]
+    ["sparkle","One weight, one set","Every glyph is a single‑weight clean outline on a 256px grid. One consistent weight across the whole set, never mix weights, fills or a second icon library."],
+    ["droplet","currentColor, never hard‑coded","Glyphs are coloured with <b>currentColor</b>, so they inherit the surrounding text colour: ink on light, white on dark, orange only as a deliberate accent. One token, every ground."],
+    ["check","Even optical weight","Consistent corners and line weight are what make the set read as one family. Use glyphs as‑drawn, don't restyle, re‑stroke or add detail."],
+    ["x","One set, no emoji","No emoji, no clip‑art, no second library. One outline set everywhere. UI, slides, ads and email, so an icon means the same thing in every surface."]
   ].map(c=>`<div class="why-card"><div class="ic">${icon(c[0],22)}</div><div><h4>${c[1]}</h4><p>${c[2]}</p></div></div>`).join("");
 
-  /* size ladder — same icon, fixed stroke, four sizes */
+  /* size ladder, same icon, fixed stroke, four sizes */
   const sizes=[[16,"16 · inline / meta"],[18,"18 · sidebar nav"],[22,"22 · cards & components"],[32,"32 · feature"]]
     .map(s=>`<div style="display:flex;flex-direction:column;align-items:center;gap:10px"><div style="height:40px;display:flex;align-items:center;color:#191919">${icon("zap",s[0],1.7)}</div><div style="font-family:${MONO};font-size:11px;color:#7A7268;letter-spacing:.02em">${s[1]}</div></div>`).join("");
 
-  /* full named, copy-ready gallery — colour via parent currentColor */
-  /* search synonyms — Zuper trades & FSM terms → matching glyph names */
+  /* full named, copy-ready gallery, colour via parent currentColor */
+  /* search synonyms. Zuper trades & FSM terms → matching glyph names */
   const SYN={roof:["house","house-line"],roofing:["house","house-line"],hvac:["snowflake","fan","thermometer-simple","wind"],ac:["snowflake","fan","wind"],cooling:["snowflake","fan"],heating:["fire","flame","thermometer-simple"],plumbing:["wrench","drop","pipe","faucet"],pipe:["pipe","wrench"],water:["drop","faucet"],electric:["plug","lightning"],electrical:["plug","lightning"],power:["plug","lightning","battery-high"],solar:["solar-panel","sun"],pest:["bug","bug-beetle"],landscaping:["tree","plant","leaf","flower-lotus"],lawn:["tree","plant","leaf"],garden:["plant","flower-lotus","tree"],security:["security-camera","shield-check","lock","siren"],alarm:["siren","bell-ringing"],cleaning:["broom","spray-bottle"],appliance:["washing-machine","oven"],telecom:["broadcast","cell-signal-high","wifi-high"],internet:["wifi-high","globe"],invoice:["invoice","receipt","file-text"],quote:["file-text","receipt"],estimate:["file-text","receipt"],payment:["credit-card","currency-dollar","money","bank"],pay:["credit-card","currency-dollar","money"],schedule:["calendar","calendar-check","calendar-plus","clock"],booking:["calendar-check","clock"],dispatch:["truck","van","navigation-arrow","map-pin"],route:["path","navigation-arrow","map-trifold"],technician:["user-gear","wrench","hard-hat"],tech:["user-gear","wrench"],job:["clipboard-text","wrench","check-square"],task:["check-square","list-checks","clipboard-text"],customer:["user","users","address-book"],contractor:["hard-hat","wrench","toolbox"],tools:["toolbox","wrench","hammer","screwdriver"],warranty:["shield-check","certificate"],report:["chart-bar","chart-line","file-text"],analytics:["chart-bar","chart-line","gauge"],location:["map-pin","navigation-arrow"],ai:["robot","sparkle","cpu"],mobile:["device-mobile","device-mobile-camera"],signature:["signature","scribble-loop"]};
 
   stage.innerHTML=`
@@ -3167,7 +3167,7 @@ function buildIcons(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Iconography</p>
       <h1>One icon set</h1>
-      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b> — one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. Search, customise and export any icon in the studio below — every one on‑brand.</p>
+      <p class="lede">Zuper runs on a single set of clean <b>outline icons</b>, one consistent weight, coloured by <b>currentColor</b>. They carry meaning in the UI, on slides, in ads and in email without ever competing with the product. Search, customise and export any icon in the studio below, every one on‑brand.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>single‑weight outline</span>
         <span class="chip">currentColor</span>
@@ -3190,16 +3190,16 @@ function buildIcons(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — The system</p><h2 class="sec">What makes it one set</h2>
+    <p class="eyebrow">01 · The system</p><h2 class="sec">What makes it one set</h2>
     <p class="sec-note">The rules below are the whole system. Stick to the one set and any glyph will look like it always belonged.</p>
     <div class="why-grid">${rules}</div>
-    <div class="why-card" style="margin-top:18px"><div class="ic">${icon("target",22)}</div><div><h4>Crisp at every size</h4><p>The set is drawn on a 256px grid and scales cleanly. Render it at <b>16–32px</b> on whole pixels and let <b>currentColor</b> do the colouring — never add an extra stroke, fill tint or shadow.</p></div></div>
+    <div class="why-card" style="margin-top:18px"><div class="ic">${icon("target",22)}</div><div><h4>Crisp at every size</h4><p>The set is drawn on a 256px grid and scales cleanly. Render it at <b>16–32px</b> on whole pixels and let <b>currentColor</b> do the colouring, never add an extra stroke, fill tint or shadow.</p></div></div>
     <div style="margin-top:26px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:30px;display:flex;gap:40px;align-items:flex-end;flex-wrap:wrap;justify-content:center">${sizes}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Studio</p><h2 class="sec">Icon studio</h2>
-    <p class="sec-note"><b>Search the full icon library</b> — try <i>roof, invoice, truck, solar</i>. Pick one, set the colour and size, then copy or download it ready to drop in — everything comes out on‑brand.</p>
+    <p class="eyebrow">02 · Studio</p><h2 class="sec">Icon studio</h2>
+    <p class="sec-note"><b>Search the full icon library</b>, try <i>roof, invoice, truck, solar</i>. Pick one, set the colour and size, then copy or download it ready to drop in, everything comes out on‑brand.</p>
     <div class="icst">
       <div class="icst-side">
         <div class="icst-stage" id="icstStage"></div>
@@ -3210,7 +3210,7 @@ function buildIcons(){
         <div class="icst-exp"><button class="icst-btn" data-exp="svg">${icon("copy",14)} Copy SVG</button><button class="icst-btn" data-exp="copy-png">${icon("copy",14)} Copy PNG</button><button class="icst-btn" data-exp="dl-svg">${icon("download",14)} Download SVG</button><button class="icst-btn" data-exp="dl-png">${icon("download",14)} Download PNG</button></div>
       </div>
       <div class="icst-pickwrap">
-        <input class="icst-search" id="icstSearch" placeholder="Search icons — roof, invoice, truck, solar…" autocomplete="off">
+        <input class="icst-search" id="icstSearch" placeholder="Search icons, roof, invoice, truck, solar…" autocomplete="off">
         <div class="icst-meta" id="icstMeta">Loading icons…</div>
         <div class="icst-pick" id="icstPick"></div>
       </div>
@@ -3218,13 +3218,13 @@ function buildIcons(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — In use</p><h2 class="sec">Colour comes from context</h2>
-    <p class="sec-note">The same glyph, four grounds — coloured only by the inherited text colour, never restyled.</p>
+    <p class="eyebrow">03 · In use</p><h2 class="sec">Colour comes from context</h2>
+    <p class="sec-note">The same glyph, four grounds, coloured only by the inherited text colour, never restyled.</p>
     <div style="display:flex;gap:18px;flex-wrap:wrap;padding-top:4px">
       <div style="flex:1;min-width:170px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#191919">${icon("zap",30,1.7)}<span style="font-family:${MONO};font-size:11px;color:#7A7268">ink on light</span></div>
       <div style="flex:1;min-width:170px;background:#282828;border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#fff">${icon("zap",30,1.7)}<span style="font-family:${MONO};font-size:11px;color:rgba(255,255,255,.6)">white on charcoal</span></div>
       <div style="flex:1;min-width:170px;background:${GRAD};border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#fff">${icon("zap",30,1.7)}<span style="font-family:${MONO};font-size:11px;color:rgba(255,255,255,.85)">white on orange</span></div>
-      <div style="flex:1;min-width:170px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#FD5000">${icon("zap",30,1.7)}<span style="font-family:${MONO};font-size:11px;color:#7A7268">orange accent — sparingly</span></div>
+      <div style="flex:1;min-width:170px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#FD5000">${icon("zap",30,1.7)}<span style="font-family:${MONO};font-size:11px;color:#7A7268">orange accent, sparingly</span></div>
     </div>
   </div></section>
   <div style="height:60px"></div>`;
@@ -3289,16 +3289,16 @@ function buildLogos(){
   const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919";
   const cap=t=>`<div style="font-family:${MONO};font-size:11px;color:#7A7268;margin-top:10px;letter-spacing:.02em">${t}</div>`;
 
-  /* grounds — approved placements */
+  /* grounds, approved placements */
   const ok=`<span style="position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;background:#1E854B;color:#fff;display:flex;align-items:center;justify-content:center">${icon("check",13)}</span>`;
   const grounds=[
-    [logo("dark",30),"#fff","border:1px solid #E7E0D6","Full colour — on white &amp; light neutrals"],
-    [logo("dark",30),"#FBF2EA","","Full colour — on warm peach"],
-    [logo("white",30),"#282828","","White — on charcoal &amp; dark UI"],
-    [logo("white",30),GRAD,"","White — on the orange gradient"]
+    [logo("dark",30),"#fff","border:1px solid #E7E0D6","Full colour, on white &amp; light neutrals"],
+    [logo("dark",30),"#FBF2EA","","Full colour, on warm peach"],
+    [logo("white",30),"#282828","","White, on charcoal &amp; dark UI"],
+    [logo("white",30),GRAD,"","White, on the orange gradient"]
   ].map(g=>`<div><div style="position:relative;background:${g[1]};${g[2]};border-radius:16px;padding:38px 22px;display:flex;align-items:center;justify-content:center;min-height:104px">${ok}${g[0]}</div>${cap(g[3])}</div>`).join("");
 
-  /* misuse — never do this */
+  /* misuse, never do this */
   const donts=[
     ["Don't stretch or distort",`<span style="display:block;transform:scaleX(1.7)">${logo("dark",26)}</span>`,"#fff"],
     ["Don't rotate it",`<span style="display:block;transform:rotate(-13deg)">${logo("dark",26)}</span>`,"#fff"],
@@ -3314,7 +3314,7 @@ function buildLogos(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Brand</p>
       <h1>Logo usage</h1>
-      <p class="lede">How to place the Zuper mark so it always reads as Zuper — clear space, minimum sizes, the right ground for each variant, and the things to never do. Grab the files themselves on the <b>Brand assets</b> page.</p>
+      <p class="lede">How to place the Zuper mark so it always reads as Zuper, clear space, minimum sizes, the right ground for each variant, and the things to never do. Grab the files themselves on the <b>Brand assets</b> page.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>protect the mark</span>
         <span class="chip">clear space = x</span>
@@ -3329,30 +3329,30 @@ function buildLogos(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Breathing room</p><h2 class="sec">Clear space &amp; minimum size</h2>
+    <p class="eyebrow">01 · Breathing room</p><h2 class="sec">Clear space &amp; minimum size</h2>
     <p class="sec-note">Give the logo room and never render it so small it breaks up. <b>x</b> = the height of the Zuper mark.</p>
     <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:stretch">
       <div style="flex:2;min-width:280px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:40px;display:flex;flex-direction:column;align-items:center;justify-content:center">
         <div style="padding:30px;outline:1.5px dashed #E8C4B3;outline-offset:0;border-radius:4px">${logo("dark",36)}</div>
-        ${cap("Clear space on all four sides ≥ x — keep text, edges and other logos out of this zone")}
+        ${cap("Clear space on all four sides ≥ x, keep text, edges and other logos out of this zone")}
       </div>
       <div style="flex:1;min-width:220px;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:center;gap:22px">
-        <div style="display:flex;align-items:center;gap:14px">${logo("dark",18)}<span style="font-family:${MONO};font-size:11px;color:#7A7268">100px — horizontal min (web)</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><img src="assets/logos/zuper-logomark.svg" alt="" style="height:24px;width:auto;display:block"><span style="font-family:${MONO};font-size:11px;color:#7A7268">24px — mark min (web)</span></div>
+        <div style="display:flex;align-items:center;gap:14px">${logo("dark",18)}<span style="font-family:${MONO};font-size:11px;color:#7A7268">100px, horizontal min (web)</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><img src="assets/logos/zuper-logomark.svg" alt="" style="height:24px;width:auto;display:block"><span style="font-family:${MONO};font-size:11px;color:#7A7268">24px, mark min (web)</span></div>
         <div style="border-top:1px solid #F0EAE1;padding-top:16px;font-family:${MONO};font-size:11px;color:#7A7268;line-height:1.6">In print, keep the horizontal lockup ≥ <b style="color:${INK}">10&nbsp;mm</b> tall. Below the minimum, use the <b style="color:${INK}">logomark</b> alone.</div>
       </div>
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — The right ground</p><h2 class="sec">Pick the variant for the background</h2>
+    <p class="eyebrow">02 · The right ground</p><h2 class="sec">Pick the variant for the background</h2>
     <p class="sec-note">Full‑colour on light, white on dark or orange. The mark must always clear the background it sits on.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;padding-top:4px">${grounds}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — Never do this</p><h2 class="sec">Logo misuse</h2>
-    <p class="sec-note">The mark is fixed artwork. Don't redraw, restyle or recolour it — use the supplied files as‑is.</p>
+    <p class="eyebrow">03 · Never do this</p><h2 class="sec">Logo misuse</h2>
+    <p class="sec-note">The mark is fixed artwork. Don't redraw, restyle or recolour it, use the supplied files as‑is.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px;padding-top:4px">${donts}</div>
   </div></section>
   <div style="height:60px"></div>`;
@@ -3373,8 +3373,8 @@ function buildHumans(){
   const HUMANS=[[GIF_C,"Carrying gear"],[GIF_B,"On the tools"],[GIF_A,"Reaching up"],[GIF_02,"On the job"],[GIF_03,"On the ladder"],[GIF_06,"Ready to work"],[GIF_08,"Inspecting"],[GIF_09,"The crew"]];
   const gallery=HUMANS.map((x,i)=>`<div class="human-card"><img src="${x[0]}" alt=""><span class="lbl">${x[1]}</span><button class="gcopy dl-btn" data-href="${x[0]}" data-name="zuper-mini-human-${i+1}.gif">${icon("download",12)} Download</button></div>`).join("");
   const why=[
-    ["monitor","The product is the hero","Real Zuper screens do the talking — live dashboards, not stock smiles."],
-    ["users","The real people who use it","Field techs, crews and customers — the people Zuper is built for, and with."],
+    ["monitor","The product is the hero","Real Zuper screens do the talking, live dashboards, not stock smiles."],
+    ["users","The real people who use it","Field techs, crews and customers, the people Zuper is built for, and with."],
     ["check","A supporting role","They live in a corner and add warmth &amp; motion. They never compete with the product or the message."],
     ["bell","Used sparingly","2–3 per deck or page, never repeated on one screen."]
   ].map(c=>`<div class="why-card"><div class="ic">${icon(c[0],22)}</div><div><h4>${c[1]}</h4><p>${c[2]}</p></div></div>`).join("");
@@ -3385,21 +3385,21 @@ function buildHumans(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Imagery</p>
       <h1>Mini humans</h1>
-      <p class="lede">Zuper doesn't sell with stock photography. The <b>product is the hero</b> — and these small, animated workers add the human touch in a corner, never stealing the show. They're the techs, crews and customers Zuper is built for.</p>
+      <p class="lede">Zuper doesn't sell with stock photography. The <b>product is the hero</b>, and these small, animated workers add the human touch in a corner, never stealing the show. They're the techs, crews and customers Zuper is built for.</p>
     </div>
     <img class="ha-walker" src="${GIF_C}" alt="">
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Why</p><h2 class="sec">Mini humans, not stock photos</h2>
+    <p class="eyebrow">01 · Why</p><h2 class="sec">Mini humans, not stock photos</h2>
     <p class="sec-note">Competitors fill pages with generic stock photography of people. We lead with the product and let a single mini human carry the warmth.</p>
     <div class="why-grid">${why}</div>
-    <div class="why-card" style="margin-top:18px"><div class="ic">${icon("scale",22)}</div><div><h4>Keep them small — this matters most</h4><p>A mini human is a <b>corner accent</b>, roughly thumb‑sized beside a headline or product screen. If you notice the person before the message, scale it down. Big reads as stock photography; small reads as Zuper. They support the product — they never become the hero.</p></div></div>
+    <div class="why-card" style="margin-top:18px"><div class="ic">${icon("scale",22)}</div><div><h4>Keep them small. This matters most</h4><p>A mini human is a <b>corner accent</b>, roughly thumb‑sized beside a headline or product screen. If you notice the person before the message, scale it down. Big reads as stock photography; small reads as Zuper. They support the product. They never become the hero.</p></div></div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — The set</p><h2 class="sec">Eight workers</h2>
-    <p class="sec-note">Pixel‑render loops with transparent backgrounds — they sit on any surface (white, orange, dark). <b style="color:var(--text-primary)">Download a GIF</b> to drop it straight into your design. Keep it small.</p>
+    <p class="eyebrow">02 · The set</p><h2 class="sec">Eight workers</h2>
+    <p class="sec-note">Pixel‑render loops with transparent backgrounds. They sit on any surface (white, orange, dark). <b style="color:var(--text-primary)">Download a GIF</b> to drop it straight into your design. Keep it small.</p>
     <div class="humans-grid">${gallery}</div>
   </div></section>
 
@@ -3420,9 +3420,9 @@ function buildAssets(){
 
   const variants=[["","Full colour",false],["-gray","Gray",false],["-white","White",true],["-inverted","Inverted",true]];
   const fams=[
-    ["Logomark","The diamond mark on its own — favicons, app icons and tight spaces.","zuper-logomark",true],
-    ["Horizontal logo","Mark + wordmark side by side — the default lockup for headers and documents.","zuper-horizontal",true],
-    ["Vertical logo","Mark stacked above the wordmark — for square and centred placements.","zuper-vertical",true]
+    ["Logomark","The diamond mark on its own, favicons, app icons and tight spaces.","zuper-logomark",true],
+    ["Horizontal logo","Mark + wordmark side by side, the default lockup for headers and documents.","zuper-horizontal",true],
+    ["Vertical logo","Mark stacked above the wordmark, for square and centred placements.","zuper-vertical",true]
   ];
   const dn=icon("download",13);
   const logoCard=(key,svg,v)=>{
@@ -3444,12 +3444,12 @@ function buildAssets(){
           <button class="la-dl dl-btn" data-href="${src}">${dn}Download</button>
         </div></div></div>`;
   const zoom=[
-    socCard("assets/zoom/zuper-zoom-wordmark.png","Zoom background — wordmark","1920 × 1080 · 16:9"),
-    socCard("assets/zoom/zuper-zoom-logomark.png","Zoom background — logomark","1920 × 1080 · 16:9")
+    socCard("assets/zoom/zuper-zoom-wordmark.png","Zoom background, wordmark","1920 × 1080 · 16:9"),
+    socCard("assets/zoom/zuper-zoom-logomark.png","Zoom background, logomark","1920 × 1080 · 16:9")
   ].join("");
   const linkedin=[
-    socCard("assets/linkedin/zuper-linkedin-trades.png","Personal cover — Skilled Trades","1584 × 396"),
-    socCard("assets/linkedin/zuper-linkedin-sense.png","Personal cover — Zuper Sense","1584 × 396")
+    socCard("assets/linkedin/zuper-linkedin-trades.png","Personal cover. Skilled Trades","1584 × 396"),
+    socCard("assets/linkedin/zuper-linkedin-sense.png","Personal cover. Zuper Sense","1584 × 396")
   ].join("");
 
   stage.innerHTML=`
@@ -3458,7 +3458,7 @@ function buildAssets(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Downloads</p>
       <h1>Brand assets</h1>
-      <p class="lede">Grab‑and‑go brand files — no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers and a branded Word document. <b>Download</b> and you're on‑brand.</p>
+      <p class="lede">Grab‑and‑go brand files, no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers and a branded Word document. <b>Download</b> and it's on‑brand.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip">3 logo lockups · 4 variants</span>
         <span class="chip">SVG + PNG</span>
@@ -3474,26 +3474,26 @@ function buildAssets(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Logos</p><h2 class="sec">Logo library</h2>
+    <p class="eyebrow">01 · Logos</p><h2 class="sec">Logo library</h2>
     <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Download</b> any variant as SVG (for design tools &amp; code) or PNG.</p>
     ${families}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Zoom backgrounds</p><h2 class="sec">Video call backgrounds</h2>
+    <p class="eyebrow">02 · Zoom backgrounds</p><h2 class="sec">Video call backgrounds</h2>
     <p class="sec-note">On‑brand 16:9 virtual backgrounds for Zoom, Meet and Teams. Download and add under <i>Backgrounds &amp; effects</i>.</p>
     <div class="la-soc">${zoom}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — LinkedIn covers</p><h2 class="sec">LinkedIn personal cover photos</h2>
+    <p class="eyebrow">03 · LinkedIn covers</p><h2 class="sec">LinkedIn personal cover photos</h2>
     <p class="sec-note">Personal profile banners at LinkedIn's 1584 × 396 cover size.</p>
     <div class="la-soc">${linkedin}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — Document</p><h2 class="sec">Word document template</h2>
-    <p class="sec-note">A branded <b style="color:var(--text-primary)">.docx</b> with the Zuper logo header, orange rule, <i>Page X of Y</i> and a confidentiality footer — Aptos throughout. <b style="color:var(--text-primary)">Download</b> and start typing.</p>
+    <p class="eyebrow">04 · Document</p><h2 class="sec">Word document template</h2>
+    <p class="sec-note">A branded <b style="color:var(--text-primary)">.docx</b> with the Zuper logo header, orange rule, <i>Page X of Y</i> and a confidentiality footer. Aptos throughout. <b style="color:var(--text-primary)">Download</b> and start typing.</p>
     <div class="la-soc">
       <div class="s-card">
         <div class="s-prev" style="background:#ECEAE6;padding:26px 26px 0">
@@ -3527,22 +3527,22 @@ function buildOverview(){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const FOUND=[
-    ["logo-usage","shield","Logo usage","Brand","How to place the mark — clear space, minimum sizes, the right variant per background, and the misuse to avoid."],
-    ["color","droplet","Colour","Palette","One vivid orange plus a neutral cast — the palette, the gradient and the grounds each colour lives on."],
-    ["type","edit","Typography","Type","Two type systems, one voice — Aptos for decks, Plus Jakarta + Inter elsewhere, Geist Mono eyebrows."],
-    ["icons","grid","Iconography","Icons","One single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in your colour and size."],
-    ["voice","chat-text","Voice &amp; tone","Voice","How Zuper writes — plain, warm, field‑first. The five principles, on/off‑tone, banned words and the litmus test."],
-    ["agents","sparkle","Agent avatars","Agents","The faces of Zuper Sense — a caped 3D superhero mascot for each AI agent, downloadable."],
-    ["humans","users","Mini humans","Imagery","Small animated workers that add warmth in a corner — the product always stays the hero."],
-    ["assets","download","Brand assets","Downloads","Grab‑and‑go files — the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc."]
+    ["logo-usage","shield","Logo usage","Brand","How to place the mark, clear space, minimum sizes, the right variant per background, and the misuse to avoid."],
+    ["color","droplet","Colour","Palette","One vivid orange plus a neutral cast, the palette, the gradient and the grounds each colour lives on."],
+    ["type","edit","Typography","Type","Two type systems, one voice. Aptos for decks, Plus Jakarta + Inter elsewhere, Geist Mono eyebrows."],
+    ["icons","grid","Iconography","Icons","One single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in any colour and size."],
+    ["voice","chat-text","Voice &amp; tone","Voice","How Zuper writes, plain, warm, field‑first. The five principles, on/off‑tone, banned words and the litmus test."],
+    ["agents","sparkle","Agent avatars","Agents","The faces of Zuper Sense, a caped 3D superhero mascot for each AI agent, downloadable."],
+    ["humans","users","Mini humans","Imagery","Small animated workers that add warmth in a corner, the product always stays the hero."],
+    ["assets","download","Brand assets","Downloads","Grab‑and‑go files, the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc."]
   ];
   const SYS_=[
     ["deck","monitor","Deck","PowerPoint","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
-    ["website","globe","Website DLS","Web","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
+    ["website","globe","Website DLS","Web","The real zuper.co system, colour &amp; type tokens, components, page patterns and live‑page references."],
     ["one-pager","doc","Case study","1‑pager","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
-    ["emailer","chat","Emailer","Lifecycle","A 600px branded email built from reusable blocks — header, hero, feature rows, stat banner and footer. Client‑safe."],
-    ["email-sig","mail","Email signature","Tool","Build your own on‑brand Outlook signature in seconds — fill in your details and copy it straight into Outlook."],
-    ["social","megaphone","Social &amp; ads","Campaign","Social creatives at real export sizes and display ads at IAB sizes — one orange gradient and a single CTA."]
+    ["emailer","chat","Emailer","Lifecycle","A 600px branded email built from reusable blocks, header, hero, feature rows, stat banner and footer. Client‑safe."],
+    ["email-sig","mail","Email signature","Tool","Build an on‑brand Outlook signature in seconds, fill in the details and copy it straight into Outlook."],
+    ["social","megaphone","Social &amp; ads","Campaign","Social creatives at real export sizes and display ads at IAB sizes, one orange gradient and a single CTA."]
   ];
   const tile=(c)=>`<button class="ov-card" onclick="setActive('${c[0]}')">
       <div class="top"><span class="ic">${icon(c[1],22)}</span></div>
@@ -3551,7 +3551,7 @@ function buildOverview(){
   const foundCards=FOUND.map(tile).join(""), sysCards=SYS_.map(tile).join("");
   const startFeat=`<button class="ov-feat" onclick="setActive('use')">
       <span class="ic">${icon("cpu",26)}</span>
-      <span class="gx"><span class="tag">Start here</span><h3>How to use this</h3><p>Open the published Zuper Design System in Claude Design, then pick it on any project — everything comes out on‑brand.</p></span>
+      <span class="gx"><span class="tag">Start here</span><h3>How to use this</h3><p>Open the published Zuper Design System in Claude Design, then pick it on any project, everything comes out on‑brand.</p></span>
       <span class="go">Open →</span></button>`;
 
   stage.innerHTML=`
@@ -3560,7 +3560,7 @@ function buildOverview(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Design Language Systems · for Claude Design</p>
       <h1>Brand‑perfect, every time</h1>
-      <p class="lede">One home for everything on‑brand at Zuper — decks, the marketing site, case studies, mini humans, iconography, social &amp; ads, the emailer, a signature builder and logo‑usage rules. The systems are published in <b>Claude Design</b>; the tools run right here. Pick a tile to start.</p>
+      <p class="lede">One home for everything on‑brand at Zuper, decks, the marketing site, case studies, mini humans, iconography, social &amp; ads, the emailer, a signature builder and logo‑usage rules. The systems are published in <b>Claude Design</b>; the tools run right here. Pick a tile to start.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>One orange · #FD5000</span>
         <span class="chip">Aa Plus Jakarta + Inter</span>
@@ -3584,13 +3584,13 @@ function buildOverview(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Foundations</p><h2 class="sec">The brand building blocks</h2>
-    <p class="sec-note">The raw materials — logo, colour, type, icons, voice, agents, imagery and downloads.</p>
+    <p class="sec-note">The raw materials, logo, colour, type, icons, voice, agents, imagery and downloads.</p>
     <div class="ov-grid">${foundCards}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Systems</p><h2 class="sec">Built with the brand</h2>
-    <p class="sec-note">The deliverables and tools — decks, the marketing site, case studies, email and campaigns.</p>
+    <p class="sec-note">The deliverables and tools, decks, the marketing site, case studies, email and campaigns.</p>
     <div class="ov-grid">${sysCards}</div>
   </div></section>
   <div style="height:60px"></div>`;
@@ -3619,7 +3619,7 @@ function buildColor(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Colour</p>
       <h1>Colour</h1>
-      <p class="lede">One vivid orange carries the whole brand; everything else is a neutral that lets the orange — and the product — do the talking. The same palette holds across decks, the site, email and ads.</p>
+      <p class="lede">One vivid orange carries the whole brand; everything else is a neutral that lets the orange, and the product, do the talking. The same palette holds across decks, the site, email and ads.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>One orange · #FD5000</span>
         <span class="chip">Charcoal #282828</span>
@@ -3634,8 +3634,8 @@ function buildColor(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — The one orange</p><h2 class="sec">#FD5000 does the work</h2>
-    <p class="sec-note">Zuper is a single, high‑energy orange. Use it for <b style="color:var(--text-primary)">one thing at a time</b> — the primary action, a key number, an accent — never as a wash. On light grounds it's the call to action; on the orange gradient it becomes the whole surface.</p>
+    <p class="eyebrow">01 · The one orange</p><h2 class="sec">#FD5000 does the work</h2>
+    <p class="sec-note">Zuper is a single, high‑energy orange. Use it for <b style="color:var(--text-primary)">one thing at a time</b>, the primary action, a key number, an accent, never as a wash. On light grounds it's the call to action; on the orange gradient it becomes the whole surface.</p>
     <div class="swatches sem">
       ${swatch("color/brand/default","#FD5000","brand-default",true)}
       ${swatch("color/brand/hover","#E04600","brand-hover",true)}
@@ -3645,14 +3645,14 @@ function buildColor(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — The gradient</p><h2 class="sec">The orange gradient</h2>
-    <p class="sec-note">The signature ground for covers, hero panels and CTAs. <b style="color:var(--text-primary)">The rule: dark at the top‑left, light at the bottom‑right</b> — always this direction and these stops. Don't flip it or invent new gradients.</p>
+    <p class="eyebrow">02 · The gradient</p><h2 class="sec">The orange gradient</h2>
+    <p class="sec-note">The signature ground for covers, hero panels and CTAs. <b style="color:var(--text-primary)">The rule: dark at the top‑left, light at the bottom‑right</b>, always this direction and these stops. Don't flip it or invent new gradients.</p>
     <div style="border-radius:16px;height:150px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);box-shadow:0 18px 44px rgba(20,4,3,.18)"></div>
     ${copyline("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)")}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — Neutrals</p><h2 class="sec">Ink, neutrals &amp; grounds</h2>
+    <p class="eyebrow">03 · Neutrals</p><h2 class="sec">Ink, neutrals &amp; grounds</h2>
     <p class="sec-note">The quiet supporting cast. Charcoal carries high‑contrast feature bands; warm peach softens cards; the canvas is a barely‑there off‑white.</p>
     <div class="swatches">
       ${swatch("ink","#191919",null,false)}
@@ -3669,10 +3669,10 @@ function buildColor(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — Grounds</p><h2 class="sec">Where each colour lives</h2>
+    <p class="eyebrow">04 · Grounds</p><h2 class="sec">Where each colour lives</h2>
     <p class="sec-note">Pick the ground first; the rest follows. Never put body text on the gradient, and keep Sense black for Zuper Sense only.</p>
     <div class="modecards">
-      ${gr("#fff","border:1px solid var(--border-default)","White","Default page ground — the everyday surface.")}
+      ${gr("#fff","border:1px solid var(--border-default)","White","Default page ground, the everyday surface.")}
       ${gr("#FBF2EA","","Warm peach","Cards and soft feature blocks.")}
       ${gr("#282828","","Charcoal","High‑contrast feature bands.")}
       ${gr("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)","","Orange gradient","Covers, hero panels and CTAs.")}
@@ -3681,7 +3681,7 @@ function buildColor(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">05 — Contrast</p><h2 class="sec">Keep it readable</h2>
+    <p class="eyebrow">05 · Contrast</p><h2 class="sec">Keep it readable</h2>
     <p class="sec-note">Orange is a <b style="color:var(--text-primary)">large‑text and UI‑accent</b> colour, not body copy. Body stays ink (#191919) on light and near‑white (#FAFAFA) on dark; on the orange ground, text and the logo go white.</p>
   </div></section>
   <div style="height:60px"></div>`;
@@ -3704,7 +3704,7 @@ function buildType(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Type</p>
       <h1>Typography</h1>
-      <p class="lede">Two type systems, one voice. <b style="color:#191919">Aptos</b> powers the deck — it's the native Office face, so slides render identically anywhere. <b style="color:#191919">Plus Jakarta Sans</b> + <b style="color:#191919">Inter</b> power the site, email and ads. <b style="color:#191919">Geist Mono</b> sets the little uppercase eyebrows that are unmistakably Zuper.</p>
+      <p class="lede">Two type systems, one voice. <b style="color:#191919">Aptos</b> powers the deck. It's the native Office face, so slides render identically anywhere. <b style="color:#191919">Plus Jakarta Sans</b> + <b style="color:#191919">Inter</b> power the site, email and ads. <b style="color:#191919">Geist Mono</b> sets the little uppercase eyebrows that are unmistakably Zuper.</p>
       <div class="chips">
         <span class="chip">Aa Aptos · decks</span>
         <span class="chip">Aa Plus Jakarta · display</span>
@@ -3720,24 +3720,24 @@ function buildType(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — Two systems</p><h2 class="sec">One voice, the right face for each medium</h2>
-    <p class="sec-note">Match the typeface to where the work lives — then never mix the two display faces in one artefact.</p>
+    <p class="eyebrow">01 · Two systems</p><h2 class="sec">One voice, the right face for each medium</h2>
+    <p class="sec-note">Match the typeface to where the work lives, then never mix the two display faces in one artefact.</p>
     <div class="cols-2" style="margin-top:6px">
-      ${pairing("Decks","Aptos Display · titles &nbsp;/&nbsp; Aptos · body","PowerPoint is built for Aptos — the native Microsoft face — so every deck renders the same on any machine.")}
+      ${pairing("Decks","Aptos Display · titles &nbsp;/&nbsp; Aptos · body","PowerPoint is built for Aptos, the native Microsoft face, so every deck renders the same on any machine.")}
       ${pairing("Web · marketing · email","Plus Jakarta Sans · display &nbsp;/&nbsp; Inter · body","The zuper.co pairing: Plus Jakarta for headlines and Inter for readable body and UI.")}
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — Specimens</p><h2 class="sec">The families</h2>
+    <p class="eyebrow">02 · Specimens</p><h2 class="sec">The families</h2>
     ${spec("'Plus Jakarta Sans',sans-serif","Plus Jakarta Sans","Display · 600 / 700","Run your service business","The quick brown fox jumps over the lazy dog · 0123456789")}
     ${spec("'Aptos Display','Aptos',sans-serif","Aptos Display","Deck titles · 700","From first call to final invoice","The quick brown fox jumps over the lazy dog · 0123456789")}
     ${spec("'Inter',sans-serif","Inter","Body &amp; UI · 400 / 500 / 700","Schedule, dispatch and invoice from one platform.","The quick brown fox jumps over the lazy dog · 0123456789")}
-    ${spec("'Geist Mono',monospace","Geist Mono","Eyebrows &amp; labels · 400 / 500","FOUNDATION · TYPOGRAPHY","01 — THE RULE · CONFIDENTIAL · 0123456789")}
+    ${spec("'Geist Mono',monospace","Geist Mono","Eyebrows &amp; labels · 400 / 500","FOUNDATION · TYPOGRAPHY","01 · THE RULE · CONFIDENTIAL · 0123456789")}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — The scale</p><h2 class="sec">Hierarchy</h2>
+    <p class="eyebrow">03 · The scale</p><h2 class="sec">Hierarchy</h2>
     <p class="sec-note">Big, tight display for headlines; calm body. Tighten letter‑spacing as size grows.</p>
     <div style="margin-top:8px">
       ${scaleRow("Display / H1 · 58","58","'Plus Jakarta Sans',sans-serif",700)}
@@ -3748,11 +3748,11 @@ function buildType(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — The signature</p><h2 class="sec">Geist Mono eyebrows</h2>
-    <p class="sec-note">The one detail that instantly reads as Zuper: a small, <b style="color:var(--text-primary)">uppercase, letter‑spaced</b> monospace label above a section or headline. Keep them short — a category, a number, a tag.</p>
+    <p class="eyebrow">04 · The signature</p><h2 class="sec">Geist Mono eyebrows</h2>
+    <p class="sec-note">The one detail that instantly reads as Zuper: a small, <b style="color:var(--text-primary)">uppercase, letter‑spaced</b> monospace label above a section or headline. Keep them short, a category, a number, a tag.</p>
     <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px">
       <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">Foundation · Colour</span>
-      <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">01 — The rule</span>
+      <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">01 · The rule</span>
       <span style="font-family:${MONO};font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);border:1px dashed var(--chip-line);border-radius:8px;padding:9px 12px">Zuper Confidential</span>
     </div>
   </div></section>
@@ -3767,7 +3767,7 @@ function buildVoice(){
   const line=(q)=>`<div style="border:1px solid var(--border-default);border-left:3px solid var(--brand-default);background:#fff;border-radius:0 12px 12px 0;padding:16px 18px;margin-bottom:12px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.01em;color:#191919">${q}</div>`;
   const sd=(say,dont)=>`<tr><td class="area" style="color:#1E854B;font-weight:600">${say}</td><td style="color:#B4341C">${dont}</td></tr>`;
   const cta=(t)=>`<span style="display:inline-block;background:var(--brand-default);color:#fff;font:700 14px/1 'Inter',sans-serif;padding:13px 20px;border-radius:9px;margin:0 10px 10px 0">${t}</span>`;
-  const rule=(t)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)"><b style="color:var(--text-primary)">${t.split("—")[0]}</b>${t.includes("—")?"— "+t.split("—").slice(1).join("—"):""}</span></div>`;
+  const rule=(label,body)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)"><b style="color:var(--text-primary)">${label}</b> ${body}</span></div>`;
   const banned=["seamless","leverage","unlock","empower","streamline","robust","cutting‑edge","game‑changing","elevate","harness","synergy","ecosystem","holistic","revolutionary","“in today's fast‑paced world”","em dashes","reflexive triads"];
   stage.innerHTML=`
   <header class="sys-hero has-art">
@@ -3775,7 +3775,7 @@ function buildVoice(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Voice</p>
       <h1>Voice &amp; tone</h1>
-      <p class="lede">How Zuper writes — plain‑spoken, warm and confident, from the homepage to a button label. Say what the product does <b style="color:#191919">for the customer</b>, in their words, and get out of the way. If a roofing contractor wouldn't say it at a trade show, it doesn't belong on the page.</p>
+      <p class="lede">How Zuper writes, plain‑spoken, warm and confident, from the homepage to a button label. Say what the product does <b style="color:#191919">for the customer</b>, in their words, and get out of the way. If a roofing contractor wouldn't say it at a trade show, it doesn't belong on the page.</p>
       <div class="chips">
         <span class="chip">Plain‑spoken</span>
         <span class="chip">Approachable</span>
@@ -3791,19 +3791,19 @@ function buildVoice(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — The five principles</p><h2 class="sec">How Zuper sounds</h2>
-    <p class="sec-note">Five principles carry every word we write. Each one has a concrete copy rule — and an anti‑pattern to avoid.</p>
+    <p class="eyebrow">01 · The five principles</p><h2 class="sec">How Zuper sounds</h2>
+    <p class="sec-note">Five principles carry every word we write. Each one has a concrete copy rule, and an anti‑pattern to avoid.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:6px">
       ${principle("Plain‑spoken","Write like you're talking to a friend at a trade show. 8th‑grade words, no hyperbole. Industry terms techs use daily are fine; vendor‑speak isn't.")}
       ${principle("Approachable","Warm and direct. Use contractions, short sentences, second person. Professional warmth, not startup‑bro.")}
-      ${principle("Customer‑obsessed","Lead with the outcome, then the capability. The customer is the hero of every section, and the pain gets named in their words — not the product's.")}
-      ${principle("Celebrate field teams","Name the roles: field techs, crew leads, installers. Show their real day — a crew lead juggling six jobs across three zip codes. Respect them, don't “manage resources.”")}
+      ${principle("Customer‑obsessed","Lead with the outcome, then the capability. The customer is the hero of every section, and the pain gets named in their words, not the product's.")}
+      ${principle("Celebrate field teams","Name the roles: field techs, crew leads, installers. Show their real day, a crew lead juggling six jobs across three zip codes. Respect them, don't “manage resources.”")}
       ${principle("Forward‑looking","Confidently optimistic. Future‑tense outcomes (“you'll see…”). No hedging, no hype.")}
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 — On‑tone vs off‑tone</p><h2 class="sec">The difference in one example</h2>
+    <p class="eyebrow">02 · On‑tone vs off‑tone</p><h2 class="sec">The difference in one example</h2>
     <p class="sec-note">Write to <b style="color:var(--text-primary)">“you,”</b> not “we, we, we.” Lead with the reader's world; use “we” only to show how we help.</p>
     <div class="cols-2" style="margin-top:6px">
       <div style="border:1px solid #F0C9C0;background:#FCF3F1;border-radius:14px;padding:20px 22px">
@@ -3818,19 +3818,19 @@ function buildVoice(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 — Signature lines &amp; CTAs</p><h2 class="sec">The lines that sound like us</h2>
-    <p class="sec-note">Pulled from the live brand — reuse and adapt these; keep their shape. Headlines make <b style="color:var(--text-primary)">one</b> claim, in sentence case, over a Geist Mono eyebrow.</p>
+    <p class="eyebrow">03 · Signature lines &amp; CTAs</p><h2 class="sec">The lines that sound like us</h2>
+    <p class="sec-note">Pulled from the live brand, reuse and adapt these; keep their shape. Headlines make <b style="color:var(--text-primary)">one</b> claim, in sentence case, over a Geist Mono eyebrow.</p>
     ${line("Stop losing revenue to missed calls and slow estimates.")}
     ${line("From the first call to the final payment.")}
     ${line("Answer every call. Win every job.")}
     ${line("Type a question, get an answer, deploy an agent.")}
     ${line("The AI operating system to run your service business.")}
-    <p class="sec-note" style="margin-top:22px">One primary action per surface — use the brand's own verbs:</p>
+    <p class="sec-note" style="margin-top:22px">One primary action per surface, use the brand's own verbs:</p>
     <div style="margin-top:6px">${cta("Test drive Zuper")}${cta("Schedule a demo")}${cta("Request early access")}${cta("See how it works")}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 — Say / don't say</p><h2 class="sec">Trade jargon for outcomes</h2>
+    <p class="eyebrow">04 · Say / don't say</p><h2 class="sec">Trade jargon for outcomes</h2>
     <div style="overflow-x:auto"><table class="cstable"><thead><tr><th>Say this</th><th>Not this</th></tr></thead><tbody>
       ${sd("You see every job and every dollar from your phone","We leverage robust analytics to unlock efficiency")}
       ${sd("You'll see better margins in your first month","Our platform is proven to drive operational efficiencies")}
@@ -3842,15 +3842,15 @@ function buildVoice(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">05 — Words we never use</p><h2 class="sec">The AI &amp; jargon tells</h2>
-    <p class="sec-note">These read as robotic or salesy — and break the plain‑spoken rule. When three or more land on a page, the copy stops sounding human. Skip <b style="color:var(--text-primary)">em dashes</b> too (use commas, colons or parentheses).</p>
+    <p class="eyebrow">05 · Words we never use</p><h2 class="sec">The AI &amp; jargon tells</h2>
+    <p class="sec-note">These read as robotic or salesy, and break the plain‑spoken rule. When three or more land on a page, the copy stops sounding human. Skip <b style="color:var(--text-primary)">em dashes</b> too (use commas, colons or parentheses).</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
       ${banned.map(w=>`<span style="font:500 12.5px/1 'Inter',sans-serif;color:#B4341C;background:#FCEEEA;border:1px solid #F2D3CB;border-radius:8px;padding:9px 12px;text-decoration:line-through;text-decoration-color:rgba(180,52,28,.45)">${w}</span>`).join("")}
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">06 — Write like an insider</p><h2 class="sec">Prove you get the work</h2>
+    <p class="eyebrow">06 · Write like an insider</p><h2 class="sec">Prove you get the work</h2>
     <p class="sec-note">Generic copy could belong to any competitor; specifics can't be faked. Real numbers, real workflows and real field moments show we actually know this world. <b style="color:var(--text-primary)">The test:</b> if you can swap in a competitor's name and the sentence still works, rewrite it.</p>
     <div class="cols-2" style="margin-top:6px">
       <div style="border:1px solid #F0C9C0;background:#FCF3F1;border-radius:14px;padding:20px 22px">
@@ -3867,19 +3867,19 @@ function buildVoice(){
       ${principle("Name the workflow","“Aging supplements by carrier,” “good‑better‑best proposals,” “the supplement dance with adjusters.” The words the trade uses.")}
       ${principle("Name the pain in their words","“Callback hell,” “the Monday morning scramble,” “scope creep on every tear‑off.” Use the exact phrases your ICP already says.")}
       ${principle("Set the scene","Time, weather, the truck, the customer at the door. Concrete situations prove you've been on the job.")}
-      ${principle("Write to the crew lead","Their real day — six jobs across three zip codes — not the org chart. Respect the people doing the work.")}
+      ${principle("Write to the crew lead","Their real day, six jobs across three zip codes, not the org chart. Respect the people doing the work.")}
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">07 — The litmus test</p><h2 class="sec">Before it ships</h2>
+    <p class="eyebrow">07 · The litmus test</p><h2 class="sec">Before it ships</h2>
     <p class="sec-note">Read it out loud. If a crew‑lead peer wouldn't say it, rewrite it. Then check the five:</p>
     <div style="margin-top:4px">
-      ${rule("Plain‑spoken? — would you say this to a friend? Any word a 14‑year‑old wouldn't get (roofing terms aside)?")}
-      ${rule("Approachable? — does it read like a conversation or a legal filing? Are there contractions?")}
-      ${rule("Customer‑obsessed? — is the customer the hero of every section? Does each feature earn a “so what”?")}
-      ${rule("Celebrate field teams? — would a crew lead feel respected, or managed?")}
-      ${rule("Forward‑looking? — does it project confidence without hedging or hype?")}
+      ${rule("Plain‑spoken?","Would you say this to a friend? Any word a 14‑year‑old wouldn't get (roofing terms aside)?")}
+      ${rule("Approachable?","Does it read like a conversation or a legal filing? Are there contractions?")}
+      ${rule("Customer‑obsessed?","Is the customer the hero of every section? Does each feature earn a “so what”?")}
+      ${rule("Celebrate field teams?","Would a crew lead feel respected, or managed?")}
+      ${rule("Forward‑looking?","Does it project confidence without hedging or hype?")}
     </div>
   </div></section>
   <div style="height:60px"></div>`;
@@ -3887,7 +3887,7 @@ function buildVoice(){
 }
 
 /* ============ FOUNDATIONS: agent avatars ============ */
-/* Imported from Claude Design · foundations/brand-agents.html — caped 3D superhero mascots, one per AI agent. */
+/* Imported from Claude Design · foundations/brand-agents.html, caped 3D superhero mascots, one per AI agent. */
 const AGENTS=[
   ["front-office","CSR Agent","Dispatch · support"],
   ["field-technician","Field Agent","On the job"],
@@ -3907,7 +3907,7 @@ function buildAgents(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Agents</p>
       <h1>Agent avatars</h1>
-      <p class="lede">The faces of <b style="color:#191919">Zuper Sense</b> — one caped 3D superhero mascot per AI agent. Each agent keeps a single, consistent avatar across product, deck and web, framed on the orange gradient so the character pops.</p>
+      <p class="lede">The faces of <b style="color:#191919">Zuper Sense</b>, one caped 3D superhero mascot per AI agent. Each agent keeps a single, consistent avatar across product, deck and web, framed on the orange gradient so the character pops.</p>
       <div class="chips">
         <span class="chip">Caped 3D mascots</span>
         <span class="chip">One avatar per agent</span>
@@ -3922,7 +3922,7 @@ function buildAgents(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 — The line‑up</p><h2 class="sec">Meet the agents</h2>
+    <p class="eyebrow">01 · The line‑up</p><h2 class="sec">Meet the agents</h2>
     <p class="sec-note">Zuper Sense ships as a team of agents. Always use the mascot with the agent's name and its role label.</p>
     <div class="agrid">
       ${AGENTS.map(card).join("")}
