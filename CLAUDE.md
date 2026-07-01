@@ -15,3 +15,16 @@ These are image-ground slides — use them as-is regardless of the deck's scheme
 - **Section break** (`slides/section-break.html`) — full-bleed orange "Outcome Era" houses illustration, white headline, `ZUPER CONFIDENTIAL` tag. Use between major sections of any deck.
 - **Zuper Glass** (`slides/glass.html`) — full-bleed AR smart-glasses photo (`assets/backgrounds/zuper-glass-bg.jpg`) with a dark scrim, white headline + badge. Reserved for whenever the deck talks about **Zuper Glass**.
 - **Zuper Sense — fluted** (`slides/sense-fluted.html`) — the black Sense slide (see above).
+
+## Copy & voice (all on-brand writing)
+Zuper's voice has five principles: plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-looking. Write to "you," lead with the outcome before the feature, use the language the trade actually uses, and prove you know the work with real numbers and real field scenarios.
+
+Avoid the tells that make copy read as AI-generated or salesy:
+- **No em dashes.** Use commas, periods, colons or parentheses instead.
+- **No banned vocab:** seamless, leverage, unlock, empower, streamline, robust, elevate, holistic, synergy, ecosystem, revolutionary, "in today's fast-paced world."
+- No throat-clearing openers, hollow wrap-ups, reflexive triads, or "not just X, Y" parallelism. Headlines make one claim, in sentence case.
+
+References:
+- **Signs of AI writing** (the checklist behind these rules): https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+- **LLM Website Copywriting Best Practices v3** — the Zuper voice source of truth (five principles, banned lists, litmus test).
+- The live **Voice & tone** page in the DLS documents all of this with examples.
