@@ -833,8 +833,9 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-typ .fams span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px}
 /* Voice — speech bubble */
 .ha-voice{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px;border:1px solid rgba(0,0,0,.05)}
-.ha-voice .bub{background:linear-gradient(135deg,#FF8A4C,#FD5000 65%,#DB3602);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 21px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
-.ha-voice .bub .tw{overflow:hidden;white-space:nowrap;max-width:214px;animation:ha-typline 5s steps(24,end) infinite}
+.ha-voice .bub{background:linear-gradient(135deg,#FF8A4C,#FD5000 65%,#DB3602);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 18px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
+.ha-voice .bub .tw{overflow:hidden;white-space:nowrap;max-width:270px;animation:ha-voicetype 5s steps(26,end) infinite}
+@keyframes ha-voicetype{0%{max-width:0}45%{max-width:270px}88%{max-width:270px}100%{max-width:0}}
 .ha-voice .bub .cr{width:3px;height:20px;background:#fff;margin-left:3px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
 .ha-voice .tag{margin-top:14px;font:600 10px/1.4 'Geist Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:#7A7268}
 /* Agent avatars — mascot cards (orange-gradient frames, 3D mascots) */
@@ -3795,8 +3796,8 @@ function buildVoice(){
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:6px">
       ${principle("Plain‑spoken","Write like you're talking to a friend at a trade show. 8th‑grade words, no hyperbole. Industry terms techs use daily are fine; vendor‑speak isn't.")}
       ${principle("Approachable","Warm and direct. Use contractions, short sentences, second person. Professional warmth, not startup‑bro.")}
-      ${principle("Customer‑obsessed","Lead with the outcome, then the capability. The customer is the hero of every section — never the product.")}
-      ${principle("Celebrate field teams","Name the roles: field techs, crew leads, installers. Show their real day. Respect them, don't “manage resources.”")}
+      ${principle("Customer‑obsessed","Lead with the outcome, then the capability. The customer is the hero of every section, and the pain gets named in their words — not the product's.")}
+      ${principle("Celebrate field teams","Name the roles: field techs, crew leads, installers. Show their real day — a crew lead juggling six jobs across three zip codes. Respect them, don't “manage resources.”")}
       ${principle("Forward‑looking","Confidently optimistic. Future‑tense outcomes (“you'll see…”). No hedging, no hype.")}
     </div>
   </div></section>
@@ -3819,12 +3820,13 @@ function buildVoice(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">03 — Signature lines &amp; CTAs</p><h2 class="sec">The lines that sound like us</h2>
     <p class="sec-note">Pulled from the live brand — reuse and adapt these; keep their shape. Headlines make <b style="color:var(--text-primary)">one</b> claim, in sentence case, over a Geist Mono eyebrow.</p>
-    ${line("The AI operating system to run your service business.")}
-    ${line("Your software should work for you, not the other way around.")}
+    ${line("Stop losing revenue to missed calls and slow estimates.")}
     ${line("From the first call to the final payment.")}
-    ${line("Deploy agents. Get the work done.")}
+    ${line("Answer every call. Win every job.")}
+    ${line("Type a question, get an answer, deploy an agent.")}
+    ${line("The AI operating system to run your service business.")}
     <p class="sec-note" style="margin-top:22px">One primary action per surface — use the brand's own verbs:</p>
-    <div style="margin-top:6px">${cta("Book a demo")}${cta("Test drive Zuper")}${cta("Schedule a demo")}${cta("Start free trial")}</div>
+    <div style="margin-top:6px">${cta("Test drive Zuper")}${cta("Schedule a demo")}${cta("Request early access")}${cta("See how it works")}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -3833,7 +3835,8 @@ function buildVoice(){
       ${sd("You see every job and every dollar from your phone","We leverage robust analytics to unlock efficiency")}
       ${sd("You'll see better margins in your first month","Our platform is proven to drive operational efficiencies")}
       ${sd("Field techs, crews, installers","Resources, workforce, headcount")}
-      ${sd("One system, not six tools","A best‑in‑class unified ecosystem")}
+      ${sd("Callback hell, the Monday morning scramble","Communication inefficiencies, operational bottlenecks")}
+      ${sd("One system, not 6–8 disconnected tools","A best‑in‑class unified ecosystem")}
       ${sd("Book a demo","Begin your transformation journey")}
     </tbody></table></div>
   </div></section>
@@ -3847,7 +3850,29 @@ function buildVoice(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">06 — The litmus test</p><h2 class="sec">Before it ships</h2>
+    <p class="eyebrow">06 — Write like an insider</p><h2 class="sec">Prove you get the work</h2>
+    <p class="sec-note">Generic copy could belong to any competitor; specifics can't be faked. Real numbers, real workflows and real field moments show we actually know this world. <b style="color:var(--text-primary)">The test:</b> if you can swap in a competitor's name and the sentence still works, rewrite it.</p>
+    <div class="cols-2" style="margin-top:6px">
+      <div style="border:1px solid #F0C9C0;background:#FCF3F1;border-radius:14px;padding:20px 22px">
+        <div style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#B4341C;margin-bottom:12px">✕ Too generic</div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#7A5148">“Zuper helps roofing businesses improve efficiency and streamline their operations.”</p>
+      </div>
+      <div style="border:1px solid #CDE9D6;background:#F1F9F3;border-radius:14px;padding:20px 22px">
+        <div style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#1E854B;margin-bottom:12px">✓ Straight from a live Zuper page</div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#1B3A28">“Every missed call is a $15K–$100K job walking to a competitor. You carry material and labor costs for 45–90 days waiting on claims, while $300K–$800K sits trapped in receivables.”</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:20px">
+      ${principle("Use real numbers","“8 hrs saved per person, per week.” “35% fewer aging receivables.” “100% of calls answered.” Specifics beat adjectives.")}
+      ${principle("Name the workflow","“Aging supplements by carrier,” “good‑better‑best proposals,” “the supplement dance with adjusters.” The words the trade uses.")}
+      ${principle("Name the pain in their words","“Callback hell,” “the Monday morning scramble,” “scope creep on every tear‑off.” Use the exact phrases your ICP already says.")}
+      ${principle("Set the scene","Time, weather, the truck, the customer at the door. Concrete situations prove you've been on the job.")}
+      ${principle("Write to the crew lead","Their real day — six jobs across three zip codes — not the org chart. Respect the people doing the work.")}
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">07 — The litmus test</p><h2 class="sec">Before it ships</h2>
     <p class="sec-note">Read it out loud. If a crew‑lead peer wouldn't say it, rewrite it. Then check the five:</p>
     <div style="margin-top:4px">
       ${rule("Plain‑spoken? — would you say this to a friend? Any word a 14‑year‑old wouldn't get (roofing terms aside)?")}
