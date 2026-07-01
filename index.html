@@ -3568,26 +3568,33 @@ function buildOverview(){
     +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
-  const cards=[
-    ["use","cpu","How to use this","START HERE","Open the published Zuper Design System in Claude Design, then pick it on any project — everything comes out on‑brand."],
-    ["color","droplet","Colour","FOUNDATION","One vivid orange plus a neutral cast — the palette, the gradient and the grounds each colour is allowed on."],
-    ["type","edit","Typography","FOUNDATION","Two type systems, one voice — Aptos for decks, Plus Jakarta + Inter for everything else, Geist Mono eyebrows."],
-    ["voice","chat-text","Voice &amp; tone","FOUNDATION","How Zuper writes — confident, plain, outcome‑led. Signature lines, say/don't‑say and CTA verbs."],
-    ["agents","sparkle","Agent avatars","FOUNDATION","The faces of Zuper Sense — a caped 3D superhero mascot for each AI agent, framed on a warm ground."],
-    ["deck","monitor","Deck","POWERPOINT","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
-    ["website","globe","Website DLS","WEB","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
-    ["one-pager","doc","Case study","1‑PAGER","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
-    ["humans","users","Mini humans","BRAND","Small animated workers that add warmth in a corner — the product always stays the hero."],
-    ["icons","grid","Iconography","FOUNDATION","Zuper's one icon language — a single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in your colour and size."],
-    ["social","megaphone","Social &amp; ads","CAMPAIGN","Social creatives at real export sizes and a full set of display ads at IAB sizes — one orange gradient and a single CTA."],
-    ["emailer","chat","Emailer","LIFECYCLE","A 600px branded email built from reusable blocks — header lockup, hero, feature rows, stat banner and footer. Client‑safe."],
-    ["email-sig","mail","Email signature","TOOLS","Build your own on‑brand Outlook signature in seconds — fill in your details, pick an optional banner, and copy it straight in."],
-    ["logo-usage","shield","Logo usage","BRAND","How to place the Zuper mark — clear space, minimum sizes, the right variant for each background, and the misuse to avoid."],
-    ["assets","download","Brand assets","DOWNLOADS","Grab‑and‑go files — the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc. Just download."]
-  ].map((c,i)=>`<button class="ov-card" onclick="setActive('${c[0]}')">
-      <div class="top"><span class="ic">${icon(c[1],22)}</span><span class="num">${i<9?"0":""}${i+1}</span></div>
+  const FOUND=[
+    ["logo-usage","shield","Logo usage","Brand","How to place the mark — clear space, minimum sizes, the right variant per background, and the misuse to avoid."],
+    ["color","droplet","Colour","Palette","One vivid orange plus a neutral cast — the palette, the gradient and the grounds each colour lives on."],
+    ["type","edit","Typography","Type","Two type systems, one voice — Aptos for decks, Plus Jakarta + Inter elsewhere, Geist Mono eyebrows."],
+    ["icons","grid","Iconography","Icons","One single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in your colour and size."],
+    ["voice","chat-text","Voice &amp; tone","Voice","How Zuper writes — plain, warm, field‑first. The five principles, on/off‑tone, banned words and the litmus test."],
+    ["agents","sparkle","Agent avatars","Agents","The faces of Zuper Sense — a caped 3D superhero mascot for each AI agent, downloadable."],
+    ["humans","users","Mini humans","Imagery","Small animated workers that add warmth in a corner — the product always stays the hero."],
+    ["assets","download","Brand assets","Downloads","Grab‑and‑go files — the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc."]
+  ];
+  const SYS_=[
+    ["deck","monitor","Deck","PowerPoint","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
+    ["website","globe","Website DLS","Web","The real zuper.co system — colour &amp; type tokens, components, page patterns and live‑page references."],
+    ["one-pager","doc","Case study","1‑pager","A co‑branded customer one‑pager: orange cover, pull‑quotes, a before/after table and a metrics grid."],
+    ["emailer","chat","Emailer","Lifecycle","A 600px branded email built from reusable blocks — header, hero, feature rows, stat banner and footer. Client‑safe."],
+    ["email-sig","mail","Email signature","Tool","Build your own on‑brand Outlook signature in seconds — fill in your details and copy it straight into Outlook."],
+    ["social","megaphone","Social &amp; ads","Campaign","Social creatives at real export sizes and display ads at IAB sizes — one orange gradient and a single CTA."]
+  ];
+  const tile=(c)=>`<button class="ov-card" onclick="setActive('${c[0]}')">
+      <div class="top"><span class="ic">${icon(c[1],22)}</span></div>
       <div class="tag">${c[3]}</div><h3>${c[2]}</h3><p>${c[4]}</p>
-      <span class="go">Open ${c[2]} →</span></button>`).join("");
+      <span class="go">Open ${c[2]} →</span></button>`;
+  const foundCards=FOUND.map(tile).join(""), sysCards=SYS_.map(tile).join("");
+  const startFeat=`<button class="ov-feat" onclick="setActive('use')">
+      <span class="ic">${icon("cpu",26)}</span>
+      <span class="gx"><span class="tag">Start here</span><h3>How to use this</h3><p>Open the published Zuper Design System in Claude Design, then pick it on any project — everything comes out on‑brand.</p></span>
+      <span class="go">Open →</span></button>`;
 
   stage.innerHTML=`
   <header class="sys-hero has-art">
@@ -3613,8 +3620,20 @@ function buildOverview(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">The toolkit</p><h2 class="sec">Pick a tile to open</h2>
-    <p class="sec-note">The design systems, the campaign and email tools, and the brand‑asset library — all in one place. New here? Start with <b style="color:var(--text-primary)">How to use this</b>.</p>
-    <div class="ov-grid">${cards}</div>
+    <p class="sec-note">Everything on‑brand at Zuper, in two layers: the <b style="color:var(--text-primary)">foundations</b> that define the brand, and the <b style="color:var(--text-primary)">systems</b> you build with it. New here? Start below.</p>
+    ${startFeat}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Foundations</p><h2 class="sec">The brand building blocks</h2>
+    <p class="sec-note">The raw materials — logo, colour, type, icons, voice, agents, imagery and downloads.</p>
+    <div class="ov-grid">${foundCards}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">Systems</p><h2 class="sec">Built with the brand</h2>
+    <p class="sec-note">The deliverables and tools — decks, the marketing site, case studies, email and campaigns.</p>
+    <div class="ov-grid">${sysCards}</div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
