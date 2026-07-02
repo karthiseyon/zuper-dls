@@ -46,7 +46,10 @@ done
 
 OUT="$PWD/assets/zuper-design-system.zip"
 rm -f "$OUT"
-(cd "$STAGE" && zip -rqX "$OUT" . -x '.*' -x '*/.DS_Store')
+# Fixed timestamps make the zip deterministic: rebuilding without source changes
+# yields a byte-identical file, so git sees no churn.
+find "$STAGE" -exec touch -t 202601010000 {} +
+(cd "$STAGE" && find . -type f ! -name '.DS_Store' ! -path './.*' | sort | zip -qX "$OUT" -@)
 
 # Regenerate llms-full.txt from the same canonical sources (llms.txt is the hand-written index).
 {
