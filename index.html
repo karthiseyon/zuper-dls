@@ -643,16 +643,29 @@ main{flex:1;min-width:0;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){.hero-art .float{animation:none}}
 @keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 /* mini product window (website) */
-.ha-win{background:#fff;border-radius:14px;box-shadow:0 30px 70px rgba(20,4,3,.30);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
-.ha-win .bar{display:flex;gap:6px;align-items:center;padding:11px 13px;background:#F6F1EB;border-bottom:1px solid #ECE6DD}
+.ha-win{background:#fff;border-radius:14px;box-shadow:0 30px 70px rgba(20,4,3,.30);overflow:hidden;border:1px solid rgba(0,0,0,.06);width:352px}
+.ha-win .bar{display:flex;gap:6px;align-items:center;padding:10px 13px;background:#F6F1EB;border-bottom:1px solid #ECE6DD}
 .ha-win .bar i{width:9px;height:9px;border-radius:50%;background:#D9D2C7;display:block}
-.ha-win .bd{padding:20px}
-.ha-win .h{height:12px;width:58%;border-radius:5px;background:#191919;margin-bottom:10px}
-.ha-win .l{height:8px;border-radius:5px;background:#E7E0D6;margin-bottom:8px}
-.ha-win .btn{margin-top:6px;display:inline-block;padding:0 16px;border-radius:8px;background:#FD5000;color:#fff;font:600 12px/30px 'Inter',sans-serif;height:30px}
-.ha-win .bars{display:flex;gap:5px;align-items:flex-end;margin-top:18px;height:46px}
-.ha-win .bars span{flex:1;background:#FFE0D0;border-radius:3px 3px 0 0}
-.ha-win .bars span:nth-child(4){background:#FD5000}
+.ha-win .bar .url{margin-left:8px;flex:1;font:600 9.5px/1 'Geist Mono',monospace;letter-spacing:.06em;color:#8A8178;background:#fff;border:1px solid #ECE6DD;border-radius:6px;padding:5px 9px}
+.ha-win .vp{height:216px;overflow:hidden}
+.ha-win .pg{animation:ha-pagescroll 11s ease-in-out infinite}
+.ha-win .s{padding:16px}
+.ha-win .s.hero{background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);height:150px;display:flex;flex-direction:column;justify-content:center;gap:9px;box-sizing:border-box}
+.ha-win .s.hero .hl{height:13px;width:72%;border-radius:6px;background:rgba(255,255,255,.94)}
+.ha-win .s.hero .hl.s2{width:50%}
+.ha-win .s.hero .sub{height:7px;width:82%;border-radius:4px;background:rgba(255,255,255,.4)}
+.ha-win .s.hero .cta{margin-top:6px;align-self:flex-start;background:#191919;color:#fff;font:700 10.5px/1 'Plus Jakarta Sans',sans-serif;border-radius:7px;padding:9px 14px}
+.ha-win .s.white{background:#fff;height:120px;box-sizing:border-box}
+.ha-win .s.white .t{height:9px;width:44%;border-radius:5px;background:#191919}
+.ha-win .s.white .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+.ha-win .s.white .cards i{display:block;height:56px;border-radius:9px;background:#F8F0EB;border:1px solid #F0E6DC}
+.ha-win .s.dark{background:#282828;height:96px;display:flex;flex-direction:column;justify-content:center;gap:8px;box-sizing:border-box}
+.ha-win .s.dark .hl{height:10px;width:56%;border-radius:5px;background:rgba(255,255,255,.9)}
+.ha-win .s.dark .sub{height:7px;width:70%;border-radius:4px;background:rgba(255,255,255,.35)}
+.ha-win .s.foot{background:#FD5000;height:64px;display:flex;align-items:center;gap:8px;box-sizing:border-box}
+.ha-win .s.foot .fl{height:8px;border-radius:4px;background:rgba(255,255,255,.85);width:64px}
+.ha-win .s.foot .fl+.fl{width:40px;background:rgba(255,255,255,.45)}
+@keyframes ha-pagescroll{0%,16%{transform:translateY(0)}32%,46%{transform:translateY(-104px)}62%,78%{transform:translateY(-214px)}94%,100%{transform:translateY(0)}}
 /* deck slide fan */
 .ha-fan{position:relative;height:236px}
 .ha-fan .sl{position:absolute;left:50%;width:248px;height:139px;border-radius:12px;box-shadow:0 20px 46px rgba(20,4,3,.30);border:1px solid rgba(0,0,0,.06);padding:15px 16px;overflow:hidden}
@@ -664,11 +677,13 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-fan .s3 .e{opacity:.85}
 /* one-pager mini doc */
 .ha-doc{background:#fff;border-radius:12px;box-shadow:0 28px 64px rgba(20,4,3,.26);padding:24px 22px 20px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
-.ha-doc .rule{position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F)}
+.ha-doc .rule{position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-size:220% 100%;animation:ha-rulepan 5s linear infinite}
+@keyframes ha-rulepan{0%{background-position:0% 0}100%{background-position:220% 0}}
 .ha-doc .lk{font:700 10px/1 'Geist Mono',monospace;letter-spacing:.1em;color:#FD5000;margin:6px 0 16px}
-.ha-doc .l{height:8px;border-radius:5px;background:#E7E0D6;margin-bottom:8px}
+.ha-doc .l{height:8px;border-radius:5px;background:#E7E0D6;margin-bottom:8px;transform-origin:left;animation:ha-write 5s ease-in-out infinite}
+.ha-doc .l:nth-of-type(2){animation-delay:.16s}.ha-doc .l:nth-of-type(3){animation-delay:.32s}.ha-doc .l:nth-of-type(4){animation-delay:.48s}
 .ha-doc .m{margin-top:18px;padding-top:16px;border-top:1px solid #EFEAE2;display:flex;align-items:baseline;gap:9px}
-.ha-doc .m b{font:700 34px/1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.02em}
+.ha-doc .m b{font:700 34px/1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.02em;display:inline-block;animation:ha-stat 5s ease-in-out infinite}
 .ha-doc .m span{font:500 12px/1 'Inter',sans-serif;color:#7A7268}
 /* use: connect card */
 .ha-conn{background:#fff;border-radius:14px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:22px;border:1px solid rgba(0,0,0,.05)}
@@ -696,8 +711,11 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* social & ads: creative fan */
 .ha-ads{position:relative;height:236px}
 .ha-ads .ad{position:absolute;border-radius:13px;box-shadow:0 20px 46px rgba(20,4,3,.28);overflow:hidden;padding:15px 16px}
-.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);color:#fff;border:1px solid rgba(255,255,255,.3)}
-.ha-ads .a2{width:186px;height:120px;left:112px;top:78px;transform:rotate(6deg);background:#fff;color:#191919;border:1px solid rgba(0,0,0,.06)}
+.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);color:#fff;border:1px solid rgba(255,255,255,.3);animation:ha-sway1 6s ease-in-out infinite;z-index:2}
+.ha-ads .a2{width:186px;height:120px;left:112px;top:78px;transform:rotate(6deg);background:#fff;color:#191919;border:1px solid rgba(0,0,0,.06);animation:ha-sway2 6s ease-in-out infinite;z-index:2}
+.ha-ads .a3{width:96px;height:170px;right:-4px;top:-12px;transform:rotate(9deg);background:#09090B;color:#FAFAFA;border:1px solid rgba(255,255,255,.14);z-index:1;padding:12px;animation:ha-liftwave 6s ease-in-out infinite;animation-delay:.8s}
+.ha-ads .a3 .e{color:#FF8B5A}
+.ha-ads .a3 .st{position:absolute;left:12px;bottom:12px;font:600 8px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#71717A}
 .ha-ads .e{font:700 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
 .ha-ads .t{font:700 17px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
 .ha-ads .cta{margin-top:13px;display:inline-block;font:600 9px/22px 'Inter',sans-serif;height:22px;padding:0 13px;border-radius:6px}
@@ -727,16 +745,38 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-studio .sfoot{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:#9A9088}
 .ha-studio .sfoot .dot{width:3px;height:3px;border-radius:50%;background:#D8CFC2}
 /* logo usage: clear-space frame */
-.ha-logo{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.2);padding:30px 34px;border:1px solid rgba(0,0,0,.05);position:relative}
-.ha-logo .frame{border:1.5px dashed #E0D8CD;border-radius:11px;padding:40px 30px;display:flex;align-items:center;justify-content:center}
-.ha-logo .x{position:absolute;font:700 11px/1 'Geist Mono',monospace;color:#FD5000}
-.ha-logo .x.t{top:16px;left:50%;transform:translateX(-50%)}
-.ha-logo .x.b{bottom:16px;left:50%;transform:translateX(-50%)}
-.ha-logo .x.l{left:15px;top:50%;transform:translateY(-50%)}
-.ha-logo .x.r{right:15px;top:50%;transform:translateY(-50%)}
+.ha-logo{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.2);padding:15px 15px 13px;border:1px solid rgba(0,0,0,.05)}
+.ha-logo .frame{position:relative;border:1.5px dashed #E0D8CD;border-radius:12px;height:150px;display:grid;place-items:center;background:#fff;animation:ha-ground 10.5s ease-in-out infinite}
+.ha-logo .lg{grid-area:1/1;display:flex;align-items:center;justify-content:center}
+.ha-logo .lg.l1{animation:ha-lg1 10.5s ease-in-out infinite}
+.ha-logo .lg.l2{opacity:0;animation:ha-lg2 10.5s ease-in-out infinite}
+@keyframes ha-ground{0%,26%{background:#FFFFFF;border-color:#E0D8CD}33%,59%{background:#282828;border-color:rgba(255,255,255,.28)}66%,92%{background:#FD5000;border-color:rgba(255,255,255,.45)}100%{background:#FFFFFF;border-color:#E0D8CD}}
+@keyframes ha-lg1{0%,26%{opacity:1}33%,92%{opacity:0}100%{opacity:1}}
+@keyframes ha-lg2{0%,26%{opacity:0}33%,92%{opacity:1}100%{opacity:0}}
+.ha-logo .grounds{display:flex;align-items:center;gap:8px;margin-top:14px;padding:0 3px}
+.ha-logo .grounds .g{width:18px;height:18px;border-radius:6px;border:1px solid rgba(0,0,0,.1);position:relative}
+.ha-logo .grounds .g::after{content:"";position:absolute;inset:-4px;border:2px solid #FD5000;border-radius:9px;opacity:0;animation:ha-gring 10.5s ease-in-out infinite}
+.ha-logo .g1{background:#fff}.ha-logo .g2{background:#282828}.ha-logo .g3{background:#FD5000}
+.ha-logo .g1::after{animation-delay:0s}.ha-logo .g2::after{animation-delay:3.5s}.ha-logo .g3::after{animation-delay:7s}
+@keyframes ha-gring{0%,2%{opacity:0}5%,26%{opacity:1}31%,100%{opacity:0}}
+.ha-logo .grounds .cap{margin-left:auto;font:600 9px/1.3 'Geist Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#7A7268}
+.ha-logo .ruler{display:flex;align-items:center;gap:9px;margin-top:12px;padding:0 3px}
+.ha-logo .ruler i{flex:1;height:1px;background:#D8CFC2;position:relative}
+.ha-logo .ruler i::before,.ha-logo .ruler i::after{content:"";position:absolute;top:-3px;width:1px;height:7px;background:#B8AC9C}
+.ha-logo .ruler i::before{left:0}.ha-logo .ruler i::after{right:0}
+.ha-logo .ruler span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;flex:0 0 auto}
+.ha-logo .x{position:absolute;font:700 11px/1 'Geist Mono',monospace;color:#FD5000;animation:ha-xcol 10.5s ease-in-out infinite}
+.ha-logo .x.t{top:7px;left:50%;transform:translateX(-50%)}
+.ha-logo .x.b{bottom:7px;left:50%;transform:translateX(-50%)}
+.ha-logo .x.l{left:10px;top:50%;transform:translateY(-50%)}
+.ha-logo .x.r{right:10px;top:50%;transform:translateY(-50%)}
+@keyframes ha-xcol{0%,26%{color:#FD5000}33%,92%{color:rgba(255,255,255,.85)}100%{color:#FD5000}}
 /* brand assets: download stack */
-.ha-assets{display:flex;flex-direction:column;gap:11px}
-.ha-assets .f{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;box-shadow:0 16px 38px rgba(20,4,3,.16);border:1px solid rgba(0,0,0,.05);padding:13px 15px}
+.ha-assets{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);border:1px solid rgba(0,0,0,.05);padding:13px;display:flex;flex-direction:column;gap:9px}
+.ha-assets .hd{display:flex;align-items:center;gap:8px;font:600 10px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#7A7268;padding:3px 4px 1px}
+.ha-assets .hd svg{color:#FD5000;flex:0 0 auto}
+.ha-assets .hd em{margin-left:auto;font-style:normal;color:#B8AC9C}
+.ha-assets .f{display:flex;align-items:center;gap:12px;background:#FBF8F4;border-radius:11px;border:1px solid #EFE8DE;padding:13px 15px}
 .ha-assets .ic{width:38px;height:38px;border-radius:9px;background:#FFE7DC;color:#FD5000;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .ha-assets .meta{flex:1;min-width:0}
 .ha-assets .nm{font:700 13px/1.15 'Plus Jakarta Sans',sans-serif;color:#191919}
@@ -803,32 +843,51 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-logo .x{opacity:.3;animation:ha-mark 3.2s ease-in-out infinite}
 @keyframes ha-mark{0%,100%{opacity:.3}50%{opacity:1}}
 .ha-logo .x.t{animation-delay:0s}.ha-logo .x.r{animation-delay:.4s}.ha-logo .x.b{animation-delay:.8s}.ha-logo .x.l{animation-delay:1.2s}
-/* Brand assets, files download, row flashes done */
-.ha-assets .dl{animation:ha-dl 2.2s ease-in-out infinite}
-@keyframes ha-dl{0%{transform:translateY(-5px);opacity:0}25%{opacity:1}70%{opacity:1}100%{transform:translateY(7px);opacity:0}}
-.ha-assets .f{animation:ha-flash 2.2s ease-in-out infinite}
-@keyframes ha-flash{0%,58%,100%{background:#fff}72%{background:#FFF3EC}}
-.ha-assets .f:nth-child(2) .dl,.ha-assets .f:nth-child(2){animation-delay:.35s}
-.ha-assets .f:nth-child(3) .dl,.ha-assets .f:nth-child(3){animation-delay:.7s}
+/* Brand assets, rows take turns downloading: lift, progress fill, arrow drop */
+.ha-assets .dl{animation:ha-dl 6.6s ease-in-out infinite}
+@keyframes ha-dl{0%{transform:translateY(-5px);opacity:0}4%{opacity:1}22%{opacity:1;transform:translateY(5px)}28%,100%{opacity:0;transform:translateY(5px)}}
+.ha-assets .f{position:relative;overflow:hidden;animation:ha-arow 6.6s ease-in-out infinite}
+@keyframes ha-arow{0%,32%,100%{transform:translateY(0);box-shadow:0 0 0 rgba(20,4,3,0)}6%,24%{transform:translateY(-4px);box-shadow:0 12px 26px rgba(20,4,3,.14)}}
+.ha-assets .f::after{content:"";position:absolute;left:0;bottom:0;height:2.5px;width:100%;background:#FD5000;transform:scaleX(0);transform-origin:left;animation:ha-aprog 6.6s ease-in-out infinite}
+@keyframes ha-aprog{0%,4%{transform:scaleX(0);opacity:1}22%{transform:scaleX(1);opacity:1}30%,100%{transform:scaleX(1);opacity:0}}
+.ha-assets .f:nth-of-type(2),.ha-assets .f:nth-of-type(2)::after,.ha-assets .f:nth-of-type(2) .dl{animation-delay:2.2s}
+.ha-assets .f:nth-of-type(3),.ha-assets .f:nth-of-type(3)::after,.ha-assets .f:nth-of-type(3) .dl{animation-delay:4.4s}
 /* Overview hub, tiles rise in a wave, active icon pulses */
 @keyframes ha-liftwave{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .ha-hub .t{animation:ha-liftwave 3s ease-in-out infinite}
 .ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
 .ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}}
-@keyframes ha-typline{0%{max-width:0}45%{max-width:250px}88%{max-width:250px}100%{max-width:0}}
+@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}}
+@keyframes ha-typline{0%{max-width:0}45%{max-width:272px}88%{max-width:272px}100%{max-width:0}}
 /* Color, palette card */
-.ha-pal{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05)}
-.ha-pal .grad{height:122px;border-radius:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);display:flex;align-items:flex-end;padding:13px}
-.ha-pal .grad .hx{font:700 13px/1 'Geist Mono',monospace;color:#fff;letter-spacing:.03em}
-.ha-pal .chips6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}
-.ha-pal .chips6 span{aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,0,0,.07);display:block;animation:ha-pop .5s ease-out both}
-.ha-pal .chips6 span:nth-child(1){animation-delay:.05s}.ha-pal .chips6 span:nth-child(2){animation-delay:.12s}.ha-pal .chips6 span:nth-child(3){animation-delay:.19s}.ha-pal .chips6 span:nth-child(4){animation-delay:.26s}.ha-pal .chips6 span:nth-child(5){animation-delay:.33s}.ha-pal .chips6 span:nth-child(6){animation-delay:.4s}
+.ha-pal{position:relative;width:380px;height:252px}
+.ha-pal .pc{position:absolute;border-radius:14px;box-shadow:0 20px 46px rgba(20,4,3,.26);border:1px solid rgba(0,0,0,.06);display:flex;align-items:flex-end;padding:12px 14px}
+.ha-pal .pc em{font:700 10.5px/1 'Geist Mono',monospace;font-style:normal;letter-spacing:.04em}
+.ha-pal .p1{left:34px;top:8px;width:230px;height:172px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);transform:rotate(-5deg);z-index:1;animation:ha-psway1 6s ease-in-out infinite;align-items:flex-start;justify-content:flex-end}
+.ha-pal .p1 em{color:#fff}
+.ha-pal .p2{right:26px;top:44px;width:128px;height:100px;background:#282828;transform:rotate(6deg);z-index:2;animation:ha-psway2 6s ease-in-out infinite}
+.ha-pal .p2 em{color:rgba(255,255,255,.85)}
+.ha-pal .p3{left:96px;bottom:6px;width:150px;height:88px;background:#FCE9E1;transform:rotate(-2deg);z-index:3;border:1px solid rgba(0,0,0,.05);animation:ha-psway3 6s ease-in-out infinite}
+.ha-pal .p3 em{color:#B5271C}
+.ha-pal .p4{right:44px;bottom:22px;width:92px;height:66px;background:#FFFAEA;transform:rotate(8deg);z-index:2;border:1px solid rgba(0,0,0,.05);justify-content:flex-end}
+.ha-pal .p4 em{color:#8A8178;font-size:9px}
+@keyframes ha-psway1{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(-2.6deg)}}
+@keyframes ha-psway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(3.4deg)}}
+@keyframes ha-psway3{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-6px)}}
 /* Typography, specimen card */
 .ha-typ{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px 22px;border:1px solid rgba(0,0,0,.05)}
-.ha-typ .big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:80px;line-height:.86;letter-spacing:-.04em;color:#191919}
+.ha-typ .big{position:relative;height:92px;font-weight:700;font-size:80px;line-height:.86;letter-spacing:-.04em;color:#191919}
+.ha-typ .big span{position:absolute;left:0;top:0}
+.ha-typ .big .f1{font-family:'Plus Jakarta Sans',sans-serif;opacity:1;animation:ha-swapa 9s ease-in-out infinite}
+.ha-typ .big .f2{font-family:'Aptos Display','Aptos',sans-serif;opacity:0;animation:ha-swapb 9s ease-in-out infinite}
+.ha-typ .who{position:relative;height:12px;margin-top:9px}
+.ha-typ .who span{position:absolute;left:0;top:0;font:600 9.5px/1.2 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#FD5000;white-space:nowrap}
+.ha-typ .who .f1{opacity:1;animation:ha-swapa 9s ease-in-out infinite}
+.ha-typ .who .f2{opacity:0;animation:ha-swapb 9s ease-in-out infinite}
+@keyframes ha-swapa{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+@keyframes ha-swapb{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
 .ha-typ .line{margin-top:12px;display:flex;align-items:center;font:600 15px/1.2 'Plus Jakarta Sans',sans-serif;color:#191919}
-.ha-typ .tw{overflow:hidden;white-space:nowrap;max-width:236px;animation:ha-typline 5s steps(28,end) infinite}
+.ha-typ .tw{overflow:hidden;white-space:nowrap;max-width:272px;animation:ha-typline 5s steps(28,end) infinite}
 .ha-typ .cr{width:2px;height:15px;background:#FD5000;margin-left:2px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
 .ha-typ .fams{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap}
 .ha-typ .fams span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px}
@@ -855,19 +914,19 @@ main{flex:1;min-width:0;overflow-x:clip}
 .acard .role{font:600 10px/1.3 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
 .acard .agdl{flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--border-default);background:#fff;color:var(--brand-default);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s}
 .acard .agdl:hover{background:var(--brand-subtle);border-color:var(--brand-default)}
-/* Agent avatars, hero art: cross-fading mascot tile */
-.ha-agents{width:300px;margin-left:auto}
-.ha-agents .tile{position:relative;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.32)}
-.ha-agents .badge{position:absolute;top:13px;left:14px;z-index:3;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 10px}
-.ha-agents .tile img{position:absolute;left:50%;bottom:0;height:97%;width:auto;transform:translateX(-50%);opacity:0;animation:ha-agcycle 18s ease-in-out infinite}
-.ha-agents .tile img:nth-child(2){animation-delay:0s}
-.ha-agents .tile img:nth-child(3){animation-delay:3s}
-.ha-agents .tile img:nth-child(4){animation-delay:6s}
-.ha-agents .tile img:nth-child(5){animation-delay:9s}
-.ha-agents .tile img:nth-child(6){animation-delay:12s}
-.ha-agents .tile img:nth-child(7){animation-delay:15s}
-@keyframes ha-agcycle{0%{opacity:0;transform:translateX(-50%) translateY(16px) scale(.97)}3%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}14%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}17%{opacity:0;transform:translateX(-50%) translateY(-10px) scale(1.01)}100%{opacity:0}}
-@media(max-width:1060px){.ha-agents{width:100%;max-width:300px}}
+/* Agent avatars, hero art: the team lineup, three mascot cards */
+.ha-agents{position:relative;width:388px;height:246px;margin-left:auto}
+.ha-agents .k{position:absolute;bottom:0;width:150px;height:206px;border-radius:16px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);overflow:hidden;box-shadow:0 20px 46px rgba(20,4,3,.30);border:1px solid rgba(255,255,255,.22)}
+.ha-agents .k::after{content:"";position:absolute;left:0;right:0;bottom:0;height:58px;background:linear-gradient(180deg,transparent,rgba(9,9,11,.42));pointer-events:none}
+.ha-agents .k img{position:absolute;left:50%;bottom:0;height:84%;width:auto;max-width:96%;object-fit:contain;object-position:bottom;transform:translateX(-50%)}
+.ha-agents .k span{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;white-space:nowrap;font:700 10px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:6px 10px}
+.ha-agents .k1{left:0;transform:rotate(-6deg);animation:ha-ksway1 5.4s ease-in-out infinite}
+.ha-agents .k2{left:119px;bottom:16px;z-index:2;box-shadow:0 30px 62px rgba(20,4,3,.38);animation:ha-klift 5.4s ease-in-out infinite}
+.ha-agents .k3{left:238px;transform:rotate(6deg);animation:ha-ksway2 5.4s ease-in-out infinite}
+@keyframes ha-klift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes ha-ksway1{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(-3.5deg)}}
+@keyframes ha-ksway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(3.5deg)}}
+@media(max-width:1060px){.ha-agents{width:100%;max-width:388px}}
 /* ===== Overview / cover landing ===== */
 .ov-principles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
 .ov-feat{display:flex;align-items:center;gap:24px;border:1px solid var(--border-default);border-radius:18px;background:linear-gradient(118deg,#fff,#FFF3EC 70%,#FFE7DC);padding:26px 28px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;margin-bottom:18px;width:100%;text-align:left}
@@ -2007,12 +2066,13 @@ function buildWebsite(s){
         <span class="chip">&lt;/&gt; Geist Mono · eyebrows</span>
       </div>
       <div class="hero-art"><div class="float ha-win">
-        <div class="bar"><i></i><i></i><i></i></div>
-        <div class="bd">
-          <div class="h"></div><div class="l" style="width:86%"></div><div class="l" style="width:70%"></div>
-          <span class="btn">Test drive Zuper</span>
-          <div class="bars"><span style="height:42%"></span><span style="height:58%"></span><span style="height:50%"></span><span style="height:100%"></span><span style="height:72%"></span></div>
-        </div>
+        <div class="bar"><i></i><i></i><i></i><span class="url">zuper.co</span></div>
+        <div class="vp"><div class="pg">
+          <div class="s hero"><div class="hl"></div><div class="hl s2"></div><div class="sub"></div><span class="cta">Book a demo</span></div>
+          <div class="s white"><div class="t"></div><div class="cards"><i></i><i></i><i></i></div></div>
+          <div class="s dark"><div class="hl"></div><div class="sub"></div></div>
+          <div class="s foot"><span class="fl"></span><span class="fl"></span></div>
+        </div></div>
       </div></div>
     </div>
   </header>
@@ -2596,7 +2656,7 @@ function buildSocial(){
   // ---- social creatives (real export sizes, scaled down for reference) ----
   const MH="assets/mini-humans/",SBG="assets/backgrounds/zuper-sense-bg.jpg",WARM="#FBF2EA",BANNER="#FFE7DC",CHAR="#18181B";
   const sb=(w,h,inner,s)=>{s=s||0.32;return `<div style="width:${Math.round(w*s)}px;height:${Math.round(h*s)}px;overflow:hidden;flex:0 0 auto;border-radius:8px;box-shadow:0 6px 20px rgba(20,4,3,.10)"><div style="width:${w}px;height:${h}px;transform:scale(${s});transform-origin:top left">${inner}</div></div>`;};
-  const cr=(t,w,h,inner,s)=>`<div style="display:flex;flex-direction:column;gap:8px">${lbl(t)}${sb(w,h,inner,s)}</div>`;
+  const cr=(t,w,h,inner,s)=>`<div style="display:flex;flex-direction:column;gap:8px;break-inside:avoid;margin-bottom:26px;width:fit-content">${lbl(t)}${sb(w,h,inner,s)}</div>`;
   const creatives=[
     cr("Instagram · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 32px;">Field service · AI</div>
@@ -2912,6 +2972,7 @@ function buildSocial(){
       <div class="hero-art"><div class="float ha-ads">
         <div class="ad a1"><div class="e">Sponsored</div><div class="t">Run your service business</div><span class="cta">Book a demo</span></div>
         <div class="ad a2"><div class="e">Display · 300×250</div><div class="t">The AI operating system</div><span class="cta">Learn more</span></div>
+        <div class="ad a3"><div class="e">Story · 1080×1920</div><div class="t" style="font-size:13px">Zuper Sense</div><span class="st">Dark · Sense only</span></div>
       </div></div>
     </div>
   </header>
@@ -2919,7 +2980,7 @@ function buildSocial(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">Social</p><h2 class="sec">Social media creatives</h2>
     <p class="docnote">↔ scroll · real export sizes, shown to scale · Instagram square &amp; story, landscape, quote/stat cards, Sense</p>
-    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${creatives}</div></div>
+    <div class="adscroll"><div style="columns:346px;column-gap:28px;padding:6px 2px 4px">${creatives}</div></div>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -3220,8 +3281,12 @@ function buildLogos(){
         <span class="chip">currentColor grounds</span>
       </div>
       <div class="hero-art"><div class="float ha-logo">
-        <span class="x t">x</span><span class="x b">x</span><span class="x l">x</span><span class="x r">x</span>
-        <div class="frame">${logo("dark",26)}</div>
+        <div class="frame">
+          <span class="x t">x</span><span class="x b">x</span><span class="x l">x</span><span class="x r">x</span>
+          <span class="lg l1">${logo("dark",26)}</span><span class="lg l2">${logo("white",26)}</span>
+        </div>
+        <div class="grounds"><span class="g g1"></span><span class="g g2"></span><span class="g g3"></span><span class="cap">right variant per ground</span></div>
+        <div class="ruler"><i></i><span>clear space = x</span><i></i></div>
       </div></div>
     </div>
   </header>
@@ -3350,6 +3415,7 @@ function buildAssets(){
         <span class="chip">Word .docx</span>
       </div>
       <div class="hero-art"><div class="float ha-assets">
+        <div class="hd">${icon("folder",14)} zuper-brand-assets <em>SVG · PNG · DOCX</em></div>
         <div class="f"><div class="ic">${icon("users",20)}</div><div class="meta"><div class="nm">LinkedIn cover photo</div><div class="mt">1584 × 396</div></div><div class="dl">${icon("download",18)}</div></div>
         <div class="f"><div class="ic">${icon("camera",20)}</div><div class="meta"><div class="nm">Zoom background</div><div class="mt">1920 × 1080</div></div><div class="dl">${icon("download",18)}</div></div>
         <div class="f"><div class="ic">${icon("invoice",20)}</div><div class="meta"><div class="nm">Branded Word doc</div><div class="mt">.docx</div></div><div class="dl">${icon("download",18)}</div></div>
@@ -3497,8 +3563,10 @@ function buildColor(){
         <span class="chip">click a swatch to copy</span>
       </div>
       <div class="hero-art"><div class="float ha-pal">
-        <div class="grad"><span class="hx">#FD5000</span></div>
-        <div class="chips6"><span style="background:#191919"></span><span style="background:#282828"></span><span style="background:#FD5000"></span><span style="background:#FBF2EA"></span><span style="background:#FFE7DC"></span><span style="background:#E7E0D6"></span></div>
+        <div class="pc p1"><em>#FD5000</em></div>
+        <div class="pc p2"><em>#282828</em></div>
+        <div class="pc p3"><em>#FCE9E1</em></div>
+        <div class="pc p4"><em>#FFFAEA</em></div>
       </div></div>
     </div>
   </header>
@@ -3587,7 +3655,8 @@ function buildType(){
         <span class="chip">&lt;/&gt; Geist Mono · eyebrows</span>
       </div>
       <div class="hero-art"><div class="float ha-typ">
-        <div class="big">Ag</div>
+        <div class="big"><span class="f1">Ag</span><span class="f2">Ag</span></div>
+        <div class="who"><span class="f1">Plus Jakarta Sans · web</span><span class="f2">Aptos Display · decks</span></div>
         <div class="line"><span class="tw">Field service, intelligently run</span><span class="cr"></span></div>
         <div class="fams"><span>Aptos</span><span>Plus Jakarta</span><span>Geist Mono</span></div>
       </div></div>
@@ -3791,10 +3860,9 @@ function buildAgents(){
         <span class="chip">Orange‑gradient ground</span>
         <span class="chip">Bottom‑aligned in frame</span>
       </div>
-      <div class="hero-art"><div class="float ha-agents"><div class="tile">
-        <span class="badge">Agents</span>
-        ${AGENTS.map(a=>`<img src="assets/agents/${a[0]}.png" alt="">`).join("")}
-      </div></div></div>
+      <div class="hero-art"><div class="float ha-agents">
+        ${AGENTS.slice(0,3).map((a,i)=>`<div class="k k${i+1}"><img src="assets/agents/${a[0]}.png" alt=""><span>${a[1]}</span></div>`).join("")}
+      </div></div>
     </div>
   </header>
 
