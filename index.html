@@ -3014,7 +3014,7 @@ function buildIcons(){
   (function(){
     const $=id=>document.getElementById(id);
     const LOCAL=Object.keys(ICON);
-    const st={name:"wrench",color:"#191919",size:96};
+    const st={name:LOCAL[Math.floor(Math.random()*LOCAL.length)],color:"#191919",size:96};
     const stg=$("icstStage"),nm=$("icstName"),dim=$("icstDim"),pick=$("icstPick"),meta=$("icstMeta");
     if(!stg||!pick)return;
     const glyph=n=>(window.PHOSPHOR&&window.PHOSPHOR[n])||ICON[n]||"";
