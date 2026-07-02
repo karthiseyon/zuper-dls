@@ -860,20 +860,16 @@ main{flex:1;min-width:0;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}}
 @keyframes ha-typline{0%{max-width:0}45%{max-width:272px}88%{max-width:272px}100%{max-width:0}}
 /* Color, palette card */
-.ha-pal{position:relative;width:380px;height:252px}
-.ha-pal .pc{position:absolute;border-radius:14px;box-shadow:0 20px 46px rgba(20,4,3,.26);border:1px solid rgba(0,0,0,.06);display:flex;align-items:flex-end;padding:12px 14px}
-.ha-pal .pc em{font:700 10.5px/1 'Geist Mono',monospace;font-style:normal;letter-spacing:.04em}
-.ha-pal .p1{left:34px;top:8px;width:230px;height:172px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);transform:rotate(-5deg);z-index:1;animation:ha-psway1 6s ease-in-out infinite;align-items:flex-start;justify-content:flex-end}
-.ha-pal .p1 em{color:#fff}
-.ha-pal .p2{right:26px;top:44px;width:128px;height:100px;background:#282828;transform:rotate(6deg);z-index:2;animation:ha-psway2 6s ease-in-out infinite}
-.ha-pal .p2 em{color:rgba(255,255,255,.85)}
-.ha-pal .p3{left:96px;bottom:6px;width:150px;height:88px;background:#FCE9E1;transform:rotate(-2deg);z-index:3;border:1px solid rgba(0,0,0,.05);animation:ha-psway3 6s ease-in-out infinite}
-.ha-pal .p3 em{color:#B5271C}
-.ha-pal .p4{right:44px;bottom:22px;width:92px;height:66px;background:#FFFAEA;transform:rotate(8deg);z-index:2;border:1px solid rgba(0,0,0,.05);justify-content:flex-end}
-.ha-pal .p4 em{color:#8A8178;font-size:9px}
-@keyframes ha-psway1{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(-2.6deg)}}
-@keyframes ha-psway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(3.4deg)}}
-@keyframes ha-psway3{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-6px)}}
+.ha-pal{width:328px;height:262px;border-radius:16px;overflow:hidden;box-shadow:0 28px 64px rgba(20,4,3,.26);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;background:#fff}
+.ha-pal .band{display:flex;align-items:center;justify-content:space-between;padding:0 16px;font:700 10.5px/1 'Geist Mono',monospace;letter-spacing:.05em}
+.ha-pal .band b{font:700 12px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;letter-spacing:0}
+.ha-pal .b1{flex:2.6;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);background-size:180% 180%;animation:ha-palpan 8s ease-in-out infinite;color:#fff}
+.ha-pal .b2{flex:1;background:#282828;color:rgba(255,255,255,.9)}
+.ha-pal .b3{flex:1;background:#191919;color:rgba(255,255,255,.9)}
+.ha-pal .b4{flex:1;background:#FCE9E1;color:#B5271C}
+.ha-pal .b5{flex:1;background:#FFFAEA;color:#8A8178}
+.ha-pal .b6{flex:1;background:#FFFFFF;color:#9A9088;border-top:1px solid #F0EAE1}
+@keyframes ha-palpan{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
 /* Typography, specimen card */
 .ha-typ{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px 22px;border:1px solid rgba(0,0,0,.05)}
 .ha-typ .big{position:relative;height:92px;font-weight:700;font-size:80px;line-height:.86;letter-spacing:-.04em;color:#191919}
@@ -3563,10 +3559,12 @@ function buildColor(){
         <span class="chip">click a swatch to copy</span>
       </div>
       <div class="hero-art"><div class="float ha-pal">
-        <div class="pc p1"><em>#FD5000</em></div>
-        <div class="pc p2"><em>#282828</em></div>
-        <div class="pc p3"><em>#FCE9E1</em></div>
-        <div class="pc p4"><em>#FFFAEA</em></div>
+        <div class="band b1"><b>Zuper orange</b><span>#FD5000</span></div>
+        <div class="band b2"><b>Charcoal</b><span>#282828</span></div>
+        <div class="band b3"><b>Ink</b><span>#191919</span></div>
+        <div class="band b4"><b>Peach</b><span>#FCE9E1</span></div>
+        <div class="band b5"><b>Cream</b><span>#FFFAEA</span></div>
+        <div class="band b6"><b>White</b><span>#FFFFFF</span></div>
       </div></div>
     </div>
   </header>
