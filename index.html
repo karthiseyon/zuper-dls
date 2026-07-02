@@ -932,6 +932,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .use-door p{margin:0;font-size:13.5px;line-height:1.5;color:var(--text-secondary)}
 .use-door .go{margin-top:auto;font:700 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--brand-default)}
 .sk-dl{display:inline-flex;align-items:center;gap:8px;font:700 13px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--brand-default);background:#FFF6F1;border:1px solid #FFD9C4;border-radius:9px;padding:10px 14px;text-decoration:none;transition:background .15s ease}
+.skill-card ol li .sk-dl{margin-top:8px}
 .sk-dl:hover{background:#FFE9DC}
 .sk-list{margin:0;padding:0;list-style:none}
 .sk-list li{position:relative;padding:0 0 10px 26px;font-size:14px;line-height:1.55;color:var(--text-secondary)}
@@ -939,7 +940,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .sk-list li b{color:var(--text-primary)}
 .skill-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
 @media(max-width:820px){.skill-cards{grid-template-columns:1fr}}
-.skill-card{background:#fff;border:1px solid var(--border-subtle,#F0EAE1);border-radius:16px;padding:24px}
+.skill-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-subtle,#F0EAE1);border-radius:16px;padding:24px}
 .skill-card h4{margin:0 0 14px;font:700 16px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-primary);display:flex;align-items:center;gap:10px}
 .skill-card h4 .ic{width:34px;height:34px;border-radius:10px;background:#FFF3EC;color:var(--brand-default);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
 .skill-card ol{margin:0;padding:0;list-style:none;counter-reset:sk}
@@ -2359,8 +2360,8 @@ function buildUse(){
       <div class="skill-card">
         <h4><span class="ic">${icon("download",17)}</span>Link not opening?</h4>
         <ol>
-          <li>Download the system: <a class="sk-dl" style="margin-top:6px" href="assets/zuper-design-system.zip" download="Zuper Design System.zip">${icon("download",14)} zuper-design-system.zip</a></li>
-          <li>Unzip it, then upload the <b>full folder</b> as a new <b>Design system</b> in Claude.</li>
+          <li>Download the system:<br><a class="sk-dl" href="assets/zuper-design-system.zip" download="Zuper Design System.zip">${icon("download",14)} zuper-design-system.zip</a></li>
+          <li>In Claude Design, choose <b>Set up design system</b> → <b>Link code from your computer</b> and drag the zip straight in, no need to unzip.</li>
         </ol>
         <p class="sk-note">Same content as the published system, uploaded by hand.</p>
       </div>
@@ -2400,7 +2401,7 @@ function buildUse(){
       <div class="skill-card">
         <h4><span class="ic">${icon("sparkle",17)}</span>A · Install the skill in your repo</h4>
         <ol>
-          <li>Get the skill: <a class="sk-dl" style="margin-top:6px" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",14)} zuper-brand-skill.zip</a></li>
+          <li>Get the skill:<br><a class="sk-dl" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",14)} zuper-brand-skill.zip</a></li>
           <li>Unzip it into the project:</li>
         </ol>
         <div class="sk-cmd"><code>unzip zuper-brand-skill.zip -d .claude/skills/</code><button class="url-copy" data-copy="unzip zuper-brand-skill.zip -d .claude/skills/">${icon("copy",14)} Copy</button></div>
@@ -2417,6 +2418,19 @@ function buildUse(){
           <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
         </div>
         <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
+      </div>
+      <div class="skill-card" style="grid-column:1/-1">
+        <h4><span class="ic">${icon("edit",17)}</span>C · Create your own design system from Claude Code</h4>
+        <ol>
+          <li>Open Claude Code in the folder that holds your design sources: tokens, fonts, components, slide templates. (This repo is a working example, it's exactly how the Zuper system was built.)</li>
+          <li>First time only: authenticate with <code>/design-login</code>.</li>
+          <li>Paste the prompt below. Claude packages the sources, publishes them to Claude Design, and hands back a share link you can pick on any project.</li>
+        </ol>
+        <div class="cc-prompt">
+          <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to create and publish a design system from this repo. Include the tokens, fonts, colors, components and templates, name it after the brand, and give me the share link.">${icon("copy",15)} Copy prompt</button></div>
+          <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to create and publish a design system from this repo.<br><br><span class="cc-do">Include:</span> the tokens, fonts, colors, components and templates · name it after the brand · give me the share link</div>
+        </div>
+        <p class="sk-note">Updating works the same way: change the sources, then ask Claude to sync the design system again.</p>
       </div>
     </div>
     <div class="cd-fallback">
