@@ -1594,27 +1594,15 @@ const ICON={
 function icon(n,s){const sz=s||22;return `<svg viewBox="0 0 256 256" width="${sz}" height="${sz}" fill="currentColor" style="display:block">${ICON[n]||""}</svg>`;}
 
 const CD_IMG="assets/img/img-1.jpg";
-const GIF_A="assets/img/gif-1.gif";
-const GIF_B="assets/img/gif-2.gif";
-const GIF_C="assets/img/gif-3.gif";
-const GIF_02="assets/img/gif-4.gif";
-const GIF_03="assets/img/gif-5.gif";
-const GIF_06="assets/img/gif-6.gif";
-const GIF_08="assets/img/gif-7.gif";
-const GIF_09="assets/img/gif-8.gif";
+const GIF_A="assets/mini-humans/reaching-up.gif";
+const GIF_B="assets/mini-humans/on-the-tools.gif";
+const GIF_C="assets/mini-humans/carrying-gear.gif";
+const GIF_02="assets/mini-humans/on-the-job.gif";
+const GIF_03="assets/mini-humans/on-the-ladder.gif";
+const GIF_06="assets/mini-humans/ready-to-work.gif";
+const GIF_08="assets/mini-humans/waving.gif";
+const GIF_09="assets/mini-humans/crew.gif";
 
-const FACE={
- "deck-light":{d:"'Aptos Display','Aptos','Segoe UI',system-ui,sans-serif",b:"'Aptos','Segoe UI',system-ui,sans-serif",logo:"dark"},
- "deck-orange":{d:"'Aptos Display','Aptos','Segoe UI',system-ui,sans-serif",b:"'Aptos','Segoe UI',system-ui,sans-serif",logo:"white"},
- "sense-dark":{d:"'Aptos Display','Aptos','Segoe UI',system-ui,sans-serif",b:"'Aptos','Segoe UI',system-ui,sans-serif",logo:"white"},
- "website":{d:"'Plus Jakarta Sans',system-ui,sans-serif",b:"'Inter',system-ui,sans-serif",logo:"dark"}
-};
-const FONTLABEL={
- "deck-light":{display:"Aptos Display",body:"Aptos",ppt:true},
- "deck-orange":{display:"Aptos Display",body:"Aptos",ppt:true},
- "sense-dark":{display:"Aptos Display",body:"Aptos",ppt:true,accent:"Press Start 2P (labels)"},
- "website":{display:"Plus Jakarta Sans",body:"Inter",hero:"Plus Jakarta Sans"}
-};
 /* ---- Zuper Sense signature background ---- */
 const SENSE_BG="assets/img/img-2.jpg";
 const SENSE_BG_CSS=`url(${SENSE_BG}) center/cover no-repeat`;
@@ -1634,191 +1622,7 @@ function swatch(name,hex,varName,sem){
       <div class="sw-hex">${hex}</div>
     </div></div>`;
 }
-const SEM_GROUPS=[
-  ["Surface",["surface-default","surface-subtle","surface-card","surface-pill","surface-inverse"]],
-  ["Text",["text-primary","text-secondary","text-tertiary","text-disabled","text-brand","text-inverse"]],
-  ["Border",["border-subtle","border-default","border-strong","border-brand"]],
-  ["Brand",["brand-default","brand-secondary","brand-subtle","brand-on-brand"]],
-  ["Status",["status-error-bg","status-error-fg","status-success-bg","status-success-fg","status-warning-bg","status-warning-fg"]]
-];
 
-function buildSystem(s){
-  const V=s.vars;
-  const face=FACE[s.id]||{d:"'Plus Jakarta Sans',system-ui,sans-serif",b:"'Inter',system-ui,sans-serif",logo:"dark"};
-  const fl=FONTLABEL[s.id]||s.fonts;
-  const varStyle=Object.entries(V).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:${face.d};--body:${face.b};--c-canvas:${s.canvas}`
-    +`;--hero-bg:${s.hero.bg};--hero-ink:${s.hero.ink};--hero-sub:${s.hero.sub};--hero-kick:${s.hero.kick}`
-    +`;--chip-bg:${s.hero.chipBg};--chip-ink:${s.hero.chipInk};--chip-line:${s.hero.chipLine}`;
-
-  // primitives
-  let prim="";
-  for(const [g,arr] of Object.entries(s.primitives)){
-    prim+=`<h3 class="grp">${g}</h3><div class="swatches">`+
-      arr.map(([n,h])=>swatch(n,h,null,false)).join("")+`</div>`;
-  }
-  // semantic
-  let sem="";
-  for(const [g,keys] of SEM_GROUPS){
-    const ks=keys.filter(k=>V[k]);
-    if(!ks.length)continue;
-    sem+=`<h3 class="grp">${g}</h3><div class="swatches sem">`+
-      ks.map(k=>swatch("color/"+k.replace(/-/g,"/"),V[k],k,true)).join("")+`</div>`;
-  }
-  // charts
-  const chartBars=s.charts.map((c,i)=>`<div class="bar" title="${c[0]} ${c[1]}" style="background:${c[1]};height:${38+i*11}%"></div>`).join("");
-  const chartLegend=s.charts.map(c=>`<span class="pill" style="background:var(--surface-pill);color:var(--text-secondary)"><span class="pill-dot" style="background:${c[1]}"></span>${c[0]}</span>`).join("");
-
-  const webBlock = s.web ? `
-    <section class="block"><div class="wrap">
-      <p class="eyebrow">06 · Web patterns</p><h2 class="sec">Marketing surfaces</h2>
-      <p class="sec-note">Navigation and hero patterns as they appear on zuper.co, warm gradient grounds with a single orange call‑to‑action.</p>
-      <div class="web-nav">
-        <div class="wlogo">${logo("dark",22)}</div>
-        <div class="links"><span>Product</span><span>Solutions</span><span>Pricing</span><span>Resources</span></div>
-        <div class="spacer"></div>
-        <button class="btn btn-ghost">Sign in</button>
-        <button class="btn btn-primary">Book a demo</button>
-      </div>
-      <div class="web-hero">
-        <h3>Field service, intelligently automated</h3>
-        <p>Schedule, dispatch and invoice from one platform, with AI that turns every job into data your team can act on.</p>
-        <div class="row"><button class="btn btn-primary">Start free trial</button><button class="btn btn-secondary">Watch overview</button></div>
-      </div>
-    </div></section>`:"";
-
-  if(s.id==="sense-dark"){
-    stage.style.cssText=varStyle
-      +`;--hero-bg:linear-gradient(180deg,rgba(9,9,11,.30) 0%,rgba(9,9,11,.62) 60%,rgba(9,9,11,.86) 100%),${SENSE_BG_CSS}`
-      +`;--c-canvas:#09090B`;
-  } else if(s.id==="deck-orange"){
-    stage.style.cssText=varStyle
-      +`;--hero-bg:linear-gradient(105deg,rgba(20,4,3,.34),rgba(20,4,3,0) 55%),${ORANGE_BG_CSS}`;
-  } else {
-    stage.style.cssText=varStyle;
-  }
-  const senseSlideBg=s.id==="sense-dark"?` style="background:linear-gradient(180deg,rgba(9,9,11,.25),rgba(9,9,11,.70)),${SENSE_BG_CSS}"`
-    :s.id==="deck-orange"?` style="background:${ORANGE_BG_CSS}"`:``;
-  stage.innerHTML=`
-  <header class="sys-hero">
-    <div class="inner">
-      <div style="margin-bottom:22px">${logo(face.logo,30)}</div>
-      <p class="kicker">${s.tagline}</p>
-      <h1>${s.name.replace(/·/g,"·")}</h1>
-      <p class="lede">${s.lede}</p>
-      <div class="chips">
-        <span class="chip"><span class="swt" style="background:${V['brand-default']}"></span>brand ${V['brand-default']}</span>
-        ${fl.ppt?`<span class="chip">PowerPoint deck</span>`:``}
-        <span class="chip">Aa ${esc(fl.display)} · display</span>
-        <span class="chip">Aa ${esc(fl.body)} · body</span>
-        <span class="chip">canvas ${s.canvas}</span>
-      </div>
-      ${s.id==="sense-dark"?`<div class="hero-note">Canvas set on the Zuper Sense signature light‑bars background, embedded here and reused on every dark slide.</div>`:``}
-    </div>
-  </header>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">01 · Primitives</p><h2 class="sec">Primitive palette</h2>
-    <p class="sec-note">Raw, named color values, the single source of truth. Semantic tokens below alias these.</p>
-    ${prim}
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">02 · Semantic tokens</p><h2 class="sec">Semantic tokens</h2>
-    <p class="sec-note">Every semantic token aliases a primitive and is consumed as <code style="font-family:var(--mono);color:var(--text-brand)">var(--token-name)</code>. Swap a theme by re‑pointing these, components never change.</p>
-    ${sem}
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">03 · Typography</p><h2 class="sec">Type system</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">${esc(fl.display)}</b> for display &amp; headlines · <b style="color:var(--text-primary)">${esc(fl.body)}</b> for body &amp; UI.${fl.accent?` · ${esc(fl.accent)} accent.`:``}${fl.ppt?` Built for PowerPoint. Aptos is the native Microsoft Office face, so decks render identically on any M365 machine.`:``}${fl.hero?` Hero headlines are set in ${esc(fl.hero)}.`:``}</p>
-    <div class="type-row"><div class="tag">Display / 56</div><div class="demo type-sample" style="font-size:56px">Field service, reimagined</div></div>
-    <div class="type-row"><div class="tag">Display / 34</div><div class="demo type-sample" style="font-size:34px">Built for the people in the field</div></div>
-    <div class="type-row"><div class="tag">Heading / 22</div><div class="demo type-sample" style="font-size:22px;font-weight:500">Scheduling, dispatch & invoicing</div></div>
-    <div class="type-row"><div class="tag">Body / 16</div><div class="demo body-sample" style="font-size:16px;color:var(--text-secondary);max-width:62ch;line-height:1.6">Zuper connects your back office and your field teams on one platform, so the right technician, with the right parts, shows up at the right time.</div></div>
-    <div class="type-row"><div class="tag">Label / 12</div><div class="demo body-sample" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary);font-weight:600">Work order · #ZW‑4821</div></div>
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">04 · Foundations</p><h2 class="sec">Spacing, radius, elevation</h2>
-    <div class="found-grid">
-      <div>
-        <h3 class="grp">Spacing scale (4px base)</h3>
-        ${[4,8,12,16,24,32,48,64].map(n=>`<div class="space-bar"><span class="t">${n}px</span><div class="b" style="width:${n*2.4}px"></div></div>`).join("")}
-      </div>
-      <div>
-        <h3 class="grp">Radius</h3>
-        <div class="radii">${[["sm","6px"],["md","12px"],["lg","16px"],["pill","999px"]].map(([n,r])=>`<div class="r" style="border-radius:${r}">${n}</div>`).join("")}</div>
-        <h3 class="grp" style="margin-top:26px">Elevation</h3>
-        <div class="shadows">
-          <div class="sh" style="box-shadow:0 1px 2px rgba(0,0,0,.08)">sm</div>
-          <div class="sh" style="box-shadow:0 6px 18px rgba(0,0,0,.10)">md</div>
-          <div class="sh" style="box-shadow:0 18px 40px rgba(0,0,0,.16)">lg</div>
-        </div>
-      </div>
-    </div>
-    <h3 class="grp" style="margin-top:34px">Signature gradient</h3>
-    <div class="grad-demo">linear-gradient(110deg, var(--grad-start), var(--grad-mid), var(--grad-end))</div>
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <p class="eyebrow">05 · Components</p><h2 class="sec">Components in this theme</h2>
-    <p class="sec-note">Every component below reads only semantic tokens, so it inherits the active theme automatically.</p>
-    <div class="comp-grid">
-      <div class="panel">
-        <h4>Buttons</h4>
-        <div class="row"><button class="btn btn-primary">Primary</button><button class="btn btn-secondary">Secondary</button><button class="btn btn-ghost">Ghost</button></div>
-        <div class="row"><button class="btn btn-primary" disabled>Disabled</button></div>
-      </div>
-      <div class="panel">
-        <h4>Badges & pills</h4>
-        <div class="row">
-          <span class="pill pill-brand"><span class="pill-dot"></span>New</span>
-          <span class="pill" style="background:var(--status-success-bg);color:var(--status-success-fg)"><span class="pill-dot"></span>Completed</span>
-          <span class="pill" style="background:var(--status-warning-bg);color:var(--status-warning-fg)"><span class="pill-dot"></span>En route</span>
-          <span class="pill" style="background:var(--status-error-bg);color:var(--status-error-fg)"><span class="pill-dot"></span>Overdue</span>
-        </div>
-      </div>
-      <div class="panel">
-        <h4>Input</h4>
-        <div class="fld"><label>Customer email</label><input placeholder="name@company.com" /></div>
-      </div>
-      <div class="panel">
-        <h4>Status messages</h4>
-        <div class="alert" style="background:var(--status-success-bg);color:var(--status-success-fg)"><span class="ic">✓</span><div>Invoice sent, payment expected in 3 days.</div></div>
-        <div class="alert" style="background:var(--status-warning-bg);color:var(--status-warning-fg)"><span class="ic">!</span><div>Technician is running 15 minutes late.</div></div>
-        <div class="alert" style="background:var(--status-error-bg);color:var(--status-error-fg)"><span class="ic">×</span><div>Job failed to sync. Retry needed.</div></div>
-      </div>
-      <div class="panel">
-        <h4>Metric card</h4>
-        <div class="mini-card"><div class="mc-k">First‑time fix rate</div><div class="mc-v">92.4%</div><div class="mc-d">+6.1% vs last quarter</div></div>
-      </div>
-      <div class="panel">
-        <h4>Chart palette</h4>
-        <div class="bars">${chartBars}</div>
-        <div class="row" style="margin-top:14px">${chartLegend}</div>
-      </div>
-      <div class="panel full">
-        <h4>Sample slide (16:9)</h4>
-        <div class="slide"${senseSlideBg}>
-          <div class="topbar"></div>
-          <div class="sbody">
-            <span class="seyebrow">Q3 Business Review</span>
-            <h3>Cut truck‑rolls by 31% with smarter dispatch</h3>
-            <div class="spt">
-              ${logo(face.logo,17)}
-              <span class="pill pill-brand">Field Service Intelligence</span>
-              <span class="metric">31% ↓</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div></section>
-  ${webBlock}
-  <div style="height:60px"></div>`;
-  stage.scrollTop=0;window.scrollTo(0,0);
-}
 
 /* ===== Shared page-chrome tokens — single source of truth for every light styleguide page ===== */
 const CHROME_TOKENS={
@@ -2570,8 +2374,8 @@ function buildEmailSig(){
   <div style="height:60px"></div>`;
 
   // ---- signature renderer (inline styles + hosted PNG, so it survives copy/paste into Outlook/Gmail) ----
-  // preview/picker use relative paths (load from same origin as this page); copy rewrites them to absolute raw URLs
-  const RAW="https://raw.githubusercontent.com/karthiseyon/zuper-dls/main/";
+  // preview/picker use relative paths (load from same origin as this page); copy rewrites them to absolute hosted URLs
+  const RAW="https://zuper-dls.vercel.app/";
   const toAbs=html=>html.replace(/(src|href)="assets\//g,'$1="'+RAW+'assets/');
   const esImg=`<img src="assets/email/zuper-vertical-tight.png" alt="Zuper" width="100" height="69" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
   const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense. Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper. The AI Operating System for the Skilled Trades"}};
@@ -3892,7 +3696,7 @@ function setActive(id,push){
   else if(id==="voice")buildVoice();
   else if(id==="agents")buildAgents();
   else if(id==="website")buildWebsite(SYS.find(s=>s.id===id));
-  else buildSystem(SYS.find(s=>s.id===id));
+  else buildOverview();
   buildSubnav(id);
   revealSections();
   if(push===false){if(history.replaceState)history.replaceState(null,"","#"+id);}
