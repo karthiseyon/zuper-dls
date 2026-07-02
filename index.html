@@ -923,6 +923,20 @@ main{flex:1;min-width:0;overflow-x:clip}
 .cd-open .ar{font-size:16px;opacity:.9}
 .cd-sub{margin-top:14px;font-size:12.5px;color:var(--text-tertiary)}
 .cd-sub code{font-family:'Geist Mono',monospace;color:var(--text-secondary)}
+.use-doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
+@media(max-width:820px){.use-doors{grid-template-columns:1fr}}
+.use-door{display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;background:#fff;border:1px solid var(--border-subtle,#F0EAE1);border-radius:16px;padding:22px;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease;font-family:inherit}
+.use-door:hover{border-color:var(--brand-default);box-shadow:0 10px 30px rgba(253,80,0,.10);transform:translateY(-2px)}
+.use-door .ic{width:38px;height:38px;border-radius:11px;background:#FFF3EC;color:var(--brand-default);display:inline-flex;align-items:center;justify-content:center}
+.use-door h5{margin:0;font:700 16px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-primary)}
+.use-door p{margin:0;font-size:13.5px;line-height:1.5;color:var(--text-secondary)}
+.use-door .go{margin-top:auto;font:700 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--brand-default)}
+.sk-dl{display:inline-flex;align-items:center;gap:8px;font:700 13px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--brand-default);background:#FFF6F1;border:1px solid #FFD9C4;border-radius:9px;padding:10px 14px;text-decoration:none;transition:background .15s ease}
+.sk-dl:hover{background:#FFE9DC}
+.sk-list{margin:0;padding:0;list-style:none}
+.sk-list li{position:relative;padding:0 0 10px 26px;font-size:14px;line-height:1.55;color:var(--text-secondary)}
+.sk-list li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--brand-default);font-weight:800}
+.sk-list li b{color:var(--text-primary)}
 .skill-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
 @media(max-width:820px){.skill-cards{grid-template-columns:1fr}}
 .skill-card{background:#fff;border:1px solid var(--border-subtle,#F0EAE1);border-radius:16px;padding:24px}
@@ -2294,9 +2308,9 @@ function buildUse(){
   <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
-      <p class="ebm">Start here · for Claude Design</p>
+      <p class="ebm">Start here · pick your door</p>
       <h1>How to use this</h1>
-      <p class="lede">The <b>Zuper Design System</b> is already built and published in <b>Claude Design</b>. Open it, pick it on any project, and everything comes out on‑brand.</p>
+      <p class="lede">The Zuper brand plugs into Claude <b>three ways</b>, pick where you work: <b>Claude Design</b> for decks &amp; pages in the browser, <b>Claude.ai chat</b> with the brand skill installed, or <b>Claude Code</b> in your repo. Everything comes out on‑brand.</p>
       <div class="hero-art"><div class="float ha-conn">
         <div class="np"><span class="ci">${icon("cpu",17)}</span>Claude Design</div>
         <div class="wire"></div>
@@ -2307,57 +2321,110 @@ function buildUse(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">Open it</p><h2 class="sec">Use the Zuper Design System</h2>
-    <p class="sec-note">One click opens the published system in Claude Design. From there, set it as the <b style="color:var(--text-primary)">Design system</b> on any new project and start prompting, decks, web pages, case studies, all on‑brand.</p>
+    <div class="use-doors">
+      <button class="use-door" onclick="document.getElementById('s-use-0').scrollIntoView({behavior:'smooth'})">
+        <span class="ic">${icon("zap",19)}</span><h5>Claude Design</h5>
+        <p>Design decks, pages and case studies in the browser, on the published system.</p>
+        <span class="go">Open &amp; design ↓</span>
+      </button>
+      <button class="use-door" onclick="document.getElementById('s-use-1').scrollIntoView({behavior:'smooth'})">
+        <span class="ic">${icon("chat",19)}</span><h5>Claude.ai &amp; Desktop</h5>
+        <p>Install the brand skill once; every chat about Zuper comes out on‑brand.</p>
+        <span class="go">Install the skill ↓</span>
+      </button>
+      <button class="use-door" onclick="document.getElementById('s-use-2').scrollIntoView({behavior:'smooth'})">
+        <span class="ic">${icon("cpu",19)}</span><h5>Claude Code</h5>
+        <p>Build in your repo: add the skill, or import the design system over MCP.</p>
+        <span class="go">Set up Code ↓</span>
+      </button>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">01 · Claude Design</p><h2 class="sec">Design in the browser</h2>
+    <p class="sec-note">The <b style="color:var(--text-primary)">Zuper Design System</b> is already published in Claude Design. One click opens it; set it as the <b style="color:var(--text-primary)">Design system</b> on any project and start prompting.</p>
     <a class="cd-open" href="https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b?via=share" target="_blank" rel="noopener">${icon("zap",18)} Open the Zuper Design System in Claude Design <span class="ar">↗</span></a>
-    <p class="cd-sub">Opens <code>claude.ai/design</code> in a new tab · then choose <b>Zuper Design System</b> from the <b>Design system</b> dropdown on the project.</p>
-    <div class="cd-fallback">
-      <p class="fb-h">${icon("git-branch",15)} Link not opening? Two fallbacks</p>
-      <p><b style="color:var(--text-primary)">1 · Upload it yourself.</b> If the chat link above doesn't work, download the design system, unzip it, and upload the <b>full folder</b> as a new <b>Design system</b> in Claude.</p>
-      <a class="dl-zip" href="assets/zuper-design-system.zip" download="Zuper Design System.zip">${icon("download",16)} Download the Zuper Design System (.zip)</a>
-      <p style="margin-top:20px"><b style="color:var(--text-primary)">2 · Use the repo.</b> For <b>Claude Code</b> and <b>Claude chat</b>, point them at the GitHub repo, paste the link and ask for the Zuper Design System.</p>
-      <div class="repo-row">
-        <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
-        <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
+    <div class="skill-cards">
+      <div class="skill-card">
+        <h4><span class="ic">${icon("zap",17)}</span>Use it</h4>
+        <ol>
+          <li>Open the system with the button above.</li>
+          <li>On any project, pick <b>Zuper Design System</b> from the <b>Design system</b> dropdown.</li>
+          <li>Prompt away: decks, web pages, case studies.</li>
+        </ol>
+        <p class="sk-note">Everything inherits the orange, the type, the slide schemes and the voice automatically.</p>
+      </div>
+      <div class="skill-card">
+        <h4><span class="ic">${icon("download",17)}</span>Link not opening?</h4>
+        <ol>
+          <li>Download the system: <a class="sk-dl" style="margin-top:6px" href="assets/zuper-design-system.zip" download="Zuper Design System.zip">${icon("download",14)} zuper-design-system.zip</a></li>
+          <li>Unzip it, then upload the <b>full folder</b> as a new <b>Design system</b> in Claude.</li>
+        </ol>
+        <p class="sk-note">Same content as the published system, uploaded by hand.</p>
       </div>
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">Claude Skill</p><h2 class="sec">Install the Zuper brand as a Claude Skill</h2>
-    <p class="sec-note">The whole system also ships as an <b style="color:var(--text-primary)">Agent Skill</b>: once installed, Claude applies Zuper's colours, type, deck rules, email kits and voice <b style="color:var(--text-primary)">automatically</b> whenever you ask it to make anything for Zuper, no pasting required.</p>
-    <a class="cd-open" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",18)} Download the Zuper brand skill (.zip) </a>
-    <p class="cd-sub">One small zip · <code>SKILL.md</code> + reference files for decks, web, email, social &amp; ads, voice and brand assets · sources in the repo at <code>skills/zuper-brand/</code>.</p>
+    <p class="eyebrow">02 · Claude.ai &amp; Claude Desktop</p><h2 class="sec">Install the brand skill in chat</h2>
+    <p class="sec-note">The whole system ships as an <b style="color:var(--text-primary)">Agent Skill</b>: install it once and Claude applies Zuper's colours, type, deck rules, email kits and voice <b style="color:var(--text-primary)">automatically</b> whenever a chat is about Zuper, no pasting required.</p>
+    <a class="cd-open" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",18)} Download the Zuper brand skill (.zip)</a>
     <div class="skill-cards">
       <div class="skill-card">
-        <h4><span class="ic">${icon("chat",17)}</span>Claude.ai &amp; Claude Desktop</h4>
+        <h4><span class="ic">${icon("sliders",17)}</span>Install it</h4>
         <ol>
           <li>Download the zip above.</li>
           <li>Open <b>Settings → Capabilities → Skills</b>.</li>
           <li>Hit <b>Upload skill</b> and pick the zip.</li>
         </ol>
-        <p class="sk-note">That's it. The skill switches on by itself whenever a chat is about Zuper decks, pages, emails or ads.</p>
+        <p class="sk-note">That's it. It switches on by itself whenever a chat mentions Zuper decks, pages, emails or ads.</p>
       </div>
       <div class="skill-card">
-        <h4><span class="ic">${icon("cpu",17)}</span>Claude Code</h4>
-        <ol>
-          <li>Download the zip above.</li>
-          <li>Unzip it into your project:</li>
-        </ol>
-        <div class="sk-cmd"><code>unzip zuper-brand-skill.zip -d .claude/skills/</code><button class="url-copy" data-copy="unzip zuper-brand-skill.zip -d .claude/skills/">${icon("copy",14)} Copy</button></div>
-        <p class="sk-note">Use <code>~/.claude/skills/</code> instead to install it once for every project.</p>
+        <h4><span class="ic">${icon("doc",17)}</span>What's inside</h4>
+        <ul class="sk-list">
+          <li><b>SKILL.md</b>, the core rules: colours, type, gradient, icons, contrast.</li>
+          <li>Reference files for <b>decks, web, email, social &amp; ads, voice, brand assets</b>.</li>
+          <li>Hosted asset URLs, so emails and decks link the real logos and banners.</li>
+        </ul>
+        <p class="sk-note">Sources live in the repo at <code>skills/zuper-brand/</code>.</p>
       </div>
     </div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">Claude Design → Claude Code</p><h2 class="sec">Use it straight from Claude Design to Claude Code</h2>
-    <p class="sec-note">Working in <b style="color:var(--text-primary)">Claude Code</b>? Skip the download. Paste the prompt below. Claude pulls the published Zuper Design System over the <code>claude_design</code> MCP, then designs and builds on‑brand from it.</p>
+    <p class="eyebrow">03 · Claude Code</p><h2 class="sec">Bring it into Claude Code</h2>
+    <p class="sec-note">Two ways, use either or both: install the <b style="color:var(--text-primary)">skill</b> in your repo so every session designs on‑brand, or <b style="color:var(--text-primary)">import the published design system</b> over the <code>claude_design</code> MCP to implement its designs directly.</p>
+    <div class="skill-cards" style="margin-top:8px">
+      <div class="skill-card">
+        <h4><span class="ic">${icon("sparkle",17)}</span>A · Install the skill in your repo</h4>
+        <ol>
+          <li>Get the skill: <a class="sk-dl" style="margin-top:6px" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",14)} zuper-brand-skill.zip</a></li>
+          <li>Unzip it into the project:</li>
+        </ol>
+        <div class="sk-cmd"><code>unzip zuper-brand-skill.zip -d .claude/skills/</code><button class="url-copy" data-copy="unzip zuper-brand-skill.zip -d .claude/skills/">${icon("copy",14)} Copy</button></div>
+        <p class="sk-note">Use <code>~/.claude/skills/</code> instead to install it once for every project.</p>
+      </div>
+      <div class="skill-card">
+        <h4><span class="ic">${icon("cpu",17)}</span>B · Import the design system over MCP</h4>
+        <ol>
+          <li>Paste the prompt below into Claude Code.</li>
+          <li>First time only: authenticate with <code>/design-login</code>.</li>
+        </ol>
+        <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
+      </div>
+    </div>
     <div class="cc-prompt">
       <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:&#10;https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b&#10;&#10;Implement: the designs in this project in claude code and use the design system">${icon("copy",15)} Copy prompt</button></div>
       <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
     </div>
-    <p class="cd-sub">First time? Authenticate once with <code>/design-login</code>, after that the import works in any project, on any machine signed into your Claude account.</p>
+    <div class="cd-fallback">
+      <p class="fb-h">${icon("github",15)} Prefer the raw repo?</p>
+      <p>Everything on this site, the styleguide, brief, skill, slides and templates, lives in the open repo. Point Claude (or a teammate) at it and ask for the Zuper Design System.</p>
+      <div class="repo-row">
+        <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
+        <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
+      </div>
+    </div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
