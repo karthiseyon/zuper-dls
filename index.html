@@ -786,6 +786,8 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:16px;border:1px solid rgba(0,0,0,.05);display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .ha-hub .t{border-radius:12px;padding:15px 14px;border:1px solid #EFEAE2;background:#FBF8F4}
 .ha-hub .t.on{background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);border-color:transparent}
+/* gradient + border: clip the gradient to the padding box so it never bleeds under translucent/transparent borders (muddy rim at corners) */
+.ha-hub .t.on,.ha-fan .s1,.ha-fan .s2,.ha-ads .a1,.ha-ads .a3,.ha-agents .k,.ha-win .s.hero,.ha-pal .b1{background-clip:padding-box}
 .ha-hub .t .ic{color:#FD5000;margin-bottom:11px}
 .ha-hub .t.on .ic{color:#fff}
 .ha-hub .t .nm{font:700 13px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.01em}
@@ -2986,7 +2988,7 @@ function buildSocial(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">Display</p><h2 class="sec">Ad banners</h2>
     <p class="docnote">↔ scroll · standard IAB sizes · orange gradient + logo lockup + one CTA</p>
-    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${leaderboard}${billboard}${medrect}${lgrect}${halfpage}${skyscraper}${mobile}</div></div>
+    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${leaderboard}${billboard}${medrect}${lgrect}${mobile}${halfpage}${skyscraper}</div></div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
