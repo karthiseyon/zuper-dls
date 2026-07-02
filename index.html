@@ -2420,9 +2420,12 @@ function buildUse(){
         <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
       </div>
     </div>
-    <div class="cd-fallback">
-      <p class="fb-h">${icon("github",15)} Prefer the raw repo?</p>
-      <p>Everything on this site, the styleguide, brief, skill, slides and templates, lives in the open repo. Point Claude (or a teammate) at it and ask for the Zuper Design System.</p>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="cd-fallback" style="margin-top:0">
+      <p class="fb-h">${icon("github",15)} One repo powers all three</p>
+      <p>Everything above, the styleguide, brief, skill, slides and templates, lives in one open repo. It works with every door: <b style="color:var(--text-primary)">Claude Design</b> · download the repo and drag the folder into <b>Set up design system</b> · <b style="color:var(--text-primary)">Claude.ai chat</b> · paste the repo link (or <code>zuper-dls.vercel.app/llms.txt</code>) and ask for the Zuper brand · <b style="color:var(--text-primary)">Claude Code</b> · clone it and work inside, <code>CLAUDE.md</code> and the skill are already wired.</p>
       <div class="repo-row">
         <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
         <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
