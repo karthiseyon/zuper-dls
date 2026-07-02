@@ -708,15 +708,34 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-sig .ct{font:500 12px/1 'Geist Mono',monospace;color:#4B5563;margin-bottom:9px;display:flex;align-items:center;gap:9px}
 .ha-sig .ct svg{color:#FD5000;flex:0 0 auto}
 .ha-sig .lg{margin-top:15px;padding-top:14px;border-top:1px solid #EFEAE2}
-/* social & ads: creative fan */
-.ha-ads{position:relative;height:236px}
-.ha-ads .ad{position:absolute;border-radius:13px;box-shadow:0 20px 46px rgba(20,4,3,.28);overflow:hidden;padding:15px 16px}
-.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);color:#fff;animation:ha-sway1 6s ease-in-out infinite;z-index:2}
-.ha-ads .a2{width:186px;height:120px;left:112px;top:78px;transform:rotate(6deg);background:#fff;color:#191919;border:1px solid rgba(0,0,0,.06);animation:ha-sway2 6s ease-in-out infinite;z-index:2}
-.ha-ads .a3{width:96px;height:170px;right:-4px;top:-12px;transform:rotate(9deg);background:#09090B;color:#FAFAFA;z-index:1;padding:12px;animation:ha-sway3 6s ease-in-out infinite}
-@keyframes ha-sway3{0%,100%{transform:rotate(9deg) translateY(0)}50%{transform:rotate(9deg) translateY(-7px)}}
-.ha-ads .a3 .e{color:#FF8B5A}
-.ha-ads .a3 .st{position:absolute;left:12px;bottom:12px;font:600 8px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#71717A}
+/* social & ads: canvas tool, one creative morphs between export sizes */
+.ha-ads{width:352px;margin-left:auto}
+.ha-ads .tool{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.30);border:1px solid rgba(0,0,0,.06)}
+.ha-ads .tb{display:flex;gap:6px;align-items:center;padding:10px 13px;background:#F6F1EB;border-bottom:1px solid #ECE6DD}
+.ha-ads .tb i{width:9px;height:9px;border-radius:50%;background:#D9D2C7;display:block}
+.ha-ads .tb .lbl{position:relative;flex:1;height:11px;margin-left:8px}
+.ha-ads .tb .lbl span{position:absolute;left:0;top:0;font:600 9px/1.2 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8A8178;white-space:nowrap}
+.ha-ads .tb .lbl .l1{animation:ha-lblA 10s ease-in-out infinite}
+.ha-ads .tb .lbl .l2{opacity:0;animation:ha-lblB 10s ease-in-out infinite}
+.ha-ads .tb .exp{font:700 8.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#FD5000;border-radius:6px;padding:6px 9px}
+@keyframes ha-lblA{0%,38%{opacity:1}46%,88%{opacity:0}96%,100%{opacity:1}}
+@keyframes ha-lblB{0%,38%{opacity:0}46%,88%{opacity:1}96%,100%{opacity:0}}
+.ha-ads .cnv{height:262px;display:flex;align-items:center;justify-content:center;background:#FBF8F4;background-image:radial-gradient(rgba(20,4,3,.07) 1px,transparent 1px);background-size:14px 14px;position:relative}
+.ha-ads .art{width:186px;height:186px;border-radius:10px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);background-clip:padding-box;padding:13px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;position:relative;outline:1.5px dashed rgba(253,80,0,.6);outline-offset:7px;animation:ha-morph 10s ease-in-out infinite;overflow:hidden}
+@keyframes ha-morph{0%,38%{width:186px;height:186px}50%,88%{width:128px;height:224px}100%{width:186px;height:186px}}
+.ha-ads .art .eb{font:600 7px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.ha-ads .art .ttl{font:800 15px/1.12 'Plus Jakarta Sans',sans-serif;color:#fff;letter-spacing:-.01em}
+.ha-ads .art .cta{align-self:flex-start;background:#191919;color:#fff;font:700 8.5px/1 'Plus Jakarta Sans',sans-serif;border-radius:6px;padding:6px 10px}
+.ha-ads .art .lg{position:absolute;top:11px;left:13px;width:14px;height:auto}
+.ha-ads .hd8{position:absolute;width:9px;height:9px;border-radius:2.5px;background:#fff;border:1.5px solid #FD5000;z-index:2}
+.ha-ads .hd8.h1{top:50%;left:50%;animation:ha-h1 10s ease-in-out infinite}
+.ha-ads .hd8.h2{top:50%;left:50%;animation:ha-h2 10s ease-in-out infinite}
+.ha-ads .hd8.h3{top:50%;left:50%;animation:ha-h3 10s ease-in-out infinite}
+.ha-ads .hd8.h4{top:50%;left:50%;animation:ha-h4 10s ease-in-out infinite}
+@keyframes ha-h1{0%,38%{transform:translate(-111px,-111px)}50%,88%{transform:translate(-82px,-130px)}100%{transform:translate(-111px,-111px)}}
+@keyframes ha-h2{0%,38%{transform:translate(102px,-111px)}50%,88%{transform:translate(73px,-130px)}100%{transform:translate(102px,-111px)}}
+@keyframes ha-h3{0%,38%{transform:translate(-111px,102px)}50%,88%{transform:translate(-82px,121px)}100%{transform:translate(-111px,102px)}}
+@keyframes ha-h4{0%,38%{transform:translate(102px,102px)}50%,88%{transform:translate(73px,121px)}100%{transform:translate(102px,102px)}}
 .ha-ads .e{font:700 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
 .ha-ads .t{font:700 17px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
 .ha-ads .cta{margin-top:13px;display:inline-block;font:600 9px/22px 'Inter',sans-serif;height:22px;padding:0 13px;border-radius:6px}
@@ -783,18 +802,50 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-assets .nm{font:700 13px/1.15 'Plus Jakarta Sans',sans-serif;color:#191919}
 .ha-assets .mt{font:600 9px/1 'Geist Mono',monospace;color:#9A9088;margin-top:5px;text-transform:uppercase;letter-spacing:.09em}
 .ha-assets .dl{color:#FD5000;flex:0 0 auto}
-/* overview: systems hub grid */
-.ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:16px;border:1px solid rgba(0,0,0,.05);display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.ha-hub .t{border-radius:12px;padding:15px 14px;border:1px solid #EFEAE2;background:#FBF8F4}
-.ha-hub .t.on{background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);border-color:transparent}
-/* gradient + border: clip the gradient to the padding box so it never bleeds under translucent/transparent borders (muddy rim at corners) */
-.ha-hub .t.on,.ha-fan .s1,.ha-fan .s2,.ha-ads .a1,.ha-ads .a3,.ha-agents .k,.ha-win .s.hero,.ha-pal .b1{background-clip:padding-box}
-.ha-hub .t .ic{color:#FD5000;margin-bottom:11px}
-.ha-hub .t.on .ic{color:#fff}
-.ha-hub .t .nm{font:700 13px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.01em}
-.ha-hub .t.on .nm{color:#fff}
-.ha-hub .t .mt{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9A9088;margin-top:6px}
-.ha-hub .t.on .mt{color:rgba(255,255,255,.85)}
+/* overview: brand pipeline, one brand feeding every system */
+.ha-fan .s1,.ha-fan .s2,.ha-ads .a1,.ha-agents .k,.ha-win .s.hero,.ha-pal .b1{background-clip:padding-box}
+.ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05);display:flex;gap:0;align-items:center;width:352px}
+.ha-hub .core{flex:0 0 96px;display:flex;flex-direction:column;align-items:center;gap:9px;padding:14px 10px;border:1px solid #EFE8DE;border-radius:14px;background:#FBF8F4}
+.ha-hub .core .mk{width:44px;height:44px;border-radius:12px;background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-clip:padding-box;display:flex;align-items:center;justify-content:center}
+.ha-hub .core .dots{display:flex;gap:5px}
+.ha-hub .core .dots i{width:9px;height:9px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+.ha-hub .core .aa{font:700 10px/1 'Plus Jakarta Sans',sans-serif;color:#191919;border:1px solid #E7E0D6;border-radius:6px;padding:5px 7px;background:#fff}
+.ha-hub .core .cl{font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9A9088}
+.ha-hub .th span,.ha-hub .th i{display:block}
+.ha-hub .flow{flex:1;display:flex;flex-direction:column;gap:10px;margin-left:16px;position:relative}
+.ha-hub .flow::before{content:"";position:absolute;left:0;top:25px;bottom:25px;width:2px;border-radius:2px;background:#F0E7DC}
+.ha-hub .flow::after{content:"";position:absolute;left:-16px;top:50%;width:16px;height:2px;margin-top:-1px;background:#F0E7DC}
+.ha-hub .row{display:flex;align-items:center;gap:0}
+.ha-hub .wire{flex:1;height:2px;background:#F0E7DC;min-width:26px}
+.ha-hub .dot{position:absolute;left:-19px;top:119px;width:9px;height:9px;border-radius:50%;background:#FD5000;box-shadow:0 0 10px rgba(253,80,0,.75);opacity:0;z-index:2;animation:ha-dotgo 8s linear infinite;pointer-events:none}
+.ha-hub .dot.d1{--ty:calc(-50% - 93px);animation-delay:0s}
+.ha-hub .dot.d2{--ty:calc(-50% - 31px);animation-delay:2s}
+.ha-hub .dot.d3{--ty:calc(-50% + 31px);animation-delay:4s}
+.ha-hub .dot.d4{--ty:calc(-50% + 93px);animation-delay:6s}
+@keyframes ha-dotgo{0%{transform:translate(0,-50%);opacity:0}2%{opacity:1}6%{transform:translate(16px,-50%)}13%{transform:translate(16px,var(--ty))}20%{transform:translate(71px,var(--ty));opacity:1}25%,100%{transform:translate(71px,var(--ty));opacity:0}}
+.ha-hub .out{flex:0 0 148px;height:52px;box-sizing:border-box;display:flex;align-items:center;gap:10px;border:1px solid #EFE8DE;border-radius:11px;background:#fff;padding:8px 10px;animation:ha-out-hit 8s ease-in-out infinite}
+.ha-hub .row:nth-child(1) .out{animation-delay:1.55s}
+.ha-hub .row:nth-child(2) .out{animation-delay:3.55s}
+.ha-hub .row:nth-child(3) .out{animation-delay:5.55s}
+.ha-hub .row:nth-child(4) .out{animation-delay:7.55s}
+@keyframes ha-out-hit{0%,100%{border-color:#EFE8DE;transform:translateY(0);box-shadow:none}3%,10%{border-color:#FD5000;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}14%{border-color:#EFE8DE;transform:translateY(0)}}
+.ha-hub .out .th{flex:0 0 auto;border-radius:6px;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
+.ha-hub .out .nm{font:700 11.5px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919}
+.ha-hub .out .mt{font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9A9088;margin-top:4px}
+.ha-hub .th.deck{width:42px;height:28px;background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-clip:padding-box;padding:6px 6px 0}
+.ha-hub .th.deck i{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.92);width:70%;margin-bottom:3px}
+.ha-hub .th.deck i+i{width:45%;background:rgba(255,255,255,.5)}
+.ha-hub .th.web{width:42px;height:28px;background:#fff}
+.ha-hub .th.web .tb{height:6px;background:linear-gradient(90deg,#7E1C0B,#D43A14,#F2864F)}
+.ha-hub .th.web .cards{display:flex!important;gap:3px;padding:4px 5px}
+.ha-hub .th.web .cards i{flex:1;height:12px;border-radius:3px;background:#F8F0EB;border:1px solid #F0E6DC}
+.ha-hub .th.email{width:24px;height:30px;background:#fff;padding:0}
+.ha-hub .th.email .hb{height:7px;background:linear-gradient(90deg,#7E1C0B,#D43A14,#F2864F)}
+.ha-hub .th.email i{display:block;height:3px;border-radius:2px;background:#E7E0D6;margin:3px 4px 0}
+.ha-hub .th.email .bt{width:12px;height:5px;border-radius:2px;background:#FD5000;margin:3px 4px 0}
+.ha-hub .th.ad{width:30px;height:30px;background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-clip:padding-box;padding:5px 5px 0}
+.ha-hub .th.ad i{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.92);width:80%}
+.ha-hub .th.ad .bt{margin-top:4px;width:14px;height:6px;border-radius:2px;background:#191919}
 /* ===== hero-art micro-animations (purposeful motion per illustration) ===== */
 @keyframes ha-caret{0%,100%{opacity:1}50%{opacity:0}}
 @keyframes ha-type{0%{max-width:0}35%{max-width:80px}80%{max-width:80px}100%{max-width:0}}
@@ -2966,9 +3017,18 @@ function buildSocial(){
         <span class="chip">IAB ad sizes</span>
       </div>
       <div class="hero-art"><div class="float ha-ads">
-        <div class="ad a1"><div class="e">Sponsored</div><div class="t">Run your service business</div><span class="cta">Book a demo</span></div>
-        <div class="ad a2"><div class="e">Display · 300×250</div><div class="t">The AI operating system</div><span class="cta">Learn more</span></div>
-        <div class="ad a3"><div class="e">Story · 1080×1920</div><div class="t" style="font-size:13px">Zuper Sense</div><span class="st">Dark · Sense only</span></div>
+        <div class="tool">
+          <div class="tb"><i></i><i></i><i></i><span class="lbl"><span class="l1">Instagram · 1080 × 1080</span><span class="l2">Story / Reel · 1080 × 1920</span></span><span class="exp">Export</span></div>
+          <div class="cnv">
+            <div class="art">
+              <img class="lg" src="assets/logos/zuper-logomark-white.svg" alt="">
+              <span class="eb">Field service · AI</span>
+              <span class="ttl">Win 1 in 3 quotes on&#8209;site</span>
+              <span class="cta">Book a demo</span>
+            </div>
+            <b class="hd8 h1"></b><b class="hd8 h2"></b><b class="hd8 h3"></b><b class="hd8 h4"></b>
+          </div>
+        </div>
       </div></div>
     </div>
   </header>
@@ -3507,10 +3567,19 @@ function buildOverview(){
         <span class="chip">Outline icons</span>
       </div>
       <div class="hero-art"><div class="float ha-hub">
-        <div class="t on"><div class="ic">${icon("image",22)}</div><div class="nm">Deck</div><div class="mt">PPT</div></div>
-        <div class="t"><div class="ic">${icon("globe",22)}</div><div class="nm">Website</div><div class="mt">Web</div></div>
-        <div class="t"><div class="ic">${icon("mail",22)}</div><div class="nm">Emailer</div><div class="mt">Email</div></div>
-        <div class="t"><div class="ic">${icon("download",22)}</div><div class="nm">Assets</div><div class="mt">Brand</div></div>
+        <div class="core">
+          <span class="mk"><img src="assets/logos/zuper-logomark-white.svg" alt="" style="width:22px;height:auto;display:block"></span>
+          <span class="dots"><i style="background:#FD5000"></i><i style="background:#191919"></i><i style="background:#FCE9E1"></i><i style="background:#FFFAEA"></i></span>
+          <span class="aa">Aa</span>
+          <span class="cl">One brand</span>
+        </div>
+        <div class="flow">
+          <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i><i class="dot d4"></i>
+          <div class="row"><span class="wire"></span><div class="out"><span class="th deck"><i></i><i></i></span><span><span class="nm">Deck</span><div class="mt">PPT</div></span></div></div>
+          <div class="row"><span class="wire"></span><div class="out"><span class="th web"><span class="tb"></span><span class="cards"><i></i><i></i><i></i></span></span><span><span class="nm">Website</span><div class="mt">Web</div></span></div></div>
+          <div class="row"><span class="wire"></span><div class="out"><span class="th email"><span class="hb"></span><i></i><i></i><span class="bt"></span></span><span><span class="nm">Emailer</span><div class="mt">Email</div></span></div></div>
+          <div class="row"><span class="wire"></span><div class="out"><span class="th ad"><i></i><span class="bt"></span></span><span><span class="nm">Social &amp; ads</span><div class="mt">Promo</div></span></div></div>
+        </div>
       </div></div>
     </div>
   </header>
