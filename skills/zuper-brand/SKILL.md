@@ -50,6 +50,8 @@ The product is the hero: build product screens as clean HTML mocks, never stock 
 
 Plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-looking. Write to "you", lead with the outcome, use real numbers. **No em dashes in output copy.** Banned: seamless, leverage, unlock, empower, streamline, robust, elevate, holistic, synergy, ecosystem, revolutionary, "in today's fast-paced world". Full rules and examples: `references/voice.md`.
 
-## Hosted assets
+## Assets (bundled in this skill)
 
-Logos, banners and GIFs are served from `https://zuper-dls.vercel.app/assets/…` — use these absolute URLs in emails and anything that leaves the page. Full index: `references/brand-assets.md`. The live styleguide is at https://zuper-dls.vercel.app (AI digest at /llms.txt).
+The real brand files ship inside this skill under `assets/`: logos (`assets/logos/`), mini-human GIFs (`assets/mini-humans/`), agent avatars (`assets/agents/`), the Glass/Sense/breaker backgrounds (`assets/backgrounds/`) and email banners (`assets/email/`). **Copy them out of the skill folder and reference them by relative path** when building decks, pages, artifacts or mocks.
+
+The same files are also hosted at `https://zuper-dls.vercel.app/assets/…` (same paths) — use those absolute URLs only where the image must live on the web: emails, email signatures, and anything pasted outside the project. Full index: `references/brand-assets.md`. Live styleguide: https://zuper-dls.vercel.app (AI digest at /llms.txt).
