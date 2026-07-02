@@ -813,16 +813,16 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub .core .cl{font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9A9088}
 .ha-hub .th span,.ha-hub .th i{display:block}
 .ha-hub .flow{flex:1;display:flex;flex-direction:column;gap:10px;margin-left:16px;position:relative}
-.ha-hub .flow::before{content:"";position:absolute;left:0;top:25px;bottom:25px;width:2px;border-radius:2px;background:#F0E7DC}
+.ha-hub .flow::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:2px;border-radius:2px;background:#F0E7DC}
 .ha-hub .flow::after{content:"";position:absolute;left:-16px;top:50%;width:16px;height:2px;margin-top:-1px;background:#F0E7DC}
 .ha-hub .row{display:flex;align-items:center;gap:0}
 .ha-hub .wire{flex:1;height:2px;background:#F0E7DC;min-width:26px}
-.ha-hub .dot{position:absolute;left:-19px;top:119px;width:9px;height:9px;border-radius:50%;background:#FD5000;box-shadow:0 0 10px rgba(253,80,0,.75);opacity:0;z-index:2;animation:ha-dotgo 8s linear infinite;pointer-events:none}
-.ha-hub .dot.d1{--ty:calc(-50% - 93px);animation-delay:0s}
-.ha-hub .dot.d2{--ty:calc(-50% - 31px);animation-delay:2s}
-.ha-hub .dot.d3{--ty:calc(-50% + 31px);animation-delay:4s}
-.ha-hub .dot.d4{--ty:calc(-50% + 93px);animation-delay:6s}
-@keyframes ha-dotgo{0%{transform:translate(0,-50%);opacity:0}2%{opacity:1}6%{transform:translate(16px,-50%)}13%{transform:translate(16px,var(--ty))}20%{transform:translate(71px,var(--ty));opacity:1}25%,100%{transform:translate(71px,var(--ty));opacity:0}}
+.ha-hub .dot{position:absolute;left:-19px;top:137px;width:9px;height:9px;border-radius:50%;background:#FD5000;box-shadow:0 0 10px rgba(253,80,0,.75);opacity:0;z-index:2;animation:ha-dotgo 8s linear infinite;pointer-events:none}
+.ha-hub .dot.d1{--ty:calc(-50% - 111px);animation-delay:0s}
+.ha-hub .dot.d2{--ty:calc(-50% - 37px);animation-delay:2s}
+.ha-hub .dot.d3{--ty:calc(-50% + 37px);animation-delay:4s}
+.ha-hub .dot.d4{--ty:calc(-50% + 111px);animation-delay:6s}
+@keyframes ha-dotgo{0%{transform:translate(0,-50%);opacity:0}2%{opacity:1}6%{transform:translate(16px,-50%)}13%{transform:translate(16px,var(--ty))}20%{transform:translate(65px,var(--ty));opacity:1}25%,100%{transform:translate(65px,var(--ty));opacity:0}}
 .ha-hub .out{flex:0 0 148px;height:52px;box-sizing:border-box;display:flex;align-items:center;gap:10px;border:1px solid #EFE8DE;border-radius:11px;background:#fff;padding:8px 10px;animation:ha-out-hit 8s ease-in-out infinite}
 .ha-hub .row:nth-child(1) .out{animation-delay:1.55s}
 .ha-hub .row:nth-child(2) .out{animation-delay:3.55s}
