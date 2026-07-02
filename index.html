@@ -963,13 +963,16 @@ main{flex:1;min-width:0;overflow-x:clip}
 .esig .btn-ghost:hover{border-color:var(--brand-default);color:var(--text-primary)}
 .esig .pv-hint{margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--text-tertiary)}
 .esig .pv-hint b{color:var(--text-secondary)}
-.esig .es-banners{display:flex;flex-direction:column;gap:9px}
-.esig .bopt{display:block;cursor:pointer;border:2px solid var(--border-default);border-radius:10px;overflow:hidden;line-height:0;transition:border-color .15s ease}
+.esig .es-bfld{grid-column:1/-1;margin-top:8px}
+.esig .es-bfld>label{display:block;font:600 12px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary);margin-bottom:8px}
+.esig .es-banners{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.esig .bopt{display:block;aspect-ratio:4/1;cursor:pointer;border:2px solid var(--border-default);border-radius:10px;overflow:hidden;line-height:0;transition:border-color .15s ease}
 .esig .bopt:hover{border-color:#d9b8a8}
 .esig .bopt input{position:absolute;opacity:0;pointer-events:none}
-.esig .bopt img{width:100%;height:auto;display:block}
-.esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:42px;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
+.esig .bopt img{width:100%;height:100%;object-fit:cover;display:block}
+.esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:100%;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
 .esig .bopt:has(input:checked){border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 18%,transparent)}
+.esig .bopt:has(input:focus-visible){border-color:var(--brand-default);box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 .adscroll{overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
 
 section.block{padding:54px 0}
@@ -2353,14 +2356,6 @@ function buildEmailSig(){
         <div class="ctl-row">
           <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
         </div>
-        <div class="fld">
-          <label id="esb-lbl">Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
-          <div class="es-banners" role="radiogroup" aria-labelledby="esb-lbl">
-            <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
-            <label class="bopt"><input type="radio" name="esb" value="sense"><img src="assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
-            <label class="bopt"><input type="radio" name="esb" value="trades"><img src="assets/email/zuper-emailer-trades.png" alt="The AI Operating System for the Skilled Trades"></label>
-          </div>
-        </div>
       </div>
       <div class="preview-col">
         <div class="pv-label">Live preview</div>
@@ -2369,6 +2364,14 @@ function buildEmailSig(){
           <button class="btn-copy" id="es-copy">${icon("copy",17)} Copy signature</button>
         </div>
         <p class="pv-hint"><b>Paste into Outlook:</b> open <b>Settings</b> → <b>Account</b> → <b>Signatures</b> → <b>New signature</b>, click into the signature box and paste (<b>⌘/Ctrl + V</b>). Give it a name and Save. The logo, banner and colours come along automatically.</p>
+      </div>
+      <div class="fld es-bfld">
+        <label id="esb-lbl">Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
+        <div class="es-banners" role="radiogroup" aria-labelledby="esb-lbl">
+          <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
+          <label class="bopt"><input type="radio" name="esb" value="sense"><img src="assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
+          <label class="bopt"><input type="radio" name="esb" value="trades"><img src="assets/email/zuper-emailer-trades.png" alt="The AI Operating System for the Skilled Trades"></label>
+        </div>
       </div>
     </div>
   </div></section>
@@ -3021,13 +3024,13 @@ function buildIcons(){
     function cells(list){pick.innerHTML=list.map(n=>`<button class="icst-cell${n===st.name?" on":""}" data-n="${n}" title="${n}"><svg viewBox="0 0 256 256" width="26" height="26" fill="currentColor">${glyph(n)}</svg></button>`).join("");}
     function setMeta(){meta.textContent=window.PHOSPHOR?`${Object.keys(window.PHOSPHOR).length.toLocaleString()} icons · search by name or keyword`:"Loading icons…";}
     function search(q){q=(q||"").trim().toLowerCase();const src=window.PHOSPHOR?Object.keys(window.PHOSPHOR):LOCAL;const T=window.PHOSPHOR_TAGS||{};
-      if(!q){cells(LOCAL);setMeta();return;}
+      if(!q){const seen=new Set(LOCAL);cells(LOCAL.concat(src.filter(n=>!seen.has(n))));setMeta();return;}
       const starts=[],has=[],tag=[];
       src.forEach(n=>{if(n.indexOf(q)===0)starts.push(n);else if(n.indexOf(q)>0)has.push(n);else if(T[n]&&T[n].indexOf(q)>=0)tag.push(n);});
       let m=starts.concat(has,tag);
       Object.keys(SYN).forEach(k=>{if(k.indexOf(q)>=0||q.indexOf(k)>=0){for(const n of SYN[k].slice().reverse()){if(src.indexOf(n)>=0){const i=m.indexOf(n);if(i>=0)m.splice(i,1);m.unshift(n);}}}});
-      const total=m.length;m=m.slice(0,200);
-      meta.textContent=total?`${total} result${total>1?"s":""} for “${q}”${total>200?" · showing 200":""}`:`No icons match “${q}”`;
+      const total=m.length;
+      meta.textContent=total?`${total} result${total>1?"s":""} for “${q}”`:`No icons match “${q}”`;
       cells(m);}
     pick.addEventListener("click",e=>{const b=e.target.closest(".icst-cell");if(!b)return;[...pick.children].forEach(c=>c.classList.remove("on"));b.classList.add("on");st.name=b.dataset.n;draw();});
     $("icstSearch").addEventListener("input",e=>search(e.target.value));
