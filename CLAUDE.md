@@ -1,5 +1,18 @@
 # Zuper Design System — project rules
 
+## Keep every surface in sync (do this on ANY brand/DLS change)
+The same brand rules live in several places. When a colour, font, rule, template, asset or link changes, update ALL of these, then run `scripts/build-zip.sh` (it rebuilds both zips + `llms-full.txt`) before committing:
+
+1. `index.html` — the styleguide pages themselves (incl. the Overview cards and How-to page).
+2. `claude-design-brief.md` — the condensed spec.
+3. `CLAUDE.md` — this file's rules below.
+4. `skills/zuper-brand/` — SKILL.md + the matching reference file (deck-rules, web-patterns, email, social-ads, voice, brand-assets).
+5. `llms.txt` — the hand-written AI index (llms-full.txt is generated).
+6. `bundle/` — the Claude Design sources (SKILL.md, readme.md, tokens/, foundations/) if the change touches tokens, components or slides.
+7. `README.md` — if structure or counts changed.
+
+Never edit `assets/zuper-design-system.zip`, `assets/zuper-brand-skill.zip` or `llms-full.txt` by hand — they are build outputs of `scripts/build-zip.sh`.
+
 ## Deck colour scheme (always apply)
 Every Zuper deck uses ONE of two contrast schemes — pick the cover colour, and every interior slide takes the opposite. Never mix interior colours.
 
