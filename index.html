@@ -2419,19 +2419,6 @@ function buildUse(){
         </div>
         <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
       </div>
-      <div class="skill-card" style="grid-column:1/-1">
-        <h4><span class="ic">${icon("edit",17)}</span>C · Create your own design system from Claude Code</h4>
-        <ol>
-          <li>Open Claude Code in the folder that holds your design sources: tokens, fonts, components, slide templates. (This repo is a working example, it's exactly how the Zuper system was built.)</li>
-          <li>First time only: authenticate with <code>/design-login</code>.</li>
-          <li>Paste the prompt below. Claude packages the sources, publishes them to Claude Design, and hands back a share link you can pick on any project.</li>
-        </ol>
-        <div class="cc-prompt">
-          <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to create and publish a design system from this repo. Include the tokens, fonts, colors, components and templates, name it after the brand, and give me the share link.">${icon("copy",15)} Copy prompt</button></div>
-          <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to create and publish a design system from this repo.<br><br><span class="cc-do">Include:</span> the tokens, fonts, colors, components and templates · name it after the brand · give me the share link</div>
-        </div>
-        <p class="sk-note">Updating works the same way: change the sources, then ask Claude to sync the design system again.</p>
-      </div>
     </div>
     <div class="cd-fallback">
       <p class="fb-h">${icon("github",15)} Prefer the raw repo?</p>
