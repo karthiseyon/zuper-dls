@@ -2389,6 +2389,14 @@ function buildUse(){
   </header>
 
   <section class="block"><div class="wrap">
+    <div class="cd-fallback" style="margin-top:0;margin-bottom:26px">
+      <p class="fb-h">${icon("github",15)} One repo powers all three</p>
+      <p>Everything below, the styleguide, brief, skill, slides and templates, lives in one open repo. In <b style="color:var(--text-primary)">Claude.ai chat</b> and <b style="color:var(--text-primary)">Claude Code</b>, just <b style="color:var(--text-primary)">paste this link</b> and ask for the Zuper brand, Claude reads the repo directly. <b style="color:var(--text-primary)">Claude Design</b> is the one exception: use the orange button in section 01 (the published share link), or drag the zip into <b>Set up design system</b>.</p>
+      <div class="repo-row">
+        <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
+        <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
+      </div>
+    </div>
     <div class="use-doors">
       <button class="use-door" onclick="document.getElementById('s-use-0').scrollIntoView({behavior:'smooth'})">
         <span class="ic">${icon("zap",19)}</span><h5>Claude Design</h5>
@@ -2483,17 +2491,6 @@ function buildUse(){
           <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
         </div>
         <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <div class="cd-fallback" style="margin-top:0">
-      <p class="fb-h">${icon("github",15)} One repo powers all three</p>
-      <p>Everything above, the styleguide, brief, skill, slides and templates, lives in one open repo. In <b style="color:var(--text-primary)">Claude.ai chat</b> and <b style="color:var(--text-primary)">Claude Code</b>, just <b style="color:var(--text-primary)">paste this link</b> and ask for the Zuper brand, Claude reads the repo directly. <b style="color:var(--text-primary)">Claude Design</b> is the one exception: use the orange button in section 01 (the published share link), or drag the zip into <b>Set up design system</b>.</p>
-      <div class="repo-row">
-        <span class="repo-url"><span class="gi">${icon("github",15)}</span>github.com/karthiseyon/zuper-dls</span>
-        <button class="url-copy" data-copy="https://github.com/karthiseyon/zuper-dls">${icon("copy",15)} Copy link</button>
       </div>
     </div>
   </div></section>
