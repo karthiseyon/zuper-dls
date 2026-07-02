@@ -962,6 +962,8 @@ main{flex:1;min-width:0;overflow-x:clip}
 .cd-fallback .dl-zip{display:inline-flex;align-items:center;gap:10px;margin-top:12px;font:700 14px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:var(--brand-default);border:none;border-radius:10px;padding:13px 20px;text-decoration:none;box-shadow:0 10px 26px rgba(253,80,0,.24);transition:background .15s ease,transform .15s ease}
 .cd-fallback .dl-zip:hover{background:var(--brand-hover);transform:translateY(-1px)}
 .cc-prompt{margin-top:18px;border:1px solid var(--chip-line,#E7E0D6);border-radius:13px;overflow:hidden;background:#0E0E10;box-shadow:0 16px 38px rgba(20,8,2,.16)}
+.skill-card .cc-prompt{margin:2px 0 14px}
+.skill-card .cc-prompt .cc-body{font-size:12.5px;padding:14px 16px}
 .cc-prompt .cc-head{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#17171A;border-bottom:1px solid rgba(255,255,255,.08)}
 .cc-prompt .cc-dot{width:11px;height:11px;border-radius:50%;background:#3A3A3F;flex:0 0 auto}
 .cc-prompt .cc-head .cc-dot:nth-child(1){background:#E0584A}
@@ -2410,12 +2412,12 @@ function buildUse(){
           <li>Paste the prompt below into Claude Code.</li>
           <li>First time only: authenticate with <code>/design-login</code>.</li>
         </ol>
+        <div class="cc-prompt">
+          <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:&#10;https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b&#10;&#10;Implement: the designs in this project in claude code and use the design system">${icon("copy",15)} Copy prompt</button></div>
+          <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
+        </div>
         <p class="sk-note">Claude pulls the published Zuper Design System and implements its designs in your codebase.</p>
       </div>
-    </div>
-    <div class="cc-prompt">
-      <div class="cc-head"><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-ttl">Paste into Claude Code</span><button class="url-copy" data-copy="Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:&#10;https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b&#10;&#10;Implement: the designs in this project in claude code and use the design system">${icon("copy",15)} Copy prompt</button></div>
-      <div class="cc-body">Use the claude_design MCP (https://api.anthropic.com/v1/design/mcp, auth via /design-login) to import this project:<br><span class="cc-url">https://claude.ai/design/p/4b4e77e7-39c1-4481-b467-3a02f2f1286b</span><br><br><span class="cc-do">Implement:</span> the designs in this project in claude code and use the design system</div>
     </div>
     <div class="cd-fallback">
       <p class="fb-h">${icon("github",15)} Prefer the raw repo?</p>
