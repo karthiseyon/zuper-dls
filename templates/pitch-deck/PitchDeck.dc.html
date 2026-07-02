@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Pitch deck" description="16:9 Zuper deck — orange cover, white interiors (one-contrast rule), dark slide reserved for Zuper Sense. Arrow keys to navigate." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+  <!-- 1 · Title (orange cover) -->
+  <section data-label="Title" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:40px;">Field Service · 2026</div>
+    <h1 style="font-weight:800;font-size:124px;line-height:1.02;letter-spacing:-.03em;margin:0;max-width:1480px;text-wrap:balance;">Run service from first call to final invoice</h1>
+    <div style="font-family:var(--font-deck-body);font-size:38px;color:rgba(255,255,255,.92);margin-top:44px;max-width:1100px;line-height:1.45;">How AI is taking the busywork out of dispatch, quoting, and getting paid.</div>
+    <img src="../../assets/mini-humans/carrying-gear.gif" alt="" aria-hidden="true" style="position:absolute;right:150px;bottom:0;height:128px;width:auto;display:block;">
+    <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position:absolute;bottom:70px;left:150px;height:50px;width:auto;">
+    <div style="position:absolute;top:64px;right:150px;font-family:var(--font-mono);font-size:22px;color:rgba(255,255,255,.85);">Q3 Business Review</div>
+  </section>
+
+  <!-- 2 · Agenda (white) -->
+  <section data-label="Agenda" style="width:1920px;height:1080px;box-sizing:border-box;background:#fff;color:var(--text-primary);font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);">Agenda</div>
+    <h2 style="font-weight:800;font-size:84px;letter-spacing:-.03em;margin:22px 0 72px;">What we'll cover</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 88px;">
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid var(--border-divider);"><span style="font-family:var(--font-mono);font-size:28px;color:var(--color-primary);font-weight:600;">01</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">The state of dispatch</div><div style="font-family:var(--font-deck-body);font-size:24px;color:var(--text-secondary);margin-top:6px;">Where time and margin leak today</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid var(--border-divider);"><span style="font-family:var(--font-mono);font-size:28px;color:var(--color-primary);font-weight:600;">02</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Quoting on-site</div><div style="font-family:var(--font-deck-body);font-size:24px;color:var(--text-secondary);margin-top:6px;">Win the job before you leave</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid var(--border-divider);"><span style="font-family:var(--font-mono);font-size:28px;color:var(--color-primary);font-weight:600;">03</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Job costing</div><div style="font-family:var(--font-deck-body);font-size:24px;color:var(--text-secondary);margin-top:6px;">See margin on every job</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid var(--border-divider);"><span style="font-family:var(--font-mono);font-size:28px;color:var(--color-primary);font-weight:600;">04</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Zuper Sense</div><div style="font-family:var(--font-deck-body);font-size:24px;color:var(--text-secondary);margin-top:6px;">AI that runs in the background</div></div></div>
+    </div>
+    <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position:absolute;bottom:64px;right:150px;height:40px;width:auto;">
+  </section>
+
+  <!-- 3 · Metrics (white) -->
+  <section data-label="Metrics" style="width:1920px;height:1080px;box-sizing:border-box;background:#fff;color:var(--text-primary);font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);">The impact</div>
+    <h2 style="font-weight:800;font-size:80px;letter-spacing:-.03em;margin:22px 0 96px;max-width:1200px;text-wrap:balance;">What crews see in the first 90 days</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;">
+      <div style="border-top:6px solid var(--color-primary);padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;color:var(--color-primary);line-height:1;">28%</div><div style="font-family:var(--font-deck-body);font-size:30px;color:var(--text-secondary);margin-top:22px;max-width:380px;line-height:1.4;">less drive time per crew, per week</div></div>
+      <div style="border-top:6px solid var(--color-primary);padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;color:var(--color-primary);line-height:1;">1 in 3</div><div style="font-family:var(--font-deck-body);font-size:30px;color:var(--text-secondary);margin-top:22px;max-width:380px;line-height:1.4;">quotes won on-site, before leaving</div></div>
+      <div style="border-top:6px solid var(--color-primary);padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;color:var(--color-primary);line-height:1;">2 days</div><div style="font-family:var(--font-deck-body);font-size:30px;color:var(--text-secondary);margin-top:22px;max-width:380px;line-height:1.4;">faster from job done to invoice sent</div></div>
+    </div>
+    <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position:absolute;bottom:64px;right:150px;height:40px;width:auto;">
+  </section>
+
+  <!-- 4 · Quote (warm interior) -->
+  <section data-label="Quote" style="width:1920px;height:1080px;box-sizing:border-box;background:var(--surface-warm);color:var(--text-primary);font-family:var(--font-deck);padding:150px 180px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div style="font-weight:800;font-size:300px;line-height:.55;color:var(--color-primary);height:150px;">&ldquo;</div>
+    <blockquote style="font-weight:700;font-size:68px;line-height:1.25;letter-spacing:-.02em;margin:0;max-width:1400px;text-wrap:balance;">We stopped losing jobs in the gap between the estimate and the invoice. Zuper closed it.</blockquote>
+    <div style="display:flex;align-items:center;gap:24px;margin-top:64px;">
+      <span style="width:84px;height:84px;border-radius:50%;background:var(--surface-banner);color:var(--color-primary-press);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:30px;">DR</span>
+      <div><div style="font-family:var(--font-deck-body);font-weight:700;font-size:28px;">Dana Russell</div><div style="font-family:var(--font-deck-body);font-size:24px;color:var(--text-secondary);">Owner, Summit Roofing</div></div>
+    </div>
+    <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position:absolute;bottom:64px;right:150px;height:40px;width:auto;">
+  </section>
+
+  <!-- 5 · Product (white) -->
+  <section data-label="Product" style="width:1920px;height:1080px;box-sizing:border-box;background:#fff;color:var(--text-primary);font-family:var(--font-deck);padding:140px 150px;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;position:relative;">
+    <div>
+      <div style="position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+      <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);">Scheduling &amp; Dispatch</div>
+      <h2 style="font-weight:800;font-size:72px;letter-spacing:-.03em;margin:22px 0 28px;text-wrap:balance;">One board for every crew, every job</h2>
+      <p style="font-family:var(--font-deck-body);font-size:30px;line-height:1.55;color:var(--text-secondary);margin:0 0 32px;max-width:640px;">Drag a job, reassign a tech, and the customer gets an updated ETA — automatically.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;font-family:var(--font-deck-body);font-size:26px;">
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--color-primary);font-weight:800;">&check;</span> Smart routing by location &amp; skill</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--color-primary);font-weight:800;">&check;</span> Live status from the field</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--color-primary);font-weight:800;">&check;</span> Automatic customer notifications</div>
+      </div>
+    </div>
+    <div style="background:var(--surface-warm);border-radius:24px;padding:40px;font-size:17px;">
+      <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.DispatchBoard" hint-size="100%,520px"></x-import>
+    </div>
+    <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position:absolute;bottom:64px;right:150px;height:40px;width:auto;">
+  </section>
+
+  <!-- 6 · Zuper Sense (dark — Sense only) -->
+  <!-- Section break (full-bleed orange illustration) -->
+  <section data-label="Section break" style="width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden;font-family:var(--font-deck);color:#fff;background:#E8631A url(../../assets/backgrounds/section-break-houses.png) center bottom/cover no-repeat;">
+    <div style="position:absolute;top:64px;right:84px;font-family:var(--font-deck-body);font-weight:700;font-size:22px;letter-spacing:.08em;">ZUPER CONFIDENTIAL</div>
+    <div style="position:absolute;left:96px;top:200px;right:96px;">
+      <h1 style="font-weight:500;font-size:104px;line-height:1.04;letter-spacing:-.02em;margin:0;max-width:1360px;text-shadow:0 2px 30px rgba(120,40,0,.25);">The AI experimentation era is over.<br>Welcome to the <b style="font-weight:800;">Outcome Era.</b></h1>
+    </div>
+    <div style="position:absolute;left:96px;bottom:250px;width:1240px;height:2px;background:rgba(255,255,255,.85);"></div>
+    <div style="position:absolute;left:96px;right:96px;bottom:104px;font-family:var(--font-deck-body);font-size:44px;color:rgba(255,255,255,.95);text-shadow:0 2px 20px rgba(120,40,0,.35);">The question is no longer <b style="font-weight:700;">&ldquo;Should we use AI?&rdquo;</b>&nbsp;&nbsp;The question is <b style="font-weight:700;">&ldquo;What does it actually deliver?&rdquo;</b></div>
+  </section>
+
+  <section data-label="Sense" style="width:1920px;height:1080px;box-sizing:border-box;background:#08080a url(../../assets/backgrounds/zuper-sense-bg.jpg) center/cover no-repeat;color:#FAFAFA;font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;background:rgba(255,139,90,.14);border:1px solid rgba(255,139,90,.3);color:#FF8B5A;font-family:var(--font-mono);font-size:22px;text-transform:uppercase;letter-spacing:.12em;padding:10px 20px;border-radius:999px;margin-bottom:30px;"><span style="background:#FF8B5A;color:#1a1a1a;font-weight:700;border-radius:6px;padding:2px 10px;font-size:18px;">New</span> Zuper Sense</div>
+    <h2 style="font-weight:800;font-size:96px;letter-spacing:-.03em;margin:0;max-width:1440px;line-height:1.05;text-wrap:balance;">The AI that runs in the background</h2>
+    <p style="font-family:var(--font-deck-body);font-size:32px;line-height:1.55;color:#A1A1AA;margin:34px 0 64px;max-width:1100px;">Sense reads every job, routes the nearest qualified tech, and flags the work that's quietly losing you money.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Auto-dispatch</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Matches the right crew to the right job by skill, location and load.</div></div>
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Job summaries</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Turns field notes and photos into a clean record in one tap.</div></div>
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Margin alerts</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Catches overruns mid-job, before the week is lost.</div></div>
+    </div>
+    <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position:absolute;bottom:70px;left:150px;height:44px;width:auto;">
+  </section>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

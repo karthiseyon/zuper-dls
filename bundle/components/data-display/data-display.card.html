@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Cards, Badges, Tags & Avatars" subtitle="Surfaces and data-display atoms" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-warm); padding: 24px; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .row + .row { margin-top: 18px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Card, Badge, Tag, Avatar, Eyebrow } = window.ZuperDesignSystem_4b4e77;
+    function Demo() {
+      return (
+        <div>
+          <div className="row">
+            <Card hoverable style={{width:300}}>
+              <Eyebrow>Intelligent Quoting</Eyebrow>
+              <h3 style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:20,margin:'8px 0 6px',letterSpacing:'-.01em'}}>Quotes that win on the spot</h3>
+              <p style={{margin:0,color:'var(--text-secondary)',fontSize:14,lineHeight:1.55}}>Build a branded estimate in the driveway and send it before you leave.</p>
+            </Card>
+            <Card variant="peach" style={{width:240}}>
+              <Eyebrow>Roofing</Eyebrow>
+              <h3 style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:18,margin:'8px 0 0'}}>End-to-end job flow</h3>
+            </Card>
+          </div>
+          <div className="row">
+            <Badge tone="success" dot>Completed</Badge>
+            <Badge tone="warning">En route</Badge>
+            <Badge tone="error" dot>Overdue</Badge>
+            <Badge tone="info">Scheduled</Badge>
+            <Badge tone="neutral">Draft</Badge>
+            <Tag>Roofing</Tag>
+            <Tag onRemove={()=>{}}>HVAC</Tag>
+            <Avatar name="Maya Torres" />
+            <Avatar name="Sam Lee" />
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+  </script>
+</body>
+</html>

@@ -10,7 +10,6 @@ Paste this whole file into Claude Design (Set up design system → Create here �
 - **Web — display / hero:** `Plus Jakarta Sans` (600–700)
 - **Web — body / UI:** `Inter` (400–700)
 - **Web — eyebrows / labels:** `Geist Mono`, UPPERCASE, letter‑spacing .1em, orange
-- **Web — secondary:** `IBM Plex Sans`
 - **Decks (PowerPoint):** `Aptos Display` (titles) + `Aptos` (body) — Office‑native, renders identically on any M365 machine
 - Headlines: weight 700, letter‑spacing ‑.02 to ‑.03em, `text-wrap: balance`. Body line‑height ~1.55.
 

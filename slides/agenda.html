@@ -1,0 +1,35 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Agenda slide" subtitle="White interior · numbered list" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide { width: 1280px; height: 720px; background: #fff; color: var(--text-primary); font-family: var(--font-deck); position: relative; box-sizing: border-box; padding: 88px 96px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 16px; text-transform: uppercase; letter-spacing: .14em; color: var(--color-primary); }
+  h2 { font-weight: 800; font-size: 56px; letter-spacing: -.03em; margin: 14px 0 48px; }
+  .rows { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 56px; }
+  .row { display: flex; align-items: baseline; gap: 20px; padding: 22px 0; border-top: 2px solid var(--border-divider); }
+  .num { font-family: var(--font-mono); font-size: 18px; color: var(--color-primary); font-weight: 600; }
+  .label { font-family: var(--font-deck); font-weight: 700; font-size: 26px; letter-spacing: -.01em; }
+  .desc { font-family: var(--font-deck-body); font-size: 16px; color: var(--text-secondary); margin-top: 4px; }
+  .wm { position: absolute; bottom: 44px; right: 96px; font-family: var(--font-deck); font-weight: 800; font-size: 22px; letter-spacing: -.04em; color: var(--color-ink); }
+  .wm .dot { color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div class="eyebrow">Agenda</div>
+    <h2>What we'll cover</h2>
+    <div class="rows">
+      <div class="row"><span class="num">01</span><div><div class="label">The state of dispatch</div><div class="desc">Where time and margin leak today</div></div></div>
+      <div class="row"><span class="num">02</span><div><div class="label">Quoting on-site</div><div class="desc">Win the job before you leave</div></div></div>
+      <div class="row"><span class="num">03</span><div><div class="label">Job costing</div><div class="desc">See margin on every job</div></div></div>
+      <div class="row"><span class="num">04</span><div><div class="label">Zuper Sense</div><div class="desc">AI that runs in the background</div></div></div>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal.png" alt="Zuper" style="height:26px;width:auto;display:block;"></div>
+  </div>
+</body>
+</html>

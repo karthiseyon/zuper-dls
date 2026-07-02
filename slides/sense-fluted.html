@@ -1,0 +1,40 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Zuper Sense — fluted" subtitle="Black fluted-glass ground — reserved for Zuper Sense" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box; position: relative; overflow: hidden;
+    font-family: var(--font-deck); color: #FAFAFA; padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    background: #08080a url(../assets/backgrounds/zuper-sense-bg.jpg) center/cover no-repeat;
+  }
+  .badge { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: rgba(255,139,90,.14); border: 1px solid rgba(255,139,90,.3); color: #FF8B5A; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; padding: 7px 14px; border-radius: 999px; margin-bottom: 26px; }
+  .badge .new { background: #FF8B5A; color: #1a1a1a; font-weight: 700; border-radius: 5px; padding: 1px 7px; font-size: 11px; }
+  h2 { font-weight: 800; font-size: 56px; letter-spacing: -.03em; margin: 0; max-width: 820px; line-height: 1.05; text-wrap: balance; }
+  p { font-family: var(--font-body); font-size: 22px; line-height: 1.5; color: #A1A1AA; margin: 22px 0 40px; max-width: 720px; }
+  .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .c { background: rgba(20,20,23,.72); backdrop-filter: blur(4px); border: 1px solid #2a2a30; border-radius: 14px; padding: 22px; }
+  .ct { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: #FF8B5A; margin-bottom: 8px; }
+  .cd { font-family: var(--font-body); font-size: 14px; color: #A1A1AA; line-height: 1.5; }
+  .wm { position: absolute; bottom: 40px; left: 80px; }
+  .wm img { height: 26px; width: auto; display: block; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <span class="badge"><span class="new">New</span> Zuper Sense</span>
+    <h2>The AI that runs in the background</h2>
+    <p>Sense reads every job, routes the nearest qualified tech, and flags the work that's quietly losing you money.</p>
+    <div class="cards">
+      <div class="c"><div class="ct">Monitor</div><div class="cd">Always-on sensing across weather, reviews, jobs and customer signals.</div></div>
+      <div class="c"><div class="ct">Analyze</div><div class="cd">Correlates signals into clean, ranked insights for each branch and crew.</div></div>
+      <div class="c"><div class="ct">Recommend</div><div class="cd">Suggests the next-best action for ops, sales and the field — in product.</div></div>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal-white.png" alt="Zuper"></div>
+  </div>
+</body>
+</html>

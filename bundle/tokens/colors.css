@@ -1,0 +1,97 @@
+/* ============================================================
+   Zuper — Color tokens
+   One vivid orange brand · warm + high-contrast neutrals.
+   Base values first, then semantic aliases.
+   ============================================================ */
+
+:root {
+  /* --- Brand --------------------------------------------------- */
+  --color-primary: #FD5000;          /* the one orange — one primary action per view */
+  --color-primary-hover: #E04600;
+  --color-primary-press: #DB3602;
+  --color-red-deep: #B5271C;
+  --color-ink: #191919;              /* secondary / brand ink */
+
+  /* Signature gradient (heroes, footers, deck covers) */
+  --gradient-brand: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); /* @kind color */
+  --gradient-brand-soft: linear-gradient(135deg, #D43A14, #F2864F); /* @kind color */
+
+  /* --- Surfaces ------------------------------------------------ */
+  --surface-white: #FFFFFF;
+  --surface-warm: #F8F5F0;           /* warm off-white page sections */
+  --surface-cream: #FFFAEA;
+  --surface-hover: #FFF5F0;          /* orange-tinted hover wash */
+  --surface-peach: #F8F0EB;          /* peach product cards */
+  --surface-banner: #FCE9E1;         /* feature banners */
+  --surface-charcoal: #282828;       /* dark feature sections */
+
+  /* --- Borders & dividers -------------------------------------- */
+  --border-card: #F0F0F0;
+  --border-divider: #E6E6E6;
+  --border-strong: #D1D5DB;
+
+  /* --- Text ---------------------------------------------------- */
+  --text-primary: #191919;
+  --text-secondary: #4B5563;
+  --text-tertiary: #606063;
+  --text-muted: #888888;
+  --text-on-dark: #FFFFFF;
+  --text-on-brand: #FFFFFF;
+
+  /* --- Neutral gray ramp --------------------------------------- */
+  --gray-50: #F3F4F6;
+  --gray-100: #E5E7EB;
+  --gray-200: #D1D5DB;
+  --gray-300: #9CA3AF;
+  --gray-400: #6B7280;
+  --gray-500: #374151;
+  --gray-900: #111827;
+  --icon-tile: #EDEDED;              /* neutral icon tile background */
+
+  /* --- Product-UI accents (charts, tags, illustrations) -------- */
+  --accent-green: #22C55E;
+  --accent-purple: #A855F7;
+  --accent-teal: #14B8A6;
+  --accent-yellow: #EAB308;
+  --accent-red: #EF4444;
+  --accent-blue: #3B82F6;
+
+  /* --- Semantic status (never the brand orange) ---------------- */
+  --status-success-fg: #1E854B;
+  --status-success-bg: #E7F6EC;
+  --status-warning-fg: #A66A00;
+  --status-warning-bg: #FEF3DC;
+  --status-error-fg: #C42121;
+  --status-error-bg: #FDECEC;
+
+  /* --- Focus ring ---------------------------------------------- */
+  --focus-ring: 0 0 0 3px rgba(253, 80, 0, 0.32);
+
+  /* --- Semantic aliases (use these in components) -------------- */
+  --bg-page: var(--surface-white);
+  --bg-card: var(--surface-white);
+  --bg-feature: var(--surface-charcoal);
+  --action-primary: var(--color-primary);
+  --action-primary-hover: var(--color-primary-hover);
+  --on-action: var(--text-on-brand);
+}
+
+/* ============================================================
+   Zuper Sense — dark theme scope
+   Dark mode is reserved for Zuper Sense (the AI command center).
+   ============================================================ */
+.zuper-sense,
+[data-theme="sense"] {
+  --bg-page: #09090B;
+  --surface-1: #141417;
+  --surface-2: #1C1C21;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #71717A;
+  --border-card: #27272A;
+  --border-divider: #27272A;
+  --border-strong: #3F3F46;
+  --color-primary-on-dark: #FF8B5A;
+  --bg-card: var(--surface-1);
+  --on-action: #FFFFFF;
+}

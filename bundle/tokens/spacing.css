@@ -1,0 +1,32 @@
+/* ============================================================
+   Zuper — Spacing, layout & sizing tokens
+   4px base scale · 1200px / 12-col grid.
+   ============================================================ */
+
+:root {
+  /* --- Spacing scale (4px base) -------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* --- Layout -------------------------------------------------- */
+  --container: 1200px;
+  --grid-columns: 12; /* @kind other */
+  --grid-gutter: 24px;
+
+  /* --- Breakpoints (reference) --------------------------------- */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* --- Section rhythm ------------------------------------------ */
+  --section-pad-y: 96px;
+  --section-pad-y-sm: 56px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Raise the Roof — 3 speakers" description="1280×720 Facebook Live show cover for the Raise the Roof roofing podcast — three-speaker layout. Swap the date and each speaker's name/role/company per episode." -->
+<helmet>
+  <script src="./ds-base.js"></script>
+</helmet>
+<div style="display:inline-block;line-height:0;">{{ creative }}</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 720 },
+  &quot;date&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;26th March&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;time&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;12 PM CST&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;pillText&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Facebook Live&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;h1&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Talking all things&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;h2&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Roofing process&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;h3&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;conference&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Episode&quot; },
+  &quot;s1Name&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;John Doe&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s1Role&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Chief Executive Officer&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s1Company&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Zuper&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s2Name&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Mike Aaron&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s2Role&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Sr. Director&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s2Company&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Acme Cloud Solutions&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s3Name&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Scott Beechuk&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s3Role&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Partner&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; },
+  &quot;s3Company&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Norwest&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Speakers&quot; }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    import('./rtr.js').then(m => { this._build = m.build; this.forceUpdate(); });
+  }
+  renderVals() {
+    return { creative: this._build ? this._build(React, this.props || {}, 3) : null };
+  }
+}
+</script>
+</body>
+</html>

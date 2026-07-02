@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Surfaces" subtitle="White default · warm neutrals · charcoal & peach for emphasis" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-warm); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; }
+  .sw { width: calc(25% - 8px); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-divider); }
+  .chip { height: 44px; }
+  .meta { padding: 6px 10px; background: var(--surface-white); }
+  .name { font-size: 12px; font-weight: 600; color: var(--text-primary); }
+  .hex { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid var(--border-divider)"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-warm)"></div><div class="meta"><div class="name">Warm</div><div class="hex">#F8F5F0</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-cream)"></div><div class="meta"><div class="name">Cream</div><div class="hex">#FFFAEA</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-peach)"></div><div class="meta"><div class="name">Peach card</div><div class="hex">#F8F0EB</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-banner)"></div><div class="meta"><div class="name">Banner</div><div class="hex">#FCE9E1</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-hover)"></div><div class="meta"><div class="name">Hover wash</div><div class="hex">#FFF5F0</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-charcoal)"></div><div class="meta"><div class="name">Charcoal</div><div class="hex">#282828</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--gradient-brand)"></div><div class="meta"><div class="name">Gradient</div><div class="hex">brand</div></div></div>
+  </div>
+</body>
+</html>

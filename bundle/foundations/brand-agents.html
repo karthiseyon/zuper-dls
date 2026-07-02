@@ -1,0 +1,27 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Zuper agents" subtitle="Caped 3D superhero mascots — one per AI agent. Use on dark or warm grounds." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-warm); padding: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; }
+  .agent { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .frame { width: 100%; aspect-ratio: 1; background: linear-gradient(160deg,#FFF5F0,#FCE9E1); border-radius: 14px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; border: 1px solid var(--border-card); }
+  .frame img { height: 96%; width: auto; object-fit: contain; object-position: bottom; }
+  .name { font-family: var(--font-display); font-weight: 700; font-size: 13px; text-align: center; color: var(--text-primary); }
+  .role { font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); text-align: center; margin-top: -6px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="agent"><div class="frame"><img src="../assets/agents/sales-coach.png" alt="Sales Coach"></div><div class="name">Review analyser</div><div class="role">REPUTATION</div></div>
+    <div class="agent"><div class="frame"><img src="../assets/agents/front-office.png" alt="Front Office"></div><div class="name">Front Office</div><div class="role">Dispatch · support</div></div>
+    <div class="agent"><div class="frame"><img src="../assets/agents/field-technician.png" alt="Field Technician"></div><div class="name">Field Tech</div><div class="role">On the job</div></div>
+    <div class="agent"><div class="frame"><img src="../assets/agents/business-analyst.png" alt="Business Analyst"></div><div class="name">Business Analyst</div><div class="role">Insights</div></div>
+    <div class="agent"><div class="frame"><img src="../assets/agents/review-analyser.png" alt="Review Analyser"></div><div class="name">Sales Coach agent</div><div class="role">TRAINING OFFICER</div></div>
+    <div class="agent"><div class="frame"><img src="../assets/agents/weather.png" alt="Weather"></div><div class="name">Weather</div><div class="role">Scheduling</div></div>
+  </div>
+</body>
+</html>

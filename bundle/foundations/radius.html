@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radius" subtitle="sm 8 (buttons) · card 14 · lg 16 · pill 999" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-warm); padding: 24px; }
+  .row { display: flex; gap: 18px; align-items: center; }
+  .u { text-align: center; }
+  .box { width: 80px; height: 64px; background: var(--surface-white); border: 1px solid var(--border-divider); box-shadow: var(--shadow-sm); }
+  .n { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+  .pill { width: 110px; border-radius: 999px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="u"><div class="box" style="border-radius:8px"></div><div class="n">sm · 8</div></div>
+    <div class="u"><div class="box" style="border-radius:12px"></div><div class="n">md · 12</div></div>
+    <div class="u"><div class="box" style="border-radius:14px"></div><div class="n">card · 14</div></div>
+    <div class="u"><div class="box" style="border-radius:16px"></div><div class="n">lg · 16</div></div>
+    <div class="u"><div class="box pill"></div><div class="n">pill · 999</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Product slide" subtitle="White interior · product screen floats as a card" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide { width: 1280px; height: 720px; background: #fff; color: var(--text-primary); font-family: var(--font-deck); position: relative; box-sizing: border-box; padding: 88px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .eyebrow { font-family: var(--font-mono); font-size: 16px; text-transform: uppercase; letter-spacing: .14em; color: var(--color-primary); }
+  h2 { font-weight: 800; font-size: 48px; letter-spacing: -.03em; margin: 14px 0 18px; text-wrap: balance; }
+  p { font-family: var(--font-deck-body); font-size: 19px; line-height: 1.55; color: var(--text-secondary); margin: 0 0 24px; max-width: 440px; }
+  .feat { display: flex; flex-direction: column; gap: 12px; }
+  .li { display: flex; align-items: center; gap: 12px; font-family: var(--font-deck-body); font-size: 17px; }
+  .check { color: var(--color-primary); font-weight: 800; }
+  /* product mock */
+  .mock { background: var(--surface-warm); border-radius: 18px; padding: 28px; }
+  .win { background: #fff; border-radius: 14px; box-shadow: var(--shadow-float); overflow: hidden; }
+  .bar { display: flex; gap: 7px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border-divider); }
+  .dotr { width: 10px; height: 10px; border-radius: 50%; }
+  .job { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid var(--border-card); }
+  .time { font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); width: 42px; }
+  .jn { font-weight: 600; font-size: 14px; }
+  .jw { font-size: 12px; color: var(--text-muted); }
+  .badge { margin-left: auto; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+  .wm { position: absolute; bottom: 44px; right: 96px; font-family: var(--font-deck); font-weight: 800; font-size: 22px; letter-spacing: -.04em; color: var(--color-ink); }
+  .wm .dot { color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div>
+      <div class="eyebrow">Scheduling &amp; Dispatch</div>
+      <h2>One board for every crew, every job</h2>
+      <p>Drag a job, reassign a tech, and the customer gets an updated ETA — automatically.</p>
+      <div class="feat">
+        <div class="li"><span class="check">&check;</span> Smart routing by location &amp; skill</div>
+        <div class="li"><span class="check">&check;</span> Live status from the field</div>
+        <div class="li"><span class="check">&check;</span> Automatic customer notifications</div>
+      </div>
+    </div>
+    <div class="mock">
+      <div class="win">
+        <div class="bar"><span class="dotr" style="background:#FF5F57"></span><span class="dotr" style="background:#FEBC2E"></span><span class="dotr" style="background:#28C840"></span><span style="margin-left:10px;font-family:var(--font-mono);font-size:12px;color:var(--text-muted)">Dispatch board</span></div>
+        <div class="job"><span class="time">8:00</span><div><div class="jn">Tear-off — 14 Maple Ave</div><div class="jw">Crew A</div></div><span class="badge" style="background:var(--status-success-bg);color:var(--status-success-fg)">Completed</span></div>
+        <div class="job"><span class="time">10:30</span><div><div class="jn">Inspection — Summit Plaza</div><div class="jw">M. Reyes</div></div><span class="badge" style="background:#E8F0FE;color:#1A56DB">En route</span></div>
+        <div class="job" style="border-bottom:0"><span class="time">13:00</span><div><div class="jn">Repair — 9 Oak Court</div><div class="jw">Crew B</div></div><span class="badge" style="background:var(--status-warning-bg);color:var(--status-warning-fg)">Scheduled</span></div>
+      </div>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal.png" alt="Zuper" style="height:26px;width:auto;display:block;"></div>
+  </div>
+</body>
+</html>

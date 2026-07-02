@@ -1,0 +1,23 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Shadows" subtitle="Soft, warm elevation — cards float as rounded shadowed surfaces" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-warm); padding: 28px 24px; }
+  .row { display: flex; gap: 24px; }
+  .u { text-align: center; flex: 1; }
+  .box { height: 70px; background: var(--surface-white); border-radius: var(--radius-card); }
+  .n { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 12px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="u"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="n">sm</div></div>
+    <div class="u"><div class="box" style="box-shadow:var(--shadow-card)"></div><div class="n">card</div></div>
+    <div class="u"><div class="box" style="box-shadow:var(--shadow-float)"></div><div class="n">float</div></div>
+    <div class="u"><div class="box" style="box-shadow:var(--shadow-orange)"></div><div class="n">orange</div></div>
+  </div>
+</body>
+</html>

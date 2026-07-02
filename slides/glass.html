@@ -1,0 +1,38 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Zuper Glass" subtitle="AR smart-glasses ground — reserved for Zuper Glass" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box; position: relative; overflow: hidden;
+    font-family: var(--font-deck); color: #FAFAFA; padding: 80px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    background: #08080a url(../assets/backgrounds/zuper-glass-bg.jpg) center/cover no-repeat;
+  }
+  .slide::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(8,8,10,.55) 0%, rgba(8,8,10,.05) 32%, rgba(8,8,10,.45) 68%, rgba(8,8,10,.92) 100%);
+  }
+  .inner { position: relative; z-index: 1; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: rgba(255,139,90,.16); border: 1px solid rgba(255,139,90,.32); color: #FF8B5A; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; padding: 7px 14px; border-radius: 999px; margin-bottom: 24px; backdrop-filter: blur(6px); }
+  .badge .new { background: #FF8B5A; color: #1a1a1a; font-weight: 700; border-radius: 5px; padding: 1px 7px; font-size: 11px; }
+  h2 { font-weight: 800; font-size: 56px; letter-spacing: -.03em; margin: 0; max-width: 760px; line-height: 1.05; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.5); }
+  p { font-family: var(--font-body); font-size: 22px; line-height: 1.5; color: #E4E4E7; margin: 20px 0 0; max-width: 660px; text-shadow: 0 1px 16px rgba(0,0,0,.5); }
+  .wm { position: absolute; bottom: 40px; right: 80px; z-index: 1; }
+  .wm img { height: 26px; width: auto; display: block; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="inner">
+      <span class="badge"><span class="new">New</span> Zuper Glass</span>
+      <h2>See the roof before you climb it</h2>
+      <p>Zuper Glass overlays damage detection, measurements and job context straight onto the field tech's line of sight — no clipboard, no second trip.</p>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal-white.png" alt="Zuper"></div>
+  </div>
+</body>
+</html>

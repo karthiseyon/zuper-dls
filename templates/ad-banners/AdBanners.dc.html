@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Ad banners" description="Display-ad set at standard IAB sizes — leaderboard, billboard, medium & large rectangle, half-page, skyscraper, mobile. On-brand orange/white with logo + CTA." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style> body { margin: 0; background: #ECEAE6; } </style>
+</helmet>
+
+<div style="font-family: var(--font-body); color: var(--text-primary); padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center;">
+
+  <!-- Leaderboard 728×90 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Leaderboard · 728 × 90</div>
+    <div style="width: 728px; height: 90px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; border-radius: 4px; display: flex; align-items: center; gap: 22px; padding: 0 26px; overflow: hidden;">
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="height: 40px; width: auto;">
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 26px; letter-spacing: -.02em; line-height: 1.05; flex: 1;">Run service from first call to final invoice</div>
+      <span style="background: var(--color-ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 15px; padding: 11px 22px; border-radius: 8px; white-space: nowrap;">Book a demo</span>
+    </div>
+  </div>
+
+  <!-- Billboard 970×250 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Billboard · 970 × 250</div>
+    <div style="width: 970px; height: 250px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; border-radius: 6px; padding: 40px 48px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+      <div style="font-family: var(--font-mono); font-size: 14px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 14px;">The AI OS for field service</div>
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 50px; line-height: 1.02; letter-spacing: -.03em; max-width: 640px;">Win 1 in 3 quotes on-site</div>
+      <span style="align-self: flex-start; margin-top: 22px; background: var(--color-ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 17px; padding: 13px 26px; border-radius: 8px;">Book a demo →</span>
+      <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; top: 36px; right: 48px; height: 30px; width: auto;">
+      <img src="../../assets/mini-humans/reaching-up.gif" alt="" aria-hidden="true" style="position: absolute; right: 52px; bottom: 0; height: 66px; width: auto; display: block;">
+    </div>
+  </div>
+
+  <!-- Medium rectangle 300×250 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Medium rectangle · 300 × 250</div>
+    <div style="width: 300px; height: 250px; box-sizing: border-box; background: #fff; color: var(--text-primary); border-radius: 6px; padding: 26px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+      <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--color-primary); margin-bottom: 10px;">Field service · AI</div>
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 30px; line-height: 1.05; letter-spacing: -.02em;">Run a tighter operation</div>
+      <span style="align-self: flex-start; margin-top: 18px; background: var(--color-primary); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 8px;">Book a demo</span>
+      <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 26px; bottom: 22px; height: 18px; width: auto;">
+    </div>
+  </div>
+
+  <!-- Large rectangle 336×280 (stat, orange) -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Large rectangle · 336 × 280</div>
+    <div style="width: 336px; height: 280px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; border-radius: 6px; padding: 28px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 96px; letter-spacing: -.04em; line-height: .9;">28%</div>
+      <div style="font-family: var(--font-display); font-weight: 700; font-size: 22px; line-height: 1.2; margin-top: 10px; max-width: 240px;">less drive time per crew</div>
+      <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 28px; bottom: 24px; height: 22px; width: auto;">
+    </div>
+  </div>
+
+  <!-- Half page 300×600 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Half page · 300 × 600</div>
+    <div style="width: 300px; height: 600px; box-sizing: border-box; background: #fff; color: var(--text-primary); border-radius: 6px; padding: 32px 28px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 10px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+      <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--color-primary); margin-bottom: 14px;">From first call to invoice</div>
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.03; letter-spacing: -.03em;">Everything between the call and the cash</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin: 22px 0; font-size: 14px;">
+        <div style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--color-primary); font-weight: 800;">&check;</span> Scheduling &amp; dispatch</div>
+        <div style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--color-primary); font-weight: 800;">&check;</span> Intelligent quoting</div>
+        <div style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--color-primary); font-weight: 800;">&check;</span> Job costing</div>
+      </div>
+      <span style="align-self: flex-start; background: var(--color-primary); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: 8px;">Book a demo</span>
+      <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 28px; bottom: 26px; height: 18px; width: auto;">
+      <img src="../../assets/mini-humans/ready-to-work.gif" alt="" aria-hidden="true" style="position: absolute; right: 16px; bottom: 0; height: 70px; width: auto; display: block;">
+    </div>
+  </div>
+
+  <!-- Skyscraper 160×600 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Skyscraper · 160 × 600</div>
+    <div style="width: 160px; height: 600px; box-sizing: border-box; background: linear-gradient(160deg,#1C0A06 0%,#7E1C0B 28%,#D43A14 62%,#F2864F 100%); color: #fff; border-radius: 6px; padding: 26px 20px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 38px; line-height: 1.02; letter-spacing: -.03em;">First call to invoice</div>
+      <span style="align-self: flex-start; margin-top: 18px; background: var(--color-ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 13px; padding: 10px 16px; border-radius: 8px;">Demo →</span>
+      <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 20px; bottom: 24px; height: 18px; width: auto;">
+    </div>
+  </div>
+
+  <!-- Mobile leaderboard 320×100 -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);">Mobile · 320 × 100</div>
+    <div style="width: 320px; height: 100px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; border-radius: 4px; display: flex; align-items: center; gap: 14px; padding: 0 18px; overflow: hidden;">
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="height: 34px; width: auto;">
+      <div style="font-family: var(--font-display); font-weight: 800; font-size: 18px; line-height: 1.1; letter-spacing: -.02em; flex: 1;">Run a tighter operation</div>
+      <span style="background: var(--color-ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 12px; padding: 8px 14px; border-radius: 6px; white-space: nowrap;">Demo</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

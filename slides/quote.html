@@ -1,0 +1,32 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Quote slide" subtitle="White interior · big orange quote mark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide { width: 1280px; height: 720px; background: var(--surface-warm); color: var(--text-primary); font-family: var(--font-deck); position: relative; box-sizing: border-box; padding: 96px 120px; display: flex; flex-direction: column; justify-content: center; }
+  .mark { font-family: var(--font-deck); font-weight: 800; font-size: 200px; line-height: .6; color: var(--color-primary); height: 96px; }
+  blockquote { font-family: var(--font-deck); font-weight: 700; font-size: 46px; line-height: 1.25; letter-spacing: -.02em; margin: 0; max-width: 960px; text-wrap: balance; }
+  .by { display: flex; align-items: center; gap: 16px; margin-top: 40px; }
+  .ava { width: 56px; height: 56px; border-radius: 50%; background: var(--surface-banner); color: var(--color-primary-press); display: flex; align-items: center; justify-content: center; font-family: var(--font-deck); font-weight: 700; font-size: 20px; }
+  .name { font-family: var(--font-deck-body); font-weight: 700; font-size: 18px; }
+  .role { font-family: var(--font-deck-body); font-size: 15px; color: var(--text-secondary); }
+  .wm { position: absolute; bottom: 44px; right: 96px; font-family: var(--font-deck); font-weight: 800; font-size: 22px; letter-spacing: -.04em; color: var(--color-ink); }
+  .wm .dot { color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div class="mark">&ldquo;</div>
+    <blockquote>We stopped losing jobs in the gap between the estimate and the invoice. Zuper closed it.</blockquote>
+    <div class="by">
+      <div class="ava">DR</div>
+      <div><div class="name">Dana Russell</div><div class="role">Owner, Summit Roofing</div></div>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal.png" alt="Zuper" style="height:26px;width:auto;display:block;"></div>
+  </div>
+</body>
+</html>

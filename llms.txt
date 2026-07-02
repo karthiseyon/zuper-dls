@@ -1,0 +1,33 @@
+# Zuper Design Language System
+
+> Brand rules for Zuper, the AI operating system for field service management. One orange `#FD5000` (one primary action per view), ink `#191919`, warm neutrals, charcoal `#282828` feature blocks. Web type: Plus Jakarta Sans (headings), Inter (body), Geist Mono (uppercase orange eyebrows). Decks: Aptos Display / Aptos. Icons: a single-weight outline set, `currentColor`, never emoji or a second library. Voice: plain-spoken, real numbers, speak to the person in the field. Read the full brief before designing anything for Zuper.
+
+Non-negotiables:
+- One orange `#FD5000`, one primary action per screen. Status colours are semantic, never the brand orange.
+- Signature gradient: `linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)`, dark top-left easing to light.
+- Decks follow one contrast rule: pick the cover colour, every interior slide takes the opposite. Primary scheme is a white cover with orange interiors. Dark slides are reserved for Zuper Sense only (`#09090B`, `#FF8B5A` orange-on-dark).
+- Product screens are always built as clean HTML mocks, never stock photos or screenshots of backgrounds.
+- No em dashes in copy. Banned vocab: seamless, leverage, unlock, empower, streamline, robust, elevate, holistic, synergy, ecosystem, revolutionary.
+
+## Docs
+
+- [Design brief](https://zuper-dls.vercel.app/claude-design-brief.md): the condensed machine-readable spec, tokens, components, deck rules, voice, reference URLs
+- [Deck and voice rules](https://zuper-dls.vercel.app/CLAUDE.md): the deck colour schemes and the copy rules in short form
+- [llms-full.txt](https://zuper-dls.vercel.app/llms-full.txt): everything above inlined in one file
+- [Full styleguide site](https://zuper-dls.vercel.app/): the human-readable system with live examples and tools
+
+## Slide layouts
+
+- [Title](https://zuper-dls.vercel.app/slides/title.html): white cover, orange title
+- [Agenda](https://zuper-dls.vercel.app/slides/agenda.html)
+- [Metrics](https://zuper-dls.vercel.app/slides/metrics.html)
+- [Quote](https://zuper-dls.vercel.app/slides/quote.html)
+- [Product](https://zuper-dls.vercel.app/slides/product.html)
+- [Section break](https://zuper-dls.vercel.app/slides/section-break.html): full-bleed orange houses illustration, use between major sections
+- [Zuper Glass](https://zuper-dls.vercel.app/slides/glass.html): full-bleed AR glasses photo, reserved for Zuper Glass topics
+- [Zuper Sense](https://zuper-dls.vercel.app/slides/sense-fluted.html): the black Sense slide
+
+## Assets
+
+- [Design system bundle (zip)](https://zuper-dls.vercel.app/assets/zuper-design-system.zip): SKILL.md, tokens, components, UI kits, templates
+- [Logo, full colour SVG](https://zuper-dls.vercel.app/assets/logos/zuper-horizontal.svg): dark logo for light grounds; use the white variant on charcoal, dark UI or the orange gradient

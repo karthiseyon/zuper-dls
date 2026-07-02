@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zuper · Design Language Systems</title>
-<meta name="description" content="The Zuper Design Language System, one brand across ten systems: decks, website, case studies, mini-humans, social, email and brand assets. Built to plug into Claude Design.">
+<meta name="description" content="The Zuper Design Language System, one brand across every system: decks, website, case studies, iconography, mini-humans, social & ads, email and brand assets. Built to plug into Claude Design.">
 <link rel="icon" type="image/svg+xml" href="assets/logos/zuper-logomark.svg">
 <link rel="icon" type="image/png" href="assets/logos/zuper-logomark.png">
 <link rel="apple-touch-icon" href="assets/logos/zuper-logomark.png">
@@ -10,17 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Zuper Design Language System">
 <meta property="og:title" content="Zuper · Design Language Systems">
-<meta property="og:description" content="One brand across ten systems: decks, website, case studies, mini-humans, social, email and brand assets. Built to plug into Claude Design.">
+<meta property="og:description" content="One brand across every system: decks, website, case studies, iconography, mini-humans, social & ads, email and brand assets. Built to plug into Claude Design.">
 <meta property="og:url" content="https://zuper-dls.vercel.app">
 <meta property="og:image" content="https://zuper-dls.vercel.app/assets/linkedin/zuper-linkedin-trades.png">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zuper · Design Language Systems">
-<meta name="twitter:description" content="One brand across ten systems: decks, website, case studies, mini-humans, social, email and brand assets.">
+<meta name="twitter:description" content="One brand across every system: decks, website, case studies, iconography, mini-humans, social & ads, email and brand assets.">
 <meta name="twitter:image" content="https://zuper-dls.vercel.app/assets/linkedin/zuper-linkedin-trades.png">
 <style>
-@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/space-grotesk-500.woff2) format("woff2");}
-@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/space-grotesk-700.woff2) format("woff2");}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-400.woff2) format("woff2");}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-500.woff2) format("woff2");}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/inter-700.woff2) format("woff2");}
@@ -567,7 +568,7 @@
   --ui-line:#2C241E;
   --ui-orange:#FD5000;
   --canvas:#EFEAE2;
-  --display:'Space Grotesk',system-ui,sans-serif;
+  --display:'Plus Jakarta Sans',system-ui,sans-serif;
   --body:'Inter',system-ui,sans-serif;
   --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
 }
@@ -655,15 +656,15 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* deck slide fan */
 .ha-fan{position:relative;height:236px}
 .ha-fan .sl{position:absolute;left:50%;width:248px;height:139px;border-radius:12px;box-shadow:0 20px 46px rgba(20,4,3,.30);border:1px solid rgba(0,0,0,.06);padding:15px 16px;overflow:hidden}
-.ha-fan .s1{margin-left:-104px;top:2px;transform:rotate(8deg);background:linear-gradient(135deg,#DB3602 0%,#FD5000 30%,#FF8A4C 100%);color:#fff;border-color:rgba(255,255,255,.35)}
-.ha-fan .s2{margin-left:-128px;top:46px;transform:rotate(-4deg);background:linear-gradient(135deg,#DB3602 0%,#FD5000 30%,#FF8A4C 100%);color:#fff;border-color:rgba(255,255,255,.35)}
+.ha-fan .s1{margin-left:-104px;top:2px;transform:rotate(8deg);background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;border-color:rgba(255,255,255,.35)}
+.ha-fan .s2{margin-left:-128px;top:46px;transform:rotate(-4deg);background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;border-color:rgba(255,255,255,.35)}
 .ha-fan .s3{margin-left:-150px;top:92px;transform:rotate(-13deg);background:#fff;color:#191919}
 .ha-fan .e{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
 .ha-fan .t{font:700 16px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
 .ha-fan .s3 .e{opacity:.85}
 /* one-pager mini doc */
 .ha-doc{background:#fff;border-radius:12px;box-shadow:0 28px 64px rgba(20,4,3,.26);padding:24px 22px 20px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
-.ha-doc .rule{position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,#DB3602,#FD5000,#FF8A4C)}
+.ha-doc .rule{position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F)}
 .ha-doc .lk{font:700 10px/1 'Geist Mono',monospace;letter-spacing:.1em;color:#FD5000;margin:6px 0 16px}
 .ha-doc .l{height:8px;border-radius:5px;background:#E7E0D6;margin-bottom:8px}
 .ha-doc .m{margin-top:18px;padding-top:16px;border-top:1px solid #EFEAE2;display:flex;align-items:baseline;gap:9px}
@@ -695,7 +696,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* social & ads: creative fan */
 .ha-ads{position:relative;height:236px}
 .ha-ads .ad{position:absolute;border-radius:13px;box-shadow:0 20px 46px rgba(20,4,3,.28);overflow:hidden;padding:15px 16px}
-.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#DB3602,#FD5000 32%,#FF8A4C);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.ha-ads .a1{width:152px;height:152px;left:12px;top:4px;transform:rotate(-7deg);background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);color:#fff;border:1px solid rgba(255,255,255,.3)}
 .ha-ads .a2{width:186px;height:120px;left:112px;top:78px;transform:rotate(6deg);background:#fff;color:#191919;border:1px solid rgba(0,0,0,.06)}
 .ha-ads .e{font:700 8px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
 .ha-ads .t{font:700 17px/1.08 'Plus Jakarta Sans',sans-serif;margin-top:9px;letter-spacing:-.01em}
@@ -705,7 +706,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* emailer: 600px email preview */
 .ha-mail{width:212px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 28px 64px rgba(20,4,3,.26);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
 .ha-mail .top{padding:11px 14px;border-bottom:1px solid #EFEAE2}
-.ha-mail .band{background:linear-gradient(135deg,#DB3602,#FD5000 32%,#FF8A4C);padding:20px 16px;color:#fff}
+.ha-mail .band{background:linear-gradient(135deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);padding:20px 16px;color:#fff}
 .ha-mail .band .t{font:700 16px/1.08 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em}
 .ha-mail .band .s{font:500 10px/1.4 'Inter',sans-serif;opacity:.92;margin-top:6px}
 .ha-mail .bd{padding:15px 16px}
@@ -744,7 +745,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 /* overview: systems hub grid */
 .ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:16px;border:1px solid rgba(0,0,0,.05);display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .ha-hub .t{border-radius:12px;padding:15px 14px;border:1px solid #EFEAE2;background:#FBF8F4}
-.ha-hub .t.on{background:linear-gradient(150deg,#DB3602,#FD5000 32%,#FF8A4C);border-color:transparent}
+.ha-hub .t.on{background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);border-color:transparent}
 .ha-hub .t .ic{color:#FD5000;margin-bottom:11px}
 .ha-hub .t.on .ic{color:#fff}
 .ha-hub .t .nm{font:700 13px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919;letter-spacing:-.01em}
@@ -818,7 +819,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 @keyframes ha-typline{0%{max-width:0}45%{max-width:250px}88%{max-width:250px}100%{max-width:0}}
 /* Color, palette card */
 .ha-pal{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05)}
-.ha-pal .grad{height:122px;border-radius:12px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);display:flex;align-items:flex-end;padding:13px}
+.ha-pal .grad{height:122px;border-radius:12px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);display:flex;align-items:flex-end;padding:13px}
 .ha-pal .grad .hx{font:700 13px/1 'Geist Mono',monospace;color:#fff;letter-spacing:.03em}
 .ha-pal .chips6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}
 .ha-pal .chips6 span{aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,0,0,.07);display:block;animation:ha-pop .5s ease-out both}
@@ -833,7 +834,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-typ .fams span{font:600 9px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#7A7268;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px}
 /* Voice, speech bubble */
 .ha-voice{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:20px;border:1px solid rgba(0,0,0,.05)}
-.ha-voice .bub{background:linear-gradient(135deg,#DB3602,#FD5000 35%,#FF8A4C);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 18px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
+.ha-voice .bub{background:linear-gradient(135deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);color:#fff;border-radius:16px 16px 16px 4px;padding:18px;font:700 18px/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;min-height:66px}
 .ha-voice .bub .tw{overflow:hidden;white-space:nowrap;max-width:270px;animation:ha-voicetype 5s steps(26,end) infinite}
 @keyframes ha-voicetype{0%{max-width:0}45%{max-width:270px}88%{max-width:270px}100%{max-width:0}}
 .ha-voice .bub .cr{width:3px;height:20px;background:#fff;margin-left:3px;flex:0 0 auto;animation:ha-caret 1s steps(1) infinite}
@@ -853,7 +854,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .acard .agdl:hover{background:var(--brand-subtle);border-color:var(--brand-default)}
 /* Agent avatars, hero art: cross-fading mascot tile */
 .ha-agents{width:300px;margin-left:auto}
-.ha-agents .tile{position:relative;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.32)}
+.ha-agents .tile{position:relative;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);overflow:hidden;box-shadow:0 30px 70px rgba(20,4,3,.32)}
 .ha-agents .badge{position:absolute;top:13px;left:14px;z-index:3;font:600 9px/1 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 10px}
 .ha-agents .tile img{position:absolute;left:50%;bottom:0;height:97%;width:auto;transform:translateX(-50%);opacity:0;animation:ha-agcycle 18s ease-in-out infinite}
 .ha-agents .tile img:nth-child(2){animation-delay:0s}
@@ -1032,7 +1033,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .alert .ic{font-weight:700;font-family:var(--display)}
 .fld label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);margin-bottom:7px;font-family:var(--body)}
 .fld input{width:100%;font-family:var(--body);font-size:14px;padding:11px 13px;border-radius:10px;border:1px solid var(--border-default);background:var(--surface-default);color:var(--text-primary)}
-.fld input:focus{outline:none;border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 22%,transparent)}
+.fld input:focus{outline:none;border-color:var(--brand-default);box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 .fld input::placeholder{color:var(--text-tertiary)}
 .mini-card{background:var(--surface-default);border:1px solid var(--border-default);border-radius:14px;padding:18px;overflow:hidden}
 .mini-card .mc-k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);font-family:var(--mono)}
@@ -1095,7 +1096,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .fld textarea{width:100%;font-family:var(--body);font-size:14px;padding:11px 13px;border-radius:10px;border:1px solid var(--border-default);background:var(--surface-default);color:var(--text-primary);resize:vertical;min-height:74px}
 .fld input.err,.fld textarea.err{border-color:#dc2626;box-shadow:0 0 0 3px #dc26261a}
 .fld .errmsg{color:#b5271c;font-size:12px;margin-top:6px}
-.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--brand-default);box-shadow:0 0 0 3px #fd50001a}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--brand-default);box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 /* grid + breakpoints */
 .gridcols{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;margin-top:6px}
 .gridcols .col{height:48px;background:var(--brand-subtle);border:1px solid var(--brand-default);border-radius:6px}
@@ -1255,23 +1256,25 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .icst-chip{position:relative;width:26px;height:26px;border-radius:7px;border:1px solid #E7E0D6;cursor:pointer;flex:0 0 auto;overflow:hidden}
 .icst-chip input{position:absolute;inset:-6px;opacity:0;cursor:pointer}
 .icst-hex{font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;text-transform:uppercase;padding:7px 10px;border:1px solid #E7E0D6;border-radius:8px;width:100%;box-sizing:border-box;color:#191919;background:#fff}
-.icst-hex:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-hex:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 .icst-ctl input[type=range]{flex:1;accent-color:#FD5000}
 .icst-num{width:56px;flex:0 0 auto;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#191919;border:1px solid #E7E0D6;border-radius:7px;padding:6px 8px;text-align:center;background:#fff}
-.icst-num:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-num:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 .icst-exp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:2px}
 .icst-btn{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.03em;border:1px solid #E7E0D6;background:#fff;color:#191919;border-radius:9px;padding:10px 8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
 .icst-btn:hover{background:#FD5000;border-color:#FD5000;color:#fff}
 .icst-btn.done{background:#1E854B;color:#fff;border-color:#1E854B}
 .icst-pickwrap{display:flex;flex-direction:column;gap:11px}
 .icst-search{font-family:'Inter',system-ui,sans-serif;font-size:14px;padding:12px 14px;border:1px solid #E7E0D6;border-radius:10px;background:#fff;color:#191919;width:100%;box-sizing:border-box}
-.icst-search:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.14)}
+.icst-search:focus{outline:none;border-color:#FD5000;box-shadow:0 0 0 3px rgba(253,80,0,.32)}
 .icst-meta{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;color:#7A7268;letter-spacing:.02em}
 .icst-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:8px;max-height:486px;overflow:auto;padding:6px;border:1px solid #F0EAE1;border-radius:12px;background:#fff}
 .icst-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:9px;cursor:pointer;color:#191919;background:none}
 .icst-cell:hover{background:#F6F1EB}
 .icst-cell.on{border-color:#FD5000;background:#FFF6F1}
 </style>
+</head>
+<body>
 
 <div class="app">
   <aside class="sidebar">
@@ -1300,7 +1303,7 @@ const SYS = [
   lede:"The primary deck look, a white cover with orange interiors. Clean white and warm‑cream grounds, black type set in Aptos, and Zuper orange reserved for emphasis. Built for readable, content‑first slides.",
   canvas:"#F8F5F0",
   hero:{bg:"linear-gradient(135deg,#FFFFFF 0%,#FFF3EC 60%,#FFE2D2 100%)",ink:"#1B1919",sub:"#5A554F",kick:"#FD5000",chipBg:"#FFFFFF",chipInk:"#1B1919",chipLine:"#E7E6E3"},
-  fonts:{display:"Space Grotesk / 500 · 700",body:"Inter / 400 · 500 · 700"},
+  fonts:{display:"Aptos Display / 700",body:"Aptos / 400 · 700"},
   vars:{
     "surface-default":"#FFFFFF","surface-subtle":"#F8F5F0","surface-card":"#FFFAEA","surface-pill":"#FFF3EC","surface-inverse":"#1B1919",
     "text-primary":"#1B1919","text-secondary":"#5A554F","text-tertiary":"#8A847C","text-disabled":"#B8B2AA","text-brand":"#FD5000","text-inverse":"#FFFFFF",
@@ -1322,7 +1325,7 @@ const SYS = [
   lede:"The secondary deck look, an orange cover with white interiors. Full‑bleed orange for title slides, section breaks and statement moments. White Aptos Display headlines own the frame; everything else gets out of the way.",
   canvas:"#FD5000",
   hero:{bg:"linear-gradient(135deg,#C22D00 0%,#FD5000 45%,#FF8A4C 100%)",ink:"#FFFFFF",sub:"#FFE0CE",kick:"#FFFAEA",chipBg:"rgba(255,255,255,.14)",chipInk:"#FFFFFF",chipLine:"rgba(255,255,255,.32)"},
-  fonts:{display:"Space Grotesk / 700",body:"Inter / 400 · 600"},
+  fonts:{display:"Aptos Display / 700",body:"Aptos / 400 · 700"},
   vars:{
     "surface-default":"#FD5000","surface-subtle":"#E84800","surface-card":"#FF6B2E","surface-pill":"#E84A05","surface-inverse":"#FFFFFF",
     "text-primary":"#FFFFFF","text-secondary":"#FFE0CE","text-tertiary":"#FFC4A6","text-disabled":"#F0A581","text-brand":"#FFFAEA","text-inverse":"#1B1919",
@@ -1343,7 +1346,7 @@ const SYS = [
   lede:"The Zuper Sense look: a zinc near‑black canvas, glassy surfaces, and a multi‑hue accent set led by orange. Made for the AI product narrative and data‑rich, low‑light slides.",
   canvas:"#09090B",
   hero:{bg:"radial-gradient(120% 140% at 80% -10%,rgba(232,93,58,.32),transparent 55%),radial-gradient(90% 120% at 0% 0%,rgba(167,139,250,.28),transparent 50%),#09090B",ink:"#FAFAFA",sub:"#A1A1AA",kick:"#FF8B5A",chipBg:"rgba(255,255,255,.06)",chipInk:"#E4E4E7",chipLine:"rgba(255,255,255,.14)"},
-  fonts:{display:"Space Grotesk / 700",body:"Inter / 400 · 500",accent:"Press Start 2P (labels)"},
+  fonts:{display:"Aptos Display / 700",body:"Aptos / 400 · 700",accent:"Press Start 2P (labels)"},
   vars:{
     "surface-default":"#09090B","surface-subtle":"#141417","surface-card":"#131317","surface-pill":"#1C1C21","surface-inverse":"#FAFAFA",
     "text-primary":"#FAFAFA","text-secondary":"#A1A1AA","text-tertiary":"#71717A","text-disabled":"#52525B","text-brand":"#FF8B5A","text-inverse":"#09090B",
@@ -1365,7 +1368,7 @@ const SYS = [
   lede:"The zuper.co system: warm cream sections, peach gradients, orange CTAs and airy spacing. Optimised for marketing pages, navigation and conversion surfaces.",
   canvas:"#FFFFFF",
   hero:{bg:"linear-gradient(120deg,#FFFAEA 0%,#F8F5F0 40%,#F8D5C2 100%)",ink:"#1B1919",sub:"#5A554F",kick:"#FD5000",chipBg:"#FFFFFF",chipInk:"#1B1919",chipLine:"#E7E6E3"},
-  fonts:{display:"Space Grotesk / 500 · 700",body:"Inter / 400 · 500 · 700"},
+  fonts:{display:"Plus Jakarta Sans / 600 · 700",body:"Inter / 400 · 500 · 700"},
   vars:{
     "surface-default":"#FFFFFF","surface-subtle":"#F8F5F0","surface-card":"#FFFAEA","surface-pill":"#FFF3EC","surface-inverse":"#1B1919",
     "text-primary":"#1B1919","text-secondary":"#5A554F","text-tertiary":"#8A847C","text-disabled":"#B8B2AA","text-brand":"#FD5000","text-inverse":"#FFFFFF",
@@ -1641,7 +1644,7 @@ const SEM_GROUPS=[
 
 function buildSystem(s){
   const V=s.vars;
-  const face=FACE[s.id]||{d:"'Space Grotesk',system-ui,sans-serif",b:"'Inter',system-ui,sans-serif",logo:"dark"};
+  const face=FACE[s.id]||{d:"'Plus Jakarta Sans',system-ui,sans-serif",b:"'Inter',system-ui,sans-serif",logo:"dark"};
   const fl=FONTLABEL[s.id]||s.fonts;
   const varStyle=Object.entries(V).map(([k,v])=>`--${k}:${v}`).join(";")
     +`;--display:${face.d};--body:${face.b};--c-canvas:${s.canvas}`
@@ -1817,16 +1820,22 @@ function buildSystem(s){
   stage.scrollTop=0;window.scrollTo(0,0);
 }
 
+/* ===== Shared page-chrome tokens — single source of truth for every light styleguide page ===== */
+const CHROME_TOKENS={
+  "brand-default":"#FD5000","brand-hover":"#E04600","brand-deep":"#B5271C","brand-subtle":"#FFE7DC",
+  "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF","surface-cream":"#FFF7EE",
+  "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
+  "border-default":"#E7E0D6","border-subtle":"#F0EAE1"};
+function chromeCss(canvas){
+  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,CHROME_TOKENS);
+  return Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:${canvas||"#FBF8F4"}`
+    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+}
+
 /* ===== One‑pager (custom) ===== */
 function buildOnePager(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF","surface-cream":"#FFF7EE",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F4EEE6`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss("#F4EEE6");
 
   const foot=n=>`<div class="pfoot"><div class="fl">${logo("dark",13)}<span class="fdiv"></span><span class="cmk">SUMMIT ROOFING</span></div><span class="pg">zuper.co · <b>0${n}</b> / 05</span></div>`;
 
@@ -2173,7 +2182,7 @@ function buildWebsite(s){
 
   <section class="block"><div class="wrap">
     <p class="ebm">Foundations</p><h2 class="sec">02 · Typography</h2>
-    <p class="sec-note"><b style="color:var(--text-primary)">Plus Jakarta Sans</b> for hero &amp; headings · <b style="color:var(--text-primary)">Inter</b> for body · <b style="color:var(--text-primary)">Geist Mono</b> for eyebrows &amp; labels (uppercase, the site's signature). Secondary: IBM Plex Sans.</p>
+    <p class="sec-note"><b style="color:var(--text-primary)">Plus Jakarta Sans</b> for hero &amp; headings · <b style="color:var(--text-primary)">Inter</b> for body · <b style="color:var(--text-primary)">Geist Mono</b> for eyebrows &amp; labels (uppercase, the site's signature).</p>
     <div style="background:var(--surface-subtle);border:1px solid var(--border-default);border-radius:14px;padding:24px;margin-bottom:24px">
       <p class="ebm">The shift · this is the eyebrow style</p>
       <div style="font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;line-height:1.04;color:var(--text-primary)">From a <span class="hl">Frankenstein</span> stack to a unified <span class="hlo">AI operating system</span>.</div>
@@ -2190,7 +2199,7 @@ function buildWebsite(s){
       <div>
         <h3 class="grp">Radius</h3><div class="radii">${[["sm","6px"],["btn","8px"],["card","14px"],["lg","20px"],["pill","999px"]].map(r=>`<div class="r" style="border-radius:${r[1]}">${r[0]}</div>`).join("")}</div>
         <h3 class="grp" style="margin-top:26px">Elevation & focus</h3>
-        <div class="shadows"><div class="sh" style="box-shadow:0 1px 2px rgba(0,0,0,.06)">card</div><div class="sh" style="box-shadow:0 20px 50px rgba(0,0,0,.12)">menu</div><div class="sh" style="box-shadow:0 0 0 3px #fd50001a;border-color:var(--brand-default)">focus</div></div>
+        <div class="shadows"><div class="sh" style="box-shadow:0 1px 2px rgba(0,0,0,.06)">card</div><div class="sh" style="box-shadow:0 20px 50px rgba(0,0,0,.12)">menu</div><div class="sh" style="box-shadow:0 0 0 3px rgba(253,80,0,.32);border-color:var(--brand-default)">focus</div></div>
       </div>
     </div>
     <h3 class="grp" style="margin-top:30px">Layout grid, 1200px container · 12 columns</h3>
@@ -2457,14 +2466,7 @@ function buildWebsite(s){
 
 /* ============ USE WITH CLAUDE ============ */
 function buildUse(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-deep":"#B5271C","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   stage.innerHTML=`
   <header class="sys-hero has-art">
@@ -2514,14 +2516,7 @@ function buildUse(){
 
 /* ============ EMAIL SIGNATURE ============ */
 function buildEmailSig(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-deep":"#B5271C","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   stage.innerHTML=`
   <header class="sys-hero has-art">
@@ -2624,14 +2619,7 @@ function buildEmailSig(){
 
 /* ============ SOCIAL & ADS ============ */
 function buildSocial(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F4EEE6`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss("#F4EEE6");
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
   const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
@@ -3021,14 +3009,7 @@ function buildSocial(){
 
 /* ============ EMAILER ============ */
 function buildEmailer(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F4EEE6`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss("#F4EEE6");
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
   const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
@@ -3133,14 +3114,7 @@ function buildEmailer(){
 
 /* ============ ICONOGRAPHY ============ */
 function buildIcons(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)";
   const names=Object.keys(ICON);
@@ -3277,14 +3251,7 @@ function buildIcons(){
 
 /* ============ LOGO USAGE ============ */
 function buildLogos(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   const MONO="'Geist Mono',ui-monospace,monospace",GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919";
   const cap=t=>`<div style="font-family:${MONO};font-size:11px;color:#7A7268;margin-top:10px;letter-spacing:.02em">${t}</div>`;
@@ -3361,14 +3328,7 @@ function buildLogos(){
 
 /* ============ MINI HUMANS ============ */
 function buildHumans(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   const HUMANS=[[GIF_C,"Carrying gear"],[GIF_B,"On the tools"],[GIF_A,"Reaching up"],[GIF_02,"On the job"],[GIF_03,"On the ladder"],[GIF_06,"Ready to work"],[GIF_08,"Inspecting"],[GIF_09,"The crew"]];
   const gallery=HUMANS.map((x,i)=>`<div class="human-card"><img src="${x[0]}" alt=""><span class="lbl">${x[1]}</span><button class="gcopy dl-btn" data-href="${x[0]}" data-name="zuper-mini-human-${i+1}.gif">${icon("download",12)} Download</button></div>`).join("");
@@ -3409,14 +3369,7 @@ function buildHumans(){
 
 /* ============ BRAND ASSETS (logos + social) ============ */
 function buildAssets(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   const variants=[["","Full colour",false],["-gray","Gray",false],["-white","White",true],["-inverted","Inverted",true]];
   const fams=[
@@ -3517,14 +3470,7 @@ function buildAssets(){
 
 /* ============ OVERVIEW / COVER ============ */
 function buildOverview(){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  stage.style.cssText=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FBF8F4`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  stage.style.cssText=chromeCss();
 
   const FOUND=[
     ["logo-usage","shield","Logo usage","Brand","How to place the mark, clear space, minimum sizes, the right variant per background, and the misuse to avoid."],
@@ -3599,14 +3545,7 @@ function buildOverview(){
 
 /* ============ FOUNDATIONS: colour · type · voice ============ */
 function foundTheme(canvas){
-  const W=Object.assign({},SYS.find(s=>s.id==="website").vars,{
-    "brand-default":"#FD5000","brand-hover":"#E04600","brand-subtle":"#FFE7DC",
-    "surface-default":"#FFFFFF","surface-subtle":"#F6F1EB","surface-card":"#FFFFFF",
-    "text-primary":"#191919","text-secondary":"#4B5563","text-tertiary":"#7A7268",
-    "border-default":"#E7E0D6","border-subtle":"#F0EAE1"});
-  return Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:${canvas||"#FBF8F4"}`
-    +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
+  return chromeCss(canvas);
 }
 
 function buildColor(){
@@ -3647,8 +3586,8 @@ function buildColor(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">02 · The gradient</p><h2 class="sec">The orange gradient</h2>
     <p class="sec-note">The signature ground for covers, hero panels and CTAs. <b style="color:var(--text-primary)">The rule: dark at the top‑left, light at the bottom‑right</b>, always this direction and these stops. Don't flip it or invent new gradients.</p>
-    <div style="border-radius:16px;height:150px;background:linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%);box-shadow:0 18px 44px rgba(20,4,3,.18)"></div>
-    ${copyline("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)")}
+    <div style="border-radius:16px;height:150px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);box-shadow:0 18px 44px rgba(20,4,3,.18)"></div>
+    ${copyline("linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)")}
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -3675,7 +3614,7 @@ function buildColor(){
       ${gr("#fff","border:1px solid var(--border-default)","White","Default page ground, the everyday surface.")}
       ${gr("#FBF2EA","","Warm peach","Cards and soft feature blocks.")}
       ${gr("#282828","","Charcoal","High‑contrast feature bands.")}
-      ${gr("linear-gradient(135deg,#DB3602 0%,#FD5000 45%,#FF8A4C 100%)","","Orange gradient","Covers, hero panels and CTAs.")}
+      ${gr("linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)","","Orange gradient","Covers, hero panels and CTAs.")}
       ${gr("#09090B","","Sense black","Reserved for Zuper Sense only.")}
     </div>
   </div></section>
@@ -3935,7 +3874,7 @@ function buildAgents(){
 
 /* ============ NAV ============ */
 const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:""},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"color",name:"Colour",hex:"#FD5000",meta:"palette",grp:"Foundations"},{id:"type",name:"Typography",hex:"#FD5000",meta:"type",grp:"Foundations"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations"},{id:"voice",name:"Voice & tone",hex:"#FD5000",meta:"voice",grp:"Foundations"},{id:"agents",name:"Agent avatars",hex:"#FD5000",meta:"agents",grp:"Foundations"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems"}];
-function setActive(id){
+function setActive(id,push){
   [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
   if(id==="overview")buildOverview();
   else if(id==="assets")buildAssets();
@@ -3956,9 +3895,14 @@ function setActive(id){
   else buildSystem(SYS.find(s=>s.id===id));
   buildSubnav(id);
   revealSections();
-  if(history.replaceState)history.replaceState(null,"","#"+id);
+  if(push===false){if(history.replaceState)history.replaceState(null,"","#"+id);}
+  else if(history.pushState&&location.hash!=="#"+id)history.pushState(null,"","#"+id);
   nav.classList.remove("open");
 }
+window.addEventListener("hashchange",()=>{
+  const id=(location.hash||"").slice(1);
+  setActive(ALL.some(a=>a.id===id)?id:"overview",false);
+});
 let _io;
 function revealSections(){
   if(_io)_io.disconnect();
@@ -4021,5 +3965,7 @@ stage.addEventListener("click",e=>{const c=e.target.closest(".sw-card");if(!c)re
 stage.addEventListener("click",e=>{const q=e.target.closest(".acc .q");if(!q)return;const a=q.parentElement.querySelector(".a");const open=a.style.display!=="none"&&a.dataset.c!=="1";if(a.dataset.c==="1"){a.dataset.c="0";a.style.display="block";q.querySelector(".pm").textContent="−";}else{a.dataset.c="1";a.style.display="none";q.querySelector(".pm").textContent="+";}});
 
 const start=(location.hash||"").slice(1);
-setActive(ALL.some(a=>a.id===start)?start:"overview");
+setActive(ALL.some(a=>a.id===start)?start:"overview",false);
 </script>
+</body>
+</html>

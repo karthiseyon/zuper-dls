@@ -1,0 +1,33 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Metrics slide" subtitle="White interior · big numbers in orange" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide { width: 1280px; height: 720px; background: #fff; color: var(--text-primary); font-family: var(--font-deck); position: relative; box-sizing: border-box; padding: 88px 96px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 16px; text-transform: uppercase; letter-spacing: .14em; color: var(--color-primary); }
+  h2 { font-weight: 800; font-size: 52px; letter-spacing: -.03em; margin: 14px 0 56px; max-width: 820px; text-wrap: balance; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+  .stat { border-top: 4px solid var(--color-primary); padding-top: 24px; }
+  .n { font-family: var(--font-deck); font-weight: 800; font-size: 88px; letter-spacing: -.04em; color: var(--color-primary); line-height: 1; }
+  .l { font-family: var(--font-deck-body); font-size: 20px; color: var(--text-secondary); margin-top: 14px; max-width: 280px; line-height: 1.4; }
+  .wm { position: absolute; bottom: 44px; right: 96px; font-family: var(--font-deck); font-weight: 800; font-size: 22px; letter-spacing: -.04em; color: var(--color-ink); }
+  .wm .dot { color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div class="eyebrow">The impact</div>
+    <h2>What crews see in the first 90 days</h2>
+    <div class="grid">
+      <div class="stat"><div class="n">28%</div><div class="l">less drive time per crew, per week</div></div>
+      <div class="stat"><div class="n">1 in 3</div><div class="l">quotes won on-site, before leaving the driveway</div></div>
+      <div class="stat"><div class="n">2 days</div><div class="l">faster from job complete to invoice sent</div></div>
+    </div>
+    <div class="wm"><img src="../assets/logos/zuper-horizontal.png" alt="Zuper" style="height:26px;width:auto;display:block;"></div>
+  </div>
+</body>
+</html>

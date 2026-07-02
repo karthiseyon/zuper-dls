@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Text Colors" subtitle="Primary ink to muted, plus on-dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-white); padding: 20px; }
+  .stack { display: flex; flex-direction: column; gap: 6px; }
+  .line { font-size: 18px; font-weight: 600; display: flex; align-items: baseline; gap: 12px; }
+  .hex { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); font-weight: 400; }
+  .ondark { background: var(--surface-charcoal); border-radius: var(--radius-sm); padding: 6px 10px; }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="line" style="color:var(--text-primary)">Primary text <span class="hex">#191919</span></div>
+    <div class="line" style="color:var(--text-secondary)">Secondary text <span class="hex">#4B5563</span></div>
+    <div class="line" style="color:var(--text-tertiary)">Tertiary text <span class="hex">#606063</span></div>
+    <div class="line" style="color:var(--text-muted)">Muted text <span class="hex">#888888</span></div>
+    <div class="line ondark" style="color:var(--text-on-dark)">On dark <span class="hex" style="color:#A1A1AA">#FFFFFF</span></div>
+  </div>
+</body>
+</html>

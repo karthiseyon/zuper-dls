@@ -1,0 +1,51 @@
+<!-- @dsCard group="Voice" viewport="700x430" name="Copy: do & don't" subtitle="Avoid the tells that read as AI-generated or salesy" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-white); color: var(--text-primary); }
+  .wrap { padding: 28px 30px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--color-primary); margin-bottom: 18px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .col h3 { font-family: var(--font-display); font-size: 15px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+  .col.dont h3 { color: var(--status-error-fg); }
+  .col.do h3 { color: var(--status-success-fg); }
+  .line { font-size: 14px; line-height: 1.55; padding: 9px 12px; border-radius: 8px; margin-bottom: 8px; }
+  .dont .line { background: var(--status-error-bg); }
+  .do .line { background: var(--status-success-bg); }
+  .banned { border-top: 1px solid var(--border-card); padding-top: 20px; }
+  .banned .lbl { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13px; padding: 5px 12px; border-radius: 999px; background: var(--gray-50); color: var(--text-secondary); text-decoration: line-through; }
+  .chip.rule { text-decoration: none; background: transparent; border: 1px dashed var(--border-card); color: var(--text-primary); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Voice &amp; tone</div>
+    <div class="cols">
+      <div class="col dont">
+        <h3>✕ Don't</h3>
+        <div class="line">Leverage our seamless platform to unlock robust efficiency.</div>
+        <div class="line">In today's fast-paced world, empower your team to elevate service.</div>
+        <div class="line">Not just software, but a complete ecosystem.</div>
+      </div>
+      <div class="col do">
+        <h3>✓ Do</h3>
+        <div class="line">Schedule the right tech and win the quote on-site.</div>
+        <div class="line">Cut drive time 28% and get paid two days faster.</div>
+        <div class="line">One place for scheduling, quoting, and invoicing.</div>
+      </div>
+    </div>
+    <div class="banned">
+      <div class="lbl">Banned vocab &amp; patterns</div>
+      <div class="chips">
+        <span class="chip">seamless</span><span class="chip">leverage</span><span class="chip">unlock</span><span class="chip">empower</span><span class="chip">streamline</span><span class="chip">robust</span><span class="chip">elevate</span><span class="chip">holistic</span><span class="chip">synergy</span><span class="chip">ecosystem</span><span class="chip">revolutionary</span>
+        <span class="chip rule">No em dashes</span><span class="chip rule">No throat-clearing openers</span><span class="chip rule">No "not just X, Y"</span><span class="chip rule">No reflexive triads</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

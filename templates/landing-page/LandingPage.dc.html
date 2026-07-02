@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Landing page" description="Zuper marketing landing page: orange hero, product grid, charcoal Sense feature and orange footer." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style> body { margin: 0; background: #fff; } </style>
+</helmet>
+
+<div style="font-family: var(--font-body); color: var(--text-primary);">
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-divider);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 68px; display: flex; align-items: center; gap: 32px;">
+      <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="height: 28px; width: auto; display: block;">
+      <nav style="display: flex; gap: 26px; align-items: center; margin-left: 8px; font-size: 15px; font-weight: 500; color: var(--text-secondary);">
+        <span>Products</span><span>Industries</span><span>Pricing</span><span>Resources</span>
+      </nav>
+      <div style="margin-left: auto; display: flex; gap: 12px; align-items: center;">
+        <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.Button" variant="ghost" hint-size="80px,42px">Sign in</x-import>
+        <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.Button" variant="primary" hint-size="130px,42px">Book a demo</x-import>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; max-width: 760px;">
+      <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.85); margin-bottom: 18px;">The AI OS for field service</div>
+      <h1 style="font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1.04; letter-spacing: -.03em; margin: 0; text-wrap: balance;">Run service from first call to final invoice</h1>
+      <p style="font-size: 19px; line-height: 1.55; color: rgba(255,255,255,.92); max-width: 520px; margin: 20px 0 28px;">Schedule the right tech, win the quote on-site, and get paid faster — with AI handling the busywork in the background.</p>
+      <div style="display: flex; gap: 14px; align-items: center;">
+        <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.Button" variant="black" size="lg" hint-size="180px,52px">Test drive Zuper</x-import>
+        <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.Button" variant="whiteOutline" size="lg" hint-size="160px,52px">Watch the tour</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product grid -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 96px 32px;">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary);">One platform</div>
+      <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 38px; letter-spacing: -.02em; margin: 12px 0 0; text-wrap: balance;">Everything between the call and the cash</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;">
+      <div style="background: #fff; border: 1px solid var(--border-card); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow-card);">
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); margin-bottom: 10px;">Dispatch</div>
+        <h3 style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin: 0 0 6px; letter-spacing: -.01em;">Scheduling &amp; Dispatch</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Drag-and-drop board with smart routing.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border-card); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow-card);">
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); margin-bottom: 10px;">Quote</div>
+        <h3 style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin: 0 0 6px; letter-spacing: -.01em;">Intelligent Quoting</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Branded estimates, sent on-site.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border-card); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow-card);">
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); margin-bottom: 10px;">Costing</div>
+        <h3 style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin: 0 0 6px; letter-spacing: -.01em;">Job Costing</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.5;">See the margin on every job.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border-card); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow-card);">
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); margin-bottom: 10px;">AI</div>
+        <h3 style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin: 0 0 6px; letter-spacing: -.01em;">Zuper Sense</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Auto-dispatch, summaries, insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charcoal Sense feature -->
+  <section style="background: var(--surface-charcoal); color: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: #FF8B5A; margin-bottom: 14px;">Zuper Sense</div>
+        <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 36px; letter-spacing: -.02em; margin: 0 0 16px; text-wrap: balance;">AI that dispatches, summarizes, and spots the margin</h2>
+        <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,.8); max-width: 440px; margin: 0 0 28px;">Sense reads every job, routes the nearest qualified tech, and flags the work that's quietly losing you money.</p>
+        <x-import component-from-global-scope="ZuperDesignSystem_4b4e77.Button" variant="primary" size="lg" hint-size="170px,52px">See Zuper Sense</x-import>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; padding: 20px 24px; background: #1C1C21; border: 1px solid #27272A; border-radius: var(--radius-card);"><span style="font-family: var(--font-display); font-weight: 800; font-size: 36px; color: #FF8B5A; letter-spacing: -.02em;">28%</span><span style="font-size: 15px; color: rgba(255,255,255,.8);">less drive time</span></div>
+        <div style="display: flex; align-items: baseline; gap: 16px; padding: 20px 24px; background: #1C1C21; border: 1px solid #27272A; border-radius: var(--radius-card);"><span style="font-family: var(--font-display); font-weight: 800; font-size: 36px; color: #FF8B5A; letter-spacing: -.02em;">1 in 3</span><span style="font-size: 15px; color: rgba(255,255,255,.8);">quotes won on-site</span></div>
+        <div style="display: flex; align-items: baseline; gap: 16px; padding: 20px 24px; background: #1C1C21; border: 1px solid #27272A; border-radius: var(--radius-card);"><span style="font-family: var(--font-display); font-weight: 800; font-size: 36px; color: #FF8B5A; letter-spacing: -.02em;">2 days</span><span style="font-size: 15px; color: rgba(255,255,255,.8);">faster to invoice</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 32px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px;">
+      <div>
+        <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 30px; width: auto; display: block;">
+        <p style="margin-top: 14px; max-width: 260px; line-height: 1.55; color: rgba(255,255,255,.9); font-size: 14px;">The AI operating system for field service — from first call to final invoice.</p>
+      </div>
+      <div style="display: flex; gap: 56px;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.75); margin-bottom: 14px;">Product</div>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: rgba(255,255,255,.95);"><span>Scheduling</span><span>Quoting</span><span>Job costing</span><span>Zuper Sense</span></div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.75); margin-bottom: 14px;">Industries</div>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: rgba(255,255,255,.95);"><span>Roofing</span><span>HVAC</span><span>Plumbing</span><span>Solar</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,.25); max-width: 1200px; margin: 0 auto; padding: 18px 32px; font-size: 13px; color: rgba(255,255,255,.85);">© 2026 Zuper, Inc.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

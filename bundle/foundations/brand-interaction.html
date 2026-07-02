@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" viewport="700x150" name="Focus & Interaction" subtitle="Orange focus ring · hover wash · active press" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface-white); padding: 24px; }
+  .row { display: flex; gap: 16px; align-items: center; }
+  .btn { font-family: var(--font-body); font-size: 14px; font-weight: 600; border-radius: 8px; padding: 10px 22px; border: 2px solid transparent; cursor: default; }
+  .primary { background: var(--color-primary); color: #fff; }
+  .focused { background: var(--color-primary); color: #fff; box-shadow: var(--focus-ring); }
+  .hover { background: var(--color-primary-hover); color: #fff; }
+  .n { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 8px; text-align: center; }
+  .u { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="u"><button class="btn primary">Default</button><div class="n">rest</div></div>
+    <div class="u"><button class="btn hover">Hover</button><div class="n">#E04600</div></div>
+    <div class="u"><button class="btn focused">Focus</button><div class="n">3px rgba(253,80,0,.32)</div></div>
+  </div>
+</body>
+</html>

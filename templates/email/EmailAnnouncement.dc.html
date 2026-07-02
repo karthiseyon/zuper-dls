@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Email announcement" description="Branded 600px email — orange header lockup, headline, body, orange CTA, feature rows and footer. Inline styles, email-client friendly." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style> body { margin: 0; background: #ECEAE6; } </style>
+</helmet>
+
+<div style="font-family: var(--font-body); color: var(--text-primary); padding: 40px 16px;">
+  <div style="width: 600px; max-width: 100%; margin: 0 auto; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 12px 40px rgba(25,25,25,.12);">
+
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); padding: 28px 40px;">
+      <img src="../../assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 28px; width: auto; display: block;">
+    </div>
+
+    <!-- Hero -->
+    <div style="padding: 44px 40px 8px;">
+      <div style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--color-primary); margin-bottom: 14px;">Product update</div>
+      <h1 style="font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1.1; letter-spacing: -.02em; margin: 0 0 16px; text-wrap: balance;">Win the quote before you leave the driveway</h1>
+      <p style="font-size: 16px; line-height: 1.6; color: var(--text-secondary); margin: 0 0 24px;">Intelligent Quoting now builds a branded good / better / best estimate from your roof measurements — so every homeowner sees the premium option, and you send on-site.</p>
+      <a href="#" style="display: inline-block; background: var(--color-primary); color: #fff; text-decoration: none; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 13px 26px; border-radius: 8px;">See what's new →</a>
+    </div>
+
+    <!-- Feature rows -->
+    <div style="padding: 36px 40px 8px;">
+      <div style="border-top: 1px solid var(--border-card); padding: 22px 0;">
+        <div style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 5px;">Tiered packages, automatically</div>
+        <div style="font-size: 14px; line-height: 1.55; color: var(--text-secondary);">Every quote presents three tiers — no judgment call for the rep.</div>
+      </div>
+      <div style="border-top: 1px solid var(--border-card); padding: 22px 0;">
+        <div style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 5px;">Carrier-aligned line items</div>
+        <div style="font-size: 14px; line-height: 1.55; color: var(--text-secondary);">Estimates mirror what adjusters expect — fewer denials, faster approvals.</div>
+      </div>
+      <div style="border-top: 1px solid var(--border-card); padding: 22px 0;">
+        <div style="font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 5px;">Built from measurements</div>
+        <div style="font-size: 14px; line-height: 1.55; color: var(--text-secondary);">Enter the roof; quantities, waste factor and pricing auto-populate.</div>
+      </div>
+    </div>
+
+    <!-- Peach banner -->
+    <div style="margin: 16px 40px 40px; background: var(--surface-banner); border-radius: 12px; padding: 22px 24px; display: flex; align-items: center; gap: 18px;">
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 40px; letter-spacing: -.03em; color: var(--color-primary); line-height: 1;">42%</span>
+      <span style="font-size: 14px; line-height: 1.5; color: var(--text-primary);">gross margin on a recent $41k insurance job — full scope captured the first time.</span>
+    </div>
+
+    <!-- Footer -->
+    <div style="background: var(--surface-warm); border-top: 1px solid var(--border-divider); padding: 28px 40px;">
+      <img src="../../assets/logos/zuper-horizontal.png" alt="Zuper" style="height: 20px; width: auto; display: block; margin-bottom: 14px;">
+      <p style="font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0 0 12px;">The AI operating system for field service — from first call to final invoice.</p>
+      <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Zuper, Inc. · You're receiving this because you subscribed. <span style="text-decoration: underline;">Unsubscribe</span></div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
