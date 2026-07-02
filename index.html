@@ -1087,7 +1087,9 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 /* form controls */
 .ctl{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-primary);font-family:var(--body)}
 .ctl input{accent-color:var(--brand-default);width:17px;height:17px}
-.switch{position:relative;width:42px;height:24px;border-radius:999px;background:var(--border-strong);transition:background .2s;flex:0 0 auto;cursor:pointer}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:99;background:#FD5000;color:#fff;font:700 14px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:12px 18px;border-radius:0 0 10px 0;text-decoration:none}
+.skip-link:focus{left:0}
+.switch{position:relative;width:42px;height:24px;border-radius:999px;background:var(--border-strong);transition:background .2s;flex:0 0 auto;cursor:pointer;border:0;padding:0}
 .switch.on{background:var(--brand-default)}
 .switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .2s}
 .switch.on::after{transform:translateX(18px)}
@@ -1154,8 +1156,6 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .acc{border:1px solid var(--border-default);border-radius:12px;overflow:hidden}
 .acc .it{padding:16px 18px;border-bottom:1px solid var(--border-subtle);background:var(--surface-default)}
 .acc .it:last-child{border-bottom:none}
-.acc .q{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:14.5px;color:var(--text-primary);cursor:pointer}
-.acc .q .pm{color:var(--brand-default);font-size:20px}
 .acc .a{font-size:13.5px;color:var(--text-secondary);margin-top:9px;line-height:1.55}
 .type-scale .ts{display:flex;align-items:baseline;gap:18px;padding:11px 0;border-bottom:1px solid var(--border-subtle);flex-wrap:wrap}
 .type-scale .ts .mt{font-family:var(--mono);font-size:11px;color:var(--text-tertiary);min-width:128px}
@@ -1275,6 +1275,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 </style>
 </head>
 <body>
+<a class="skip-link" href="#stage">Skip to content</a>
 
 <div class="app">
   <aside class="sidebar">
@@ -1291,7 +1292,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
       Web, social &amp; email: <b>Plus Jakarta Sans</b> · <b>Inter</b>.
     </div>
   </aside>
-  <main><div id="stage"></div></main>
+  <main><div id="stage" tabindex="-1"></div></main>
 </div>
 
 <script>
@@ -2035,14 +2036,14 @@ function buildWebsite(s){
     <p class="ebm">Atoms</p><h2 class="sec">05 · Forms, pills & tiles</h2>
     <div class="comp-grid">
       <div class="panel"><h4>Input + error</h4>
-        <div class="fld"><label>Work email</label><input placeholder="name@company.com" /></div>
+        <div class="fld"><label for="demo-email">Work email</label><input id="demo-email" placeholder="name@company.com" /></div>
         <div class="fld" style="margin-top:12px"><input class="err" value="not-an-email" /><div class="errmsg">Enter a valid work email.</div></div>
       </div>
       <div class="panel"><h4>Controls</h4>
         <label class="ctl"><input type="checkbox" checked> Email me product updates</label>
         <label class="ctl" style="margin-top:9px"><input type="radio" name="r" checked> Monthly</label>
         <label class="ctl" style="margin-top:7px"><input type="radio" name="r"> Annual</label>
-        <div class="ctl" style="margin-top:13px"><span class="switch on" onclick="this.classList.toggle('on')"></span> Auto‑dispatch</div>
+        <div class="ctl" style="margin-top:13px"><button type="button" class="switch on" role="switch" aria-checked="true" aria-label="Auto-dispatch" onclick="this.setAttribute('aria-checked',this.classList.toggle('on'))"></button> Auto‑dispatch</div>
       </div>
       <div class="panel"><h4>Pills & status</h4>
         <div class="row"><span class="pill pill-brand"><span class="pill-dot"></span>New</span><span class="pill" style="background:#E7F6EC;color:#1E854B"><span class="pill-dot"></span>Completed</span><span class="pill" style="background:var(--surface-subtle);color:var(--text-secondary)">v2.4</span></div>
@@ -2128,8 +2129,8 @@ function buildWebsite(s){
     <p class="sec-note">Product‑surface UI, all reading the same tokens. Outline icons throughout.</p>
     <div class="annbar"><span class="tp">New</span><span>Zuper Sense is live, the AI layer for field service</span><a href="#" onclick="return false">Learn more →</a></div>
     <div class="comp-grid" style="margin-top:20px">
-      <div class="panel"><h4>Segmented control</h4><div class="seg"><button class="on">Monthly</button><button>Annual</button></div></div>
-      <div class="panel"><h4>Tabs</h4><div class="tabs"><button class="on">Work orders</button><button>Scheduling</button><button>Invoicing</button></div></div>
+      <div class="panel"><h4>Segmented control</h4><div class="seg" role="tablist" aria-label="Billing period"><button class="on" role="tab" aria-selected="true">Monthly</button><button role="tab" aria-selected="false">Annual</button></div></div>
+      <div class="panel"><h4>Tabs</h4><div class="tabs" role="tablist" aria-label="Job sections"><button class="on" role="tab" aria-selected="true">Work orders</button><button role="tab" aria-selected="false">Scheduling</button><button role="tab" aria-selected="false">Invoicing</button></div></div>
       <div class="panel"><h4>Toast</h4><div class="toast"><span class="ck">✓</span><div><div class="tt">Invoice sent</div><div class="ts">Payment expected in 3 days</div></div></div></div>
       <div class="panel"><h4>Team avatars</h4><div class="avg"><span class="av" style="background:#FD5000">AR</span><span class="av" style="background:#A855F7">MK</span><span class="av" style="background:#14B8A6">JD</span><span class="av more">+5</span></div></div>
       <div class="panel"><h4>Onboarding steps</h4><div class="steps"><span class="st done"><span class="dot">✓</span>Setup</span><span class="bar"></span><span class="st on"><span class="dot">2</span>Import</span><span class="bar"></span><span class="st"><span class="dot">3</span>Live</span></div></div>
@@ -2140,7 +2141,7 @@ function buildWebsite(s){
       <div class="panel"><h4>Info banner</h4><div class="infob"><span class="mk"></span><div class="tx"><b>QuickBooks sync is in progress.</b> Invoices reconcile automatically once it's complete.</div></div></div>
       <div class="panel"><h4>Tooltip</h4><div class="tip"><span class="bub">Syncs every 5 min</span></div></div>
       <div class="panel"><h4>Select</h4><div class="wselect"><select><option>Roofing</option><option>HVAC</option><option>Solar</option></select></div></div>
-      <div class="panel"><h4>Range</h4><input class="range" type="range" min="0" max="100" value="60"><div style="font-size:12px;color:var(--text-tertiary);margin-top:9px;font-family:'Geist Mono',ui-monospace,monospace">Crew radius · 60 mi</div></div>
+      <div class="panel"><h4>Range</h4><input class="range" type="range" min="0" max="100" value="60" aria-label="Crew radius in miles"><div style="font-size:12px;color:var(--text-tertiary);margin-top:9px;font-family:'Geist Mono',ui-monospace,monospace">Crew radius · 60 mi</div></div>
       <div class="panel"><h4>Skeleton</h4><div class="skel"><div class="ln" style="width:78%"></div><div class="ln" style="width:100%"></div><div class="ln" style="width:58%"></div></div></div>
       <div class="panel"><h4>Pagination</h4><div class="pager"><a>‹</a><a class="on">1</a><a>2</a><a>3</a><a>›</a></div></div>
       <div class="panel"><h4>Notification</h4><div class="row" style="align-items:center"><span class="nbell">${icon('bell',22)}<span class="b">3</span></span><span style="font-size:13px;color:var(--text-secondary)">3 new alerts</span></div></div>
@@ -2345,16 +2346,16 @@ function buildEmailSig(){
     <p class="sec-note">Everything you type updates the preview on the right. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your Outlook signature settings.</p>
     <div class="esig">
       <div class="form">
-        <div class="fld"><label>Full name</label><input id="es-name" placeholder="Jane Doe" value="Jane Doe" /></div>
-        <div class="fld"><label>Job title</label><input id="es-title" placeholder="Field Service Consultant" value="Field Service Consultant" /></div>
-        <div class="fld"><label>Email</label><input id="es-email" type="email" placeholder="name@zuper.co" value="name@zuper.co" /></div>
-        <div class="fld"><label>Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="+1 (555) 000‑0000" /></div>
+        <div class="fld"><label for="es-name">Full name</label><input id="es-name" placeholder="Jane Doe" value="Jane Doe" /></div>
+        <div class="fld"><label for="es-title">Job title</label><input id="es-title" placeholder="Field Service Consultant" value="Field Service Consultant" /></div>
+        <div class="fld"><label for="es-email">Email</label><input id="es-email" type="email" placeholder="name@zuper.co" value="name@zuper.co" /></div>
+        <div class="fld"><label for="es-phone">Phone <span style="color:var(--text-tertiary);font-weight:500">· optional</span></label><input id="es-phone" placeholder="+1 (555) 000‑0000" value="+1 (555) 000‑0000" /></div>
         <div class="ctl-row">
           <label class="ctl"><input type="checkbox" id="es-cta" checked> Show "Book a demo" call‑to‑action</label>
         </div>
         <div class="fld">
-          <label>Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
-          <div class="es-banners">
+          <label id="esb-lbl">Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
+          <div class="es-banners" role="radiogroup" aria-labelledby="esb-lbl">
             <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
             <label class="bopt"><input type="radio" name="esb" value="sense"><img src="assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
             <label class="bopt"><input type="radio" name="esb" value="trades"><img src="assets/email/zuper-emailer-trades.png" alt="The AI Operating System for the Skilled Trades"></label>
@@ -2430,19 +2431,19 @@ function buildSocial(){
   const lbl=t=>`<div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268">${t}</div>`;
   const col=(t,box)=>`<div style="display:flex;flex-direction:column;gap:8px">${lbl(t)}${box}</div>`;
 
-  const leaderboard=col("Leaderboard · 728 × 90",`<div style="width:728px;height:90px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:22px;padding:0 26px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="Zuper" style="height:40px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1.05;flex:1">Run service from first call to final invoice</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:11px 22px;border-radius:8px;white-space:nowrap">Book a demo</span></div>`);
+  const leaderboard=col("Leaderboard · 728 × 90",`<div style="width:728px;height:90px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:22px;padding:0 26px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="" style="height:40px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1.05;flex:1">Run service from first call to final invoice</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:11px 22px;border-radius:8px;white-space:nowrap">Book a demo</span></div>`);
 
-  const billboard=col("Billboard · 970 × 250",`<div style="width:970px;height:250px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:40px 48px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:14px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:14px">The AI OS for field service</div><div style="font-family:${DISP};font-weight:800;font-size:50px;line-height:1.02;letter-spacing:-.03em;max-width:640px">Win 1 in 3 quotes on-site</div><span style="align-self:flex-start;margin-top:22px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:17px;padding:13px 26px;border-radius:8px">Book a demo →</span><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;top:36px;right:48px;height:30px;width:auto"></div>`);
+  const billboard=col("Billboard · 970 × 250",`<div style="width:970px;height:250px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:40px 48px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${MONO};font-size:14px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:14px">The AI OS for field service</div><div style="font-family:${DISP};font-weight:800;font-size:50px;line-height:1.02;letter-spacing:-.03em;max-width:640px">Win 1 in 3 quotes on-site</div><span style="align-self:flex-start;margin-top:22px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:17px;padding:13px 26px;border-radius:8px">Book a demo →</span><img src="${L}zuper-horizontal-white.png" alt="" style="position:absolute;top:36px;right:48px;height:30px;width:auto"></div>`);
 
-  const medrect=col("Medium rectangle · 300 × 250",`<div style="width:300px;height:250px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:26px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:8px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:10px">Field service · AI</div><div style="font-family:${DISP};font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em">Run a tighter operation</div><span style="align-self:flex-start;margin-top:18px;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:14px;padding:10px 20px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="Zuper" style="position:absolute;left:26px;bottom:22px;height:18px;width:auto"></div>`);
+  const medrect=col("Medium rectangle · 300 × 250",`<div style="width:300px;height:250px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:26px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:8px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:10px">Field service · AI</div><div style="font-family:${DISP};font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em">Run a tighter operation</div><span style="align-self:flex-start;margin-top:18px;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:14px;padding:10px 20px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="" style="position:absolute;left:26px;bottom:22px;height:18px;width:auto"></div>`);
 
-  const lgrect=col("Large rectangle · 336 × 280",`<div style="width:336px;height:280px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:96px;letter-spacing:-.04em;line-height:.9">28%</div><div style="font-family:${DISP};font-weight:700;font-size:22px;line-height:1.2;margin-top:10px;max-width:240px">less drive time per crew</div><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;left:28px;bottom:24px;height:22px;width:auto"></div>`);
+  const lgrect=col("Large rectangle · 336 × 280",`<div style="width:336px;height:280px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:6px;padding:28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:96px;letter-spacing:-.04em;line-height:.9">28%</div><div style="font-family:${DISP};font-weight:700;font-size:22px;line-height:1.2;margin-top:10px;max-width:240px">less drive time per crew</div><img src="${L}zuper-horizontal-white.png" alt="" style="position:absolute;left:28px;bottom:24px;height:22px;width:auto"></div>`);
 
-  const halfpage=col("Half page · 300 × 600",`<div style="width:300px;height:600px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:32px 28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:10px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">From first call to invoice</div><div style="font-family:${DISP};font-weight:800;font-size:40px;line-height:1.03;letter-spacing:-.03em">Everything between the call and the cash</div><div style="display:flex;flex-direction:column;gap:10px;margin:22px 0;font-size:14px;font-family:${BODY}"><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Scheduling &amp; dispatch</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Intelligent quoting</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Job costing</div></div><span style="align-self:flex-start;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:12px 24px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="Zuper" style="position:absolute;left:28px;bottom:26px;height:18px;width:auto"></div>`);
+  const halfpage=col("Half page · 300 × 600",`<div style="width:300px;height:600px;box-sizing:border-box;background:#fff;color:${INK};border-radius:6px;padding:32px 28px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;border:1px solid #E7E0D6"><div style="position:absolute;top:0;left:0;right:0;height:10px;background:${GRAD}"></div><div style="font-family:${MONO};font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#FD5000;margin-bottom:14px">From first call to invoice</div><div style="font-family:${DISP};font-weight:800;font-size:40px;line-height:1.03;letter-spacing:-.03em">Everything between the call and the cash</div><div style="display:flex;flex-direction:column;gap:10px;margin:22px 0;font-size:14px;font-family:${BODY}"><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Scheduling &amp; dispatch</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Intelligent quoting</div><div style="display:flex;gap:10px;align-items:center"><span style="color:#FD5000;font-weight:800">&check;</span> Job costing</div></div><span style="align-self:flex-start;background:#FD5000;color:#fff;font-family:${DISP};font-weight:700;font-size:15px;padding:12px 24px;border-radius:8px">Book a demo</span><img src="${L}zuper-horizontal.png" alt="" style="position:absolute;left:28px;bottom:26px;height:18px;width:auto"></div>`);
 
-  const skyscraper=col("Skyscraper · 160 × 600",`<div style="width:160px;height:600px;box-sizing:border-box;background:linear-gradient(180deg,#DB3602,#FD5000);color:#fff;border-radius:6px;padding:26px 20px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:38px;line-height:1.02;letter-spacing:-.03em">First call to invoice</div><span style="align-self:flex-start;margin-top:18px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px">Demo →</span><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="position:absolute;left:20px;bottom:24px;height:18px;width:auto"></div>`);
+  const skyscraper=col("Skyscraper · 160 × 600",`<div style="width:160px;height:600px;box-sizing:border-box;background:linear-gradient(180deg,#DB3602,#FD5000);color:#fff;border-radius:6px;padding:26px 20px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-family:${DISP};font-weight:800;font-size:38px;line-height:1.02;letter-spacing:-.03em">First call to invoice</div><span style="align-self:flex-start;margin-top:18px;background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px">Demo →</span><img src="${L}zuper-horizontal-white.png" alt="" style="position:absolute;left:20px;bottom:24px;height:18px;width:auto"></div>`);
 
-  const mobile=col("Mobile · 320 × 100",`<div style="width:320px;height:100px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:14px;padding:0 18px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="Zuper" style="height:34px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:18px;line-height:1.1;letter-spacing:-.02em;flex:1">Run a tighter operation</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:12px;padding:8px 14px;border-radius:6px;white-space:nowrap">Demo</span></div>`);
+  const mobile=col("Mobile · 320 × 100",`<div style="width:320px;height:100px;box-sizing:border-box;background:${GRAD};color:#fff;border-radius:4px;display:flex;align-items:center;gap:14px;padding:0 18px;overflow:hidden"><img src="${L}zuper-logomark-white.png" alt="" style="height:34px;width:auto"><div style="font-family:${DISP};font-weight:800;font-size:18px;line-height:1.1;letter-spacing:-.02em;flex:1">Run a tighter operation</div><span style="background:${INK};color:#fff;font-family:${DISP};font-weight:700;font-size:12px;padding:8px 14px;border-radius:6px;white-space:nowrap">Demo</span></div>`);
 
   const email=`<div style="width:600px;max-width:100%;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px rgba(25,25,25,.12);font-family:${BODY};color:${INK}">
     <div style="background:${GRAD};padding:28px 40px"><img src="${L}zuper-horizontal-white.png" alt="Zuper" style="height:28px;width:auto;display:block"></div>
@@ -2475,7 +2476,7 @@ function buildSocial(){
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 32px;">Field service · AI</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 118px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 860px; text-wrap: balance;">Win 1 in 3 quotes on-site</h2>
       <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 740px; margin: 36px 0 0;">Build a branded estimate in the driveway, and send it before you leave.</p>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
       <img src="assets/mini-humans/reaching-up.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
     cr("Story / Reel · 1080 × 1920",1080,1920,`<div style="width: 1080px; height: 1920px; box-sizing: border-box; background: #fff; color: #191919; padding: 110px 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
@@ -2484,13 +2485,13 @@ function buildSocial(){
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 130px; line-height: 1.02; letter-spacing: -.03em; margin: 0;">From first call to final invoice</h2>
       <p style="font-size: 38px; line-height: 1.5; color: #4B5563; max-width: 820px; margin: 44px 0 56px;">Schedule the right tech, win the quote on-site, and get paid faster, with AI doing the busywork.</p>
       <span style="display: inline-flex; align-self: flex-start; background: #FD5000; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 36px; padding: 26px 52px; border-radius: 14px;">Book a demo →</span>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
       <img src="assets/mini-humans/ready-to-work.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 128px; width: auto; display: block;">
     </div>`),
     cr("LinkedIn / X · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; background: #18181B; color: #fff; padding: 72px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 20px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 24px;">Zuper Sense</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 70px; line-height: 1.04; letter-spacing: -.03em; margin: 0; max-width: 780px; text-wrap: balance;">AI that dispatches, summarizes &amp; spots the margin</h2>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 72px; bottom: 56px; height: 40px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 72px; bottom: 56px; height: 40px; width: auto;">
       <img src="assets/mini-humans/on-the-job.gif" alt="" aria-hidden="true" style="position: absolute; right: 72px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
     cr("Quote card · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #FBF2EA; color: #191919; padding: 100px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
@@ -2501,27 +2502,27 @@ function buildSocial(){
         <span style="width: 88px; height: 88px; border-radius: 50%; background: #FD5000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 32px;">CL</span>
         <div><div style="font-weight: 700; font-size: 34px;">Chris Little</div><div style="font-size: 28px; color: #4B5563;">Office Manager, Dickinson Roofing</div></div>
       </div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; right: 100px; bottom: 92px; height: 44px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; right: 100px; bottom: 92px; height: 44px; width: auto;">
     </div>`),
     cr("Zuper Sense · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B url(assets/backgrounds/zuper-sense-bg.jpg) center/cover; color: #FAFAFA; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 32px;">Zuper Sense</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">AI that runs in the background</h2>
       <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Auto-dispatch, job summaries and margin alerts, before the week is lost.</p>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
     </div>`),
     cr("Stat card · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">The impact · first 90 days</div>
       <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 360px; line-height: .85; letter-spacing: -.04em; color: #FD5000;">28%</div>
       <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; color: #191919; max-width: 720px; margin: 28px 0 0;">less drive time per crew, every week</p>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
       <img src="assets/mini-humans/carrying-gear.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
     cr("Job costing · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 32px;">Job costing &amp; profitability</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 116px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 860px; text-wrap: balance;">See the margin on every job</h2>
       <p style="font-size: 34px; line-height: 1.45; color: rgba(255,255,255,.92); max-width: 740px; margin: 36px 0 0;">Gross profit updates live on the job card as costs come in. No spreadsheets.</p>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
     </div>`),
     cr("Intelligent Quoting · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
@@ -2532,7 +2533,7 @@ function buildSocial(){
         <span style="background: #FFE7DC; color: #B5271C; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 18px 34px; border-radius: 12px;">Better</span>
         <span style="background: #FD5000; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 18px 34px; border-radius: 12px;">Best</span>
       </div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
     </div>`),
     cr("Testimonial · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #FBF2EA; color: #191919; padding: 110px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 6px; overflow: hidden;">
       <span style="width: 136px; height: 136px; border-radius: 50%; background: #FD5000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 52px; margin-bottom: 36px;">LC</span>
@@ -2542,13 +2543,13 @@ function buildSocial(){
         <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 34px;">Lisa Crocker</div>
         <div style="font-size: 27px; color: #4B5563; margin-top: 4px;">Chief Admin Officer, Roof Doctors</div>
       </div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 60px; height: 38px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 60px; height: 38px; width: auto;">
     </div>`),
     cr("CTA · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 72px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 76px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 820px; text-wrap: balance;">Ready to run a tighter operation?</h2>
       <p style="font-size: 28px; color: rgba(255,255,255,.92); margin: 22px 0 34px;">Set up in a day. No rip-and-replace.</p>
       <span style="align-self: flex-start; background: #191919; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 28px; padding: 20px 40px; border-radius: 12px;">Book a demo →</span>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 72px; bottom: 52px; height: 38px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 72px; bottom: 52px; height: 38px; width: auto;">
       <img src="assets/mini-humans/on-the-tools.gif" alt="" aria-hidden="true" style="position: absolute; right: 72px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
     cr("Stat card · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
@@ -2556,21 +2557,21 @@ function buildSocial(){
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">Intelligent Quoting</div>
       <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 360px; line-height: .85; letter-spacing: -.04em; color: #FD5000;">4×</div>
       <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 720px; margin: 28px 0 0;">premium product sales, no new hires</p>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
     </div>`),
     cr("Hiring story · 1080 × 1920",1080,1920,`<div style="width: 1080px; height: 1920px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 110px 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 28px; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.85); margin-bottom: 36px;">We're hiring</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 128px; line-height: 1.02; letter-spacing: -.03em; margin: 0;">Join a crew that runs on Zuper</h2>
       <p style="font-size: 38px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 820px; margin: 44px 0 56px;">New hires run clean jobs in weeks, guided workflows do the heavy lifting.</p>
       <span style="align-self: flex-start; background: #191919; color: #fff; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 36px; padding: 26px 52px; border-radius: 14px;">See open roles →</span>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 88px; bottom: 96px; height: 56px; width: auto;">
       <img src="assets/mini-humans/ready-to-work.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 130px; width: auto; display: block;">
     </div>`),
     cr("Zuper Sense · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B url(assets/backgrounds/zuper-sense-bg.jpg) center/cover; color: #FAFAFA; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 32px;">Zuper Sense</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 110px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">It dispatches the nearest qualified tech</h2>
       <p style="font-size: 34px; line-height: 1.45; color: #A1A1AA; max-width: 780px; margin: 36px 0 0;">Sense reads the job, the location and the load, and routes the right crew.</p>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 52px; width: auto;">
     </div>`),
     cr("Industries · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #fff; color: #191919; padding: 88px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
@@ -2583,14 +2584,14 @@ function buildSocial(){
         <span style="background: #FBF2EA; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 16px 30px; border-radius: 999px;">Electrical</span>
         <span style="background: #FBF2EA; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px; padding: 16px 30px; border-radius: 999px;">Solar</span>
       </div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
     </div>`),
     cr("Feature · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; background: #fff; color: #191919; padding: 72px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 14px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 20px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 22px;">Scheduling &amp; Dispatch</div>
       <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 68px; line-height: 1.03; letter-spacing: -.03em; margin: 0; max-width: 820px; text-wrap: balance;">One board for every crew, every job</h2>
       <p style="font-size: 26px; color: #4B5563; margin: 20px 0 0; max-width: 720px;">Drag a job, reassign a tech, the customer gets an updated ETA automatically.</p>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 72px; bottom: 52px; height: 38px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 72px; bottom: 52px; height: 38px; width: auto;">
       <img src="assets/mini-humans/carrying-gear.gif" alt="" aria-hidden="true" style="position: absolute; right: 72px; bottom: 0; height: 92px; width: auto; display: block;">
     </div>`),
     cr("Product · Dispatch · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 80px; position: relative; display: flex; flex-direction: column; justify-content: center; gap: 60px; border-radius: 6px; overflow: hidden;">
@@ -2599,7 +2600,7 @@ function buildSocial(){
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 92px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 900px; text-wrap: balance;">Dispatch on autopilot</h2>
       </div>
       <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(20,8,2,.42);background:#fff;border-radius:20px;padding:22px 26px;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:4px 6px 18px"><div style="display:flex;align-items:center;gap:9px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#7A7268;margin-left:10px">Dispatch board · Today</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:19px;color:#9A938A">Tue, Jun 25</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">8:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Tear-off, 14 Maple Ave</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#E6F4EA;color:#1E854B;padding:9px 18px;border-radius:999px;white-space:nowrap">Completed</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">9:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Roof inspection. Summit Plaza</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">M. Reyes</div></div><span style="font-weight:700;font-size:19px;background:#E7EEFB;color:#3B5BDB;padding:9px 18px;border-radius:999px;white-space:nowrap">En route</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">11:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Leak repair, 9 Oak Court</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew B</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">13:30</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Gutter install, 220 Pine St</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Crew A</div></div><span style="font-weight:700;font-size:19px;background:#FBEFD3;color:#A66A00;padding:9px 18px;border-radius:999px;white-space:nowrap">Scheduled</span></div><div style="display:flex;align-items:center;gap:20px;border:1px solid #EFECE6;border-radius:14px;padding:18px 22px;margin-bottom:10px"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:22px;color:#7A7268;width:88px;flex:0 0 auto">15:00</span><div style="flex:1"><div style="font-weight:700;font-size:26px;color:#191919">Estimate, 5 Birch Ln</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#9A938A;margin-top:3px">Unassigned</div></div><span style="font-weight:700;font-size:19px;background:#EFEEEC;color:#7A7268;padding:9px 18px;border-radius:999px;white-space:nowrap">Unassigned</span></div></div>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
     </div>`),
     cr("Product · Quoting · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #FBF2EA; color: #191919; padding: 80px; position: relative; display: flex; flex-direction: column; justify-content: center; gap: 56px; border-radius: 6px; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 16px; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
@@ -2608,13 +2609,13 @@ function buildSocial(){
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 88px; line-height: 1.02; letter-spacing: -.03em; margin: 0; max-width: 880px; text-wrap: balance;">Good, better, best, in under a minute</h2>
       </div>
       <div style="width:900px;align-self:center;box-shadow:0 40px 90px rgba(120,40,0,.16);background:#fff;border-radius:20px;overflow:hidden;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 30px;border-bottom:1px solid #F0EAE1"><div style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;background:#E0584A;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#E9B23C;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#56B36B;display:inline-block"></span><span style="font-weight:700;font-size:24px;margin-left:8px">Intelligent Quoting</span></div><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.1em;color:#A66A00;background:#FEF3DC;padding:7px 16px;border-radius:999px">Draft</span></div><div style="padding:30px 32px 34px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:#7A7268;margin-bottom:8px">Summit Roofing · 2,400 sq ft</div><div style="font-weight:800;font-size:40px;letter-spacing:-.02em;margin-bottom:26px">Roof replacement, asphalt</div><div style="display:flex;gap:18px"><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Good</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$9,200</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">Architectural shingles</div></div><div style="flex:1;border:2px solid #FD5000;background:#FFF6F1;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#FD5000;margin-bottom:12px">Better</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$11,800</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ synthetic underlayment</div></div><div style="flex:1;border:2px solid #E7E0D6;background:#fff;border-radius:16px;padding:22px 20px"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:#7A7268;margin-bottom:12px">Best</div><div style="font-weight:800;font-size:38px;letter-spacing:-.02em;color:#191919">$14,500</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.4;color:#7A7268;margin-top:8px">+ 50-yr workmanship warranty</div></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;padding-top:24px;border-top:1px solid #F0EAE1"><div><span style="font-family:'Inter',system-ui,sans-serif;font-size:20px;color:#7A7268">Est. gross margin</span><span style="font-weight:800;font-size:28px;color:#1E854B;margin-left:12px">42%</span></div><span style="font-weight:700;font-size:22px;color:#fff;background:#FD5000;padding:14px 28px;border-radius:12px">Send quote →</span></div></div></div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; right: 80px; bottom: 60px; height: 42px; width: auto;">
     </div>`),
     cr("Product · Job costing · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; background: #18181B; color: #fff; padding: 64px; position: relative; display: flex; align-items: center; gap: 56px; border-radius: 6px; overflow: hidden;">
       <div style="flex: 1;">
         <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 18px; text-transform: uppercase; letter-spacing: .14em; color: #FF8B5A; margin-bottom: 20px;">Job costing &amp; profitability</div>
         <h2 style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 60px; line-height: 1.04; letter-spacing: -.03em; margin: 0; text-wrap: balance;">Know the margin before the job closes</h2>
-        <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="margin-top: 40px; height: 36px; width: auto;">
+        <img src="assets/logos/zuper-horizontal-white.png" alt="" style="margin-top: 40px; height: 36px; width: auto;">
       </div>
       <div style="width:500px;flex:none;box-shadow:0 30px 70px rgba(0,0,0,.45);background:#fff;border-radius:18px;padding:32px 34px;color:#191919;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;letter-spacing:.1em;color:#9A938A;margin-bottom:6px">INSURANCE · FULL ROOF</div><div style="font-weight:800;font-size:34px;letter-spacing:-.02em;margin-bottom:22px">Job 4821</div><div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #F0EAE1;font-family:'Inter',system-ui,sans-serif;font-size:23px"><span style="color:#4B5563">Contract value</span><span style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;color:#191919">$41,000</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #F0EAE1;font-family:'Inter',system-ui,sans-serif;font-size:23px"><span style="color:#4B5563">Materials</span><span style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;color:#7A7268">− $13,200</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #F0EAE1;font-family:'Inter',system-ui,sans-serif;font-size:23px"><span style="color:#4B5563">Labor</span><span style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;color:#7A7268">− $9,100</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #F0EAE1;font-family:'Inter',system-ui,sans-serif;font-size:23px"><span style="color:#4B5563">Permits & disposal</span><span style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;color:#7A7268">− $1,480</span></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;background:#E6F4EA;border-radius:12px;padding:20px 22px"><div><div style="font-family:'Inter',system-ui,sans-serif;font-size:19px;color:#1E854B">Gross margin</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:16px;color:#4B5563">$17,220 gross profit</div></div><span style="font-weight:800;font-size:48px;letter-spacing:-.02em;color:#1E854B">42%</span></div></div>
     </div>`),
@@ -2627,7 +2628,7 @@ function buildSocial(){
       <div style="height: 1000px; display: flex; align-items: center; justify-content: center;">
         <div style="transform:scale(1.6);transform-origin:center;filter:drop-shadow(0 40px 80px rgba(20,8,2,.5));width:300px;background:#0E0E10;border-radius:40px;padding:9px;font-family:'Plus Jakarta Sans',system-ui,sans-serif"><div style="background:#fff;border-radius:32px;overflow:hidden;text-align:left"><div style="background:linear-gradient(135deg,#C0341A,#E8784A);color:#fff;padding:16px 18px 18px"><div style="display:flex;justify-content:space-between;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;margin-bottom:14px"><span>9:41</span><span>Zuper</span></div><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:5px">CURRENT JOB</div><div style="font-weight:800;font-size:24px;letter-spacing:-.02em">Leak repair</div><div style="font-family:'Inter',system-ui,sans-serif;font-size:13px;color:rgba(255,255,255,.9);margin-top:4px">9 Oak Court · 11:00 AM</div></div><div style="padding:16px 18px 18px"><div style="display:flex;gap:10px;margin-bottom:16px"><span style="flex:1;text-align:center;background:#FFE7DC;color:#C23A14;font-weight:700;font-size:13px;padding:11px 0;border-radius:10px">Navigate</span><span style="flex:1;text-align:center;background:#F1EFEC;color:#191919;font-weight:700;font-size:13px;padding:11px 0;border-radius:10px">Call</span></div><div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;color:#9A938A;margin-bottom:10px">CHECKLIST</div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;background:#FD5000;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px">&check;</span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#A7A097;text-decoration:line-through">Inspect flashing</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;background:#FD5000;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px">&check;</span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#A7A097;text-decoration:line-through">Photo before</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;border:2px solid #D8D2C8;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px"></span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#191919">Seal & replace</span></div><div style="display:flex;align-items:center;gap:11px;padding:8px 0"><span style="width:20px;height:20px;border-radius:6px;flex:0 0 auto;border:2px solid #D8D2C8;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px"></span><span style="font-family:'Inter',system-ui,sans-serif;font-size:15px;color:#191919">Photo after</span></div><div style="margin-top:14px;background:#FD5000;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:13px 0;border-radius:12px">Complete job</div></div></div></div>
       </div>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 72px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 72px; height: 48px; width: auto;">
     </div>`),
     cr("Zuper Glass · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B; color: #FAFAFA; position: relative; display: flex; flex-direction: column; border-radius: 6px; overflow: hidden;">
       <div style="height: 596px; background: #08080a url(assets/backgrounds/zuper-glass-bg.jpg) center/cover no-repeat; position: relative;">
@@ -2639,7 +2640,7 @@ function buildSocial(){
         <p style="font-size: 31px; line-height: 1.45; color: #A1A1AA; max-width: 760px; margin: 0;">AI smart glasses built for the trades, damage detection and job context, hands-free.</p>
         <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
           <span style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 28px; color: #FF8B5A;">Explore Zuper Glass →</span>
-          <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 40px; width: auto;">
+          <img src="assets/logos/zuper-horizontal-white.png" alt="" style="height: 40px; width: auto;">
         </div>
       </div>
     </div>`),
@@ -2648,7 +2649,7 @@ function buildSocial(){
       <div style="font-family: 'Geist Mono',ui-monospace,monospace; font-size: 26px; text-transform: uppercase; letter-spacing: .14em; color: #FD5000; margin-bottom: 28px;">Guided selling</div>
       <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 340px; line-height: .85; letter-spacing: -.04em; color: #FD5000;">98%</div>
       <p style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 52px; line-height: 1.25; letter-spacing: -.02em; max-width: 760px; margin: 28px 0 0;">faster new-hire ramp-up, selling like a pro on day one</p>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; left: 88px; bottom: 80px; height: 48px; width: auto;">
       <img src="assets/mini-humans/waving.gif" alt="" aria-hidden="true" style="position: absolute; right: 88px; bottom: 0; height: 96px; width: auto; display: block;">
     </div>`),
     cr("Testimonial · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%); color: #fff; padding: 100px; position: relative; display: flex; flex-direction: column; justify-content: space-between; border-radius: 6px; overflow: hidden;">
@@ -2658,7 +2659,7 @@ function buildSocial(){
         <div style="height: 3px; width: 130px; background: rgba(255,255,255,.55); margin-bottom: 30px;"></div>
         <div style="display: flex; align-items: flex-end; justify-content: space-between;">
           <div><div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 38px;">JT Ulyatt</div><div style="font-size: 27px; color: rgba(255,255,255,.85); margin-top: 4px;">CEO, Maven Roofing</div></div>
-          <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 40px; width: auto;">
+          <img src="assets/logos/zuper-horizontal-white.png" alt="" style="height: 40px; width: auto;">
         </div>
       </div>
     </div>`),
@@ -2671,7 +2672,7 @@ function buildSocial(){
         <span style="width: 84px; height: 84px; border-radius: 50%; background: #FD5000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px;">CK</span>
         <div><div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 34px;">Cooper Knutson</div><div style="font-size: 27px; color: #4B5563; margin-top: 4px;">Bookkeeper, Russell&rsquo;s Quality Roofing</div></div>
       </div>
-      <img src="assets/logos/zuper-horizontal.png" alt="Zuper" style="position: absolute; right: 96px; bottom: 80px; height: 40px; width: auto;">
+      <img src="assets/logos/zuper-horizontal.png" alt="" style="position: absolute; right: 96px; bottom: 80px; height: 40px; width: auto;">
     </div>`),
     cr("Testimonial · Zuper Glass · 1080 × 1080",1080,1080,`<div style="width: 1080px; height: 1080px; box-sizing: border-box; background: #09090B; color: #FAFAFA; padding: 100px; position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 6px; overflow: hidden;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 44px;">
@@ -2682,7 +2683,7 @@ function buildSocial(){
       <div style="margin-top: 60px; border-top: 1px solid #27272A; padding-top: 40px; display: flex; align-items: center; gap: 22px;">
         <span style="width: 84px; height: 84px; border-radius: 50%; background: rgba(255,139,90,.18); border: 1px solid rgba(255,139,90,.4); color: #FF8B5A; display: inline-flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 30px;">JM</span>
         <div><div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 34px;">John Marrah</div><div style="font-size: 27px; color: #A1A1AA; margin-top: 4px;">CEO, Marasun</div></div>
-        <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="margin-left: auto; height: 40px; width: auto;">
+        <img src="assets/logos/zuper-horizontal-white.png" alt="" style="margin-left: auto; height: 40px; width: auto;">
       </div>
     </div>`),
     cr("Testimonial · split · 1200 × 630",1200,630,`<div style="width: 1200px; height: 630px; box-sizing: border-box; display: flex; border-radius: 6px; overflow: hidden;">
@@ -2695,7 +2696,7 @@ function buildSocial(){
           </div>
           <div style="color: #fff; font-size: 26px; letter-spacing: 5px;">★★★★★</div>
         </div>
-        <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="height: 30px; width: auto; align-self: flex-start;">
+        <img src="assets/logos/zuper-horizontal-white.png" alt="" style="height: 30px; width: auto; align-self: flex-start;">
       </div>
       <div style="flex: 1; background: #fff; color: #191919; padding: 60px 68px; display: flex; flex-direction: column; justify-content: center;">
         <div style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 800; font-size: 128px; line-height: .5; color: #FD5000; height: 58px;">&ldquo;</div>
@@ -2731,7 +2732,7 @@ function buildSocial(){
         <blockquote style="font-family: 'Plus Jakarta Sans',system-ui,sans-serif; font-weight: 700; font-size: 38px; line-height: 1.32; margin: 0;">Zuper Glass has already saved my life once, both hands free, I caught myself on a wet roof.</blockquote>
         <div style="margin-top: 24px; font-size: 26px; color: rgba(255,255,255,.9);"><strong>John Marrah</strong> · Marasun</div>
       </div>
-      <img src="assets/logos/zuper-horizontal-white.png" alt="Zuper" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 64px; height: 44px; width: auto;">
+      <img src="assets/logos/zuper-horizontal-white.png" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 64px; height: 44px; width: auto;">
     </div>`)
   ].join("");
 
@@ -2982,14 +2983,14 @@ function buildIcons(){
       <div class="icst-side">
         <div class="icst-stage" id="icstStage"></div>
         <div class="icst-name"><span id="icstName">wrench</span><span class="dim" id="icstDim">96px</span></div>
-        <div class="icst-ctl"><span class="icst-lbl">Colour</span><div class="icst-sws" id="icstSws"><button class="icst-sw on" data-col="#191919" style="background:#191919"></button><button class="icst-sw" data-col="#FFFFFF" style="background:#fff"></button><button class="icst-sw" data-col="#FD5000" style="background:#FD5000"></button></div></div>
-        <div class="icst-ctl"><span class="icst-lbl">Hex</span><div class="icst-hexwrap"><label class="icst-chip" id="icstChip" style="background:#191919" title="Pick a colour"><input type="color" id="icstColor" value="#191919"></label><input type="text" class="icst-hex" id="icstHex" value="#191919" spellcheck="false" maxlength="7"></div></div>
-        <div class="icst-ctl"><span class="icst-lbl">Size</span><input type="range" id="icstSize" min="16" max="256" step="2" value="96"><input type="number" id="icstSizeV" class="icst-num" min="16" max="256" value="96"></div>
+        <div class="icst-ctl"><span class="icst-lbl">Colour</span><div class="icst-sws" id="icstSws"><button class="icst-sw on" data-col="#191919" style="background:#191919" aria-label="Ink #191919" aria-pressed="true"></button><button class="icst-sw" data-col="#FFFFFF" style="background:#fff" aria-label="White #FFFFFF" aria-pressed="false"></button><button class="icst-sw" data-col="#FD5000" style="background:#FD5000" aria-label="Orange #FD5000" aria-pressed="false"></button></div></div>
+        <div class="icst-ctl"><span class="icst-lbl">Hex</span><div class="icst-hexwrap"><label class="icst-chip" id="icstChip" style="background:#191919" title="Pick a colour"><input type="color" id="icstColor" value="#191919" aria-label="Pick a colour"></label><input type="text" class="icst-hex" id="icstHex" value="#191919" spellcheck="false" maxlength="7" aria-label="Hex colour value"></div></div>
+        <div class="icst-ctl"><span class="icst-lbl">Size</span><input type="range" id="icstSize" min="16" max="256" step="2" value="96" aria-label="Icon size"><input type="number" id="icstSizeV" class="icst-num" min="16" max="256" value="96" aria-label="Icon size in pixels"></div>
         <div class="icst-exp"><button class="icst-btn" data-exp="svg">${icon("copy",14)} Copy SVG</button><button class="icst-btn" data-exp="copy-png">${icon("copy",14)} Copy PNG</button><button class="icst-btn" data-exp="dl-svg">${icon("download",14)} Download SVG</button><button class="icst-btn" data-exp="dl-png">${icon("download",14)} Download PNG</button></div>
       </div>
       <div class="icst-pickwrap">
-        <input class="icst-search" id="icstSearch" placeholder="Search icons, roof, invoice, truck, solar…" autocomplete="off">
-        <div class="icst-meta" id="icstMeta">Loading icons…</div>
+        <input class="icst-search" id="icstSearch" aria-label="Search icons" placeholder="Search icons, roof, invoice, truck, solar…" autocomplete="off">
+        <div class="icst-meta" id="icstMeta" role="status" aria-live="polite">Loading icons…</div>
         <div class="icst-pick" id="icstPick"></div>
       </div>
     </div>
@@ -3031,7 +3032,7 @@ function buildIcons(){
     pick.addEventListener("click",e=>{const b=e.target.closest(".icst-cell");if(!b)return;[...pick.children].forEach(c=>c.classList.remove("on"));b.classList.add("on");st.name=b.dataset.n;draw();});
     $("icstSearch").addEventListener("input",e=>search(e.target.value));
     const chip=$("icstChip"),hex=$("icstHex"),nat=$("icstColor");
-    function setColor(c,sw){st.color=c;if(chip)chip.style.background=c;if(hex&&document.activeElement!==hex)hex.value=c.toUpperCase();if(nat&&/^#[0-9a-f]{6}$/i.test(c))nat.value=c.toLowerCase();$("icstSws").querySelectorAll(".icst-sw").forEach(x=>x.classList.toggle("on",sw===x));draw();}
+    function setColor(c,sw){st.color=c;if(chip)chip.style.background=c;if(hex&&document.activeElement!==hex)hex.value=c.toUpperCase();if(nat&&/^#[0-9a-f]{6}$/i.test(c))nat.value=c.toLowerCase();$("icstSws").querySelectorAll(".icst-sw").forEach(x=>{x.classList.toggle("on",sw===x);x.setAttribute("aria-pressed",sw===x);});draw();}
     $("icstSws").addEventListener("click",e=>{const s=e.target.closest(".icst-sw[data-col]");if(!s)return;setColor(s.dataset.col,s);});
     nat.addEventListener("input",e=>setColor(e.target.value,null));
     hex.addEventListener("input",e=>{const v=e.target.value.trim().replace(/^#/,"");if(/^[0-9a-fA-F]{6}$/.test(v))setColor("#"+v,null);else if(/^[0-9a-fA-F]{3}$/.test(v))setColor("#"+v.split("").map(x=>x+x).join(""),null);});
@@ -3426,6 +3427,11 @@ function buildColor(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">05 · Contrast</p><h2 class="sec">Keep it readable</h2>
     <p class="sec-note">Orange is a <b style="color:var(--text-primary)">large‑text and UI‑accent</b> colour, not body copy. Body stays ink (#191919) on light and near‑white (#FAFAFA) on dark; on the orange ground, text and the logo go white.</p>
+    <div class="modecards" style="margin-top:18px">
+      <div class="modecard"><div class="sw" style="background:#fff;border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center"><span style="color:#FD5000;font-weight:800;font-size:19px">Orange on white · 3.3:1</span></div><h5>Large or bold only</h5><p>Passes AA only for large text (18px+, or 14px+ bold). Fine for headlines, eyebrows and button labels at 14px/600+; never body copy or small regular text.</p></div>
+      <div class="modecard"><div class="sw" style="background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);display:flex;align-items:center;padding:0 14px"><span style="color:#fff;font-weight:800;font-size:19px">White on the gradient</span></div><h5>Keep copy on the dark end</h5><p>White reads at 10:1 over the dark corner but drops to 2.5:1 over the light end (#F2864F). Anchor text top‑left over the dark ground; never let copy sit on the bright corner.</p></div>
+      <div class="modecard"><div class="sw" style="background:#09090B;display:flex;align-items:center;justify-content:center"><span style="color:#FF8B5A;font-weight:800;font-size:19px">Sense · 8.6:1</span></div><h5>The safe pairs</h5><p>Ink on white 17.6:1 · white on charcoal 14.7:1 · zinc #FAFAFA on Sense black 19:1 · orange‑on‑dark #FF8B5A 8.6:1. These carry body copy; orange carries emphasis.</p></div>
+    </div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -3679,7 +3685,7 @@ function buildAgents(){
 /* ============ NAV ============ */
 const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:""},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"color",name:"Colour",hex:"#FD5000",meta:"palette",grp:"Foundations"},{id:"type",name:"Typography",hex:"#FD5000",meta:"type",grp:"Foundations"},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations"},{id:"voice",name:"Voice & tone",hex:"#FD5000",meta:"voice",grp:"Foundations"},{id:"agents",name:"Agent avatars",hex:"#FD5000",meta:"agents",grp:"Foundations"},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations"},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations"},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems"},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems"},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems"},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems"},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems"},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems"}];
 function setActive(id,push){
-  [...nav.querySelectorAll("button")].forEach(b=>b.classList.toggle("active",b.dataset.id===id));
+  [...nav.querySelectorAll("button")].forEach(b=>{const on=b.dataset.id===id;b.classList.toggle("active",on);if(on)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   if(id==="overview")buildOverview();
   else if(id==="assets")buildAssets();
   else if(id==="deck")buildDeck();
@@ -3699,6 +3705,7 @@ function setActive(id,push){
   else buildOverview();
   buildSubnav(id);
   revealSections();
+  freezeGifs(stage);
   if(push===false){if(history.replaceState)history.replaceState(null,"","#"+id);}
   else if(history.pushState&&location.hash!=="#"+id)history.pushState(null,"","#"+id);
   nav.classList.remove("open");
@@ -3707,6 +3714,16 @@ window.addEventListener("hashchange",()=>{
   const id=(location.hash||"").slice(1);
   setActive(ALL.some(a=>a.id===id)?id:"overview",false);
 });
+/* Reduced motion: swap animated GIFs for a static first frame */
+const _rmq=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");
+function freezeGifs(root){
+  if(!_rmq||!_rmq.matches)return;
+  root.querySelectorAll('img[src$=".gif"]').forEach(img=>{
+    if(img.dataset.frozen)return;
+    const freeze=()=>{if(img.dataset.frozen)return;try{const c=document.createElement("canvas");c.width=img.naturalWidth;c.height=img.naturalHeight;if(!c.width)return;c.getContext("2d").drawImage(img,0,0);img.dataset.frozen="1";img.src=c.toDataURL("image/png");}catch(_){}};
+    if(img.complete&&img.naturalWidth)freeze();else img.addEventListener("load",freeze,{once:true});
+  });
+}
 let _io;
 function revealSections(){
   if(_io)_io.disconnect();
@@ -3763,11 +3780,8 @@ function spy(){
   links.forEach(l=>l.classList.toggle("cur",l===cur));
 }
 let _spyR;window.addEventListener("scroll",()=>{cancelAnimationFrame(_spyR);_spyR=requestAnimationFrame(spy);},{passive:true});
-/* FAQ accordion toggle (delegated) */
 stage.addEventListener("click",e=>{const b=e.target.closest(".copybtn");if(!b)return;const ct=b.parentElement.querySelector(".ct");if(!ct)return;const t=ct.textContent;const done=()=>{b.textContent="Copied ✓";setTimeout(()=>{b.textContent="Copy";},1600);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb);}else{fb();}});
 stage.addEventListener("click",e=>{const c=e.target.closest(".sw-card");if(!c)return;const hx=c.querySelector(".sw-hex");if(!hx)return;const t=hx.textContent.trim();const flash=()=>{c.classList.add("copied");setTimeout(()=>c.classList.remove("copied"),1000);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);flash();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(flash).catch(fb);}else{fb();}});
-stage.addEventListener("click",e=>{const q=e.target.closest(".acc .q");if(!q)return;const a=q.parentElement.querySelector(".a");const open=a.style.display!=="none"&&a.dataset.c!=="1";if(a.dataset.c==="1"){a.dataset.c="0";a.style.display="block";q.querySelector(".pm").textContent="−";}else{a.dataset.c="1";a.style.display="none";q.querySelector(".pm").textContent="+";}});
-
 const start=(location.hash||"").slice(1);
 setActive(ALL.some(a=>a.id===start)?start:"overview",false);
 </script>
