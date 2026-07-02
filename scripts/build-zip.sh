@@ -51,6 +51,12 @@ rm -f "$OUT"
 find "$STAGE" -exec touch -t 202601010000 {} +
 (cd "$STAGE" && find . -type f ! -name '.DS_Store' ! -path './.*' | sort | zip -qX "$OUT" -@)
 
+# Package the Claude Agent Skill (skills/zuper-brand/ -> assets/zuper-brand-skill.zip).
+SKILL_OUT="$PWD/assets/zuper-brand-skill.zip"
+rm -f "$SKILL_OUT"
+find skills/zuper-brand -exec touch -t 202601010000 {} +
+(cd skills && find zuper-brand -type f ! -name '.DS_Store' | sort | zip -qX "$SKILL_OUT" -@)
+
 # Regenerate llms-full.txt from the same canonical sources (llms.txt is the hand-written index).
 {
   echo "# Zuper Design Language System — full spec"

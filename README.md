@@ -37,6 +37,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 
 ## Repo layout
 - `index.html` — the whole styleguide site (markup, CSS and logic in one file).
+- `skills/zuper-brand/` — the **Claude Agent Skill**: SKILL.md + reference files (decks, web, email, social, voice, assets). Install the packaged `assets/zuper-brand-skill.zip` in Claude.ai (Settings → Capabilities → Skills) or unzip into `.claude/skills/` for Claude Code.
 - `assets/` — fonts, logos, GIFs, backgrounds and the downloadable `zuper-design-system.zip`.
 - `slides/` — the 16:9 deck slide layouts (title, agenda, metrics, quote, product, section break, Glass, Sense).
 - `templates/` — the Claude Design templates (both pitch decks, case study, emailer, ads, landing page, Raise the Roof).

@@ -2310,6 +2310,22 @@ function buildUse(){
   </div></section>
 
   <section class="block"><div class="wrap">
+    <p class="eyebrow">Claude Skill</p><h2 class="sec">Install the Zuper brand as a Claude Skill</h2>
+    <p class="sec-note">The whole system also ships as an <b style="color:var(--text-primary)">Agent Skill</b>: once installed, Claude applies Zuper's colours, type, deck rules, email kits and voice <b style="color:var(--text-primary)">automatically</b> whenever you ask it to make anything for Zuper, no pasting required.</p>
+    <a class="dl-zip" href="assets/zuper-brand-skill.zip" download="zuper-brand-skill.zip">${icon("download",16)} Download the Zuper brand skill (.zip)</a>
+    <div class="cd-fallback" style="margin-top:18px">
+      <p class="fb-h">${icon("sparkle",15)} Where to install it</p>
+      <p><b style="color:var(--text-primary)">Claude.ai / Desktop:</b> Settings → Capabilities → <b>Skills</b> → upload the zip. It triggers on its own when a chat mentions Zuper decks, pages, emails or ads.</p>
+      <p style="margin-top:12px"><b style="color:var(--text-primary)">Claude Code:</b> unzip into your project (or <code>~/.claude/skills/</code> for every project):</p>
+      <div class="repo-row">
+        <span class="repo-url"><span class="gi">${icon("cpu",15)}</span>unzip zuper-brand-skill.zip -d .claude/skills/</span>
+        <button class="url-copy" data-copy="unzip zuper-brand-skill.zip -d .claude/skills/">${icon("copy",15)} Copy command</button>
+      </div>
+      <p style="margin-top:12px">Inside: <code>SKILL.md</code> (the core rules) plus reference files for decks, web, email, social &amp; ads, voice and brand assets. Also in the repo at <code>skills/zuper-brand/</code>.</p>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
     <p class="eyebrow">Claude Design → Claude Code</p><h2 class="sec">Use it straight from Claude Design to Claude Code</h2>
     <p class="sec-note">Working in <b style="color:var(--text-primary)">Claude Code</b>? Skip the download. Paste the prompt below. Claude pulls the published Zuper Design System over the <code>claude_design</code> MCP, then designs and builds on‑brand from it.</p>
     <div class="cc-prompt">

@@ -11,6 +11,7 @@ Non-negotiables:
 
 ## Docs
 
+- [Claude Agent Skill (zip)](https://zuper-dls.vercel.app/assets/zuper-brand-skill.zip): install in Claude.ai or Claude Code and the brand applies automatically; sources at /skills/zuper-brand/SKILL.md
 - [Design brief](https://zuper-dls.vercel.app/claude-design-brief.md): the condensed machine-readable spec, tokens, components, deck rules, voice, reference URLs
 - [Deck and voice rules](https://zuper-dls.vercel.app/CLAUDE.md): the deck colour schemes and the copy rules in short form
 - [llms-full.txt](https://zuper-dls.vercel.app/llms-full.txt): everything above inlined in one file
