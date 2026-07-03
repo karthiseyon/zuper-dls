@@ -803,7 +803,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-assets .mt{font:600 9px/1 'Geist Mono',monospace;color:#9A9088;margin-top:5px;text-transform:uppercase;letter-spacing:.09em}
 .ha-assets .dl{color:#FD5000;flex:0 0 auto}
 /* overview: brand pipeline, one brand feeding every system */
-.ha-fan .s1,.ha-fan .s2,.ha-ads .a1,.ha-agents .k,.ha-win .s.hero,.ha-pal .b1{background-clip:padding-box}
+.ha-fan .s1,.ha-fan .s2,.ha-ads .a1,.ha-win .s.hero,.ha-pal .b1{background-clip:padding-box}
 .ha-hub{background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);padding:18px;border:1px solid rgba(0,0,0,.05);display:flex;gap:0;align-items:center;width:352px}
 .ha-hub .core{flex:0 0 96px;display:flex;flex-direction:column;align-items:center;gap:9px;padding:14px 10px;border:1px solid #EFE8DE;border-radius:14px;background:#FBF8F4}
 .ha-hub .core .mk{width:44px;height:44px;border-radius:12px;background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-clip:padding-box;display:flex;align-items:center;justify-content:center}
@@ -916,7 +916,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub .t{animation:ha-liftwave 3s ease-in-out infinite}
 .ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
 .ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}.ha-hub .out{filter:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}.ha-hub .out{filter:none;opacity:1}.ha-shift .st .d{opacity:1;transform:translateY(-50%)}.ha-shift .st .w{opacity:0}.ha-shift .r{filter:none;opacity:1}}
 @keyframes ha-typline{0%{max-width:0}45%{max-width:272px}88%{max-width:272px}100%{max-width:0}}
 /* Color, palette card */
 .ha-pal{width:328px;height:262px;border-radius:16px;overflow:hidden;box-shadow:0 28px 64px rgba(20,4,3,.26);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;background:#fff}
@@ -969,19 +969,44 @@ main{flex:1;min-width:0;overflow-x:clip}
 .acard .role{font:600 10px/1.3 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
 .acard .agdl{flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--border-default);background:#fff;color:var(--brand-default);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s}
 .acard .agdl:hover{background:var(--brand-subtle);border-color:var(--brand-default)}
-/* Agent avatars, hero art: the team lineup, three mascot cards */
-.ha-agents{position:relative;width:388px;height:246px;margin-left:auto}
-.ha-agents .k{position:absolute;bottom:0;width:150px;height:206px;border-radius:16px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);overflow:hidden;box-shadow:0 20px 46px rgba(20,4,3,.30)}
-.ha-agents .k::after{content:"";position:absolute;left:0;right:0;bottom:0;height:58px;background:linear-gradient(180deg,transparent,rgba(9,9,11,.42));pointer-events:none}
-.ha-agents .k img{position:absolute;left:50%;bottom:0;height:84%;width:auto;max-width:96%;object-fit:contain;object-position:bottom;transform:translateX(-50%)}
-.ha-agents .k span{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;white-space:nowrap;font:700 10px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:6px 10px}
-.ha-agents .k1{left:0;transform:rotate(-6deg);animation:ha-ksway1 5.4s ease-in-out infinite}
-.ha-agents .k2{left:119px;bottom:16px;z-index:2;box-shadow:0 30px 62px rgba(20,4,3,.38);animation:ha-klift 5.4s ease-in-out infinite}
-.ha-agents .k3{left:238px;transform:rotate(6deg);animation:ha-ksway2 5.4s ease-in-out infinite}
-@keyframes ha-klift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@keyframes ha-ksway1{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(-3.5deg)}}
-@keyframes ha-ksway2{0%,100%{transform:rotate(6deg)}50%{transform:rotate(3.5deg)}}
-@media(max-width:1060px){.ha-agents{width:100%;max-width:388px}}
+/* Agent avatars, hero art: agents on shift, a live roster card running the day's work */
+.ha-shift{width:344px;background:#fff;border-radius:16px;box-shadow:0 28px 64px rgba(20,4,3,.22);border:1px solid rgba(0,0,0,.05);padding:16px;margin-left:auto}
+.ha-shift .hd{display:flex;align-items:center;gap:10px;padding:2px 2px 14px}
+.ha-shift .hd .mk{width:30px;height:30px;border-radius:9px;background:linear-gradient(150deg,#1C0A06,#7E1C0B 30%,#D43A14 64%,#F2864F);background-clip:padding-box;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ha-shift .hd b{display:block;font:700 12.5px/1.1 'Plus Jakarta Sans',system-ui,sans-serif;color:#191919}
+.ha-shift .hd i{display:block;font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9A9088;font-style:normal;margin-top:4px}
+.ha-shift .live{margin-left:auto;display:flex;align-items:center;gap:5px;font:600 8px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#FD5000;border:1px solid #FFD9C7;border-radius:999px;padding:5px 8px}
+.ha-shift .live u{width:6px;height:6px;border-radius:50%;background:#FD5000;animation:ha-pulse 1.6s ease-in-out infinite}
+.ha-shift .r{display:flex;align-items:center;gap:11px;border:1px solid #EFE8DE;border-radius:12px;padding:9px 10px;background:#fff;filter:grayscale(1);opacity:.55}
+.ha-shift .r+.r{margin-top:9px}
+.ha-shift .av{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:linear-gradient(150deg,#7E1C0B,#D43A14 55%,#F2864F);position:relative;overflow:hidden}
+.ha-shift .av img{position:absolute;left:50%;top:2px;transform:translateX(-50%);height:108%;width:auto;max-width:none}
+.ha-shift .who b{display:block;font:700 12px/1.1 'Plus Jakarta Sans',system-ui,sans-serif;color:#191919}
+.ha-shift .who i{display:block;font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9A9088;font-style:normal;margin-top:4px}
+.ha-shift .st{margin-left:auto;position:relative;height:24px;display:flex;align-items:center;justify-content:flex-end;min-width:118px}
+.ha-shift .st .w{font:600 8px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#B8AFA6}
+.ha-shift .st .d{position:absolute;right:0;top:50%;display:flex;align-items:center;gap:5px;background:#FCE9E1;color:#B5271C;border-radius:999px;padding:6px 9px;font:700 9.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;white-space:nowrap;opacity:0;transform:translateY(-50%) scale(.7)}
+.ha-shift .r1{animation:ha-sr1 9s ease-in-out infinite}
+.ha-shift .r2{animation:ha-sr2 9s ease-in-out infinite}
+.ha-shift .r3{animation:ha-sr3 9s ease-in-out infinite}
+.ha-shift .r1 .d{animation:ha-sd1 9s ease-in-out infinite}
+.ha-shift .r2 .d{animation:ha-sd2 9s ease-in-out infinite}
+.ha-shift .r3 .d{animation:ha-sd3 9s ease-in-out infinite}
+.ha-shift .r1 .w{animation:ha-sw1 9s ease-in-out infinite}
+.ha-shift .r2 .w{animation:ha-sw2 9s ease-in-out infinite}
+.ha-shift .r3 .w{animation:ha-sw3 9s ease-in-out infinite}
+/* shared 9s timeline: rows finish one by one (12/45/78%), all reset together at 97% */
+@keyframes ha-sd1{0%,8%{opacity:0;transform:translateY(-50%) scale(.7)}12%{opacity:1;transform:translateY(-50%) scale(1.08)}15%,92%{opacity:1;transform:translateY(-50%) scale(1)}97%,100%{opacity:0;transform:translateY(-50%) scale(.7)}}
+@keyframes ha-sd2{0%,41%{opacity:0;transform:translateY(-50%) scale(.7)}45%{opacity:1;transform:translateY(-50%) scale(1.08)}48%,92%{opacity:1;transform:translateY(-50%) scale(1)}97%,100%{opacity:0;transform:translateY(-50%) scale(.7)}}
+@keyframes ha-sd3{0%,74%{opacity:0;transform:translateY(-50%) scale(.7)}78%{opacity:1;transform:translateY(-50%) scale(1.08)}81%,92%{opacity:1;transform:translateY(-50%) scale(1)}97%,100%{opacity:0;transform:translateY(-50%) scale(.7)}}
+@keyframes ha-sw1{0%,9%{opacity:1}12%,93%{opacity:0}98%,100%{opacity:1}}
+@keyframes ha-sw2{0%,42%{opacity:1}45%,93%{opacity:0}98%,100%{opacity:1}}
+@keyframes ha-sw3{0%,75%{opacity:1}78%,93%{opacity:0}98%,100%{opacity:1}}
+/* rows start gray and colour in as each agent activates (4/37/70%), result lands just after; all reset at 97% */
+@keyframes ha-sr1{0%,4%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}8%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}12%,18%{border-color:#FD5000;filter:grayscale(0);opacity:1}26%{border-color:#EFE8DE}92%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}97%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}}
+@keyframes ha-sr2{0%,37%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}41%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}45%,51%{border-color:#FD5000;filter:grayscale(0);opacity:1}59%{border-color:#EFE8DE}92%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}97%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}}
+@keyframes ha-sr3{0%,70%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}74%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}78%,84%{border-color:#FD5000;filter:grayscale(0);opacity:1}92%{border-color:#EFE8DE;filter:grayscale(0);opacity:1}97%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55}}
+@media(max-width:1060px){.ha-shift{width:100%;max-width:344px}}
 /* ===== Overview / cover landing ===== */
 .ov-principles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
 .ov-feat{display:flex;align-items:center;gap:24px;border:1px solid var(--border-default);border-radius:18px;background:linear-gradient(118deg,#fff,#FFF3EC 70%,#FFE7DC);padding:26px 28px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;margin-bottom:18px;width:100%;text-align:left}
@@ -3932,8 +3957,11 @@ function buildAgents(){
         <span class="chip">Orange‑gradient ground</span>
         <span class="chip">Bottom‑aligned in frame</span>
       </div>
-      <div class="hero-art"><div class="float ha-agents">
-        ${AGENTS.slice(0,3).map((a,i)=>`<div class="k k${i+1}"><img src="assets/agents/${a[0]}.png" alt=""><span>${a[1]}</span></div>`).join("")}
+      <div class="hero-art"><div class="float ha-shift">
+        <div class="hd"><span class="mk"><img src="assets/logos/zuper-logomark-white.svg" alt="" style="width:15px;height:auto;display:block"></span><span><b>Zuper</b><i>Agents on shift</i></span><span class="live"><u></u>Live</span></div>
+        <div class="r r1"><span class="av"><img src="assets/agents/front-office.png" alt=""></span><span class="who"><b>CSR Agent</b><i>Dispatch · support</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("calendar-check",12)} Booked 9:30 AM</span></span></div>
+        <div class="r r2"><span class="av"><img src="assets/agents/sales-coach.png" alt=""></span><span class="who"><b>Sales Coach</b><i>Training officer</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("lightbulb",12)} Upsell tip sent</span></span></div>
+        <div class="r r3"><span class="av"><img src="assets/agents/business-analyst.png" alt=""></span><span class="who"><b>Business Analyst</b><i>Insights</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("trend-up",12)} Margin up 18%</span></span></div>
       </div></div>
     </div>
   </header>
@@ -4048,19 +4076,27 @@ function buildSubnav(id){
     }
     const a=document.createElement("a");a.href="#"+sid;
     a.textContent=hh.textContent.replace(/^\s*\d+\s*[·—\-]\s*/,"");
-    a.addEventListener("click",ev=>{ev.preventDefault();sec.scrollIntoView({behavior:"smooth",block:"start"});});
+    a.addEventListener("click",ev=>{ev.preventDefault();_pin=a;_pinT=Date.now();spy();sec.scrollIntoView({behavior:"smooth",block:"start"});});
     sub.appendChild(a);
   });
   btn.insertAdjacentElement("afterend",sub);
   requestAnimationFrame(spy);
 }
+let _pin=null,_pinT=0;
 function spy(){
   const links=[...nav.querySelectorAll(".subnav a")];if(!links.length)return;
-  let cur=links[0];
-  for(const l of links){const t=document.getElementById(l.getAttribute("href").slice(1));if(t&&t.getBoundingClientRect().top<150)cur=l;}
+  if(_pin&&!_pin.isConnected)_pin=null;
+  let cur;
+  if(_pin){cur=_pin;}
+  else{
+    cur=links[0];
+    for(const l of links){const t=document.getElementById(l.getAttribute("href").slice(1));if(t&&t.getBoundingClientRect().top<150)cur=l;}
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)cur=links[links.length-1];
+  }
   links.forEach(l=>l.classList.toggle("cur",l===cur));
 }
-let _spyR;window.addEventListener("scroll",()=>{cancelAnimationFrame(_spyR);_spyR=requestAnimationFrame(spy);},{passive:true});
+let _spyR;window.addEventListener("scroll",()=>{if(_pin&&Date.now()-_pinT>1600)_pin=null;cancelAnimationFrame(_spyR);_spyR=requestAnimationFrame(spy);},{passive:true});
+["wheel","touchmove","keydown"].forEach(ev=>window.addEventListener(ev,()=>{_pin=null;},{passive:true}));
 stage.addEventListener("click",e=>{const b=e.target.closest(".copybtn");if(!b)return;const ct=b.parentElement.querySelector(".ct");if(!ct)return;const t=ct.textContent;const done=()=>{b.textContent="Copied ✓";setTimeout(()=>{b.textContent="Copy";},1600);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb);}else{fb();}});
 stage.addEventListener("click",e=>{const c=e.target.closest(".sw-card");if(!c)return;const hx=c.querySelector(".sw-hex");if(!hx)return;const t=hx.textContent.trim();const flash=()=>{c.classList.add("copied");setTimeout(()=>c.classList.remove("copied"),1000);};const fb=()=>{try{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);flash();}catch(_){}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(flash).catch(fb);}else{fb();}});
 gotoHash((location.hash||"").slice(1),false);
