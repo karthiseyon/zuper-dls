@@ -813,22 +813,27 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub .core .cl{font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9A9088}
 .ha-hub .th span,.ha-hub .th i{display:block}
 .ha-hub .flow{flex:1;display:flex;flex-direction:column;gap:10px;margin-left:16px;position:relative}
-.ha-hub .flow::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:2px;border-radius:2px;background:#F0E7DC}
+.ha-hub .flow::before{content:"";position:absolute;left:0;right:148px;top:25px;bottom:25px;border:2px solid #F0E7DC;border-right:0;border-radius:12px 0 0 12px}
 .ha-hub .flow::after{content:"";position:absolute;left:-16px;top:50%;width:16px;height:2px;margin-top:-1px;background:#F0E7DC}
 .ha-hub .row{display:flex;align-items:center;gap:0}
 .ha-hub .wire{flex:1;height:2px;background:#F0E7DC;min-width:26px}
+.ha-hub .row:nth-of-type(1) .wire,.ha-hub .row:nth-of-type(4) .wire{background:transparent}
 .ha-hub .dot{position:absolute;left:-19px;top:137px;width:9px;height:9px;border-radius:50%;background:#FD5000;box-shadow:0 0 10px rgba(253,80,0,.75);opacity:0;z-index:2;animation:ha-dotgo 8s linear infinite;pointer-events:none}
 .ha-hub .dot.d1{--ty:calc(-50% - 111px);animation-delay:0s}
-.ha-hub .dot.d2{--ty:calc(-50% - 37px);animation-delay:2s}
-.ha-hub .dot.d3{--ty:calc(-50% + 37px);animation-delay:4s}
-.ha-hub .dot.d4{--ty:calc(-50% + 111px);animation-delay:6s}
+.ha-hub .dot.d2{--ty:calc(-50% - 37px);animation-delay:1.5s}
+.ha-hub .dot.d3{--ty:calc(-50% + 37px);animation-delay:3s}
+.ha-hub .dot.d4{--ty:calc(-50% + 111px);animation-delay:4.5s}
 @keyframes ha-dotgo{0%{transform:translate(0,-50%);opacity:0}2%{opacity:1}6%{transform:translate(16px,-50%)}13%{transform:translate(16px,var(--ty))}20%{transform:translate(65px,var(--ty));opacity:1}25%,100%{transform:translate(65px,var(--ty));opacity:0}}
-.ha-hub .out{flex:0 0 148px;height:52px;box-sizing:border-box;display:flex;align-items:center;gap:10px;border:1px solid #EFE8DE;border-radius:11px;background:#fff;padding:8px 10px;animation:ha-out-hit 8s ease-in-out infinite}
-.ha-hub .row:nth-child(1) .out{animation-delay:1.55s}
-.ha-hub .row:nth-child(2) .out{animation-delay:3.55s}
-.ha-hub .row:nth-child(3) .out{animation-delay:5.55s}
-.ha-hub .row:nth-child(4) .out{animation-delay:7.55s}
-@keyframes ha-out-hit{0%,100%{border-color:#EFE8DE;transform:translateY(0);box-shadow:none}3%,10%{border-color:#FD5000;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}14%{border-color:#EFE8DE;transform:translateY(0)}}
+.ha-hub .out{flex:0 0 148px;height:52px;box-sizing:border-box;display:flex;align-items:center;gap:10px;border:1px solid #EFE8DE;border-radius:11px;background:#fff;padding:8px 10px;filter:grayscale(1);opacity:.55}
+.ha-hub .row:nth-of-type(1) .out{animation:ha-hit1 8s ease-in-out infinite}
+.ha-hub .row:nth-of-type(2) .out{animation:ha-hit2 8s ease-in-out infinite}
+.ha-hub .row:nth-of-type(3) .out{animation:ha-hit3 8s ease-in-out infinite}
+.ha-hub .row:nth-of-type(4) .out{animation:ha-hit4 8s ease-in-out infinite}
+/* one shared 8s timeline, starts ALL GRAY: dots land at 20/39/58/76%, each card lights on its hit and stays lit; all fade back to gray at 94-98% before the loop restarts */
+@keyframes ha-hit1{0%,20%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}22%,27%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}31%,94%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(0);box-shadow:none}98%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}}
+@keyframes ha-hit2{0%,39%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}41%,46%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}50%,94%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(0);box-shadow:none}98%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}}
+@keyframes ha-hit3{0%,58%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}60%,65%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}69%,94%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(0);box-shadow:none}98%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}}
+@keyframes ha-hit4{0%,77%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}79%,84%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(-3px);box-shadow:0 10px 22px rgba(253,80,0,.16)}88%,94%{border-color:#FD5000;filter:grayscale(0);opacity:1;transform:translateY(0);box-shadow:none}98%,100%{border-color:#EFE8DE;filter:grayscale(1);opacity:.55;transform:translateY(0);box-shadow:none}}
 .ha-hub .out .th{flex:0 0 auto;border-radius:6px;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
 .ha-hub .out .nm{font:700 11.5px/1.1 'Plus Jakarta Sans',sans-serif;color:#191919}
 .ha-hub .out .mt{font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9A9088;margin-top:4px}
@@ -911,7 +916,7 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-hub .t{animation:ha-liftwave 3s ease-in-out infinite}
 .ha-hub .t:nth-child(1){animation-delay:0s}.ha-hub .t:nth-child(2){animation-delay:.18s}.ha-hub .t:nth-child(3){animation-delay:.36s}.ha-hub .t:nth-child(4){animation-delay:.54s}
 .ha-hub .t.on .ic{animation:ha-pulse 2.4s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}}
+@media (prefers-reduced-motion:reduce){.hero-art *{animation:none!important}.ha-typ .big .f1,.ha-typ .who .f1{opacity:1!important}.ha-hub .out{filter:none;opacity:1}}
 @keyframes ha-typline{0%{max-width:0}45%{max-width:272px}88%{max-width:272px}100%{max-width:0}}
 /* Color, palette card */
 .ha-pal{width:328px;height:262px;border-radius:16px;overflow:hidden;box-shadow:0 28px 64px rgba(20,4,3,.26);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;background:#fff}
