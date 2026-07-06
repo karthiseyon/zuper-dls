@@ -571,7 +571,7 @@
   --ui-mute:#9A8E81;
   --ui-line:#2C241E;
   --ui-orange:#FD5000;
-  --canvas:#EFEAE2;
+  --canvas:#F8F5F2;
   --display:'Plus Jakarta Sans',system-ui,sans-serif;
   --body:'Inter',system-ui,sans-serif;
   --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
@@ -1060,9 +1060,10 @@ main{flex:1;min-width:0;overflow-x:clip}
 .la-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(218px,1fr));gap:16px}
 .la-card{border:1px solid var(--border-default);border-radius:14px;overflow:hidden;background:var(--surface-card);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .la-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,4,3,.08);border-color:var(--brand-default)}
-.la-prev{height:124px;display:flex;align-items:center;justify-content:center;padding:18px;background:#F2ECE3;border-bottom:1px solid var(--border-subtle)}
+.la-prev{height:124px;display:flex;align-items:center;justify-content:center;padding:18px;background:#F2ECE3;border-bottom:1px solid var(--border-subtle);overflow:hidden}
 .la-card.dark .la-prev{background:#191919}
 .la-prev img{max-height:80px;max-width:84%;width:auto;object-fit:contain}
+.la-fam.fam-zuper-vertical .la-prev img{transform:translateY(3%) scale(1.55)}
 .la-meta{padding:13px 14px 14px;display:flex;flex-direction:column;gap:11px}
 .la-name{font:600 13px/1 'Inter',sans-serif;color:var(--text-primary)}
 .la-btns{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
@@ -1169,7 +1170,7 @@ h2.sec .alink.ok{opacity:1;color:#1E854B;border-color:#1E854B}
 .esig .es-banners{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 .esig .bopt{display:block;aspect-ratio:4/1;cursor:pointer;border:2px solid var(--border-default);border-radius:10px;overflow:hidden;line-height:0;transition:border-color .15s ease}
 .esig .bopt:hover{border-color:#d9b8a8}
-.esig .bopt input{position:absolute;opacity:0;pointer-events:none}
+.esig .bopt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
 .esig .bopt img{width:100%;height:100%;object-fit:cover;display:block}
 .esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:100%;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
 .esig .bopt:has(input:checked){border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 18%,transparent)}
@@ -2032,13 +2033,13 @@ const CHROME_TOKENS={
 function chromeCss(canvas){
   const W=Object.assign({},SYS.find(s=>s.id==="website").vars,CHROME_TOKENS);
   return Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:${canvas||"#FBF8F4"}`
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:${canvas||"#F8F5F2"}`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 }
 
 /* ===== One‑pager (custom) ===== */
 function buildOnePager(){
-  stage.style.cssText=chromeCss("#F4EEE6");
+  stage.style.cssText=chromeCss();
 
   const foot=n=>`<div class="pfoot"><div class="fl">${logo("dark",13)}<span class="fdiv"></span><span class="cmk">SUMMIT ROOFING</span></div><span class="pg">zuper.co · <b>0${n}</b> / 05</span></div>`;
 
@@ -2187,7 +2188,7 @@ function buildOnePager(){
 function buildDeck(){
   const L=SYS.find(s=>s.id==="deck-light").vars;
   stage.style.cssText=Object.entries(L).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Aptos Display','Aptos','Segoe UI',system-ui,sans-serif;--body:'Aptos','Segoe UI',system-ui,sans-serif;--c-canvas:#F8F5F0`
+    +`;--display:'Aptos Display','Aptos','Segoe UI',system-ui,sans-serif;--body:'Aptos','Segoe UI',system-ui,sans-serif;--c-canvas:#F8F5F2`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 
   const sw=(n,hex,d)=>`<div class="sw-card"><div class="sw-chip" style="background:${hex}${d?';box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)':''}"></div><div class="sw-body"><div class="sw-name">${n}</div><div class="sw-hex">${hex}</div></div></div>`;
@@ -2334,7 +2335,7 @@ function buildWebsite(s){
     "border-default":"#E6E6E6","border-subtle":"#F0F0F0","card-border":"#F0F0F0","brand-subtle":"#FFE7DC"
   });
   const css=Object.entries(W).map(([k,v])=>`--${k}:${v}`).join(";")
-    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#FFFFFF`
+    +`;--display:'Plus Jakarta Sans',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--c-canvas:#F8F5F2`
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000`
     +`;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
   stage.style.cssText=css;
@@ -2903,7 +2904,7 @@ function buildEmailSig(){
 
 /* ============ SOCIAL & ADS ============ */
 function buildSocial(){
-  stage.style.cssText=chromeCss("#F4EEE6");
+  stage.style.cssText=chromeCss();
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
   const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
@@ -3303,7 +3304,7 @@ function buildSocial(){
 
 /* ============ EMAILER ============ */
 function buildEmailer(){
-  stage.style.cssText=chromeCss("#F4EEE6");
+  stage.style.cssText=chromeCss();
 
   const DISP="'Plus Jakarta Sans',system-ui,sans-serif",BODY="'Inter',system-ui,sans-serif",MONO="'Geist Mono',ui-monospace,monospace";
   const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)",INK="#191919",L="assets/logos/";
@@ -3726,7 +3727,7 @@ function buildAssets(){
         <button class="la-dl dl-btn" data-href="${base}.png">${dn}PNG</button>
       </div></div></div>`;
   };
-  const families=fams.map(f=>`<div class="la-fam"><h3 class="grp">${f[0]}</h3><p class="grp-note">${f[1]}</p>
+  const families=fams.map(f=>`<div class="la-fam fam-${f[2]}"><h3 class="grp">${f[0]}</h3><p class="grp-note">${f[1]}</p>
       <div class="la-grid">${variants.map(v=>logoCard(f[2],f[3],v)).join("")}</div></div>`).join("");
 
   const socCard=(src,nm,dim)=>`<div class="s-card">
@@ -3898,7 +3899,7 @@ function foundTheme(canvas){
 }
 
 function buildColor(){
-  stage.style.cssText=foundTheme("#FBF8F4");
+  stage.style.cssText=foundTheme();
   const copyline=(code)=>`<div style="margin-top:14px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border-default);border-radius:10px;padding:11px 13px"><code class="ct" style="font-family:'Geist Mono',monospace;font-size:12px;color:#191919;flex:1;overflow-x:auto;white-space:nowrap">${code}</code><button class="copybtn" style="font:600 11px/1 'Inter',sans-serif;color:var(--brand-default);background:var(--brand-subtle);border:0;border-radius:7px;padding:8px 11px;cursor:pointer">Copy</button></div>`;
   const gr=(bg,brd,h5,p)=>`<div class="modecard"><div style="height:56px;border-radius:10px;margin-bottom:12px;${brd};background:${bg}"></div><h5>${h5}</h5><p>${p}</p></div>`;
   stage.innerHTML=`
@@ -3986,7 +3987,7 @@ function buildColor(){
 }
 
 function buildType(){
-  stage.style.cssText=foundTheme("#FBF8F4");
+  stage.style.cssText=foundTheme();
   const MONO="'Geist Mono',ui-monospace,monospace";
   const spec=(fam,label,meta,big,sample)=>`<div style="border:1px solid var(--border-default);border-radius:16px;padding:26px;background:#fff;margin-bottom:16px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-family:${MONO};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary)">${label}</span><span style="font-family:${MONO};font-size:11px;color:var(--text-tertiary)">${meta}</span></div>
@@ -4138,7 +4139,7 @@ function buildType(){
 }
 
 function buildVoice(){
-  stage.style.cssText=foundTheme("#FBF8F4");
+  stage.style.cssText=foundTheme();
   const MONO="'Geist Mono',ui-monospace,monospace";
   const vprin=(n,ic,t,d)=>`<div class="vprin"><div class="top"><span class="ic">${icon(ic,19)}</span><span class="num">${n}</span></div><h5>${t}</h5><p>${d}</p></div>`;
   const vline=(eb,q,g)=>`<div class="vline ${g}"><p class="veb">${eb}</p><h4>${q}</h4><button class="cp url-copy" data-copy="${q}">Copy</button></div>`;
@@ -4303,7 +4304,7 @@ const AGENTS=[
 ];
 function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){
-  stage.style.cssText=foundTheme("#FBF8F4");
+  stage.style.cssText=foundTheme();
   const card=(a)=>`<div class="acard">${agentFrame(a)}<div class="bd"><div class="meta"><div class="nm">${a[1]}</div><div class="role">${a[2]}</div></div><button class="dl-btn agdl" data-href="assets/agents/${a[0]}.png" data-name="zuper-${a[0]}.png" aria-label="Download ${a[1]}">${icon("download",16)}</button></div></div>`;
   const rule=(t)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)">${t}</span></div>`;
   stage.innerHTML=`
