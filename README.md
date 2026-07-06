@@ -18,11 +18,11 @@ A sidebar switches between an overview, eight foundations and six systems:
 - **How to use this** — one button opens the published **Zuper Design System** in **Claude Design**; then pick **Zuper Design System** from the Design system dropdown on any project. *(The repo itself is the source the system was built from.)*
 
 **Foundations**
+- **Voice & tone** — the five principles (plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-looking), the banned vocab, and on-tone/off-tone examples.
 - **Logo usage** — how to place the mark: clear space (= `x`, the mark height), minimum sizes (24px mark / 100px lockup / 10mm print), the right variant per background, and a misuse grid (don't stretch, rotate, recolour, add effects, fade, or sit it on low contrast).
 - **Colour** — the one orange `#FD5000`, the signature gradient, ink, warm + high‑contrast neutrals, and where each colour lives.
 - **Typography** — Plus Jakarta Sans (headings) · Inter (body) · Geist Mono (uppercase eyebrows) for web; Aptos Display / Aptos for decks; the scale and rhythm.
 - **Iconography** — Zuper's one icon language: a **single‑weight outline set** (clean outline glyphs, 256px grid, `currentColor`). The consistency rules, plus an **Icon Studio** — search the full icon library by name or keyword (trade synonyms like "roof"→house), recolour / resize, then copy or download SVG/PNG. Everything comes out on‑brand.
-- **Voice & tone** — the five principles (plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-looking), the banned vocab, and on-tone/off-tone examples.
 - **Agent avatars** — the AI agent portrait set (business analyst, field technician, sales coach and friends) and how to use them.
 - **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
 - **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**, plus a downloadable Word document template and the full design-system `.zip`.
