@@ -28,6 +28,10 @@ Zuper makes field service management software for the skilled trades (roofing, H
 
 Orange on white is 3.3:1 — large or bold text only (18px+, or 14px+ at 600+). Never body copy. White on the gradient reads 10:1 over the dark corner but 2.5:1 over the light end, so anchor text on the dark ground. Body copy rides the safe pairs: ink on white (17.6:1), white on charcoal (14.7:1), `#FAFAFA` on Sense black (19:1).
 
+## Charts & data
+
+An emphasis ladder, not a rainbow. Categorical series in order: focus `#FD5000` (one per chart), comparison `#191919`, context `#7A7268`, field `#E7E0D6`; past three series use small multiples or fold into "Other", and direct-label every series (colour is never the only cue). Sequential runs light→dark through orange tints `#FFE7DC → #F2864F → #FD5000 → #D43A14 → #7E1C0B`. Polarity is status green `#1E854B` / red `#C42121` with an arrow or label, never brand orange. Values in Geist Mono, labels Inter 11-12px `#7A7268` (text never wears the series colour), hairline `#E7E0D6` grid, no axis spines. Charts sit on white or Sense black (`#FF8B5A` leads, white comparison); marks never sit on the orange gradient — on an orange slide the chart rides a white card. Never: rainbow palettes, gradient fills, 3D/shadows, dual y-axes, a value on every point. Picking a chart form: https://datavizproject.com/ catalogues every type by data shape and job.
+
 ## Typography
 
 - **Web, email, ads:** Plus Jakarta Sans 600-700 (headings) · Inter 400-700 (body) · Geist Mono uppercase orange eyebrows (letter-spacing .1em).

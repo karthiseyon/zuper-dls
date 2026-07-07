@@ -411,7 +411,7 @@
 .indpills{display:flex;gap:9px;flex-wrap:wrap}
 .indpills .ip{font-size:13px;font-weight:600;padding:8px 15px;border-radius:999px;background:var(--surface-default);border:1px solid var(--border-default);color:var(--text-primary)}
 .marquee{overflow:hidden;background:#282828;border-radius:12px;padding:15px 0;white-space:nowrap;position:relative}
-.marquee .track{display:inline-block;animation:mq 20s linear infinite;will-change:transform}
+.marquee .track{display:inline-block;animation:mq 40s linear infinite;will-change:transform}
 .marquee .track span{color:#fff;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em;margin:0 6px}
 .marquee .track .dot{color:var(--brand-default);margin:0 16px}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -1393,11 +1393,11 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 /* megamenu */
 .mega{background:#fff;border:1px solid var(--border-default);border-radius:16px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.12)}
 .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.megacard{background:#F8F0EB;border-radius:14px;padding:18px;min-height:118px;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.megacard{background:#F8F0EB;border-radius:14px;padding:18px;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s}
 .megacard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
 .megacard .t{font-family:var(--display);font-weight:700;font-size:17px;color:#1B1919;display:flex;align-items:center;gap:8px}
 .megacard .t .ar{color:var(--brand-default);font-weight:700}
-.megacard .sub{font-size:12.5px;color:#606063;margin-top:auto;padding-top:10px}
+.megacard .sub{font-size:12.5px;color:#606063;padding-top:8px}
 .mega-foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-subtle)}
 .mega-foot .mt{font-size:13px;color:#606063}
 .roof-banner{background:#FCE9E1;border-radius:14px;padding:16px 18px;margin-bottom:16px}
@@ -1468,7 +1468,7 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .ckwrap{z-index:80}
 .ckwrap.open{display:block}
 .ckwrap .scrim,.lbwrap .scrim{position:absolute;inset:0;background:rgba(18,10,6,.46)}
-.ck{position:relative;margin:11vh auto 0;width:min(560px,calc(100vw - 40px));background:#fff;border-radius:18px;box-shadow:0 40px 110px rgba(20,4,3,.35);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+.ckwrap .ck{position:relative;margin:11vh auto 0;width:min(560px,calc(100vw - 40px));background:#fff;border-radius:18px;box-shadow:0 40px 110px rgba(20,4,3,.35);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
 .ck input{width:100%;box-sizing:border-box;border:none;outline:none;font:500 16px/1.3 'Inter',system-ui,sans-serif;padding:18px 20px;border-bottom:1px solid #F0EAE1;color:#191919;background:#fff}
 .ck input::placeholder{color:#A89F93}
 .ck .ls{max-height:46vh;overflow:auto;padding:8px}
@@ -1483,10 +1483,10 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .lbwrap{z-index:70;align-items:center;justify-content:center;padding:34px}
 .lbwrap.open{display:flex}
 .lbwrap .scrim{background:rgba(14,8,5,.88);cursor:zoom-out}
-.lb{position:relative;max-width:min(1080px,92vw);max-height:88vh;margin:0;display:flex;flex-direction:column;gap:12px;align-items:center}
-.lb img{max-width:100%;max-height:78vh;border-radius:14px;box-shadow:0 40px 120px rgba(0,0,0,.5);display:block}
-.lb .cap{font:500 11.5px/1.4 'Geist Mono',ui-monospace,monospace;letter-spacing:.06em;color:#D8CEC2;text-transform:uppercase;text-align:center}
-.lb .x{position:absolute;top:-13px;right:-13px;width:34px;height:34px;border-radius:50%;background:#fff;color:#191919;border:none;cursor:pointer;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center}
+.lbwrap .lb{position:relative;max-width:min(1080px,92vw);max-height:88vh;margin:0;display:flex;flex-direction:column;gap:12px;align-items:center}
+.lbwrap .lb img{max-width:100%;max-height:78vh;border-radius:14px;box-shadow:0 40px 120px rgba(0,0,0,.5);display:block}
+.lbwrap .lb .cap{font:500 11.5px/1.4 'Geist Mono',ui-monospace,monospace;letter-spacing:.06em;color:#D8CEC2;text-transform:uppercase;text-align:center}
+.lbwrap .lb .x{position:absolute;top:-13px;right:-13px;width:34px;height:34px;border-radius:50%;background:#fff;color:#191919;border:none;cursor:pointer;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center}
 .s-prev img,.acard .frame img,.la-prev img{cursor:zoom-in}
 @media (prefers-reduced-motion:no-preference){
   .ckwrap.open .ck,.lbwrap.open .lb{animation:ck-in .18s ease}
@@ -2618,7 +2618,7 @@ function buildWebsite(s){
       </div>
     </div>
     <h3 class="grp">Marquee / ticker</h3>
-    <div class="marquee"><div class="track"><span>Right place</span><span class="dot">•</span><span>Right job</span><span class="dot">•</span><span>Right time</span><span class="dot">•</span><span>Right skills</span><span class="dot">•</span><span>Right parts</span><span class="dot">•</span><span>Right place</span><span class="dot">•</span><span>Right job</span><span class="dot">•</span><span>Right time</span><span class="dot">•</span><span>Right skills</span><span class="dot">•</span><span>Right parts</span><span class="dot">•</span></div></div>
+    <div class="marquee"><div class="track">${'<span>Right place</span><span class="dot">•</span><span>Right job</span><span class="dot">•</span><span>Right time</span><span class="dot">•</span><span>Right skills</span><span class="dot">•</span><span>Right parts</span><span class="dot">•</span>'.repeat(4)}</div></div>
     <div class="cols-2" style="margin-top:24px;align-items:start">
       <div><h3 class="grp">Launch‑plan card</h3>
         <div class="launch">
@@ -3611,13 +3611,32 @@ function buildLogos(){
     ["Don't sit it on a low‑contrast ground",`<span style="display:block">${logo("dark",26)}</span>`,GRAD]
   ].map(d=>`<div><div style="position:relative;background:${d[2]};border:1px solid #E7E0D6;border-radius:14px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:94px;overflow:hidden"><span style="position:absolute;top:9px;right:9px;width:22px;height:22px;border-radius:50%;background:#C42121;color:#fff;display:flex;align-items:center;justify-content:center">${icon("x",13)}</span>${d[1]}</div>${cap(d[0])}</div>`).join("");
 
+  /* co-branding, partner lockups. HubSpot (a real Zuper integration partner) is the worked example */
+  const HUBW="M11.48 4.974v8.475H3.694V4.974H0v20.231h3.695v-8.2h7.784v8.2h3.696V4.974zm15.522 13.692a3.057 3.057 0 1 1-6.115 0V10h-3.505v8.666a6.556 6.556 0 0 0 13.112 0V10h-3.492v8.666zm25.971-7.773c0-1.777 1.175-2.34 2.462-2.34 1.038 0 2.408.79 3.305 1.748l2.295-2.706c-1.146-1.55-3.47-2.621-5.373-2.621-3.803 0-6.553 2.227-6.553 5.919 0 6.85 8.372 4.676 8.372 8.51 0 1.182-1.148 2.226-2.462 2.226-2.073 0-2.745-1.013-3.697-2.085l-2.548 2.649c1.63 2 3.64 3.016 6.047 3.016 3.613 0 6.519-2.254 6.519-5.778 0-7.604-8.373-5.241-8.373-8.538m51.8 11.08c-2.071 0-2.66-.896-2.66-2.268V13.63h3.22v-3.078h-3.22V6.491l-3.554 1.595V20.46c0 3.165 2.184 4.76 5.178 4.76.47.008.94-.03 1.402-.112l.867-3.192c-.391.027-.84.054-1.233.054M40.344 10.101c-1.736 0-2.948.504-4.12 1.653V5.095h-3.51v12.343c0 4.62 3.34 7.786 7.094 7.786 4.164 0 7.827-3.222 7.827-7.56 0-4.284-3.371-7.56-7.291-7.56m-.022 11.587a3.983 3.983 0 1 1 0-7.967 3.983 3.983 0 0 1 0 7.967m38.142-4.211c0-4.346-3.655-7.56-7.827-7.56-3.753 0-7.094 3.165-7.094 7.786v12.35h3.51v-6.668c1.17 1.147 2.384 1.653 4.118 1.653 3.92 0 7.292-3.276 7.292-7.561m-3.323-.044a3.983 3.983 0 1 1-7.967 0 3.983 3.983 0 0 1 7.967 0";
+  const HUBS="M89.806 9.75V6.223a2.716 2.716 0 0 0 1.566-2.448v-.081c0-1.5-1.216-2.716-2.716-2.716h-.081a2.716 2.716 0 0 0-2.716 2.716v.081a2.716 2.716 0 0 0 1.566 2.448V9.75a7.691 7.691 0 0 0-3.657 1.61l-9.673-7.534c.069-.249.105-.505.109-.762a3.06 3.06 0 1 0-3.064 3.054 3.027 3.027 0 0 0 1.507-.41l9.525 7.412a7.715 7.715 0 0 0 .118 8.69l-2.897 2.898a2.488 2.488 0 0 0-.724-.118 2.513 2.513 0 1 0 2.515 2.515 2.48 2.48 0 0 0-.118-.724l2.866-2.867A7.728 7.728 0 1 0 89.806 9.75m-1.188 11.6a3.965 3.965 0 1 1 0-7.927 3.965 3.965 0 0 1 .004 7.925";
+  const hub=(w,s,px)=>`<svg viewBox="0 0 106 31" height="${px}" style="width:auto;display:block" role="img" aria-label="HubSpot"><g fill="none"><path d="${HUBW}" fill="${w}"/><path d="${HUBS}" fill="${s}"/></g></svg>`;
+  const pmark=(c,px)=>c==="full"?hub("#33475B","#FF7A59",px):hub(c,c,px);
+  const lockup=(v,dc,pc,px)=>`<span style="display:inline-flex;align-items:center;gap:${Math.round(px*.8)}px">${logo(v,px)}<span style="width:1px;height:${Math.round(px*1.3)}px;background:${dc};display:inline-block;flex:none"></span>${pmark(pc,Math.round(px*.95))}</span>`;
+  const codonts=[
+    ["Don't let the partner outweigh the mark",`<span style="display:inline-flex;align-items:center;gap:14px">${logo("dark",15)}<span style="width:1px;height:34px;background:#D8D0C4"></span>${pmark("full",30)}</span>`,"#fff"],
+    ["Don't merge the marks, keep the divider",`<span style="display:inline-flex;align-items:center;gap:5px">${logo("dark",22)}${pmark("full",19)}</span>`,"#fff"],
+    ["Don't recolour the partner in Zuper orange",lockup("dark","#D8D0C4","#FD5000",22),"#fff"],
+    ["Don't pair on a ground either mark can't clear",lockup("dark","#7E1C0B","full",22),GRAD]
+  ].map(d=>`<div><div style="position:relative;background:${d[2]};border:1px solid #E7E0D6;border-radius:14px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:94px;overflow:hidden"><span style="position:absolute;top:9px;right:9px;width:22px;height:22px;border-radius:50%;background:#C42121;color:#fff;display:flex;align-items:center;justify-content:center">${icon("x",13)}</span>${d[1]}</div>${cap(d[0])}</div>`).join("");
+  const corules=[
+    ["shield","Same rules as ours","The supplied files, clear space, minimum sizes and the misuse list above all apply when a partner uses the Zuper mark."],
+    ["droplet","Match the ground","Full colour on white and light neutrals, white on dark. If either mark can't clear the ground, move the pair onto a white panel. Never recolour a mark to fit."],
+    ["check","Sign-off before it ships","A co-branded piece claims a real partnership. Zuper marketing approves every co-branded asset before it goes out."],
+    ["download","Get the files","Logos live on the <b>Brand assets</b> page. Partners get the same files, never screenshots or redraws."]
+  ].map(c=>`<div style="background:#fff;border:1px solid #E7E0D6;border-radius:14px;padding:20px;display:flex;gap:14px;align-items:flex-start"><span style="color:#FD5000;flex:none;margin-top:2px">${icon(c[0],20)}</span><div><h4 style="font:700 14px/1.3 'Inter',sans-serif;color:${INK};margin:0 0 6px">${c[1]}</h4><p style="font:400 13px/1.55 'Inter',sans-serif;color:#5C554C;margin:0">${c[2]}</p></div></div>`).join("");
+
   stage.innerHTML=`
   <header class="sys-hero has-art">
     <div class="inner">
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Brand</p>
       <h1>Logo usage</h1>
-      <p class="lede">How to place the Zuper mark so it always reads as Zuper, clear space, minimum sizes, the right ground for each variant, and the things to never do. Grab the files themselves on the <b>Brand assets</b> page.</p>
+      <p class="lede">How to place the Zuper mark so it always reads as Zuper, clear space, minimum sizes, the right ground for each variant, the things to never do, and how the mark pairs with partner brands. Grab the files themselves on the <b>Brand assets</b> page.</p>
       <div class="chips">
         <span class="chip"><span class="swt" style="background:#FD5000"></span>protect the mark</span>
         <span class="chip">clear space = x</span>
@@ -3661,6 +3680,18 @@ function buildLogos(){
     <p class="eyebrow">03 · Never do this</p><h2 class="sec">Logo misuse</h2>
     <p class="sec-note">The mark is fixed artwork. Don't redraw, restyle or recolour it, use the supplied files as‑is.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px;padding-top:4px">${donts}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">04 · With partners</p><h2 class="sec">Co‑branding &amp; partner lockups</h2>
+    <p class="sec-note">When Zuper appears next to a partner brand, pair the marks, don't merge them. Zuper first, a hairline divider, clear space ≥ <b>x</b> on either side of it, and the partner scaled to the same optical height.</p>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:stretch">
+      <div style="flex:2;min-width:300px;position:relative;background:#fff;border:1px solid #E7E0D6;border-radius:16px;padding:44px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center">${ok}${lockup("dark","#D8D0C4","full",30)}${cap("On white &amp; light neutrals: full‑colour Zuper, the partner in its own colours")}</div>
+      <div style="flex:1;min-width:240px;position:relative;background:#282828;border-radius:16px;padding:44px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center">${ok}${lockup("white","rgba(255,255,255,.35)","#fff",26)}<div style="font-family:${MONO};font-size:11px;color:#B8B2A9;margin-top:10px;letter-spacing:.02em">On dark or orange grounds, both marks go white</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;padding-top:22px">${codonts}</div>
+    <h3 style="font:800 17px/1.2 'Inter',sans-serif;color:${INK};letter-spacing:-.01em;margin:34px 0 14px">If you're the partner</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px">${corules}</div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -3815,7 +3846,7 @@ function buildOverview(){
 
   const FOUND=[
     ["voice","chat-text","Voice &amp; tone","Voice","How Zuper writes, plain, warm, field‑first. The five principles, on/off‑tone, banned words and the litmus test."],
-    ["logo-usage","shield","Logo usage","Brand","How to place the mark, clear space, minimum sizes, the right variant per background, and the misuse to avoid."],
+    ["logo-usage","shield","Logo usage","Brand","How to place the mark, clear space, minimum sizes, the right variant per background, misuse to avoid, and partner lockups."],
     ["color","droplet","Colour","Palette","One vivid orange plus a neutral cast, the palette, the gradient and the grounds each colour lives on."],
     ["type","edit","Typography","Type","Two type systems, one voice. Aptos for decks, Plus Jakarta + Inter elsewhere, Geist Mono eyebrows."],
     ["icons","grid","Iconography","Icons","One single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in any colour and size."],
@@ -3981,6 +4012,46 @@ function buildColor(){
       <div class="modecard"><div class="sw" style="background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);display:flex;align-items:center;padding:0 14px"><span style="color:#fff;font-weight:800;font-size:19px">White on the gradient</span></div><h5>Keep copy on the dark end</h5><p>White reads at 10:1 over the dark corner but drops to 2.5:1 over the light end (#F2864F). Anchor text top‑left over the dark ground; never let copy sit on the bright corner.</p></div>
       <div class="modecard"><div class="sw" style="background:#09090B;display:flex;align-items:center;justify-content:center"><span style="color:#FF8B5A;font-weight:800;font-size:19px">Sense · 8.6:1</span></div><h5>The safe pairs</h5><p>Ink on white 17.6:1 · white on charcoal 14.7:1 · zinc #FAFAFA on Sense black 19:1 · orange‑on‑dark #FF8B5A 8.6:1. These carry body copy; orange carries emphasis.</p></div>
     </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">06 · Charts &amp; data</p><h2 class="sec">One series wears the orange</h2>
+    <p class="sec-note">The chart palette is the brand palette: an <b style="color:var(--text-primary)">emphasis ladder, not a rainbow</b>. The series that carries the claim wears #FD5000; everything else steps down through ink and warm gray. Label series directly (colour is never the only cue), and past three series split into small multiples or fold the tail into "Other".</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-bottom:22px">
+      ${[["1 · Focus","#FD5000","#fff","The point of the chart. One series per chart, same as buttons."],
+         ["2 · Comparison","#191919","#fff","The series it's measured against."],
+         ["3 · Context","#7A7268","#fff","Older periods, benchmarks, trend lines."],
+         ["4 · The field","#E7E0D6","#191919","Everything de‑emphasised behind the claim."]]
+        .map(s=>`<div style="background:#fff;border:1px solid var(--border-default);border-radius:14px;overflow:hidden"><div style="height:54px;background:${s[1]};display:flex;align-items:flex-end;padding:10px 14px"><span style="font-family:'Geist Mono',monospace;font-size:11px;color:${s[2]}">${s[1]}</span></div><div style="padding:12px 14px"><h5 style="font:700 13px/1.2 'Inter',sans-serif;color:var(--text-primary);margin:0 0 5px">${s[0]}</h5><p style="font:400 12px/1.5 'Inter',sans-serif;color:var(--text-secondary);margin:0">${s[3]}</p></div></div>`).join("")}
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:stretch">
+      <div style="flex:1;min-width:290px;position:relative;background:#fff;border:1px solid var(--border-default);border-radius:16px;padding:24px">
+        <span style="position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;background:#1E854B;color:#fff;display:flex;align-items:center;justify-content:center">${icon("check",13)}</span>
+        <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7A7268;margin-bottom:18px">Quotes won on‑site</div>
+        <div style="display:flex;gap:12px;align-items:flex-end;border-bottom:1px solid #E7E0D6;padding:0 6px">
+          ${[["Q1","31%",62,"#E7E0D6","#7A7268",500],["Q2","34%",70,"#E7E0D6","#7A7268",500],["Q3","38%",82,"#E7E0D6","#7A7268",500],["Q4","46%",104,"#FD5000","#191919",700]]
+            .map(b=>`<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px"><span style="font-family:'Geist Mono',monospace;font-size:11px;font-weight:${b[5]};color:${b[4]}">${b[1]}</span><div style="width:100%;max-width:42px;height:${b[2]}px;background:${b[3]};border-radius:4px 4px 0 0"></div></div>`).join("")}
+        </div>
+        <div style="display:flex;gap:12px;padding:7px 6px 0">${["Q1","Q2","Q3","Q4"].map(q=>`<span style="flex:1;text-align:center;font:500 11px/1 'Inter',sans-serif;color:#7A7268">${q}</span>`).join("")}</div>
+        <div style="font-family:'Geist Mono',monospace;font-size:11px;color:#7A7268;margin-top:16px;letter-spacing:.02em">One orange bar carries the claim, the rest recede. Values in Geist Mono, labels in Inter, hairline grid, no axis spines.</div>
+      </div>
+      <div style="flex:1;min-width:290px;position:relative;background:#fff;border:1px solid var(--border-default);border-radius:16px;padding:24px">
+        <span style="position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;background:#C42121;color:#fff;display:flex;align-items:center;justify-content:center">${icon("x",13)}</span>
+        <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7A7268;margin-bottom:18px">The same data, off‑brand</div>
+        <div style="display:flex;gap:12px;align-items:flex-end;border-bottom:1px solid #E7E0D6;padding:0 6px">
+          ${[["Q1","31%",62,"linear-gradient(180deg,#63A4FF,#1A56C4)","#1A56C4"],["Q2","34%",70,"linear-gradient(180deg,#7ADB8F,#1E854B)","#1E854B"],["Q3","38%",82,"linear-gradient(180deg,#FFD34D,#C99700)","#C99700"],["Q4","46%",104,"linear-gradient(135deg,#7E1C0B,#F2864F)","#D43A14"]]
+            .map(b=>`<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px"><span style="font-family:'Geist Mono',monospace;font-size:11px;font-weight:700;color:${b[4]}">${b[1]}</span><div style="width:100%;max-width:42px;height:${b[2]}px;background:${b[3]};border-radius:6px 6px 0 0;box-shadow:0 6px 12px rgba(0,0,0,.28)"></div></div>`).join("")}
+        </div>
+        <div style="display:flex;gap:12px;padding:7px 6px 0">${["Q1","Q2","Q3","Q4"].map(q=>`<span style="flex:1;text-align:center;font:500 11px/1 'Inter',sans-serif;color:#7A7268">${q}</span>`).join("")}</div>
+        <div style="font-family:'Geist Mono',monospace;font-size:11px;color:#7A7268;margin-top:16px;letter-spacing:.02em">Never a rainbow, gradient fills, shadows or 3D, a second y‑axis, or values wearing the series colour. The gradient is a ground, not a fill.</div>
+      </div>
+    </div>
+    <div class="modecards" style="margin-top:22px">
+      <div class="modecard"><div style="display:flex;height:44px;border-radius:10px;overflow:hidden;margin-bottom:12px">${["#FFE7DC","#F2864F","#FD5000","#D43A14","#7E1C0B"].map(c=>`<span style="flex:1;background:${c}"></span>`).join("")}</div><h5>Magnitude runs through orange tints</h5><p>Sequential scales (heatmaps, funnels, intensity) run light→dark through the one hue: #FFE7DC → #F2864F → #FD5000 → #D43A14 → #7E1C0B. One hue, ordered, never a rainbow ramp.</p></div>
+      <div class="modecard"><div style="height:44px;border-radius:10px;margin-bottom:12px;background:#fff;border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;gap:18px"><span style="font-family:'Geist Mono',monospace;font-size:13px;font-weight:700;color:#1E854B">▲ +12%</span><span style="font-family:'Geist Mono',monospace;font-size:13px;font-weight:700;color:#C42121">▼ −8%</span></div><h5>Good and bad are status colours</h5><p>Positive #1E854B, negative #C42121, always with an arrow or label, never colour alone. Brand orange never signals polarity; it signals focus.</p></div>
+      <div class="modecard"><div style="height:44px;border-radius:10px;margin-bottom:12px;background:#09090B;display:flex;align-items:flex-end;gap:6px;padding:8px 14px">${[14,20,26,17,29].map((h,i)=>`<span style="flex:1;height:${h}px;background:${i===4?"#FF8B5A":"rgba(255,255,255,.28)"};border-radius:3px 3px 0 0"></span>`).join("")}</div><h5>Charts sit on white, or Sense black</h5><p>On white: ink text, #E7E0D6 hairlines. On a Sense slide: #FF8B5A leads, white comparison, rgba(255,255,255,.14) grid. Never place marks on the orange gradient; on an orange slide the chart rides a white card.</p></div>
+    </div>
+    <p style="font-family:'Geist Mono',monospace;font-size:11px;color:#7A7268;margin-top:18px;letter-spacing:.02em">Unsure which form fits the data? <a href="https://datavizproject.com/" target="_blank" rel="noopener" style="color:var(--brand-default);text-decoration:none;border-bottom:1px solid currentColor">datavizproject.com</a> catalogues every chart type by data shape and job, then colour it with the ladder above.</p>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);
@@ -4514,8 +4585,8 @@ function appendPager(id){
 const SECIDX={
   overview:["Pick a tile to open","The brand building blocks","Built with the brand"],
   use:["Design in the browser","Install the brand skill in chat","Bring it into Claude Code"],
-  "logo-usage":["Clear space & minimum size","Pick the variant for the background","Logo misuse"],
-  color:["#FD5000 does the work","The orange gradient","Ink, neutrals & grounds","Where each colour lives","Keep it readable"],
+  "logo-usage":["Clear space & minimum size","Pick the variant for the background","Logo misuse","Co-branding & partner lockups"],
+  color:["#FD5000 does the work","The orange gradient","Ink, neutrals & grounds","Where each colour lives","Keep it readable","One series wears the orange"],
   type:["One voice, the right face for each medium","The families","Hierarchy","Geist Mono eyebrows","Try the scale"],
   icons:["What makes it one set","Icon studio","Colour comes from context"],
   voice:["How Zuper sounds","The difference in one example","The lines that sound like us","Trade jargon for outcomes","The AI & jargon tells","Prove you get the work","Before it ships"],

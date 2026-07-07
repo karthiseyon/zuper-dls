@@ -8,6 +8,7 @@ Non-negotiables:
 - Decks follow one contrast rule: pick the cover colour, every interior slide takes the opposite. Primary scheme is a white cover with orange interiors. Dark slides are reserved for Zuper Sense only (`#09090B`, `#FF8B5A` orange-on-dark).
 - Product screens are always built as clean HTML mocks, never stock photos or screenshots of backgrounds.
 - No em dashes in copy. Banned vocab: seamless, leverage, unlock, empower, streamline, robust, elevate, holistic, synergy, ecosystem, revolutionary.
+- Charts are an emphasis ladder, never a rainbow: focus `#FD5000` (one series per chart) → comparison `#191919` → context `#7A7268` → field `#E7E0D6`; sequential = orange tints light→dark; polarity = status green/red, never brand orange; direct-label every series; never gradient fills, 3D or dual y-axes. Chart forms: https://datavizproject.com/
 
 ## Docs
 
@@ -31,4 +32,4 @@ Non-negotiables:
 ## Assets
 
 - [Design system bundle (zip)](https://zuper-dls.vercel.app/assets/zuper-design-system.zip): SKILL.md, tokens, components, UI kits, templates
-- [Logo, full colour SVG](https://zuper-dls.vercel.app/assets/logos/zuper-horizontal.svg): dark logo for light grounds; use the white variant on charcoal, dark UI or the orange gradient
+- [Logo, full colour SVG](https://zuper-dls.vercel.app/assets/logos/zuper-horizontal.svg): dark logo for light grounds; use the white variant on charcoal, dark UI or the orange gradient. Partner lockups: Zuper first, a hairline divider, clear space = the mark height either side, both marks at equal optical height, never merged or recoloured

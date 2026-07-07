@@ -22,6 +22,9 @@ Every Zuper deck uses ONE of two contrast schemes — pick the cover colour, and
 
 Aptos Display (titles) + Aptos (body); small Zuper logo in a bottom corner of every slide — **but on ANY content-heavy slide where it would crowd the layout, drop the logo** rather than cram it in. This applies to every slide type (agenda, content, split, data, comparison, two-column, Sense, full-bleed product, etc.) — not just one.
 
+## Charts & data (any medium)
+The chart palette is an emphasis ladder, never a rainbow: focus `#FD5000` (one series per chart), comparison `#191919`, context `#7A7268`, field `#E7E0D6`; direct-label every series. Sequential = orange tints light→dark; polarity = status green `#1E854B` / red `#C42121` with an arrow, never brand orange. Marks never sit on the orange gradient (on an orange slide the chart rides a white card); Sense charts lead with `#FF8B5A`. Never gradient fills, 3D, shadows or dual y-axes. Chart-form catalogue: https://datavizproject.com/
+
 ## Special full-bleed slides (sit outside the white/orange contrast rule)
 These are image-ground slides — use them as-is regardless of the deck's scheme; they don't count as "interiors". Keep all copy in one corner/column over the scrim so it never overlaps the focal subject:
 

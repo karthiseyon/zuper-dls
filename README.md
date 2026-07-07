@@ -19,8 +19,8 @@ A sidebar switches between an overview, eight foundations and six systems:
 
 **Foundations**
 - **Voice & tone** — the five principles (plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-looking), the banned vocab, and on-tone/off-tone examples.
-- **Logo usage** — how to place the mark: clear space (= `x`, the mark height), minimum sizes (24px mark / 100px lockup / 10mm print), the right variant per background, and a misuse grid (don't stretch, rotate, recolour, add effects, fade, or sit it on low contrast).
-- **Colour** — the one orange `#FD5000`, the signature gradient, ink, warm + high‑contrast neutrals, and where each colour lives.
+- **Logo usage** — how to place the mark: clear space (= `x`, the mark height), minimum sizes (24px mark / 100px lockup / 10mm print), the right variant per background, a misuse grid (don't stretch, rotate, recolour, add effects, fade, or sit it on low contrast), and co-branding rules (Zuper first, hairline divider, `x` clear space, equal optical height, marketing sign-off).
+- **Colour** — the one orange `#FD5000`, the signature gradient, ink, warm + high‑contrast neutrals, where each colour lives, and the chart rules (the emphasis ladder: focus orange → ink → warm gray → field; orange-tint sequential ramp; status green/red for polarity; never a rainbow, gradient fills or 3D).
 - **Typography** — Plus Jakarta Sans (headings) · Inter (body) · Geist Mono (uppercase eyebrows) for web; Aptos Display / Aptos for decks; the scale and rhythm.
 - **Iconography** — Zuper's one icon language: a **single‑weight outline set** (clean outline glyphs, 256px grid, `currentColor`). The consistency rules, plus an **Icon Studio** — search the full icon library by name or keyword (trade synonyms like "roof"→house), recolour / resize, then copy or download SVG/PNG. Everything comes out on‑brand.
 - **Agent avatars** — the AI agent portrait set (business analyst, field technician, sales coach and friends) and how to use them.

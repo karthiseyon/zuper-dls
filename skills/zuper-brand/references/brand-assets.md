@@ -6,6 +6,7 @@
 - **Clear space:** padding on all sides ≥ x, where x = the height of the Zuper mark. No text, edges or other logos inside that zone.
 - **Minimum size:** horizontal lockup ≥ 100px web / 10mm print; logomark ≥ 24px. Below that, use the logomark alone.
 - **Never:** stretch, rotate, recolour, add shadows/effects/outlines, reduce opacity, or place on low contrast. The mark is fixed artwork; use the supplied files as-is.
+- **Co-branding (partner lockups):** Zuper first, a 1px hairline divider, then the partner mark. Clear space ≥ x either side of the divider, both marks at the same optical height. Full-colour Zuper + partner's own colours on white/light; both marks white on dark or orange. Never merge the marks, let the partner outweigh Zuper, recolour a partner mark orange, or pair on a ground either mark can't clear. Partners follow the same clear-space and misuse rules; every co-branded asset needs Zuper marketing sign-off before it ships.
 
 ## Asset files
 

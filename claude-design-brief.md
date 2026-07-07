@@ -31,6 +31,16 @@ Paste this whole file into Claude Design (Set up design system → Create here �
 **Status:** success `#1E854B` on `#E7F6EC` · warning `#A66A00` on `#FEF3DC` · error `#C42121` on `#FDECEC`
 **Zuper Sense (dark):** bg `#09090B` · surface `#141417`/`#1C1C21` · text `#FAFAFA`/`#A1A1AA`/`#71717A` · orange‑on‑dark `#FF8B5A` · borders `#27272A`/`#3F3F46`
 
+## 2b. Charts & data
+The chart palette is an **emphasis ladder, not a rainbow** — the same one-orange rule as buttons:
+- **Series order (categorical):** 1 focus `#FD5000` (the series carrying the claim — one per chart) · 2 comparison `#191919` · 3 context `#7A7268` · 4 de-emphasised field `#E7E0D6`. Past three series, use small multiples or fold the tail into "Other". Direct-label every series — colour is never the only cue.
+- **Sequential (magnitude):** one hue, light→dark through orange tints: `#FFE7DC → #F2864F → #FD5000 → #D43A14 → #7E1C0B`. Never a rainbow ramp.
+- **Polarity:** positive `#1E854B`, negative `#C42121`, always with an arrow or label. Brand orange never signals good/bad; it signals focus.
+- **Labels:** values in Geist Mono; category/axis labels Inter 11–12px `#7A7268`; text wears text colours, never the series colour. Hairline `#E7E0D6` grid, no axis spines, 4px rounded data-ends.
+- **Grounds:** charts sit on white, or Sense black (`#FF8B5A` leads, white comparison, `rgba(255,255,255,.14)` grid). Marks never sit on the orange gradient — on an orange slide the chart rides a white card.
+- **Never:** rainbow palettes, gradient fills, 3D or shadows, dual y-axes, a value on every point.
+- **Picking a form:** https://datavizproject.com/ catalogues chart types by data shape and job; pick the form there, colour it with the ladder above.
+
 ## 3. Foundations
 - **Spacing:** 4px base — 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96
 - **Radius:** sm 6–8 (buttons) · cards 12–16 · pill 999
@@ -49,6 +59,7 @@ The styleguide ships ~190 named glyphs, including a core UI set (home, search, c
 - **Clear space:** keep padding on all sides ≥ **x**, where x = the height of the Zuper mark — no text, edges or other logos inside that zone.
 - **Minimum size:** horizontal lockup ≥ **100px** (web) / **10mm** (print); logomark ≥ **24px**. Below that, use the logomark alone.
 - **Misuse — never:** stretch/distort, rotate, recolour, add shadows/effects/outlines, reduce opacity/ghost, or place on a low‑contrast or busy background. The mark is fixed artwork — use the supplied files as‑is.
+- **Co‑branding (partner lockups):** Zuper first, a 1px hairline divider, then the partner mark — clear space ≥ **x** on either side of the divider, both marks at the same optical height. On white/light grounds: full‑colour Zuper, partner in its own colours; on dark or orange grounds both marks go white. Never merge the marks, let the partner outweigh Zuper, recolour a partner mark orange, or pair on a ground either mark can't clear. Partners follow the same clear‑space/misuse rules, and every co‑branded asset needs Zuper marketing sign‑off before it ships.
 
 ## 5. Components
 - **Buttons** — base `.cta-btn`: 14px / 600 / radius 8 / 2px border / padding 10×22.
