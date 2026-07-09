@@ -12,7 +12,7 @@
 
 The files below are **bundled inside this skill** under `assets/` — copy them out and use relative paths for decks, pages, artifacts and mocks. The identical files are hosted at `https://zuper-dls.vercel.app/assets/` (same paths); use the hosted URLs only for emails, signatures and anything that must load images from the web.
 
-- **Logos** (`logos/`): `zuper-horizontal.svg|png`, `zuper-vertical.svg|png`, `zuper-logomark.svg|png`, plus `-white` variants (bundled). `-gray` and `-inverted` variants are hosted-only.
+- **Logos** (`logos/`): `zuper-horizontal.svg|png`, `zuper-vertical.svg|png`, `zuper-logomark.svg|png`, plus `-white` variants (bundled). `-gray` and `-inverted` variants are hosted-only, and every lockup/variant is also hosted as `.eps` for print.
 - **Mini humans** (`mini-humans/`): `carrying-gear.gif`, `crew.gif`, `on-the-job.gif`, `on-the-ladder.gif`, `on-the-tools.gif`, `reaching-up.gif`, `ready-to-work.gif`, `waving.gif`.
 - **Email** (`email/`): `zuper-vertical-tight.png` (signature logo), `zuper-emailer-sense.png`, `zuper-emailer-trades.png` (380×95 banners).
 - **Backgrounds** (`backgrounds/`): `zuper-glass-bg.jpg` (Zuper Glass slide), `zuper-sense-bg.jpg` (Sense), `zuper-breaker-bg.jpg`.

@@ -32,4 +32,4 @@ Non-negotiables:
 ## Assets
 
 - [Design system bundle (zip)](https://zuper-dls.vercel.app/assets/zuper-design-system.zip): SKILL.md, tokens, components, UI kits, templates
-- [Logo, full colour SVG](https://zuper-dls.vercel.app/assets/logos/zuper-horizontal.svg): dark logo for light grounds; use the white variant on charcoal, dark UI or the orange gradient. Partner lockups: Zuper first, a hairline divider, clear space = the mark height either side, both marks at equal optical height, never merged or recoloured
+- [Logo, full colour SVG](https://zuper-dls.vercel.app/assets/logos/zuper-horizontal.svg): dark logo for light grounds; use the white variant on charcoal, dark UI or the orange gradient. Every lockup/variant is also hosted as .png and .eps (print) at the same path. Partner lockups: Zuper first, a hairline divider, clear space = the mark height either side, both marks at equal optical height, never merged or recoloured

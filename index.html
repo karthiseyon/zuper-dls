@@ -1074,6 +1074,11 @@ main{flex:1;min-width:0;overflow-x:clip}
 .la-copy.done{background:#1E854B;border-color:#1E854B}
 .la-dl{background:#fff;color:var(--text-primary)}
 .la-dl:hover{border-color:var(--brand-default);color:var(--brand-default)}
+.la-pack{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 6px}
+.la-pack .la-dl{font-size:12px;padding:11px 15px;border-radius:9px}
+.la-pack-all{display:inline-flex;align-items:center;gap:8px;font:700 12.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:var(--brand-default);border:0;border-radius:9px;padding:11px 16px;cursor:pointer;transition:background .15s,transform .15s ease}
+.la-pack-all:hover{background:var(--brand-hover);transform:translateY(-1px)}
+.la-pack button:disabled{opacity:.6;cursor:default;transform:none}
 .la-soc{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
 .s-card{border:1px solid var(--border-default);border-radius:16px;overflow:hidden;background:var(--surface-card);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .s-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(20,4,3,.09);border-color:var(--brand-default)}
@@ -3532,27 +3537,6 @@ function buildIcons(){
       mtBtn.setAttribute("aria-pressed",multi?"true":"false");
     }
     mtBtn.addEventListener("click",()=>{multi=!multi;if(!multi){msel.clear();pick.querySelectorAll(".sel").forEach(c=>c.classList.remove("sel"));}syncMulti();});
-    function crc32(u8){
-      if(!crc32.T){crc32.T=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;crc32.T[n]=c;}}
-      let r=-1;for(let i=0;i<u8.length;i++)r=(r>>>8)^crc32.T[(r^u8[i])&0xFF];return (r^-1)>>>0;
-    }
-    function makeZip(files){
-      const num=(n,b)=>{const a=new Uint8Array(b);for(let i=0;i<b;i++)a[i]=(n>>>(8*i))&255;return a;};
-      const parts=[],cd=[];let off=0;
-      files.forEach(f=>{
-        const crc=crc32(f.data);
-        parts.push(num(0x04034b50,4),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(crc,4),num(f.data.length,4),num(f.data.length,4),num(f.name.length,2),num(0,2),f.name,f.data);
-        cd.push({name:f.name,crc,len:f.data.length,off});
-        off+=30+f.name.length+f.data.length;
-      });
-      let cdLen=0;
-      cd.forEach(e=>{
-        parts.push(num(0x02014b50,4),num(20,2),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(e.crc,4),num(e.len,4),num(e.len,4),num(e.name.length,2),num(0,2),num(0,2),num(0,2),num(0,2),num(0,4),num(e.off,4),e.name);
-        cdLen+=46+e.name.length;
-      });
-      parts.push(num(0x06054b50,4),num(0,2),num(0,2),num(cd.length,2),num(cd.length,2),num(cdLen,4),num(off,4),num(0,2));
-      return new Blob(parts,{type:"application/zip"});
-    }
     zipBtn.addEventListener("click",()=>{
       if(!msel.size)return;
       const enc=new TextEncoder();
@@ -3756,6 +3740,7 @@ function buildAssets(){
       <div class="la-meta"><span class="la-name">${v[1]}</span><div class="la-btns">
         ${svg?`<button class="la-dl dl-btn" data-href="${base}.svg">${dn}SVG</button>`:``}
         <button class="la-dl dl-btn" data-href="${base}.png">${dn}PNG</button>
+        ${svg?`<button class="la-dl dl-btn" data-href="${base}.eps">${dn}EPS</button>`:``}
       </div></div></div>`;
   };
   const families=fams.map(f=>`<div class="la-fam fam-${f[2]}"><h3 class="grp">${f[0]}</h3><p class="grp-note">${f[1]}</p>
@@ -3785,12 +3770,12 @@ function buildAssets(){
       <p class="lede">Grab‑and‑go brand files, no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers and a branded Word document. <b>Download</b> and it's on‑brand.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip">3 logo lockups · 4 variants</span>
-        <span class="chip">SVG + PNG</span>
+        <span class="chip">SVG + PNG + EPS</span>
         <span class="chip">Zoom &amp; LinkedIn templates</span>
         <span class="chip">Word .docx</span>
       </div>
       <div class="hero-art"><div class="float ha-assets">
-        <div class="hd">${icon("folder",14)} zuper-brand-assets <em>SVG · PNG · DOCX</em></div>
+        <div class="hd">${icon("folder",14)} zuper-brand-assets <em>SVG · PNG · EPS · DOCX</em></div>
         <div class="f"><div class="ic">${icon("users",20)}</div><div class="meta"><div class="nm">LinkedIn cover photo</div><div class="mt">1584 × 396</div></div><div class="dl">${icon("download",18)}</div></div>
         <div class="f"><div class="ic">${icon("camera",20)}</div><div class="meta"><div class="nm">Zoom background</div><div class="mt">1920 × 1080</div></div><div class="dl">${icon("download",18)}</div></div>
         <div class="f"><div class="ic">${icon("invoice",20)}</div><div class="meta"><div class="nm">Branded Word doc</div><div class="mt">.docx</div></div><div class="dl">${icon("download",18)}</div></div>
@@ -3800,7 +3785,13 @@ function buildAssets(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">01 · Logos</p><h2 class="sec">Logo library</h2>
-    <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Download</b> any variant as SVG (for design tools &amp; code) or PNG.</p>
+    <p class="sec-note">Three lockups, each in four variants. Use <b style="color:var(--text-primary)">Full colour</b> or <b style="color:var(--text-primary)">Gray</b> on light grounds; <b style="color:var(--text-primary)">White</b> or <b style="color:var(--text-primary)">Inverted</b> on dark or photographic grounds. Never recolour, stretch or add effects. <b style="color:var(--text-primary)">Download</b> any variant as SVG (for design tools &amp; code), PNG (for docs &amp; web) or EPS (for print), or grab the whole library as a zip.</p>
+    <div class="la-pack" id="laPack">
+      <button class="la-pack-all" data-pack="all">${icon("download",15)} Download all (SVG + PNG + EPS)</button>
+      <button class="la-dl" data-pack="svg">${dn}All SVG (.zip)</button>
+      <button class="la-dl" data-pack="png">${dn}All PNG (.zip)</button>
+      <button class="la-dl" data-pack="eps">${dn}All EPS (.zip)</button>
+    </div>
     ${families}
   </div></section>
 
@@ -3837,6 +3828,28 @@ function buildAssets(){
     </div>
   </div></section>
   <div style="height:60px"></div>`;
+
+  document.getElementById("laPack").addEventListener("click",e=>{
+    const b=e.target.closest("[data-pack]");if(!b||b.disabled)return;
+    const kind=b.dataset.pack,urls=[];
+    const exts=kind==="all"?["svg","png","eps"]:[kind];
+    fams.forEach(f=>variants.forEach(v=>exts.forEach(x=>urls.push(`assets/logos/${f[2]}${v[0]}.${x}`))));
+    const o=b.innerHTML;b.disabled=true;b.innerHTML="Preparing…";
+    const enc=new TextEncoder();
+    Promise.all(urls.map(u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r.arrayBuffer();}).then(buf=>({name:enc.encode(u.split("/").pop()),data:new Uint8Array(buf)}))))
+      .then(files=>{
+        const url=URL.createObjectURL(makeZip(files)),a=document.createElement("a");
+        a.href=url;a.download=kind==="all"?"zuper-logos.zip":`zuper-logos-${kind}.zip`;
+        document.body.appendChild(a);a.click();
+        setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},1500);
+        b.innerHTML="Saved ✓";setTimeout(()=>{b.disabled=false;b.innerHTML=o;},1600);
+      })
+      .catch(()=>{
+        urls.forEach((u,i)=>setTimeout(()=>zDownload(u),i*350));
+        b.innerHTML="Downloading…";
+        setTimeout(()=>{b.disabled=false;b.innerHTML=o;},urls.length*350+800);
+      });
+  });
   window.scrollTo(0,0);
 }
 
@@ -3852,7 +3865,7 @@ function buildOverview(){
     ["icons","grid","Iconography","Icons","One single‑weight outline set, plus an Icon Studio to search 1,500+ glyphs and export any in any colour and size."],
     ["agents","sparkle","Agent avatars","Agents","The faces of Zuper Sense, a caped 3D superhero mascot for each AI agent, downloadable."],
     ["humans","users","Mini humans","Imagery","Small animated workers that add warmth in a corner, the product always stays the hero."],
-    ["assets","download","Brand assets","Downloads","Grab‑and‑go files, the full logo library (SVG + PNG), Zoom backgrounds, LinkedIn covers and a branded Word doc."]
+    ["assets","download","Brand assets","Downloads","Grab‑and‑go files, the full logo library (SVG, PNG + EPS), Zoom backgrounds, LinkedIn covers and a branded Word doc."]
   ];
   const SYS_=[
     ["deck","monitor","Deck","PowerPoint","One deck, one contrast rule. Aptos type, foundations, atoms and a library of 16:9 slide layouts."],
@@ -4515,6 +4528,27 @@ function zDownload(url,name){
   }).catch(function(){
     var a=document.createElement("a");a.href=url;a.download=nm;document.body.appendChild(a);a.click();a.remove();
   });
+}
+function crc32(u8){
+  if(!crc32.T){crc32.T=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;crc32.T[n]=c;}}
+  let r=-1;for(let i=0;i<u8.length;i++)r=(r>>>8)^crc32.T[(r^u8[i])&0xFF];return (r^-1)>>>0;
+}
+function makeZip(files){
+  const num=(n,b)=>{const a=new Uint8Array(b);for(let i=0;i<b;i++)a[i]=(n>>>(8*i))&255;return a;};
+  const parts=[],cd=[];let off=0;
+  files.forEach(f=>{
+    const crc=crc32(f.data);
+    parts.push(num(0x04034b50,4),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(crc,4),num(f.data.length,4),num(f.data.length,4),num(f.name.length,2),num(0,2),f.name,f.data);
+    cd.push({name:f.name,crc,len:f.data.length,off});
+    off+=30+f.name.length+f.data.length;
+  });
+  let cdLen=0;
+  cd.forEach(e=>{
+    parts.push(num(0x02014b50,4),num(20,2),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(e.crc,4),num(e.len,4),num(e.len,4),num(e.name.length,2),num(0,2),num(0,2),num(0,2),num(0,2),num(0,4),num(e.off,4),e.name);
+    cdLen+=46+e.name.length;
+  });
+  parts.push(num(0x06054b50,4),num(0,2),num(0,2),num(cd.length,2),num(cd.length,2),num(cdLen,4),num(off,4),num(0,2));
+  return new Blob(parts,{type:"application/zip"});
 }
 stage.addEventListener("click",function(e){var b=e.target.closest(".dl-btn");if(!b)return;e.preventDefault();zDownload(b.getAttribute("data-href"),b.getAttribute("data-name"));});
 stage.addEventListener("click",function(e){var b=e.target.closest(".icon-dl");if(!b)return;e.preventDefault();var name=b.getAttribute("data-name");var gal=document.getElementById("iconGallery");var col=gal?gal.getAttribute("data-color"):"ink";var hex={ink:"#191919",white:"#FFFFFF",orange:"#FD5000"}[col]||"#191919";var inner=ICON[name]||"";var svg='<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="'+hex+'">'+inner+'</svg>';var blob=new Blob([svg],{type:"image/svg+xml"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="zuper-"+name+"-"+col+".svg";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(u);a.remove();},1200);});

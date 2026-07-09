@@ -25,7 +25,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 - **Iconography** — Zuper's one icon language: a **single‑weight outline set** (clean outline glyphs, 256px grid, `currentColor`). The consistency rules, plus an **Icon Studio** — search the full icon library by name or keyword (trade synonyms like "roof"→house), recolour / resize, then copy or download SVG/PNG. Everything comes out on‑brand.
 - **Agent avatars** — the AI agent portrait set (business analyst, field technician, sales coach and friends) and how to use them.
 - **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
-- **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**, plus a downloadable Word document template and the full design-system `.zip`.
+- **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG + EPS) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**, plus a downloadable Word document template and the full design-system `.zip`.
 
 **Systems**
 - **Deck** (PowerPoint) — one contrast rule (**primary:** white cover with orange title → orange interiors; **secondary:** orange cover → white interiors; **dark = Zuper Sense only**), foundations, atoms, full‑bleed photo slides that sit outside the contrast rule (section breaker + Zuper Glass), and a library of 16:9 slide layouts. *(On any content‑heavy slide, drop the footer logo mark so it never crowds the layout.)*
