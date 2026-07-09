@@ -25,7 +25,7 @@ Palette: peach/warm neutrals `#FBF7F2 #FFE7DC #FBF2EA`, hairlines `#E7E0D6`.
 
 Outlook/Gmail-safe: table-based, inline styles, **Arial/Helvetica** fallbacks (no web fonts in mail clients).
 
-Structure: logomark image → 2px orange left border rule → **name** (17px bold ink) · **title** (13px bold orange) · **email + phone** (12px gray, `|` separators) · optional orange **"Book a demo →"** button linking to https://www.zuper.co/demo. Optional banner image below (380×95, rounded).
+Structure: logomark image → 2px orange left border rule → **name** (17px bold ink) · **title** (13px bold orange) · **email + phone** (12px gray, `|` separators) · optional orange **"Book a demo →"** button linking to https://www.zuper.co/demo. Optional banner image below (380×95, rounded), linked to a URL of the sender's choice (default https://www.zuper.co).
 
 Keep it to logo + rule + text + one CTA; never a full marketing layout. Image URLs must be absolute and hosted:
 
