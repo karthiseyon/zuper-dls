@@ -1,0 +1,12 @@
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(../../assets/fonts/inter-var.woff2) format("woff2");}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:200 800;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-var.woff2) format('woff2');}
+@font-face{font-family:'Geist Mono';font-style:normal;font-weight:100 900;font-display:swap;src:url(../../assets/fonts/geist-mono-var.woff2) format('woff2');}
+
+@font-face{font-family:'Aptos';font-style:normal;font-weight:300;font-display:swap;src:local('Aptos Light'),local('Aptos-Light'),url(../../assets/fonts/aptos-300.woff2) format('woff2');}
+@font-face{font-family:'Aptos';font-style:normal;font-weight:400;font-display:swap;src:local('Aptos'),url(../../assets/fonts/aptos-400.woff2) format('woff2');}
+@font-face{font-family:'Aptos';font-style:normal;font-weight:600;font-display:swap;src:local('Aptos SemiBold'),local('Aptos-SemiBold'),url(../../assets/fonts/aptos-600.woff2) format('woff2');}
+@font-face{font-family:'Aptos';font-style:normal;font-weight:700;font-display:swap;src:local('Aptos Bold'),local('Aptos-Bold'),url(../../assets/fonts/aptos-700.woff2) format('woff2');}
+@font-face{font-family:'Aptos';font-style:normal;font-weight:800;font-display:swap;src:local('Aptos ExtraBold'),local('Aptos-ExtraBold'),url(../../assets/fonts/aptos-800.woff2) format('woff2');}
+@font-face{font-family:'Aptos';font-style:normal;font-weight:900;font-display:swap;src:local('Aptos Black'),local('Aptos-Black'),url(../../assets/fonts/aptos-900.woff2) format('woff2');}
+@font-face{font-family:'Aptos Display';font-style:normal;font-weight:400;font-display:swap;src:local('Aptos Display'),url(../../assets/fonts/aptos-display-400.woff2) format('woff2');}
+@font-face{font-family:'Aptos Display';font-style:normal;font-weight:700;font-display:swap;src:local('Aptos Display Bold'),local('Aptos Display'),url(../../assets/fonts/aptos-display-700.woff2) format('woff2');}

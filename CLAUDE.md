@@ -3,7 +3,7 @@
 ## Keep every surface in sync (do this on ANY brand/DLS change)
 The same brand rules live in several places. When a colour, font, rule, template, asset or link changes, update ALL of these, then run `scripts/build-zip.sh` (it rebuilds both zips + `llms-full.txt`) before committing:
 
-1. `index.html` — the styleguide pages themselves (incl. the Overview cards and How-to page).
+1. The styleguide site — `index.html` is a thin shell that loads `site/css/` (`fonts.css`, `styles.css`) and `site/js/` (`data/`, `lib/`, one file per page under `pages/`, and `app.js` — the router/nav, loaded last). Edit the relevant module: a page's content lives in `site/js/pages/<name>.js`, tokens in `site/js/data/sys.js`, shared styles in `site/css/styles.css`. Scripts are plain global-scope files loaded in order (no bundler); `app.js` must stay last. This covers the Overview cards and How-to page too.
 2. `claude-design-brief.md` — the condensed spec.
 3. `CLAUDE.md` — this file's rules below.
 4. `skills/zuper-brand/` — SKILL.md + the matching reference file (deck-rules, web-patterns, email, social-ads, voice, brand-assets).

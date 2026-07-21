@@ -36,7 +36,8 @@ A sidebar switches between an overview, eight foundations and six systems:
 - **Social & ads** — on-brand social creatives at real export sizes (1080 / 1920 / 1200), a full set of display ads at standard IAB sizes, and show templates (e.g. **Raise the Roof** FB Live, 1280×720, with 1/2/3/4-speaker layouts); orange-gradient and dark (Sense) looks, one CTA each.
 
 ## Repo layout
-- `index.html` — the whole styleguide site (markup, CSS and logic in one file).
+- `index.html` — a thin shell that loads the styleguide site from `site/`.
+- `site/css/` — `fonts.css` + `styles.css` (all styling). `site/js/` — `data/` (tokens, icons, hero-art), `lib/` (helpers), `pages/` (one file per page), and `app.js` (nav/router, loaded last). Plain global-scope scripts, no bundler.
 - `skills/zuper-brand/` — the **Claude Agent Skill**: SKILL.md + reference files (decks, web, email, social, voice, assets). Install the packaged `assets/zuper-brand-skill.zip` in Claude.ai (Settings → Capabilities → Skills) or unzip into `.claude/skills/` for Claude Code.
 - `assets/` — fonts, logos, GIFs, backgrounds and the downloadable `zuper-design-system.zip`.
 - `slides/` — the 16:9 deck slide layouts (title, agenda, metrics, quote, product, section break, Glass, Sense).
@@ -53,4 +54,4 @@ A sidebar switches between an overview, eight foundations and six systems:
 ## Use with Claude Design
 Open the **How to use this** page in the styleguide for the full walkthrough, or see `claude-design-brief.md` for the condensed spec to paste/upload.
 
-> `index.html` (~470 KB) holds all the markup, CSS and logic; fonts, GIFs and images live in `assets/` and load by relative path. Keep `assets/` next to `index.html`.
+> The styleguide site is `index.html` (shell) + `site/css` + `site/js`; fonts, GIFs and images live in `assets/` and load by relative path. Keep `assets/` and `site/` next to `index.html`.

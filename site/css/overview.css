@@ -1,0 +1,70 @@
+/* =========================================================
+   Guidy-style Overview — card grid rendered by buildOverview().
+   Scoped under .gy-overview so it never affects other pages.
+   ========================================================= */
+.gy-overview{--gy-ink:#18181B;--gy-muted:#8A8177;--gy-card:#FFFFFF;--gy-line:#ECE5DC;padding-bottom:70px}
+
+/* header */
+.gy-overview .gy-head{padding:60px 56px 26px;max-width:1180px}
+.gy-overview .gy-head .eb{font:600 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--brand-default);margin:0 0 16px}
+.gy-overview .gy-head h1{font:700 clamp(36px,4.6vw,60px)/1.02 var(--display);letter-spacing:-.035em;margin:0;color:var(--gy-ink)}
+.gy-overview .gy-head p{font:400 18px/1.55 var(--body);color:#5A554F;max-width:58ch;margin:18px 0 0}
+
+/* chapter label + divider between chapters */
+.gy-overview .gy-divider{height:1px;background:var(--gy-line);margin:46px 56px 0}
+.gy-overview .gy-chapter{display:flex;align-items:baseline;gap:12px;padding:34px 56px 0}
+.gy-overview .gy-chapter .no{font:700 13px/1 var(--mono);color:var(--brand-default)}
+.gy-overview .gy-chapter .nm{font:700 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gy-muted)}
+
+/* grid */
+.gy-overview .gy-grid{margin:18px 56px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:1200px){.gy-overview .gy-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.gy-overview .gy-grid{grid-template-columns:1fr}}
+
+.gy-overview .gy-card{position:relative;min-width:0;background:var(--gy-card);border:1px solid var(--gy-line);border-radius:24px;
+  height:436px;padding:34px 36px 30px;display:flex;flex-direction:column;cursor:pointer;text-align:left;
+  transition:transform .2s,box-shadow .2s,border-color .2s}
+.gy-overview .gy-card:hover{transform:translateY(-3px);box-shadow:0 26px 60px rgba(20,4,3,.09);border-color:#E1D8CB}
+/* scroll reveal: cards fade up (bigger + slower), staggered one-by-one via inline delay,
+   re-triggering each time they enter view */
+.gy-overview .gy-card.rv{opacity:0;transform:translateY(46px) scale(.97);transition:opacity .7s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+.gy-overview .gy-card.rv.in{opacity:1;transform:none}
+.gy-overview .gy-head.rv,.gy-overview .gy-chapter.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.gy-overview .gy-head.rv.in,.gy-overview .gy-chapter.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.gy-overview .rv{opacity:1!important;transform:none!important;transition:none}}
+
+/* preview: fixed height so it never resizes on hover; overflow visible so shadows show.
+   .hs is absolutely centred and scaled per motif via --s. */
+.gy-overview .prev{flex:0 0 auto;height:300px;position:relative;overflow:visible;margin-bottom:20px;border-radius:16px}
+.gy-overview .prev::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:80%;height:80%;border-radius:50%;background:radial-gradient(circle,rgba(253,80,0,.10),transparent 66%);filter:blur(10px);z-index:0}
+.gy-overview .hs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(var(--s,.82));transform-origin:center;
+  width:344px;z-index:1;display:flex;align-items:center;justify-content:center}
+
+/* footer: title (left) + (0N) right. Hover reveals description + arrow, number fades. */
+.gy-overview .gy-foot{display:grid;grid-template-columns:1fr auto;align-items:end;gap:16px}
+.gy-overview .gy-txt{min-width:0}
+.gy-overview .gy-txt h3{font:600 22px/1.1 var(--display);letter-spacing:-.02em;margin:0;color:var(--gy-ink);text-align:left}
+.gy-overview .gy-txt p{font:400 13.5px/1.45 var(--body);color:var(--gy-muted);margin:0;text-align:left;max-height:0;opacity:0;
+  overflow:hidden;transform:translateY(4px);transition:max-height .22s ease,opacity .2s ease,transform .2s ease,margin .22s ease}
+.gy-overview .gy-card:hover .gy-txt p{max-height:60px;opacity:1;margin-top:8px;transform:none}
+.gy-overview .gy-end{position:relative;width:52px;height:52px}
+.gy-overview .gy-num{position:absolute;right:2px;bottom:6px;font:500 13px/1 var(--mono);color:#B7AEA3;transition:opacity .18s}
+.gy-overview .gy-card:hover .gy-num{opacity:0}
+.gy-overview .gy-arrow{position:absolute;inset:0;border-radius:14px;background:var(--gy-ink);color:#fff;display:grid;place-items:center;
+  opacity:0;transform:scale(.85);transition:opacity .2s,transform .2s,background .2s}
+.gy-overview .gy-card:hover .gy-arrow{opacity:1;transform:none;background:var(--brand-default)}
+
+/* mini-human working "on top of" a big dashboard screen.
+   The screen is cropped on its left + bottom so it hugs the card box. */
+.gy-overview .pv-work{position:relative;width:330px;height:290px;overflow:hidden;border-radius:16px}
+.gy-overview .pv-work .scr{position:absolute;left:-12px;bottom:-16px;width:300px;height:196px;background:#fff;border:1px solid var(--gy-line);border-radius:16px;box-shadow:0 18px 44px rgba(20,4,3,.13);overflow:hidden}
+.gy-overview .pv-work .scr-hd{height:30px;background:#F4F0EA;border-bottom:1px solid var(--gy-line);display:flex;align-items:center;gap:6px;padding:0 12px}
+.gy-overview .pv-work .scr-hd i{width:8px;height:8px;border-radius:50%;background:#D6CFC5}
+.gy-overview .pv-work .scr-bd{padding:18px}
+.gy-overview .pv-work .scr-bd .row{height:13px;background:#EFE9E1;border-radius:5px;margin-bottom:11px}
+.gy-overview .pv-work .scr-bd .row:first-child{width:64%;background:var(--brand-default)}
+.gy-overview .pv-work .scr-bd .bar{height:44px;background:#F4F0EA;border-radius:8px;margin-top:10px}
+/* worker kneels on the screen's top edge, right side. The GIF has empty padding
+   below the figure, so he's pushed well down to overlap the screen (knee touches). */
+.gy-overview .pv-work .wk{position:absolute;right:44px;bottom:166px;height:94px;width:auto;z-index:2;filter:drop-shadow(0 10px 18px rgba(20,4,3,.20))}
