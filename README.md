@@ -32,7 +32,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 - **Website DLS** — foundations → atoms → molecules → page patterns → usage / states / anatomy, plus a **Reference** section linking the live Zuper pages to design from.
 - **Case study** — co‑branded one‑pager: cover, body, before/after table, metrics, testimonial. *(Uses a generic sample customer, "Summit Roofing".)*
 - **Emailer** — a 600px campaign email built from a 12-block kit (header, hero, **HTML product screen**, feature rows, two-up cards, checklist, stat banner, testimonial, CTA banner, button, divider, footer), all inline-styled to survive every client.
-- **Email signature** — a live, editable signature builder (name, title, email, phone, CTA) with copy-ready output and a tight Zuper logo.
+- **Email signature** — a live, editable signature builder (name, title, email, phone, CTA) with copy-ready output and a tight Zuper logo. Pick a campaign banner or upload your own, and set where the banner links.
 - **Social & ads** — on-brand social creatives at real export sizes (1080 / 1920 / 1200), a full set of display ads at standard IAB sizes, and show templates (e.g. **Raise the Roof** FB Live, 1280×720, with 1/2/3/4-speaker layouts); orange-gradient and dark (Sense) looks, one CTA each.
 
 ## Repo layout

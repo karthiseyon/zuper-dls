@@ -115,7 +115,7 @@ A **600px** branded campaign email, built from a kit of reusable **inline‑styl
 ## 8e. Email signature
 An Outlook/Gmail‑safe signature, table‑based with **inline styles and Arial/Helvetica** fallbacks (no web fonts in mail clients):
 - Logomark, then a **2px orange left border** rule, then: **name** (17px bold ink) · **title** (13px bold orange) · **email + phone** (12px gray, `|` separators) · optional orange **"Book a demo →"** button.
-- Optional banner image below (`380×95`, rounded). Keep it to logo + rule + text + one optional CTA — never a full marketing layout.
+- Optional banner image below, rounded and 380px wide: a shipped campaign banner (`380×95`) or the sender's own upload, sized from its real aspect ratio. The banner links wherever the sender points it (default `https://www.zuper.co`). Keep it to logo + rule + text + one optional CTA — never a full marketing layout.
 
 ## 9. Voice
 Direct · practical · confident · human · no jargon. Speak to the person in the field. Active voice, real numbers over adjectives.

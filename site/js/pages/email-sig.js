@@ -34,21 +34,29 @@ function buildEmailSig(){
         </div>
         <div class="fld" id="es-burl-fld" style="display:none"><label for="es-burl">Banner link URL <span style="color:var(--text-tertiary);font-weight:500">· where the banner goes when clicked</span></label><input id="es-burl" type="url" placeholder="https://www.zuper.co" value="https://www.zuper.co" /></div>
       </div>
-      <div class="preview-col">
+      <div class="preview-col"><div class="pv-sticky">
         <div class="pv-label">Live preview</div>
         <div class="pv-card"><div id="es-preview"></div></div>
         <div class="pv-actions">
           <button class="btn-copy" id="es-copy">${icon("copy",17)} Copy signature</button>
         </div>
         <p class="pv-hint"><b>Paste into Outlook:</b> open <b>Settings</b> → <b>Account</b> → <b>Signatures</b> → <b>New signature</b>, click into the signature box and paste (<b>⌘/Ctrl + V</b>). Give it a name and Save. The logo, banner and colours come along automatically.</p>
-      </div>
+      </div></div>
       <div class="fld es-bfld">
         <label id="esb-lbl">Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
         <div class="es-banners" role="radiogroup" aria-labelledby="esb-lbl">
           <label class="bopt"><input type="radio" name="esb" value="none" checked><span class="bnone">No banner</span></label>
+          <div class="bopt bup" id="es-bcustom">
+            <input type="radio" name="esb" value="custom" aria-label="Your own banner">
+            <img id="es-bimg" alt="Your banner" hidden>
+            <span class="bupi" id="es-bupi">${icon("upload",18)}<b>Upload your own</b></span>
+            <button type="button" class="bup-chg" id="es-bchg" hidden>${icon("refresh",12)} Change</button>
+            <input type="file" id="es-bfile" tabindex="-1" accept="image/png,image/jpeg,image/gif,image/webp">
+          </div>
           <label class="bopt"><input type="radio" name="esb" value="sense"><img src="assets/email/zuper-emailer-sense.png" alt="Introducing Zuper Sense"></label>
           <label class="bopt"><input type="radio" name="esb" value="trades"><img src="assets/email/zuper-emailer-trades.png" alt="The AI Operating System for the Skilled Trades"></label>
         </div>
+        <p class="es-bnote" id="es-bnote">Your banner travels with the copied signature and links to whatever you put in <b>Banner link URL</b>. It shows up in Outlook for Windows and Mac. Outlook on the web and Gmail can drop pasted image files, so send yourself one test mail before you rely on it.</p>
       </div>
     </div>
   </div></section>
@@ -60,9 +68,20 @@ function buildEmailSig(){
   const toAbs=html=>html.replace(/(src|href)="assets\//g,'$1="'+RAW+'assets/');
   const esImg=`<img src="assets/email/zuper-vertical-tight.png" alt="Zuper" width="100" height="69" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic" />`;
   const BAN={sense:{u:"assets/email/zuper-emailer-sense.png",a:"Introducing Zuper Sense. Monitor. Analyze. Predict. Recommend"},trades:{u:"assets/email/zuper-emailer-trades.png",a:"Zuper. The AI Operating System for the Skilled Trades"}};
+  const BW=380; // banner display width in the signature
+  const CUSTOM={src:"",w:0,h:0};      // your own banner, uploaded as a data URL
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   // banner link: allow http(s) only, add https:// to bare domains, fall back to zuper.co
   function esUrl(u){u=(u||"").trim();if(/^https?:\/\//i.test(u))return u;if(/^[\w.-]+\.[a-z]{2,}([\/?#].*)?$/i.test(u))return "https://"+u;return "https://www.zuper.co";}
+  // which image the chosen banner shows, and how tall it renders at 380px wide
+  function banImg(d){
+    if(d.banner==="custom"){
+      if(!CUSTOM.src)return null;
+      return{u:CUSTOM.src,a:"Zuper",h:CUSTOM.w?Math.round(BW*CUSTOM.h/CUSTOM.w):0};
+    }
+    const b=BAN[d.banner];
+    return b?{u:b.u,a:b.a,h:95}:null;
+  }
   function sigHTML(d){
     const A='color:#FD5000', INK='#191919', SUB='#5b6470';
     const rows=[];
@@ -77,17 +96,48 @@ function buildEmailSig(){
       +`<td style="vertical-align:middle;padding:0 14px 0 0">${esImg}</td>`
       +`<td style="vertical-align:middle;padding:0 0 0 14px;border-left:2px solid #FD5000">${rows.join("")}</td>`
       +`</tr></table>`;
-    const b=BAN[d.banner];
+    const b=banImg(d);
     if(!b)return sig;
-    const esBanner=`<a href="${esc(esUrl(d.burl))}" style="text-decoration:none"><img src="${b.u}" alt="${esc(b.a)}" width="380" height="95" style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic;border-radius:8px" /></a>`;
+    const dim=b.h?`width="${BW}" height="${b.h}"`:`width="${BW}"`;
+    const esBanner=`<a href="${esc(esUrl(d.burl))}" style="text-decoration:none"><img src="${b.u}" alt="${esc(b.a)}" ${dim} style="display:block;border:0;outline:none;-ms-interpolation-mode:bicubic;border-radius:8px;width:${BW}px;height:auto" /></a>`;
     return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse"><tr><td style="padding:0 0 14px 0">${sig}</td></tr><tr><td>${esBanner}</td></tr></table>`;
   }
   const $=id=>document.getElementById(id);
   function read(){const br=document.querySelector('input[name="esb"]:checked');return{name:$("es-name").value.trim(),title:$("es-title").value.trim(),email:$("es-email").value.trim(),phone:$("es-phone").value.trim(),cta:$("es-cta").checked,banner:br?br.value:"none",burl:$("es-burl").value.trim()};}
-  function render(){const d=read();$("es-burl-fld").style.display=d.banner==="none"?"none":"";$("es-preview").innerHTML=sigHTML(d);}
+  function render(){
+    const d=read();
+    $("es-burl-fld").style.display=d.banner==="none"?"none":"";
+    $("es-bnote").style.display=d.banner==="custom"?"":"none";
+    $("es-preview").innerHTML=sigHTML(d);
+  }
   ["es-name","es-title","es-email","es-phone","es-burl"].forEach(id=>$(id).addEventListener("input",render));
   $("es-cta").addEventListener("change",render);
   [...document.querySelectorAll('input[name="esb"]')].forEach(r=>r.addEventListener("change",render));
+
+  // ---- your own banner: upload a file, or point at a hosted image ----
+  const bTile=$("es-bcustom"),bRad=bTile.querySelector('input[name="esb"]'),bFile=$("es-bfile"),bImg=$("es-bimg");
+  function showThumb(src){bImg.src=src;bImg.hidden=false;$("es-bupi").hidden=true;$("es-bchg").hidden=false;}
+  function pick(){bRad.checked=true;render();}
+  bTile.addEventListener("click",e=>{
+    if(e.target===bRad)return;                                   // radio handles itself
+    if($("es-bchg").contains(e.target)||!bImg.src){bFile.click();return;}
+    pick();
+  });
+  bFile.addEventListener("change",()=>{
+    const f=bFile.files&&bFile.files[0];
+    if(!f)return;
+    if(!/^image\//.test(f.type)){alert("Pick an image file (PNG, JPG, GIF or WebP).");bFile.value="";return;}
+    if(f.size>3*1024*1024){alert("That image is "+Math.round(f.size/1024/1024*10)/10+" MB. Keep it under 3 MB, or host it and use Banner image URL instead.");bFile.value="";return;}
+    const fr=new FileReader();
+    fr.onload=()=>{
+      const probe=new Image();
+      probe.onload=()=>{CUSTOM.src=String(fr.result);CUSTOM.w=probe.naturalWidth;CUSTOM.h=probe.naturalHeight;showThumb(CUSTOM.src);pick();};
+      probe.onerror=()=>alert("That image could not be read. Try a PNG or JPG.");
+      probe.src=String(fr.result);
+    };
+    fr.onerror=()=>alert("That image could not be read. Try a PNG or JPG.");
+    fr.readAsDataURL(f);
+  });
   render();
 
   // ---- copy handlers ----

@@ -1155,7 +1155,10 @@ h2.sec .alink.ok{opacity:1;color:#1E854B;border-color:#1E854B}
 .esig .ctl-row{display:flex;flex-direction:column;gap:9px;margin-top:2px}
 .esig .ctl{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-secondary);cursor:pointer}
 .esig .ctl input{accent-color:var(--brand-default);width:16px;height:16px}
-.esig .preview-col{position:sticky;top:22px}
+/* the column stretches to the row, the inner block sticks inside it — a sticky grid item
+   itself slides past its row and lands on top of the banner picker below */
+.esig .preview-col{align-self:stretch;min-width:0}
+.esig .pv-sticky{position:sticky;top:22px}
 .esig .pv-label{font:600 11px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
 .esig .pv-card{background:#fff;border:1px solid var(--border-default);border-radius:14px;padding:30px 28px;box-shadow:0 14px 34px rgba(25,25,25,.06);overflow-x:auto}
 .esig .pv-actions{display:flex;gap:11px;margin-top:16px;flex-wrap:wrap}
@@ -1167,7 +1170,10 @@ h2.sec .alink.ok{opacity:1;color:#1E854B;border-color:#1E854B}
 .esig .pv-hint b{color:var(--text-secondary)}
 .esig .es-bfld{grid-column:1/-1;margin-top:8px}
 .esig .es-bfld>label{display:block;font:600 12px/1.2 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary);margin-bottom:8px}
-.esig .es-banners{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+/* 3 fixed columns so extra banners wrap onto new rows rather than squeezing the row */
+.esig .es-banners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:900px){.esig .es-banners{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.esig .es-banners{grid-template-columns:1fr}}
 .esig .bopt{display:block;aspect-ratio:4/1;cursor:pointer;border:2px solid var(--border-default);border-radius:10px;overflow:hidden;line-height:0;transition:border-color .15s ease}
 .esig .bopt:hover{border-color:#d9b8a8}
 .esig .bopt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
@@ -1175,6 +1181,19 @@ h2.sec .alink.ok{opacity:1;color:#1E854B;border-color:#1E854B}
 .esig .bopt .bnone{display:flex;align-items:center;justify-content:center;height:100%;font:600 13px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text-secondary)}
 .esig .bopt:has(input:checked){border-color:var(--brand-default);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-default) 18%,transparent)}
 .esig .bopt:has(input:focus-visible){border-color:var(--brand-default);box-shadow:0 0 0 3px rgba(253,80,0,.32)}
+/* "upload your own" banner tile */
+.esig .bopt.bup{position:relative;background:#fff;border-style:dashed}
+.esig .bopt.bup:has(img:not([hidden])){border-style:solid}
+.esig .bopt.bup img{object-fit:contain;background:#fff}
+.esig .bopt.bup input[type=file]{display:none}
+.esig .bopt img[hidden],.esig .bopt .bupi[hidden],.esig .bopt .bup-chg[hidden]{display:none}
+.esig .bupi{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:100%;color:var(--text-secondary);text-align:center}
+.esig .bupi svg{color:var(--brand-default);margin-bottom:2px}
+.esig .bupi b{font:700 13px/1.2 'Plus Jakarta Sans',system-ui,sans-serif}
+.esig .bup-chg{position:absolute;right:7px;bottom:7px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.94);color:var(--text-secondary);border:1px solid var(--border-default);border-radius:7px;padding:5px 9px;font:600 11px/1 'Plus Jakarta Sans',system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(25,25,25,.1)}
+.esig .bup-chg:hover{border-color:var(--brand-default);color:var(--brand-default)}
+.esig .es-bnote{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--text-tertiary);max-width:74ch}
+.esig .es-bnote b{color:var(--text-secondary)}
 .adscroll{overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
 
 section.block{padding:54px 0}
