@@ -43,7 +43,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 - `slides/` — the 16:9 deck slide layouts (title, agenda, metrics, quote, product, section break, Glass, Sense).
 - `templates/` — the Claude Design templates (both pitch decks, case study, emailer, ads, landing page, Raise the Roof).
 - `bundle/` — sources that ship only inside the design-system zip (SKILL.md, tokens, components, UI kits).
-- `scripts/build-zip.sh` — rebuilds `assets/zuper-design-system.zip` from the repo, so the download never drifts. Run it after editing the brief, slides or templates.
+- `scripts/build-zip.sh` — rebuilds `assets/zuper-brand-skill.zip` and `llms-full.txt` from the repo. Run it after editing the brief, the skill or the bundled assets. It does **not** touch `assets/zuper-design-system.zip`, which is exported from Claude Design and committed as-is; `--rebuild-ds-zip` regenerates that from repo sources and replaces the export.
 
 ## Brand at a glance
 - **Color:** brand orange `#FD5000` (one primary action per view) · ink `#191919` · warm + high‑contrast neutrals · charcoal `#282828` feature sections · Zuper Sense dark `#09090B`.

@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
-# Rebuild assets/zuper-design-system.zip from repo sources so the download can never drift.
-# Bundle = bundle/ (Claude Design sources that live only in the bundle)
-#        + CLAUDE.md, claude-design-brief.md, slides/, templates/ (repo canonical copies)
-#        + the shared assets listed below (repo canonical copies).
-# Run from anywhere: scripts/build-zip.sh
+# Builds assets/zuper-brand-skill.zip and regenerates llms-full.txt.
+#
+# assets/zuper-design-system.zip is NOT built here any more. It is exported from
+# Claude Design and committed as-is, because the export carries work (agent
+# dimensions, uploads-free packaging) that the repo sources cannot reproduce.
+# This script used to overwrite it, silently discarding that export.
+#
+# To rebuild it from repo sources anyway (bundle/ + CLAUDE.md +
+# claude-design-brief.md + slides/ + templates/ + SHARED_ASSETS), pass
+# --rebuild-ds-zip. That REPLACES the Claude Design export, so only do it if you
+# mean to move the download back onto repo sources.
+#
+# Run from anywhere: scripts/build-zip.sh [--rebuild-ds-zip]
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+REBUILD_DS_ZIP=0
+for arg in "$@"; do
+  case "$arg" in
+    --rebuild-ds-zip) REBUILD_DS_ZIP=1 ;;
+    *) echo "unknown option: $arg" >&2; exit 2 ;;
+  esac
+done
 
 SHARED_ASSETS=(
   assets/logos/zuper-horizontal-gray.png
@@ -32,24 +48,26 @@ SHARED_ASSETS=(
   assets/shows/speaker-c.png
 )
 
-STAGE="$(mktemp -d)"
-trap 'rm -rf "$STAGE"' EXIT
-
-rsync -a bundle/ "$STAGE/"
-cp CLAUDE.md claude-design-brief.md "$STAGE/"
-rsync -a slides "$STAGE/"
-rsync -a templates "$STAGE/"
-for f in "${SHARED_ASSETS[@]}"; do
-  mkdir -p "$STAGE/$(dirname "$f")"
-  cp "$f" "$STAGE/$f"
-done
-
 OUT="$PWD/assets/zuper-design-system.zip"
-rm -f "$OUT"
-# Fixed timestamps make the zip deterministic: rebuilding without source changes
-# yields a byte-identical file, so git sees no churn.
-find "$STAGE" -exec touch -t 202601010000 {} +
-(cd "$STAGE" && find . -type f ! -name '.DS_Store' ! -path './.*' | sort | zip -qX "$OUT" -@)
+if [ "$REBUILD_DS_ZIP" = "1" ]; then
+  STAGE="$(mktemp -d)"
+  trap 'rm -rf "$STAGE"' EXIT
+
+  rsync -a bundle/ "$STAGE/"
+  cp CLAUDE.md claude-design-brief.md "$STAGE/"
+  rsync -a slides "$STAGE/"
+  rsync -a templates "$STAGE/"
+  for f in "${SHARED_ASSETS[@]}"; do
+    mkdir -p "$STAGE/$(dirname "$f")"
+    cp "$f" "$STAGE/$f"
+  done
+
+  rm -f "$OUT"
+  # Fixed timestamps make the zip deterministic: rebuilding without source changes
+  # yields a byte-identical file, so git sees no churn.
+  find "$STAGE" -exec touch -t 202601010000 {} +
+  (cd "$STAGE" && find . -type f ! -name '.DS_Store' ! -path './.*' | sort | zip -qX "$OUT" -@)
+fi
 
 # Package the Claude Agent Skill (skills/zuper-brand/ + bundled assets -> assets/zuper-brand-skill.zip).
 # Assets are injected at build time from the repo's canonical copies so nothing is duplicated in git.
@@ -95,5 +113,10 @@ rm -rf "$SKILL_STAGE"
   cat CLAUDE.md
 } > llms-full.txt
 
-echo "Built $OUT ($(du -h "$OUT" | cut -f1)) — $(unzip -l "$OUT" | tail -1 | awk '{print $2}') files"
+echo "Built $SKILL_OUT ($(du -h "$SKILL_OUT" | cut -f1)) — $(unzip -l "$SKILL_OUT" | tail -1 | awk '{print $2}') files"
 echo "Rebuilt llms-full.txt"
+if [ "$REBUILD_DS_ZIP" = "1" ]; then
+  echo "Rebuilt $OUT ($(du -h "$OUT" | cut -f1)) — $(unzip -l "$OUT" | tail -1 | awk '{print $2}') files, REPLACING the Claude Design export"
+else
+  echo "Left assets/zuper-design-system.zip alone (Claude Design export; pass --rebuild-ds-zip to replace it)"
+fi

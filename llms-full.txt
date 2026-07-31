@@ -138,7 +138,7 @@ Direct · practical · confident · human · no jargon. Speak to the person in t
 # Zuper Design System — project rules
 
 ## Keep every surface in sync (do this on ANY brand/DLS change)
-The same brand rules live in several places. When a colour, font, rule, template, asset or link changes, update ALL of these, then run `scripts/build-zip.sh` (it rebuilds both zips + `llms-full.txt`) before committing:
+The same brand rules live in several places. When a colour, font, rule, template, asset or link changes, update ALL of these, then run `scripts/build-zip.sh` (it rebuilds `assets/zuper-brand-skill.zip` + `llms-full.txt`) before committing:
 
 1. The styleguide site — `index.html` is a thin shell that loads `site/css/` (`fonts.css`, `styles.css`) and `site/js/` (`data/`, `lib/`, one file per page under `pages/`, and `app.js` — the router/nav, loaded last). Edit the relevant module: a page's content lives in `site/js/pages/<name>.js`, tokens in `site/js/data/sys.js`, shared styles in `site/css/styles.css`. Scripts are plain global-scope files loaded in order (no bundler); `app.js` must stay last. This covers the Overview cards and How-to page too.
 2. `claude-design-brief.md` — the condensed spec.
@@ -148,7 +148,9 @@ The same brand rules live in several places. When a colour, font, rule, template
 6. `bundle/` — the Claude Design sources (SKILL.md, readme.md, tokens/, foundations/) if the change touches tokens, components or slides.
 7. `README.md` — if structure or counts changed.
 
-Never edit `assets/zuper-design-system.zip`, `assets/zuper-brand-skill.zip` or `llms-full.txt` by hand — they are build outputs of `scripts/build-zip.sh`.
+Never edit `assets/zuper-brand-skill.zip` or `llms-full.txt` by hand — they are build outputs of `scripts/build-zip.sh`.
+
+`assets/zuper-design-system.zip` is the opposite: it is **exported from Claude Design and committed as-is**, not built from this repo. Replace it by copying a fresh export over it (drop the `uploads/` folder first, it adds ~39 MB). `scripts/build-zip.sh` deliberately leaves it alone. Passing `--rebuild-ds-zip` regenerates it from `bundle/` + `slides/` + `templates/` and **discards the export**, so only do that if you mean to move the download back onto repo sources. Because of this, `bundle/` is a source mirror for reference and for Claude Design, and edits there no longer reach the shipped zip on their own.
 
 ## Deck colour scheme (always apply)
 Every Zuper deck uses ONE of two contrast schemes — pick the cover colour, and every interior slide takes the opposite. Never mix interior colours.
