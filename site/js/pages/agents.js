@@ -1,13 +1,14 @@
 /* ============ FOUNDATIONS: agent avatars ============ */
 /* Imported from Claude Design · foundations/brand-agents.html, caped 3D superhero mascots, one per AI agent. */
+/* alphabetical by agent name, so the grid has an order a reader can predict */
 const AGENTS=[
+  ["ar-agent","AR Agent","Collections"],
+  ["business-analyst","Business Analyst","Insights"],
   ["front-office","CSR Agent","Dispatch · support"],
   ["field-technician","Field Agent","On the job"],
-  ["business-analyst","Business Analyst","Insights"],
-  ["sales-coach","Sales Coach","Training officer"],
   ["review-analyser","Review Analyser","Reputation"],
-  ["weather","Weather Forecast","Scheduling"],
-  ["ar-agent","AR Agent","Collections"]
+  ["sales-coach","Sales Coach","Training officer"],
+  ["weather","Weather Forecast","Scheduling"]
 ];
 function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){
