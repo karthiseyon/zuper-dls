@@ -39,12 +39,14 @@ const CHANGELOG=[
     "One warm canvas, white doc cards.",
     "Lightbox, pager, type playground, icon zip."
   ]},
-  {v:"1.0",date:"2 Jul 2026",items:[
+  {v:"1.0",date:"2 to 3 Jul 2026",items:[
     "Zuper brand shipped as a Claude Agent Skill.",
     "How-to page rebuilt as pick-your-door.",
     "Working back and forward nav, one token source.",
     "Accessibility pass.",
-    "Hero art across every page."
+    "Hero art across every page.",
+    "Agents hero rebuilt as an on-shift roster.",
+    "Theme-aware favicon."
   ]},
   {v:"0.5",date:"1 Jul 2026",items:[
     "Foundations added: Colour, Typography, Voice & tone, Agent avatars.",
