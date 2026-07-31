@@ -26,8 +26,10 @@ function buildOverview(){
     ["website","website","Website DLS","The real zuper.co marketing system."],
     ["one-pager","one-pager","Case study","The one-page co-branded customer story."],
     ["emailer","emailer","Emailer","A 600px branded email from reusable blocks."],
-    ["email-sig","email-sig","Email signature","Build an on-brand Outlook signature fast."],
     ["social","social","Social &amp; ads","Real export and IAB sizes, one CTA."]
+  ];
+  const APP_=[
+    ["email-sig","email-sig","Email signature","Build an on-brand Outlook signature fast."]
   ];
 
   const preview=(key)=>{
@@ -52,7 +54,10 @@ function buildOverview(){
     <div class="gy-chapter"><span class="no">01</span><span class="nm">Foundations</span></div>
     <div class="gy-grid">${FOUND.map(card).join("")}</div>
     <div class="gy-divider"></div>
-    <div class="gy-chapter"><span class="no">02</span><span class="nm">Systems</span></div>
+    <div class="gy-chapter"><span class="no">02</span><span class="nm">Application</span></div>
+    <div class="gy-grid">${APP_.map(card).join("")}</div>
+    <div class="gy-divider"></div>
+    <div class="gy-chapter"><span class="no">03</span><span class="nm">AI learning systems</span></div>
     <div class="gy-grid">${SYS_.map(card).join("")}</div>
   </div>`;
   window.scrollTo(0,0);

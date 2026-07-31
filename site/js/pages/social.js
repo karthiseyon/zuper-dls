@@ -379,20 +379,20 @@ function buildSocial(){
   <section class="block"><div class="wrap">
     <p class="eyebrow">Social</p><h2 class="sec">Social media creatives</h2>
     <p class="docnote">↔ scroll · real export sizes, shown to scale · Instagram square &amp; story, landscape, quote/stat cards, Sense</p>
-    <div class="adscroll"><div style="columns:346px;column-gap:28px;padding:6px 2px 4px">${creatives}</div></div>
+    <div class="adscroll"><div class="adcols">${creatives}</div></div>
   </div></section>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Live show</p><h2 class="sec">Raise the Roof. Facebook Live</h2>
     <p class="docnote">↔ scroll · 1280 × 720 FB Live cover · one template, four speaker layouts</p>
     <p class="sec-note">The cover for the Raise the Roof roofing podcast. Keep the badge, logo lockup, headline and date fixed; swap the date and each speaker's <b>name, role and company</b> per episode. The layout adapts to <b>one, two, three or four speakers</b>, pick the matching variant.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start;padding:6px 0 4px">${shows}</div>
+    <div class="adscroll"><div class="adrow">${shows}</div></div>
   </div></section>
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Display</p><h2 class="sec">Ad banners</h2>
     <p class="docnote">↔ scroll · standard IAB sizes · orange gradient + logo lockup + one CTA</p>
-    <div class="adscroll"><div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding:6px 2px 4px">${leaderboard}${billboard}${medrect}${lgrect}${mobile}${halfpage}${skyscraper}</div></div>
+    <div class="adscroll"><div class="adrow">${leaderboard}${billboard}${medrect}${lgrect}${mobile}${halfpage}${skyscraper}</div></div>
   </div></section>
   <div style="height:60px"></div>`;
   window.scrollTo(0,0);

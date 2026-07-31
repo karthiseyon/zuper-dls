@@ -37,7 +37,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 
 ## Repo layout
 - `index.html` — a thin shell that loads the styleguide site from `site/`.
-- `site/css/` — `fonts.css` + `styles.css` (all styling). `site/js/` — `data/` (tokens, icons, hero-art), `lib/` (helpers), `pages/` (one file per page), and `app.js` (nav/router, loaded last). Plain global-scope scripts, no bundler.
+- `site/css/` — `fonts.css`, `styles.css` + `overview.css` (all styling). `site/js/` — `data/` (tokens, icons, hero-art, changelog), `lib/` (helpers), `pages/` (one file per page), and `app.js` (nav/router, loaded last). Plain global-scope scripts, no bundler.
 - `skills/zuper-brand/` — the **Claude Agent Skill**: SKILL.md + reference files (decks, web, email, social, voice, assets). Install the packaged `assets/zuper-brand-skill.zip` in Claude.ai (Settings → Capabilities → Skills) or unzip into `.claude/skills/` for Claude Code.
 - `assets/` — fonts, logos, GIFs, backgrounds and the downloadable `zuper-design-system.zip`.
 - `slides/` — the 16:9 deck slide layouts (title, agenda, metrics, quote, product, section break, Glass, Sense).

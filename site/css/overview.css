@@ -2,7 +2,13 @@
    Guidy-style Overview — card grid rendered by buildOverview().
    Scoped under .gy-overview so it never affects other pages.
    ========================================================= */
-.gy-overview{--gy-ink:#18181B;--gy-muted:#8A8177;--gy-card:#FFFFFF;--gy-line:#ECE5DC;padding-bottom:70px}
+/* --gs scales every motif with the art panel, which changes width at each breakpoint */
+.gy-overview{--gy-ink:#18181B;--gy-muted:#8A8177;--gy-card:#FFFFFF;--gy-line:#ECE5DC;--gs:1.18;padding-bottom:70px}
+@media(max-width:1320px){.gy-overview{--gs:1.04}}
+@media(max-width:1100px){.gy-overview{--gs:.9}}
+@media(max-width:860px){.gy-overview{--gs:1.06}}
+@media(max-width:640px){.gy-overview{--gs:.8}}
+@media(max-width:470px){.gy-overview{--gs:.62}}
 
 /* header */
 .gy-overview .gy-head{padding:60px 56px 26px;max-width:1180px}
@@ -17,12 +23,11 @@
 .gy-overview .gy-chapter .nm{font:700 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gy-muted)}
 
 /* grid */
-.gy-overview .gy-grid{margin:18px 56px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:1200px){.gy-overview .gy-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.gy-overview .gy-grid{grid-template-columns:1fr}}
+.gy-overview .gy-grid{margin:18px 56px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:860px){.gy-overview .gy-grid{grid-template-columns:1fr}}
 
 .gy-overview .gy-card{position:relative;min-width:0;background:var(--gy-card);border:1px solid var(--gy-line);border-radius:24px;
-  height:436px;padding:34px 36px 30px;display:flex;flex-direction:column;cursor:pointer;text-align:left;
+  height:auto;padding:22px 22px 26px;display:flex;flex-direction:column;cursor:pointer;text-align:left;
   transition:transform .2s,box-shadow .2s,border-color .2s}
 .gy-overview .gy-card:hover{transform:translateY(-3px);box-shadow:0 26px 60px rgba(20,4,3,.09);border-color:#E1D8CB}
 /* scroll reveal: cards fade up (bigger + slower), staggered one-by-one via inline delay,
@@ -35,19 +40,22 @@
 
 /* preview: fixed height so it never resizes on hover; overflow visible so shadows show.
    .hs is absolutely centred and scaled per motif via --s. */
-.gy-overview .prev{flex:0 0 auto;height:300px;position:relative;overflow:visible;margin-bottom:20px;border-radius:16px}
-.gy-overview .prev::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:80%;height:80%;border-radius:50%;background:radial-gradient(circle,rgba(253,80,0,.10),transparent 66%);filter:blur(10px);z-index:0}
-.gy-overview .hs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(var(--s,.82));transform-origin:center;
+/* art panel: warm orange corner wash over a fine dot grid, motif centred on top */
+.gy-overview .prev{flex:0 0 auto;aspect-ratio:16/10;min-height:250px;position:relative;overflow:hidden;margin-bottom:22px;
+  border:1px solid #F0E7DC;border-radius:18px;
+  background:
+    radial-gradient(130% 135% at 100% 0%,rgba(253,80,0,.14),rgba(255,163,110,.07) 42%,rgba(255,255,255,0) 62%),
+    radial-gradient(rgba(120,55,20,.075) 1px,rgba(255,255,255,0) 1.5px),
+    #FFFDFB;
+  background-size:auto,14px 14px,auto}
+.gy-overview .hs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(calc(var(--s,.82) * var(--gs,1)));transform-origin:center;
   width:344px;z-index:1;display:flex;align-items:center;justify-content:center}
 
 /* footer: title (left) + (0N) right. Hover reveals description + arrow, number fades. */
 .gy-overview .gy-foot{display:grid;grid-template-columns:1fr auto;align-items:end;gap:16px}
 .gy-overview .gy-txt{min-width:0}
 .gy-overview .gy-txt h3{font:600 22px/1.1 var(--display);letter-spacing:-.02em;margin:0;color:var(--gy-ink);text-align:left}
-.gy-overview .gy-txt p{font:400 13.5px/1.45 var(--body);color:var(--gy-muted);margin:0;text-align:left;max-height:0;opacity:0;
-  overflow:hidden;transform:translateY(4px);transition:max-height .22s ease,opacity .2s ease,transform .2s ease,margin .22s ease}
-.gy-overview .gy-card:hover .gy-txt p{max-height:60px;opacity:1;margin-top:8px;transform:none}
+.gy-overview .gy-txt p{font:400 13.5px/1.45 var(--body);color:var(--gy-muted);margin:8px 0 0;text-align:left}
 .gy-overview .gy-end{position:relative;width:52px;height:52px}
 .gy-overview .gy-num{position:absolute;right:2px;bottom:6px;font:500 13px/1 var(--mono);color:#B7AEA3;transition:opacity .18s}
 .gy-overview .gy-card:hover .gy-num{opacity:0}

@@ -6,7 +6,8 @@ const AGENTS=[
   ["business-analyst","Business Analyst","Insights"],
   ["sales-coach","Sales Coach","Training officer"],
   ["review-analyser","Review Analyser","Reputation"],
-  ["weather","Weather Forecast","Scheduling"]
+  ["weather","Weather Forecast","Scheduling"],
+  ["ar-agent","AR Agent","Collections"]
 ];
 function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){

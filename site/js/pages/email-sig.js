@@ -22,7 +22,7 @@ function buildEmailSig(){
 
   <section class="block"><div class="wrap">
     <p class="eyebrow">Make it yours</p><h2 class="sec">Build your signature</h2>
-    <p class="sec-note">Everything you type updates the preview on the right. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your Outlook signature settings.</p>
+    <p class="sec-note">Everything you type updates the live preview. When it looks good, hit <b style="color:var(--text-primary)">Copy signature</b> and paste it into your Outlook signature settings.</p>
     <div class="esig">
       <div class="form">
         <div class="fld"><label for="es-name">Full name</label><input id="es-name" placeholder="Jane Doe" value="Jane Doe" /></div>
@@ -39,8 +39,10 @@ function buildEmailSig(){
         <div class="pv-card"><div id="es-preview"></div></div>
         <div class="pv-actions">
           <button class="btn-copy" id="es-copy">${icon("copy",17)} Copy signature</button>
+          <button class="btn-copy alt" id="es-copy-html">${icon("code",17)} Copy HTML</button>
         </div>
         <p class="pv-hint"><b>Paste into Outlook:</b> open <b>Settings</b> → <b>Account</b> → <b>Signatures</b> → <b>New signature</b>, click into the signature box and paste (<b>⌘/Ctrl + V</b>). Give it a name and Save. The logo, banner and colours come along automatically.</p>
+        <p class="pv-hint"><b>Copy HTML</b> gives you the raw markup instead of the rich text, for HubSpot or any editor that wants source.</p>
       </div></div>
       <div class="fld es-bfld">
         <label id="esb-lbl">Email banner <span style="color:var(--text-tertiary);font-weight:500">· optional, pick one</span></label>
@@ -60,6 +62,7 @@ function buildEmailSig(){
       </div>
     </div>
   </div></section>
+
   <div style="height:60px"></div>`;
 
   // ---- signature renderer (inline styles + hosted PNG, so it survives copy/paste into Outlook/Gmail) ----
@@ -151,6 +154,28 @@ function buildEmailSig(){
       navigator.clipboard.write([item]).then(done).catch(fail);
     }else{fail();}
   });
+
+  // ---- HubSpot: copy the raw source as plain text, indented so it reads in a source editor ----
+  const HSBLOCK=/^(table|tbody|tr|td)$/;
+  function fmtHTML(h){
+    let out="",depth=0;
+    h.replace(/</g,"\n<").split("\n").filter(Boolean).forEach(function(seg){
+      const m=/^<(\/?)([a-z]+)/i.exec(seg);
+      if(!m||!HSBLOCK.test(m[2].toLowerCase())){out+=seg;return;}
+      const closing=m[1]==="/";
+      if(closing)depth=Math.max(0,depth-1);
+      out+="\n"+"  ".repeat(depth)+seg;
+      if(!closing)depth++;
+    });
+    return out.trim();
+  }
+  function copyText(t,btn){
+    const done=()=>flash(btn,'Copied ✓');
+    const fb=()=>{const ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand("copy");}catch(_){}document.body.removeChild(ta);ok?done():flash(btn,'Press ⌘/Ctrl+C');};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb);}else{fb();}
+  }
+  $("es-copy-html").addEventListener("click",function(){copyText(fmtHTML(toAbs($("es-preview").innerHTML)),this);});
+
   window.scrollTo(0,0);
 }
 

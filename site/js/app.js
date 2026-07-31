@@ -1,8 +1,30 @@
 /* ============ NAV ============ */
-const ALL=[{id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:"",desc:"Plug the system into Claude."},{id:"voice",name:"Voice & tone",hex:"#FD5000",meta:"voice",grp:"Foundations",desc:"How Zuper sounds, words we skip."},{id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations",desc:"Clear space, sizing, misuse."},{id:"color",name:"Colour",hex:"#FD5000",meta:"palette",grp:"Foundations",desc:"One orange, plus neutrals."},{id:"type",name:"Typography",hex:"#FD5000",meta:"type",grp:"Foundations",desc:"Aptos, Jakarta and Inter."},{id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations",desc:"One weight, on a 256 grid."},{id:"agents",name:"Agent avatars",hex:"#FD5000",meta:"agents",grp:"Foundations",desc:"A mascot per AI agent."},{id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations",desc:"Crews for empty states."},{id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations",desc:"Logos, backgrounds, files."},{id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"Systems",desc:"White, orange, or Sense dark."},{id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"Systems",desc:"The zuper.co system."},{id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1‑pager",grp:"Systems",desc:"One-page customer story."},{id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"Systems",desc:"Lifecycle email layouts."},{id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Systems",desc:"The signature builder."},{id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"Systems",desc:"Post and ad sizes."}];
-const CHAP={"":["00","Start"],"Foundations":["01","Foundations"],"Systems":["02","Systems"]};
+const ALL=[
+  {id:"use",name:"How to use this",hex:"#FD5000",meta:"start",grp:"",desc:"Plug the system into Claude."},
+  {id:"voice",name:"Voice & tone",hex:"#FD5000",meta:"voice",grp:"Foundations",desc:"How Zuper sounds, words we skip."},
+  {id:"logo-usage",name:"Logo usage",hex:"#FD5000",meta:"brand",grp:"Foundations",desc:"Clear space, sizing, misuse."},
+  {id:"color",name:"Colour",hex:"#FD5000",meta:"palette",grp:"Foundations",desc:"One orange, plus neutrals."},
+  {id:"type",name:"Typography",hex:"#FD5000",meta:"type",grp:"Foundations",desc:"Aptos, Jakarta and Inter."},
+  {id:"icons",name:"Iconography",hex:"#FD5000",meta:"icons",grp:"Foundations",desc:"One weight, on a 256 grid."},
+  {id:"agents",name:"Agent avatars",hex:"#FD5000",meta:"agents",grp:"Foundations",desc:"A mascot per AI agent."},
+  {id:"humans",name:"Mini humans",hex:"#FD5000",meta:"brand",grp:"Foundations",desc:"Crews for empty states."},
+  {id:"assets",name:"Brand assets",hex:"#FD5000",meta:"logos",grp:"Foundations",desc:"Logos, backgrounds, files."},
+  {id:"email-sig",name:"Email signature",hex:"#FD5000",meta:"mail",grp:"Application",desc:"The signature builder."},
+  {id:"deck",name:"Deck",hex:"#FD5000",meta:"PPT",grp:"AI learning systems",desc:"White, orange, or Sense dark."},
+  {id:"website",name:"Website DLS",hex:"#FD5000",meta:"web",grp:"AI learning systems",desc:"The zuper.co system."},
+  {id:"one-pager",name:"Case study",hex:"#FD5000",meta:"1\u2011pager",grp:"AI learning systems",desc:"One-page customer story."},
+  {id:"emailer",name:"Emailer",hex:"#FD5000",meta:"email",grp:"AI learning systems",desc:"Lifecycle email layouts."},
+  {id:"social",name:"Social & ads",hex:"#FD5000",meta:"promo",grp:"AI learning systems",desc:"Post and ad sizes."}
+];
+const CHAP={"":["00","Start"],"Foundations":["01","Foundations"],"Application":["02","Application"],"AI learning systems":["03","AI learning systems"]};
 function setActive(id,push){
   [...nav.querySelectorAll("button")].forEach(b=>{const on=b.dataset.id===id;b.classList.toggle("active",on);if(on)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
+  /* the nav scrolls on short viewports, so keep the current page in view */
+  (function(){
+    const b=nav.querySelector("button.active");if(!b)return;
+    const nb=nav.getBoundingClientRect(),bb=b.getBoundingClientRect();
+    if(bb.top<nb.top||bb.bottom>nb.bottom)nav.scrollTop+=bb.top-nb.top-(nb.height-bb.height)/2;
+  })();
   if(id==="overview")buildOverview();
   else if(id==="assets")buildAssets();
   else if(id==="deck")buildDeck();
@@ -62,7 +84,10 @@ function revealSections(){
   secs.forEach(s=>_io.observe(s));
 }
 const NAVIC={overview:"home",deck:"monitor",website:"globe",humans:"users",icons:"grid",use:"cpu","one-pager":"doc",social:"megaphone",emailer:"chat","email-sig":"mail","logo-usage":"shield",assets:"download",color:"droplet",type:"edit",voice:"chat-text",agents:"sparkle"};
-nav.innerHTML=(function(){var g=null,out="";ALL.forEach(function(a){var grp=a.grp||"";if(grp!==g){var c=CHAP[grp]||["",grp];out+=`<div class="ch-head"><span class="no">${c[0]}</span><span class="nm">${c[1]}</span></div>`;g=grp;}out+=`<button data-id="${a.id}"><span class="it-name">${a.name}</span><span class="it-desc">${a.desc||""}</span></button>`;});return out;})();
+nav.innerHTML=(function(){
+  var g=null,out="",head=function(grp){var c=CHAP[grp]||["",grp];return `<div class="ch-head"><span class="no">${c[0]}</span><span class="nm">${c[1]}</span></div>`;};
+  ALL.forEach(function(a){var grp=a.grp||"";if(grp!==g){out+=head(grp);g=grp;}out+=`<button data-id="${a.id}"><span class="it-name">${a.name}</span><span class="it-desc">${a.desc||""}</span></button>`;});
+  return out;})();
 nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setActive(b.dataset.id)});
 document.getElementById("menuBtn").addEventListener("click",function(){const open=nav.classList.toggle("open");this.setAttribute("aria-expanded",open?"true":"false");});
 var brandLogoEl=document.getElementById("brandLogo");
@@ -219,6 +244,26 @@ ckList.addEventListener("click",e=>{const b=e.target.closest(".it");if(b)ckGo(b.
 ckw.querySelector(".scrim").addEventListener("click",ckClose);
 document.getElementById("ckOpenBtn").addEventListener("click",ckOpen);
 
+/* ===== changelog ===== */
+const chBtn=document.getElementById("chOpenBtn");
+document.getElementById("chVersion").textContent="v"+VERSION;
+const chw=document.createElement("div");
+chw.className="chwrap";chw.setAttribute("role","dialog");chw.setAttribute("aria-modal","true");chw.setAttribute("aria-label","What's new");
+chw.innerHTML=`<div class="scrim"></div><div class="ch">
+  <div class="ch-hd"><h2>What's new</h2><button class="x" aria-label="Close">${icon("x",17)}</button></div>
+  <div class="ch-bd">${CHANGELOG.map((r,i)=>`<div class="rel">
+    <div class="rel-hd"><span class="v">v${r.v}</span><span class="d">${r.date}</span>${i===0?'<span class="now">Current</span>':""}</div>
+    <ul>${r.items.map(t=>`<li>${t}</li>`).join("")}</ul>
+  </div>`).join("")}</div>
+</div>`;
+document.body.appendChild(chw);
+let chPrevFocus=null;
+function chOpen(){chPrevFocus=document.activeElement;chw.classList.add("open");lockScroll(true);chw.querySelector(".ch-hd .x").focus();}
+function chClose(){chw.classList.remove("open");lockScroll(false);if(chPrevFocus&&chPrevFocus.focus)chPrevFocus.focus();}
+chBtn.addEventListener("click",chOpen);
+chw.querySelector(".scrim").addEventListener("click",chClose);
+chw.querySelector(".ch-hd .x").addEventListener("click",chClose);
+
 /* ===== image lightbox ===== */
 const lbw=document.createElement("div");lbw.className="lbwrap";lbw.setAttribute("role","dialog");lbw.setAttribute("aria-modal","true");lbw.setAttribute("aria-label","Image preview");
 lbw.innerHTML=`<div class="scrim"></div><figure class="lb"><button class="x" aria-label="Close preview">✕</button><img alt=""><figcaption class="cap"></figcaption></figure>`;
@@ -256,7 +301,7 @@ window.addEventListener("scroll",()=>{topBtn.classList.toggle("show",window.scro
 /* global keys: ⌘K palette, esc closes overlays, [ ] page prev/next */
 window.addEventListener("keydown",e=>{
   if((e.metaKey||e.ctrlKey)&&(e.key==="k"||e.key==="K")){e.preventDefault();ckw.classList.contains("open")?ckClose():ckOpen();return;}
-  if(e.key==="Escape"){if(ckw.classList.contains("open"))ckClose();else if(lbw.classList.contains("open"))lbClose();return;}
+  if(e.key==="Escape"){if(ckw.classList.contains("open"))ckClose();else if(chw.classList.contains("open"))chClose();else if(lbw.classList.contains("open"))lbClose();return;}
   if((e.key==="["||e.key==="]")&&!e.metaKey&&!e.ctrlKey&&!e.altKey){
     if(ckw.classList.contains("open")||lbw.classList.contains("open"))return;
     const t=e.target;

@@ -63,9 +63,10 @@ SKILL_ASSETS=(
   assets/mini-humans/on-the-job.gif assets/mini-humans/on-the-ladder.gif
   assets/mini-humans/on-the-tools.gif assets/mini-humans/reaching-up.gif
   assets/mini-humans/ready-to-work.gif assets/mini-humans/waving.gif
-  assets/agents/business-analyst.png assets/agents/field-technician.png
-  assets/agents/front-office.png assets/agents/review-analyser.png
-  assets/agents/sales-coach.png assets/agents/weather.png
+  assets/agents/ar-agent.png assets/agents/business-analyst.png
+  assets/agents/field-technician.png assets/agents/front-office.png
+  assets/agents/review-analyser.png assets/agents/sales-coach.png
+  assets/agents/weather.png
   assets/backgrounds/zuper-glass-bg.jpg assets/backgrounds/zuper-sense-bg.jpg
   assets/backgrounds/zuper-breaker-bg.jpg
   assets/email/zuper-vertical-tight.png assets/email/zuper-emailer-sense.png

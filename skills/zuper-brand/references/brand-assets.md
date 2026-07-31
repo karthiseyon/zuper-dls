@@ -16,7 +16,7 @@ The files below are **bundled inside this skill** under `assets/` — copy them 
 - **Mini humans** (`mini-humans/`): `carrying-gear.gif`, `crew.gif`, `on-the-job.gif`, `on-the-ladder.gif`, `on-the-tools.gif`, `reaching-up.gif`, `ready-to-work.gif`, `waving.gif`.
 - **Email** (`email/`): `zuper-vertical-tight.png` (signature logo), `zuper-emailer-sense.png`, `zuper-emailer-trades.png` (380×95 banners).
 - **Backgrounds** (`backgrounds/`): `zuper-glass-bg.jpg` (Zuper Glass slide), `zuper-sense-bg.jpg` (Sense), `zuper-breaker-bg.jpg`.
-- **Agent avatars** (`agents/`): `business-analyst.png`, `field-technician.png`, `front-office.png`, `review-analyser.png`, `sales-coach.png`, `weather.png` — portrait tiles for AI-agent UI; use on peach card grounds.
+- **Agent avatars** (`agents/`): `ar-agent.png`, `business-analyst.png`, `field-technician.png`, `front-office.png`, `review-analyser.png`, `sales-coach.png`, `weather.png` — portrait tiles for AI-agent UI; use on peach card grounds.
 
 ## Mini humans (imagery rule)
 
