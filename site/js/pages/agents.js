@@ -31,7 +31,7 @@ function buildAgents(){
         <div class="hd"><span class="mk"><img src="assets/logos/zuper-logomark-white.svg" alt="" style="width:15px;height:auto;display:block"></span><span><b>Zuper</b><i>Agents on shift</i></span><span class="live"><u></u>Live</span></div>
         <div class="r r1"><span class="av"><img src="assets/agents/front-office.png" alt=""></span><span class="who"><b>CSR Agent</b><i>Dispatch · support</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("calendar-check",12)} Booked 9:30 AM</span></span></div>
         <div class="r r2"><span class="av"><img src="assets/agents/sales-coach.png" alt=""></span><span class="who"><b>Sales Coach</b><i>Training officer</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("lightbulb",12)} Upsell tip sent</span></span></div>
-        <div class="r r3"><span class="av"><img src="assets/agents/business-analyst.png" alt=""></span><span class="who"><b>Business Analyst</b><i>Insights</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("trend-up",12)} Margin up 18%</span></span></div>
+        <div class="r r3"><span class="av"><img src="assets/agents/review-analyser.png" alt=""></span><span class="who"><b>Review Analyser</b><i>Reputation</i></span><span class="st"><span class="w">On it…</span><span class="d">${icon("star",12)} New 5‑star review</span></span></div>
       </div></div>
     </div>
   </header>

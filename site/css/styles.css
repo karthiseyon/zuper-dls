@@ -1007,9 +1007,8 @@ main{flex:1;min-width:0;overflow-x:clip}
 .ha-shift .r+.r{margin-top:9px}
 .ha-shift .av{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:linear-gradient(150deg,#7E1C0B,#D43A14 55%,#F2864F);position:relative;overflow:hidden}
 .ha-shift .av img{position:absolute;left:50%;top:2px;transform:translateX(-50%);height:108%;width:auto;max-width:none}
-/* the Business Analyst render is a composed scene rather than a cut-out, so the
-   42px tile zooms onto the character instead of showing the whole dashboard */
-.ha-shift .av img[src*="business-analyst"]{height:150%;left:33%;top:0}
+/* Roster tiles need cut-out portraits: the Business Analyst render is a composed
+   scene and turns to mush at 42px, so the roster uses Review Analyser instead. */
 .ha-shift .who b{display:block;font:700 12px/1.1 'Plus Jakarta Sans',system-ui,sans-serif;color:#191919}
 .ha-shift .who i{display:block;font:600 7.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9A9088;font-style:normal;margin-top:4px}
 .ha-shift .st{margin-left:auto;position:relative;height:24px;display:flex;align-items:center;justify-content:flex-end;min-width:118px}
