@@ -28,6 +28,8 @@ Non-negotiables:
 - [Section break](https://zuper-dls.vercel.app/slides/section-break.html): full-bleed orange houses illustration, use between major sections
 - [Zuper Glass](https://zuper-dls.vercel.app/slides/glass.html): full-bleed AR glasses photo, reserved for Zuper Glass topics
 - [Zuper Sense](https://zuper-dls.vercel.app/slides/sense-fluted.html): the black Sense slide
+- [Deck master, PowerPoint](https://zuper-dls.vercel.app/assets/zuper-deck-master.pptx): start a new deck here. One file, 36 empty slides: the 18 layouts in the primary scheme (slides 1-18, white cover + orange interiors) then the same 18 in the secondary (19-36, orange cover + white interiors). Every shape is editable, delete the half and the layouts you don't need
+- [Deck master, HTML](https://zuper-dls.vercel.app/templates/deck-master/DeckMaster.dc.html): the primary scheme's 18 layouts in the browser
 
 ## Assets
 

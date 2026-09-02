@@ -201,8 +201,8 @@ const SECIDX={
   voice:["How Zuper sounds","The difference in one example","The lines that sound like us","Trade jargon for outcomes","The AI & jargon tells","Prove you get the work","Before it ships"],
   agents:["Meet the agents","Keep the team consistent"],
   humans:["Mini humans, not stock photos","Eight workers"],
-  assets:["Logo library","Video call backgrounds","LinkedIn personal cover photos","Word document template"],
-  deck:["One deck. One contrast.","Palette, type & icons","Slide building blocks","Slide layouts","The rule, both ways"],
+  assets:["Logo library","Video call backgrounds","LinkedIn personal cover photos","Deck template","Word document template"],
+  deck:["Download the deck template","One deck. One contrast.","Palette, type & icons","Slide building blocks","Slide layouts","The rule, both ways"],
   website:["Color","Typography","Spacing, radius, grid","Buttons & eyebrows","Forms, pills & tiles","Navigation & mega-menus","Section grounds","Cards","More components","Usage, states & anatomy","Page patterns","CTA banner & footer","Take reference from these URLs"],
   "one-pager":["The building blocks","A 5-page co-branded story"],
   emailer:["Building blocks","Email announcement"]

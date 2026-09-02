@@ -1,3 +1,9 @@
 .DS_Store
 .vercel
 .env*
+
+# nested sub-project, not part of the zuper-dls deploy
+zuper-dls-pitch/
+
+# PowerPoint lock files
+~$*

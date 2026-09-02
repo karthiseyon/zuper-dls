@@ -41,7 +41,8 @@ A sidebar switches between an overview, eight foundations and six systems:
 - `skills/zuper-brand/` — the **Claude Agent Skill**: SKILL.md + reference files (decks, web, email, social, voice, assets). Install the packaged `assets/zuper-brand-skill.zip` in Claude.ai (Settings → Capabilities → Skills) or unzip into `.claude/skills/` for Claude Code.
 - `assets/` — fonts, logos, GIFs, backgrounds and the downloadable `zuper-design-system.zip`.
 - `slides/` — the 16:9 deck slide layouts (title, agenda, metrics, quote, product, section break, Glass, Sense).
-- `templates/` — the Claude Design templates (both pitch decks, case study, emailer, ads, landing page, Raise the Roof).
+- `templates/` — the Claude Design templates (`deck-master/` = the empty all-layouts master deck, both pitch decks, case study, emailer, ads, landing page, Raise the Roof).
+- `assets/zuper-deck-master.pptx` — the master deck as a real PowerPoint file, offered as a download card on both the **Deck** and **Brand assets** pages (shared card: `deckTemplateCard()` in `site/js/lib/helpers.js`): 36 slides, the 18 layouts in each contrast scheme, placeholder copy only, every shape editable. Built by `scripts/build-deck-master-pptx.py`; never hand-edit it, edit the script. (The script can also author the layouts as real PowerPoint slide masters, `MASTERS=1`, but PowerPoint asks to repair a deck built that way, so it ships off.)
 - `bundle/` — sources that ship only inside the design-system zip (SKILL.md, tokens, components, UI kits).
 - `scripts/build-zip.sh` — rebuilds `assets/zuper-brand-skill.zip` and `llms-full.txt` from the repo. Run it after editing the brief, the skill or the bundled assets. It does **not** touch `assets/zuper-design-system.zip`, which is exported from Claude Design and committed as-is; `--rebuild-ds-zip` regenerates that from repo sources and replaces the export.
 

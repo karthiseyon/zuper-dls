@@ -88,7 +88,13 @@ function buildDeck(){
   </header>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">01 · The rule</p><h2 class="sec">One deck. One contrast.</h2>
+    <p class="eyebrow">01 · Template</p><h2 class="sec">Download the deck template</h2>
+    <p class="sec-note">The whole system as one PowerPoint file: every layout on this page, at full size, with placeholder copy. Slides 1&ndash;18 run the <b style="color:var(--text-primary)">primary</b> scheme (white cover, orange interiors); slides 19&ndash;36 run the <b style="color:var(--text-primary)">secondary</b> one (orange cover, white interiors). Delete the half you don't need, then duplicate the layouts you do. <b style="color:var(--text-primary)">Every shape is editable</b>, so a four-up team row drops to three. The rules behind it are below. Prefer the browser? Open the <a href="templates/deck-master/DeckMaster.dc.html" style="color:var(--color-primary);font-weight:600">HTML master</a>.</p>
+    ${deckTemplateCard()}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">02 · The rule</p><h2 class="sec">One deck. One contrast.</h2>
     <p class="sec-note"><b style="color:var(--text-primary)">Choose the cover's colour, and every interior slide takes the opposite.</b> The <b style="color:var(--text-primary)">primary</b> option is a white cover with orange interiors; the <b style="color:var(--text-primary)">secondary</b> option flips it, an orange cover with white interiors. Never mix orange and white interiors in one deck. <b style="color:var(--text-primary)">Dark is reserved exclusively for Zuper Sense.</b></p>
     <div class="modecards">
       <div class="modecard"><div class="sw" style="background:#fff;border:1px solid var(--border-default)"></div><h5>White · primary cover</h5><p>The default cover; interiors then run orange.</p></div>
@@ -105,7 +111,7 @@ function buildDeck(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 · Foundations</p><h2 class="sec">Palette, type &amp; icons</h2>
+    <p class="eyebrow">03 · Foundations</p><h2 class="sec">Palette, type &amp; icons</h2>
     <h3 class="grp">Orange (brand)</h3>${ramp([["orange/300","#FFB088"],["orange/400","#FF8A4C"],["orange/500","#FD5000"],["orange/600","#DB3602"],["orange/700","#B42E00"]])}
     <h3 class="grp">Neutral</h3>${ramp([["white","#FFFFFF"],["paper","#F8F5F0"],["slate","#6E675F"],["ink","#1B1919"],["black","#000000"]])}
     <h3 class="grp">Dark. Sense only</h3>${ramp([["bg","#09090B",1],["surface","#141417",1],["text","#FAFAFA"],["orange‑on‑dark","#FF8B5A"]])}
@@ -116,19 +122,19 @@ function buildDeck(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">03 · Atoms</p><h2 class="sec">Slide building blocks</h2>
+    <p class="eyebrow">04 · Atoms</p><h2 class="sec">Slide building blocks</h2>
     <p class="sec-note">The elements every slide is composed from, set in Aptos, with line icons and one orange accent. <b style="color:var(--text-primary)">The footer logo mark sits in a clear bottom corner, but on content‑heavy slides, drop it to avoid clutter.</b></p>
     ${atoms}
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 · Layouts</p><h2 class="sec">Slide layouts</h2>
+    <p class="eyebrow">05 · Layouts</p><h2 class="sec">Slide layouts</h2>
     <p class="sec-note">↔ Scroll the library. Seventeen 16:9 layouts, title, full‑bleed section breaker, divider, agenda, content, split, stat, big‑number grid, data, comparison, timeline, two‑column, quote, Sense, Zuper Glass and closing. <b style="color:var(--text-primary)">On content‑heavy slides the footer logo mark is dropped</b> so it never crowds the layout.</p>
     <div class="slidewrap">${layouts}</div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">05 · In practice</p><h2 class="sec">The rule, both ways</h2>
+    <p class="eyebrow">06 · In practice</p><h2 class="sec">The rule, both ways</h2>
     <p class="sec-note">The same story run as two valid decks, primary first. The Zuper Sense slide stays dark in both.</p>
     ${vhead("Primary · White cover → orange interiors","#FFFFFF","#FD5000")}
     <div class="slidewrap">${variantB}</div>

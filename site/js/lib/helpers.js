@@ -37,3 +37,31 @@ function chromeCss(canvas){
     +`;--hero-bg:linear-gradient(118deg,#FFFFFF,#FBF2EA 55%,#FBDFD0);--hero-ink:#191919;--hero-sub:#4B5563;--hero-kick:#FD5000;--chip-bg:#fff;--chip-ink:#191919;--chip-line:#E7E0D6`;
 }
 
+
+/* ── Deck master template · download card ────────────────────────────────
+   One card, used on both the Deck page and Brand assets, so the two stay in
+   step. Previews the two covers the file ships: primary (white) and
+   secondary (orange gradient). */
+function deckTemplateCard(){
+  const GRAD="linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%)";
+  const thumb=(scheme)=>{
+    const white=scheme==="white";
+    return `<div style="flex:1;min-width:0;border-radius:8px;overflow:hidden;box-shadow:0 10px 26px rgba(20,4,3,.16);background:${white?"#fff":GRAD};aspect-ratio:16/9;position:relative;padding:16px 18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+      ${white?`<div style="position:absolute;top:0;left:0;right:0;height:3px;background:${GRAD}"></div>`:``}
+      <div style="font:700 7px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:${white?"#FD5000":"rgba(255,255,255,.9)"};margin-bottom:7px">Eyebrow</div>
+      <div style="font:700 17px/1.05 'Aptos Display','Plus Jakarta Sans',sans-serif;letter-spacing:-.02em;color:${white?"#191919":"#fff"}">Deck title<br>goes here</div>
+      ${white?`<div style="align-self:flex-start;margin-top:5px;background:#FCE9E1;color:#FD5000;font:700 17px/1.05 'Aptos Display','Plus Jakarta Sans',sans-serif;letter-spacing:-.02em;padding:1px 6px;border-radius:4px">in two lines.</div>`:``}
+      <div style="position:absolute;bottom:11px;right:12px">${logo(white?"dark":"white",9)}</div>
+      <div style="position:absolute;bottom:12px;left:18px;font:500 6px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:${white?"#888":"rgba(255,255,255,.85)"}">${white?"Primary · orange interiors":"Secondary · white interiors"}</div>
+    </div>`;
+  };
+  return `<div class="la-soc"><div class="s-card">
+    <div class="s-prev" style="background:#ECEAE6;padding:26px;display:flex;gap:16px;align-items:stretch">
+      ${thumb("white")}${thumb("orange")}
+    </div>
+    <div class="s-meta">
+      <div><div class="nm">Zuper deck master</div><div class="dim">.pptx · 36 slides · 16:9 · Aptos</div></div>
+      <div class="s-btns"><button class="la-dl dl-btn" data-href="assets/zuper-deck-master.pptx" data-name="Zuper-Deck-Master.pptx">${icon("download",13)}Download</button></div>
+    </div>
+  </div></div>`;
+}

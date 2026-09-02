@@ -2,8 +2,19 @@
    What shipped, newest first. Add a new entry at the top whenever the DLS changes;
    VERSION below drives the label in the sidebar footer.
    Keep items short: one line, one change, no trailing explanation. */
-const VERSION="1.6";
+const VERSION="1.7";
 const CHANGELOG=[
+  {v:"1.7",date:"2 Sep 2026",items:[
+    "Deck template: one .pptx, 36 slides, every layout in both contrast schemes.",
+    "Deck page opens with the template download.",
+    "Brand assets: deck template download card.",
+    "Deck master also in HTML, at templates/deck-master/.",
+    "Nothing dark sits on the orange gradient any more.",
+    "Logomark sits in the bottom-right corner of every slide.",
+    "Section break and Zuper Glass scrims fade with a real gradient.",
+    "Section break background: fixed the missing image.",
+    "Slide specimens now load the design system stylesheet."
+  ]},
   {v:"1.6",date:"31 Jul 2026",items:[
     "AR Agent added to the avatar set.",
     "Business Analyst re-rendered.",

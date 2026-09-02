@@ -43,11 +43,12 @@ function buildAssets(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Brand · Downloads</p>
       <h1>Brand assets</h1>
-      <p class="lede">Grab‑and‑go brand files, no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers and a branded Word document. <b>Download</b> and it's on‑brand.</p>
+      <p class="lede">Grab‑and‑go brand files, no design tools needed. The Zuper logo in every lockup and colour variant, plus ready‑made Zoom backgrounds, LinkedIn covers, the PowerPoint deck template and a branded Word document. <b>Download</b> and it's on‑brand.</p>
       <div class="chips" style="margin-top:24px">
         <span class="chip">3 logo lockups · 4 variants</span>
         <span class="chip">SVG + PNG + EPS</span>
         <span class="chip">Zoom &amp; LinkedIn templates</span>
+        <span class="chip">Deck .pptx</span>
         <span class="chip">Word .docx</span>
       </div>
       <div class="hero-art"><div class="float ha-assets">
@@ -84,7 +85,13 @@ function buildAssets(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">04 · Document</p><h2 class="sec">Word document template</h2>
+    <p class="eyebrow">04 · Presentation</p><h2 class="sec">Deck template</h2>
+    <p class="sec-note">The whole slide system as one branded <b style="color:var(--text-primary)">.pptx</b>: 36 slides covering every layout twice, once per contrast scheme. Aptos throughout, the logomark in the bottom-right corner, placeholder copy ready to type over. <b style="color:var(--text-primary)">Download</b>, delete the half you don't need and fill in the rest.</p>
+    ${deckTemplateCard()}
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">05 · Document</p><h2 class="sec">Word document template</h2>
     <p class="sec-note">A branded <b style="color:var(--text-primary)">.docx</b> with the Zuper logo header, orange rule, <i>Page X of Y</i> and a confidentiality footer. Aptos throughout. <b style="color:var(--text-primary)">Download</b> and start typing.</p>
     <div class="la-soc">
       <div class="s-card">

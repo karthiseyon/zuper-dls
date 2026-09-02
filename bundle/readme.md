@@ -135,6 +135,7 @@ The product is the hero. Whenever a creative (deck, social post, ad, web hero) c
 **`templates/`** — copyable starting artifacts (Templates picker)
 - `landing-page/` — marketing landing page (composes DS components)
 - `case-study/` — co-branded customer one-pager, A4 multi-page
+- `deck-master/` — 16:9 **master deck: all 18 layouts, placeholder copy only.** Start here for a new deck, delete what you don't need. Also shipped as PowerPoint, both schemes in one 36-slide file: `assets/zuper-deck-master.pptx`
 - `pitch-deck-white/` — 16:9 deck, **white cover → orange interiors (Aptos) — PRIMARY/default scheme**
 - `pitch-deck/` — 16:9 deck, orange cover → white interiors (Aptos) — secondary scheme
 - `social-creatives/` — 15 social formats (IG square / story, landscape, quote, stat, Sense)

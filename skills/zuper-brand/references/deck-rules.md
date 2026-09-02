@@ -29,6 +29,8 @@ Small Zuper logomark in a bottom corner of every slide, **but on any content-hea
 
 ## Layout reference
 
+Building a deck from scratch? Start from the empty master deck, `assets/zuper-deck-master.pptx`. One PowerPoint file holding both schemes: 36 slides, the 18 layouts in the primary scheme (white cover, orange interiors) then the same 18 in the secondary (orange cover, white interiors). Every shape is editable, delete the half and the layouts you don't need. `templates/deck-master/DeckMaster.dc.html` is the primary scheme in HTML. All 18 layouts, placeholder copy only: title, agenda, section break, divider, content, split + product, stat, metrics grid, chart, comparison, timeline, two-column, quote, logo wall, team, Sense, Glass, closing. Delete what you don't need.
+
 Live 16:9 HTML layouts to copy from: title, agenda, metrics, quote, product, section-break, glass, sense-fluted at `https://zuper-dls.vercel.app/slides/<name>.html`. Product slides show the product as an HTML mock in a rounded, shadowed card, never a screenshot of a stock image.
 
 ## Charts in decks

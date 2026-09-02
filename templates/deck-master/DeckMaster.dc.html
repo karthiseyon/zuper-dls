@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Deck master (all layouts, empty)" description="16:9 Zuper master deck — every slide layout with placeholder copy only. Primary scheme: white cover, orange interiors, dark reserved for Sense, full-bleed break and Glass slides. Delete the layouts you don't need, fill the rest. Arrow keys to navigate, right-click a thumbnail to duplicate or delete." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+  <!-- 01 · Title (WHITE cover — primary scheme) -->
+  <section data-label="01 Title" style="width:1920px;height:1080px;box-sizing:border-box;background:#fff;color:var(--text-primary);font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;height:14px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div style="font-family:var(--font-mono);font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);margin-bottom:36px;">Eyebrow, audience or date</div>
+    <h1 style="font-weight:800;font-size:130px;line-height:1.02;letter-spacing:-.03em;margin:0;max-width:1500px;text-wrap:balance;">Deck title goes here</h1>
+    <div style="margin-top:18px;"><span style="display:inline-block;background:var(--surface-banner);color:var(--color-primary);font-weight:800;font-size:130px;line-height:1.05;letter-spacing:-.03em;padding:6px 28px;border-radius:14px;">in two lines.</span></div>
+    <div style="font-family:var(--font-deck-body);font-size:34px;color:var(--text-secondary);margin-top:44px;max-width:1000px;line-height:1.45;">One supporting line. Say the outcome, not the feature list.</div>
+    <div style="position:absolute;bottom:76px;right:150px;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Presenter, role</div>
+      <img src="../../assets/logos/zuper-logomark.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 02 · Agenda (ORANGE interior) -->
+  <section data-label="02 Agenda" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Agenda</div>
+    <h2 style="font-weight:800;font-size:84px;letter-spacing:-.03em;margin:22px 0 72px;">What we'll cover</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 88px;">
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid rgba(255,255,255,.4);"><span style="font-family:var(--font-mono);font-size:28px;font-weight:600;">01</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Section title</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:6px;">One line on what it answers</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid rgba(255,255,255,.4);"><span style="font-family:var(--font-mono);font-size:28px;font-weight:600;">02</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Section title</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:6px;">One line on what it answers</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid rgba(255,255,255,.4);"><span style="font-family:var(--font-mono);font-size:28px;font-weight:600;">03</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Section title</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:6px;">One line on what it answers</div></div></div>
+      <div style="display:flex;align-items:baseline;gap:30px;padding:34px 0;border-top:3px solid rgba(255,255,255,.4);"><span style="font-family:var(--font-mono);font-size:28px;font-weight:600;">04</span><div><div style="font-weight:700;font-size:40px;letter-spacing:-.01em;">Section title</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:6px;">One line on what it answers</div></div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 03 · Section break (full-bleed, outside the contrast rule) -->
+  <section data-label="03 Section break" style="width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden;font-family:var(--font-deck);color:#fff;background:#E8631A url(../../assets/backgrounds/zuper-breaker-bg.jpg) center bottom/cover no-repeat;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,4,3,.18) 0%,rgba(20,4,3,.06) 34%,rgba(20,4,3,.80) 100%);"></div>
+    <div style="position:absolute;top:64px;right:84px;font-family:var(--font-deck-body);font-weight:700;font-size:22px;letter-spacing:.08em;">ZUPER CONFIDENTIAL</div>
+    <div style="position:absolute;left:96px;right:96px;bottom:200px;">
+      <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:#FFD9C9;margin-bottom:20px;">Section 02</div>
+      <h1 style="font-weight:500;font-size:104px;line-height:1.04;letter-spacing:-.02em;margin:0;max-width:1360px;text-shadow:0 2px 30px rgba(120,40,0,.25);">Section headline, <b style="font-weight:800;">one claim.</b></h1>
+      <div style="font-family:var(--font-deck-body);font-size:40px;color:rgba(255,255,255,.95);margin-top:34px;max-width:1200px;text-shadow:0 2px 20px rgba(120,40,0,.35);">One line of setup for the section that follows.</div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 04 · Divider (numbered, ORANGE interior) -->
+  <section data-label="04 Divider" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Section 02</div>
+    <div style="font-weight:800;font-size:280px;line-height:.9;letter-spacing:-.05em;color:rgba(255,255,255,.45);margin:20px 0 0;">02</div>
+    <h2 style="font-weight:800;font-size:88px;letter-spacing:-.03em;margin:24px 0 0;max-width:1300px;text-wrap:balance;">Section title goes here</h2>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 05 · Content, bulleted (ORANGE interior) -->
+  <section data-label="05 Content, bullets" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Eyebrow</div>
+    <h2 style="font-weight:800;font-size:80px;letter-spacing:-.03em;margin:22px 0 28px;max-width:1300px;text-wrap:balance;">Headline goes here, sentence case</h2>
+    <p style="font-family:var(--font-deck-body);font-size:32px;line-height:1.55;color:rgba(255,255,255,.92);margin:0 0 60px;max-width:1200px;">Optional supporting line. Two lines at most, then let the bullets carry the detail.</p>
+    <div style="display:flex;flex-direction:column;gap:30px;font-family:var(--font-deck-body);font-size:34px;">
+      <div style="display:flex;align-items:baseline;gap:20px;"><span style="color:#fff;font-weight:800;">&check;</span> First point, one line, no wrapping</div>
+      <div style="display:flex;align-items:baseline;gap:20px;"><span style="color:#fff;font-weight:800;">&check;</span> Second point, one line, no wrapping</div>
+      <div style="display:flex;align-items:baseline;gap:20px;"><span style="color:#fff;font-weight:800;">&check;</span> Third point, one line, no wrapping</div>
+      <div style="display:flex;align-items:baseline;gap:20px;"><span style="color:#fff;font-weight:800;">&check;</span> Fourth point, stop at five</div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 06 · Split, copy + product mock (ORANGE interior, white product card) -->
+  <section data-label="06 Split + product" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;position:relative;">
+    <div>
+      <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Module name</div>
+      <h2 style="font-weight:800;font-size:72px;letter-spacing:-.03em;margin:22px 0 28px;text-wrap:balance;">What this screen does for you</h2>
+      <p style="font-family:var(--font-deck-body);font-size:30px;line-height:1.55;color:rgba(255,255,255,.92);margin:0 0 32px;max-width:640px;">One line on the outcome, in the words the trade uses.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;font-family:var(--font-deck-body);font-size:26px;">
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#fff;font-weight:800;">&check;</span> Capability, one line</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#fff;font-weight:800;">&check;</span> Capability, one line</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#fff;font-weight:800;">&check;</span> Capability, one line</div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.18);border-radius:24px;padding:40px;">
+      <div style="background:#fff;border-radius:18px;box-shadow:var(--shadow-float);overflow:hidden;color:var(--text-primary);">
+        <div style="display:flex;gap:10px;align-items:center;padding:18px 22px;border-bottom:1px solid var(--border-divider);"><span style="width:14px;height:14px;border-radius:50%;background:#FF5F57;"></span><span style="width:14px;height:14px;border-radius:50%;background:#FEBC2E;"></span><span style="width:14px;height:14px;border-radius:50%;background:#28C840;"></span><span style="margin-left:14px;font-family:var(--font-mono);font-size:18px;color:var(--text-muted);">Screen name</span></div>
+        <div style="display:flex;align-items:center;gap:18px;padding:22px;border-bottom:1px solid var(--border-card);"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-muted);width:60px;">00:00</span><div style="flex:1;"><div style="font-family:var(--font-deck-body);font-weight:600;font-size:22px;">Row title, real job name</div><div style="font-family:var(--font-deck-body);font-size:18px;color:var(--text-muted);">Secondary detail</div></div><span style="font-family:var(--font-deck-body);font-size:18px;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--status-success-bg);color:var(--status-success-fg);">Status</span></div>
+        <div style="display:flex;align-items:center;gap:18px;padding:22px;border-bottom:1px solid var(--border-card);"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-muted);width:60px;">00:00</span><div style="flex:1;"><div style="font-family:var(--font-deck-body);font-weight:600;font-size:22px;">Row title, real job name</div><div style="font-family:var(--font-deck-body);font-size:18px;color:var(--text-muted);">Secondary detail</div></div><span style="font-family:var(--font-deck-body);font-size:18px;font-weight:600;padding:6px 14px;border-radius:999px;background:#E8F0FE;color:#1A56DB;">Status</span></div>
+        <div style="display:flex;align-items:center;gap:18px;padding:22px;"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-muted);width:60px;">00:00</span><div style="flex:1;"><div style="font-family:var(--font-deck-body);font-weight:600;font-size:22px;">Row title, real job name</div><div style="font-family:var(--font-deck-body);font-size:18px;color:var(--text-muted);">Secondary detail</div></div><span style="font-family:var(--font-deck-body);font-size:18px;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--status-warning-bg);color:var(--status-warning-fg);">Status</span></div>
+      </div>
+      <div style="font-family:var(--font-mono);font-size:18px;color:rgba(255,255,255,.8);margin-top:22px;text-align:center;">Build the product as an HTML mock, never a screenshot of stock art</div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 07 · Single stat (ORANGE interior) -->
+  <section data-label="07 Stat" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">The outcome</div>
+    <div style="font-weight:800;font-size:340px;line-height:.9;letter-spacing:-.05em;margin:30px 0 0;">00%</div>
+    <div style="font-family:var(--font-deck-body);font-weight:700;font-size:48px;line-height:1.35;margin-top:34px;max-width:1200px;">What the number means, in one line.</div>
+    <div style="font-family:var(--font-mono);font-size:22px;color:rgba(255,255,255,.8);margin-top:30px;">Source, period</div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 08 · Big-number grid (ORANGE interior) -->
+  <section data-label="08 Metrics grid" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">The impact</div>
+    <h2 style="font-weight:800;font-size:80px;letter-spacing:-.03em;margin:22px 0 96px;max-width:1200px;text-wrap:balance;">Headline that frames the numbers</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;">
+      <div style="border-top:6px solid #fff;padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;line-height:1;">00%</div><div style="font-family:var(--font-deck-body);font-size:30px;color:rgba(255,255,255,.9);margin-top:22px;max-width:380px;line-height:1.4;">What it measures, one line</div></div>
+      <div style="border-top:6px solid #fff;padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;line-height:1;">0 in 0</div><div style="font-family:var(--font-deck-body);font-size:30px;color:rgba(255,255,255,.9);margin-top:22px;max-width:380px;line-height:1.4;">What it measures, one line</div></div>
+      <div style="border-top:6px solid #fff;padding-top:32px;"><div style="font-weight:800;font-size:140px;letter-spacing:-.04em;line-height:1;">0 days</div><div style="font-family:var(--font-deck-body);font-size:30px;color:rgba(255,255,255,.9);margin-top:22px;max-width:380px;line-height:1.4;">What it measures, one line</div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 09 · Data, chart on a white card (ORANGE interior — marks never sit on the gradient) -->
+  <section data-label="09 Chart" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:120px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Data, period</div>
+    <h2 style="font-weight:800;font-size:68px;letter-spacing:-.03em;margin:20px 0 44px;max-width:1300px;text-wrap:balance;">The one takeaway from this chart</h2>
+    <div style="background:#fff;border-radius:24px;box-shadow:var(--shadow-float);padding:56px 64px;color:var(--text-primary);">
+      <div style="display:flex;flex-direction:column;gap:34px;">
+        <div style="display:flex;align-items:center;gap:32px;"><span style="font-family:var(--font-deck-body);font-size:26px;width:340px;color:var(--text-secondary);">Category label</span><span style="flex:1;height:44px;background:#E7E0D6;border-radius:6px;overflow:hidden;"><span style="display:block;width:72%;height:100%;background:#FD5000;"></span></span><span style="font-family:var(--font-mono);font-size:26px;font-weight:600;width:110px;text-align:right;">00</span></div>
+        <div style="display:flex;align-items:center;gap:32px;"><span style="font-family:var(--font-deck-body);font-size:26px;width:340px;color:var(--text-secondary);">Category label</span><span style="flex:1;height:44px;background:#E7E0D6;border-radius:6px;overflow:hidden;"><span style="display:block;width:54%;height:100%;background:#191919;"></span></span><span style="font-family:var(--font-mono);font-size:26px;font-weight:600;width:110px;text-align:right;">00</span></div>
+        <div style="display:flex;align-items:center;gap:32px;"><span style="font-family:var(--font-deck-body);font-size:26px;width:340px;color:var(--text-secondary);">Category label</span><span style="flex:1;height:44px;background:#E7E0D6;border-radius:6px;overflow:hidden;"><span style="display:block;width:38%;height:100%;background:#7A7268;"></span></span><span style="font-family:var(--font-mono);font-size:26px;font-weight:600;width:110px;text-align:right;">00</span></div>
+        <div style="display:flex;align-items:center;gap:32px;"><span style="font-family:var(--font-deck-body);font-size:26px;width:340px;color:var(--text-secondary);">Category label</span><span style="flex:1;height:44px;background:#E7E0D6;border-radius:6px;overflow:hidden;"><span style="display:block;width:26%;height:100%;background:#7A7268;"></span></span><span style="font-family:var(--font-mono);font-size:26px;font-weight:600;width:110px;text-align:right;">00</span></div>
+      </div>
+      <div style="font-family:var(--font-deck-body);font-size:22px;color:var(--text-muted);margin-top:44px;">One series in focus orange, the rest in comparison ink and context grey. Direct-label every series. No gradient fills, no 3D, no dual axes.</div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 10 · Comparison, before / after (ORANGE interior) -->
+  <section data-label="10 Comparison" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Before and after</div>
+    <h2 style="font-weight:800;font-size:76px;letter-spacing:-.03em;margin:22px 0 68px;max-width:1300px;text-wrap:balance;">The shift, in one headline</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div style="background:rgba(255,255,255,.14);border-radius:24px;padding:56px;">
+        <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.75);margin-bottom:32px;">Before</div>
+        <div style="display:flex;flex-direction:column;gap:26px;font-family:var(--font-deck-body);font-size:30px;line-height:1.4;">
+          <div>What it costs them today, one line</div><div>What it costs them today, one line</div><div>What it costs them today, one line</div>
+        </div>
+      </div>
+      <div style="background:#fff;color:var(--text-primary);border-radius:24px;padding:56px;box-shadow:var(--shadow-float);">
+        <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);margin-bottom:32px;">After</div>
+        <div style="display:flex;flex-direction:column;gap:26px;font-family:var(--font-deck-body);font-size:30px;line-height:1.4;">
+          <div>What changes, one line</div><div>What changes, one line</div><div>What changes, one line</div>
+        </div>
+      </div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 11 · Timeline (ORANGE interior) -->
+  <section data-label="11 Timeline" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Rollout</div>
+    <h2 style="font-weight:800;font-size:76px;letter-spacing:-.03em;margin:22px 0 100px;max-width:1300px;text-wrap:balance;">From kickoff to live, in plain steps</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:44px;position:relative;">
+      <div style="position:absolute;top:13px;left:0;right:0;height:3px;background:rgba(255,255,255,.4);"></div>
+      <div style="position:relative;"><span style="display:block;width:28px;height:28px;border-radius:50%;background:#fff;"></span><div style="font-family:var(--font-mono);font-size:24px;color:rgba(255,255,255,.85);margin-top:36px;">Week 0</div><div style="font-weight:700;font-size:38px;letter-spacing:-.01em;margin-top:12px;">Milestone</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:10px;">What happens, one line</div></div>
+      <div style="position:relative;"><span style="display:block;width:28px;height:28px;border-radius:50%;background:#fff;"></span><div style="font-family:var(--font-mono);font-size:24px;color:rgba(255,255,255,.85);margin-top:36px;">Week 0</div><div style="font-weight:700;font-size:38px;letter-spacing:-.01em;margin-top:12px;">Milestone</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:10px;">What happens, one line</div></div>
+      <div style="position:relative;"><span style="display:block;width:28px;height:28px;border-radius:50%;background:#fff;"></span><div style="font-family:var(--font-mono);font-size:24px;color:rgba(255,255,255,.85);margin-top:36px;">Week 0</div><div style="font-weight:700;font-size:38px;letter-spacing:-.01em;margin-top:12px;">Milestone</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:10px;">What happens, one line</div></div>
+      <div style="position:relative;"><span style="display:block;width:28px;height:28px;border-radius:50%;background:#fff;"></span><div style="font-family:var(--font-mono);font-size:24px;color:rgba(255,255,255,.85);margin-top:36px;">Month 0</div><div style="font-weight:700;font-size:38px;letter-spacing:-.01em;margin-top:12px;">Live</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:10px;">What happens, one line</div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 12 · Two-column text (ORANGE interior) -->
+  <section data-label="12 Two-column" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Eyebrow</div>
+    <h2 style="font-weight:800;font-size:76px;letter-spacing:-.03em;margin:22px 0 80px;max-width:1300px;text-wrap:balance;">Headline that sets up both columns</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:120px;">
+      <div><div style="font-weight:700;font-size:44px;letter-spacing:-.02em;padding-bottom:24px;border-bottom:3px solid rgba(255,255,255,.4);">Column heading</div><p style="font-family:var(--font-deck-body);font-size:30px;line-height:1.55;color:rgba(255,255,255,.92);margin-top:32px;">Three or four lines of body copy. Write to "you", lead with the outcome, and use the words the trade actually uses.</p></div>
+      <div><div style="font-weight:700;font-size:44px;letter-spacing:-.02em;padding-bottom:24px;border-bottom:3px solid rgba(255,255,255,.4);">Column heading</div><p style="font-family:var(--font-deck-body);font-size:30px;line-height:1.55;color:rgba(255,255,255,.92);margin-top:32px;">Three or four lines of body copy. Keep both columns to a similar length so the slide stays balanced.</p></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 13 · Quote (ORANGE interior) -->
+  <section data-label="13 Quote" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:150px 180px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="font-weight:800;font-size:300px;line-height:.55;color:rgba(255,255,255,.4);height:150px;">&ldquo;</div>
+    <blockquote style="font-weight:700;font-size:68px;line-height:1.25;letter-spacing:-.02em;margin:0;max-width:1400px;text-wrap:balance;">The customer's words, unedited, two lines at most so it stays quotable.</blockquote>
+    <div style="display:flex;align-items:center;gap:24px;margin-top:64px;">
+      <span style="width:84px;height:84px;border-radius:50%;background:#fff;color:var(--color-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:30px;">AB</span>
+      <div><div style="font-family:var(--font-deck-body);font-weight:700;font-size:28px;">Name</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);">Role, company</div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 14 · Logo wall (ORANGE interior, white tiles) -->
+  <section data-label="14 Logo wall" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Customers</div>
+    <h2 style="font-weight:800;font-size:76px;letter-spacing:-.03em;margin:22px 0 80px;max-width:1300px;text-wrap:balance;">Who already runs this way</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:36px;">
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+      <div style="background:#fff;border-radius:18px;height:180px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">Customer logo</div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 15 · Team / people (ORANGE interior) -->
+  <section data-label="15 Team" style="width:1920px;height:1080px;box-sizing:border-box;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);color:#fff;font-family:var(--font-deck);padding:140px 150px;position:relative;">
+    <div style="font-family:var(--font-mono);font-size:24px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.85);">Your team</div>
+    <h2 style="font-weight:800;font-size:76px;letter-spacing:-.03em;margin:22px 0 90px;max-width:1300px;text-wrap:balance;">Who you'll be working with</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:56px;">
+      <div><div style="width:100%;aspect-ratio:1;border-radius:20px;background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:20px;color:rgba(255,255,255,.8);">Photo</div><div style="font-weight:700;font-size:34px;margin-top:26px;">Name</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:8px;">Role</div></div>
+      <div><div style="width:100%;aspect-ratio:1;border-radius:20px;background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:20px;color:rgba(255,255,255,.8);">Photo</div><div style="font-weight:700;font-size:34px;margin-top:26px;">Name</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:8px;">Role</div></div>
+      <div><div style="width:100%;aspect-ratio:1;border-radius:20px;background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:20px;color:rgba(255,255,255,.8);">Photo</div><div style="font-weight:700;font-size:34px;margin-top:26px;">Name</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:8px;">Role</div></div>
+      <div><div style="width:100%;aspect-ratio:1;border-radius:20px;background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:20px;color:rgba(255,255,255,.8);">Photo</div><div style="font-weight:700;font-size:34px;margin-top:26px;">Name</div><div style="font-family:var(--font-deck-body);font-size:24px;color:rgba(255,255,255,.85);margin-top:8px;">Role</div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 16 · Zuper Sense (DARK — Sense content only) -->
+  <section data-label="16 Zuper Sense (dark)" style="width:1920px;height:1080px;box-sizing:border-box;background:#08080a url(../../assets/backgrounds/zuper-sense-bg.jpg) center/cover no-repeat;color:#FAFAFA;font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;background:rgba(255,139,90,.14);border:1px solid rgba(255,139,90,.3);color:#FF8B5A;font-family:var(--font-mono);font-size:22px;text-transform:uppercase;letter-spacing:.12em;padding:10px 20px;border-radius:999px;margin-bottom:30px;">Zuper Sense</div>
+    <h2 style="font-weight:800;font-size:96px;letter-spacing:-.03em;margin:0;max-width:1440px;line-height:1.05;text-wrap:balance;">Headline for the Sense slide</h2>
+    <p style="font-family:var(--font-deck-body);font-size:32px;line-height:1.55;color:#A1A1AA;margin:34px 0 64px;max-width:1100px;">One line on what Sense does in the background, in plain language.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Capability</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Two lines on what it does and what it saves.</div></div>
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Capability</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Two lines on what it does and what it saves.</div></div>
+      <div style="background:rgba(20,20,23,.72);backdrop-filter:blur(4px);border:1px solid #2a2a30;border-radius:18px;padding:36px;"><div style="font-weight:700;font-size:30px;color:#FF8B5A;margin-bottom:14px;">Capability</div><div style="font-family:var(--font-deck-body);font-size:22px;color:#A1A1AA;line-height:1.5;">Two lines on what it does and what it saves.</div></div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 17 · Zuper Glass (full-bleed, Glass content only) -->
+  <section data-label="17 Zuper Glass" style="width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden;font-family:var(--font-deck);color:#fff;background:#070B14 url(../../assets/backgrounds/zuper-glass-bg.jpg) center/cover no-repeat;">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,11,20,.94) 0%,rgba(7,11,20,.80) 30%,rgba(7,11,20,.34) 52%,rgba(7,11,20,0) 70%);"></div>
+    <div style="position:absolute;left:150px;top:150px;width:840px;">
+      <div style="display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);font-family:var(--font-mono);font-size:20px;text-transform:uppercase;letter-spacing:.12em;padding:10px 20px;border-radius:999px;margin-bottom:34px;">Zuper Glass</div>
+      <h2 style="font-weight:800;font-size:88px;letter-spacing:-.03em;line-height:1.05;margin:0;text-wrap:balance;">Headline for the Glass slide</h2>
+      <p style="font-family:var(--font-deck-body);font-size:30px;line-height:1.55;color:rgba(255,255,255,.9);margin:30px 0 44px;">One line on what the crew does hands-free.</p>
+      <div style="display:flex;flex-direction:column;gap:20px;font-family:var(--font-deck-body);font-size:26px;">
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#FF8B5A;font-weight:800;">&check;</span> Capability, one line</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#FF8B5A;font-weight:800;">&check;</span> Capability, one line</div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="color:#FF8B5A;font-weight:800;">&check;</span> Capability, one line</div>
+      </div>
+    </div>
+      <img src="../../assets/logos/zuper-logomark-white.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+  <!-- 18 · Closing / next steps (WHITE — matches the cover) -->
+  <section data-label="18 Closing" style="width:1920px;height:1080px;box-sizing:border-box;background:#fff;color:var(--text-primary);font-family:var(--font-deck);padding:150px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;height:14px;background:linear-gradient(135deg,#1C0A06 0%,#7E1C0B 30%,#D43A14 64%,#F2864F 100%);"></div>
+    <div style="font-family:var(--font-mono);font-size:26px;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);margin-bottom:36px;">Next steps</div>
+    <h2 style="font-weight:800;font-size:110px;line-height:1.04;letter-spacing:-.03em;margin:0;max-width:1400px;text-wrap:balance;">The ask, in one line.</h2>
+    <div style="display:flex;gap:80px;margin-top:70px;font-family:var(--font-deck-body);font-size:30px;color:var(--text-secondary);">
+      <div><div style="font-family:var(--font-mono);font-size:22px;color:var(--color-primary);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">Step 01</div>What happens next, one line</div>
+      <div><div style="font-family:var(--font-mono);font-size:22px;color:var(--color-primary);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">Step 02</div>What happens next, one line</div>
+      <div><div style="font-family:var(--font-mono);font-size:22px;color:var(--color-primary);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">Step 03</div>What happens next, one line</div>
+    </div>
+    <img src="../../assets/mini-humans/waving.gif" alt="" aria-hidden="true" style="position:absolute;right:150px;bottom:0;height:128px;width:auto;display:block;">
+    <div style="position:absolute;bottom:76px;right:340px;font-family:var(--font-mono);font-size:22px;color:var(--text-muted);">zuper.co</div>
+      <img src="../../assets/logos/zuper-logomark.png" alt="Zuper" style="position:absolute;bottom:84px;right:96px;height:56px;width:auto;">
+  </section>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

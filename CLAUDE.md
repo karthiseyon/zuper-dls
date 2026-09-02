@@ -20,6 +20,8 @@ Every Zuper deck uses ONE of two contrast schemes — pick the cover colour, and
 
 - **Primary (default):** WHITE cover/hero slide (orange title text) → all other slides on the ORANGE gradient with white text. Use this unless the user says otherwise. Template: `templates/pitch-deck-white/`.
 - **Secondary:** ORANGE cover/hero slide (white title, orange title treatment) → all other slides WHITE. Template: `templates/pitch-deck/`.
+- **Starting a deck from scratch?** Take the master deck: `assets/zuper-deck-master.pptx`. One file, both schemes: 36 slides, the 18 layouts in the primary scheme then the same 18 in the secondary, every shape editable. Delete the half and the layouts you don't need. `templates/deck-master/` is the primary scheme in HTML. The .pptx is built by `scripts/build-deck-master-pptx.py` — edit the script, never the file.
+- **Nothing dark sits on the orange gradient.** On the gradient every mark is white, full or reduced opacity; `--color-ink` is for white grounds only. Every slide carries the Zuper logomark in the bottom-right corner and nothing else.
 - **Zuper Sense → BLACK slides, always.** Whenever a deck talks about Zuper Sense, those slides use the dark/black ground (`#09090B`, light-bars / fluted background, `#FF8B5A` orange-on-dark), no matter which scheme the rest of the deck uses. Dark mode is reserved for Sense.
 
 Aptos Display (titles) + Aptos (body); small Zuper logo in a bottom corner of every slide — **but on ANY content-heavy slide where it would crowd the layout, drop the logo** rather than cram it in. This applies to every slide type (agenda, content, split, data, comparison, two-column, Sense, full-bleed product, etc.) — not just one.
