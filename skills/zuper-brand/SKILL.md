@@ -56,6 +56,6 @@ Plain-spoken, approachable, customer-obsessed, celebrate field teams, forward-lo
 
 ## Assets (bundled in this skill)
 
-The real brand files ship inside this skill under `assets/`: logos (`assets/logos/`), mini-human GIFs (`assets/mini-humans/`), agent avatars (`assets/agents/`), the Glass/Sense/breaker backgrounds (`assets/backgrounds/`) and email banners (`assets/email/`). **Copy them out of the skill folder and reference them by relative path** when building decks, pages, artifacts or mocks.
+The real brand files ship inside this skill under `assets/`: logos (`assets/logos/`), mini-human GIFs (`assets/mini-humans/`), agent avatars (`assets/agents/`; the 36 custom-agent avatars for agents customers create are online only, see `references/brand-assets.md`), the Glass/Sense/breaker backgrounds (`assets/backgrounds/`) and email banners (`assets/email/`). **Copy them out of the skill folder and reference them by relative path** when building decks, pages, artifacts or mocks.
 
 The same files are also hosted at `https://zuper-dls.vercel.app/assets/…` (same paths) — use those absolute URLs only where the image must live on the web: emails, email signatures, and anything pasted outside the project. Full index: `references/brand-assets.md`. Live styleguide: https://zuper-dls.vercel.app (AI digest at /llms.txt).

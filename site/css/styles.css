@@ -986,6 +986,15 @@ main{flex:1;min-width:0;overflow-x:clip}
 .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:820px){.agrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.agrid{grid-template-columns:1fr}}
+/* custom-agent avatars: a compact six-across grid of the 36 app faces */
+.cgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+@media(max-width:980px){.cgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){.cgrid{grid-template-columns:repeat(3,1fr);gap:10px}}
+.ccard2{border-radius:14px}
+.ccard2 .frame img{height:100%}
+.ccard2 .bd{padding:9px 10px}
+.ccard2 .role{margin-top:0}
+.ccard2 .agdl{width:30px;height:30px;border-radius:8px}
 .acard{border:1px solid var(--border-default);border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .acard .frame{aspect-ratio:1;background:linear-gradient(135deg,#F8D5C2 0%,#FFE2D2 45%,#FFF3EC 100%);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
 .acard .frame img{height:98%;width:auto;object-fit:contain;object-position:bottom}
@@ -1572,6 +1581,9 @@ h3.grp{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--
 .dodont .ok li::before{background:#1E854B}.dodont .no li::before{background:#B4341C}
 .ag-dl-all{display:inline-flex;align-items:center;gap:9px;font:700 13.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:var(--brand-default,#FD5000);border:0;border-radius:10px;padding:12px 18px;cursor:pointer;transition:background .15s,transform .15s ease,box-shadow .15s ease}
 .ag-dl-all:hover{background:var(--brand-hover,#E04600);transform:translateY(-1px);box-shadow:0 10px 24px rgba(253,80,0,.25)}
+.ag-dl-all{text-decoration:none}
+.ag-dl-all--line{color:var(--brand-default,#FD5000);background:#fff;box-shadow:inset 0 0 0 1.5px var(--brand-default,#FD5000)}
+.ag-dl-all--line:hover{color:#fff}
 /* icon studio multi-select */
 .icst-multi{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .icst-multi .icst-btn{padding:9px 11px}

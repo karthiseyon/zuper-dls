@@ -23,7 +23,7 @@ A sidebar switches between an overview, eight foundations and six systems:
 - **Colour** — the one orange `#FD5000`, the signature gradient, ink, warm + high‑contrast neutrals, where each colour lives, and the chart rules (the emphasis ladder: focus orange → ink → warm gray → field; orange-tint sequential ramp; status green/red for polarity; never a rainbow, gradient fills or 3D).
 - **Typography** — Plus Jakarta Sans (headings) · Inter (body) · Geist Mono (uppercase eyebrows) for web; Aptos Display / Aptos for decks; the scale and rhythm.
 - **Iconography** — Zuper's one icon language: a **single‑weight outline set** (clean outline glyphs, 256px grid, `currentColor`). The consistency rules, plus an **Icon Studio** — search the full icon library by name or keyword (trade synonyms like "roof"→house), recolour / resize, then copy or download SVG/PNG. Everything comes out on‑brand.
-- **Agent avatars** — the AI agent portrait set (business analyst, field technician, sales coach and friends) and how to use them.
+- **Agent avatars** — the AI agent portrait set (business analyst, field technician, sales coach and friends), the 36 custom-agent avatars customers pick in Agent Studio, and how to use them.
 - **Mini humans** — why Zuper uses small animated workers instead of stock photos, and the copy‑ready GIF set.
 - **Brand assets** — the official logo library (Logomark / Horizontal / Vertical × Full colour / Gray / White / Inverted, SVG + PNG + EPS) plus Zoom backgrounds and LinkedIn covers, each with **Copy** and **Download**, plus a downloadable Word document template and the full design-system `.zip`.
 

@@ -17,6 +17,7 @@ The files below are **bundled inside this skill** under `assets/` — copy them 
 - **Email** (`email/`): `zuper-vertical-tight.png` (signature logo), `zuper-emailer-sense.png`, `zuper-emailer-trades.png` (380×95 banners).
 - **Backgrounds** (`backgrounds/`): `zuper-glass-bg.jpg` (Zuper Glass slide), `zuper-sense-bg.jpg` (Sense), `zuper-breaker-bg.jpg`.
 - **Agent avatars** (`agents/`): `ar-agent.png`, `business-analyst.png`, `field-technician.png`, `front-office.png`, `review-analyser.png`, `sales-coach.png`, `weather.png` — portrait tiles for AI-agent UI; use on peach card grounds.
+- **Custom-agent avatars** (not bundled in the skill, 36 faces): the faces customers pick when they create an agent in Agent Studio. Download from https://zuper-dls.vercel.app/#agents or `https://zuper-dls.vercel.app/assets/agents/custom/agent-01.png` … `agent-36.png` (640px, transparent, bottom-aligned; zips: `zuper-custom-agent-avatars.zip`, `-2x.zip` at 1280px). Use for custom agents only, never for a ready-made agent, and give each custom agent one face and keep it.
 
 ## Mini humans (imagery rule)
 

@@ -10,6 +10,8 @@ const AGENTS=[
   ["sales-coach","Sales Coach","Training officer"],
   ["weather","Weather Forecast","Scheduling"]
 ];
+/* the app's custom-agent avatars: 36 faces a customer picks from when they create an agent in Agent Studio */
+const CUSTOM_AGENTS=Array.from({length:36},(_,i)=>"agent-"+String(i+1).padStart(2,"0"));
 function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){
   stage.style.cssText=foundTheme();
@@ -21,12 +23,13 @@ function buildAgents(){
       <div style="margin-bottom:22px">${logo("dark",30)}</div>
       <p class="ebm">Foundation · Agents</p>
       <h1>Agent avatars</h1>
-      <p class="lede">The faces of <b style="color:#191919">Zuper Sense</b>, one caped 3D superhero mascot per AI agent. Each agent keeps a single, consistent avatar across product, deck and web, framed on the orange gradient so the character pops.</p>
+      <p class="lede">The faces of <b style="color:#191919">Zuper Sense</b>, one caped 3D superhero mascot per AI agent. Each agent keeps a single, consistent avatar across product, deck and web, framed on the orange gradient so the character pops. Agents customers create in Agent Studio pick from a separate set of ${CUSTOM_AGENTS.length} custom avatars.</p>
       <div class="chips">
         <span class="chip">Caped 3D mascots</span>
         <span class="chip">One avatar per agent</span>
         <span class="chip">Orange‑gradient ground</span>
         <span class="chip">Bottom‑aligned in frame</span>
+        <span class="chip">${CUSTOM_AGENTS.length} custom‑agent faces</span>
       </div>
       <div class="hero-art"><div class="float ha-shift">
         <div class="hd"><span class="mk"><img src="assets/logos/zuper-logomark-white.svg" alt="" style="width:15px;height:auto;display:block"></span><span><b>Zuper</b><i>Agents on shift</i></span><span class="live"><u></u>Live</span></div>
@@ -46,7 +49,20 @@ function buildAgents(){
   </div></section>
 
   <section class="block"><div class="wrap">
-    <p class="eyebrow">02 · Usage</p><h2 class="sec">Keep the team consistent</h2>
+    <p class="eyebrow">02 · Custom agents</p><h2 class="sec">Faces for the agents customers create</h2>
+    <p class="sec-note">When someone creates an agent in Agent Studio, they give it one of these ${CUSTOM_AGENTS.length} avatars. Same caped 3D style as the mascots, so custom agents sit next to the ready-made ones as one team. Use them for custom agents only, never for a ready-made agent.</p>
+    <div class="cgrid">
+      ${CUSTOM_AGENTS.map(c=>`<div class="acard ccard2"><div class="frame"><img src="assets/agents/custom/${c}.webp" alt="Custom agent avatar ${c.slice(6)}" loading="lazy" onerror="this.remove()"></div><div class="bd"><div class="meta"><div class="role">${c.replace("-"," ")}</div></div><button class="dl-btn agdl" data-href="assets/agents/custom/${c}.png" data-name="zuper-custom-${c}.png" aria-label="Download custom avatar ${c.slice(6)}">${icon("download",14)}</button></div></div>`).join("")}
+    </div>
+    <div style="margin-top:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <a class="ag-dl-all" href="assets/agents/custom/zuper-custom-agent-avatars.zip" download>${icon("download",16)} Download all (PNG, 640px)</a>
+      <a class="ag-dl-all ag-dl-all--line" href="assets/agents/custom/zuper-custom-agent-avatars-2x.zip" download>${icon("download",16)} Download all @2x (1280px)</a>
+      <span style="font:500 11.5px/1.4 'Geist Mono',ui-monospace,monospace;color:var(--text-tertiary)">Transparent PNG · square · bottom‑aligned</span>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">03 · Usage</p><h2 class="sec">Keep the team consistent</h2>
     <p class="sec-note">The avatars work because they never change. Same character, same ground, same label, everywhere an agent shows up.</p>
     <div class="dodont">
       <div class="col ok"><h5>${icon("check",13)} Do</h5><ul>
@@ -54,12 +70,14 @@ function buildAgents(){
         <li>Frame on the orange gradient or warm peach ground so the cape reads.</li>
         <li>Bottom-align the character in its frame; cropping from the waist up is fine.</li>
         <li>Caption with the agent's name and role label, set in Geist Mono.</li>
+        <li>Give each custom agent one face from the custom set and keep it.</li>
       </ul></div>
       <div class="col no"><h5>${icon("x",13)} Don't</h5><ul>
         <li>Don't swap characters between agents or invent new ones per deck.</li>
         <li>Don't place avatars on busy photos or colours outside the palette.</li>
         <li>Don't flip, recolour, outline or restyle the renders.</li>
         <li>Don't use an avatar without naming the agent it belongs to.</li>
+        <li>Don't give a custom agent a ready-made mascot, or a ready-made agent a custom face.</li>
       </ul></div>
     </div>
     <div style="margin-top:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
