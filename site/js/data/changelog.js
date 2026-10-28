@@ -7,7 +7,8 @@ const CHANGELOG=[
   {v:"1.8",date:"27 Oct 2026",items:[
     "Custom-agent avatars: the 33 faces customers pick in Agent Studio.",
     "Each avatar downloads on its own, or all at once in 640px and 1280px zips.",
-    "Usage rules: custom faces for custom agents, mascots for ready-made ones."
+    "Usage rules: custom faces for custom agents, mascots for ready-made ones.",
+    "Ready-made agents carry their names: Max, Mark, Nova, Bob, Ruby, Ted, Skye."
   ]},
   {v:"1.7",date:"2 Sep 2026",items:[
     "Deck template: one .pptx, 36 slides, every layout in both contrast schemes.",
