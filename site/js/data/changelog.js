@@ -5,7 +5,7 @@
 const VERSION="1.8";
 const CHANGELOG=[
   {v:"1.8",date:"27 Oct 2026",items:[
-    "Custom-agent avatars: the 36 faces customers pick in Agent Studio.",
+    "Custom-agent avatars: the 33 faces customers pick in Agent Studio.",
     "Each avatar downloads on its own, or all at once in 640px and 1280px zips.",
     "Usage rules: custom faces for custom agents, mascots for ready-made ones."
   ]},

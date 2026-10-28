@@ -1,21 +1,21 @@
 /* ============ FOUNDATIONS: agent avatars ============ */
 /* Imported from Claude Design · foundations/brand-agents.html, caped 3D superhero mascots, one per AI agent. */
-/* alphabetical by agent name, so the grid has an order a reader can predict */
+/* alphabetical by agent role, so the grid has an order a reader can predict; 4th field is the persona name from the homepage (v5) */
 const AGENTS=[
-  ["ar-agent","AR Agent","Collections"],
-  ["business-analyst","Business Analyst","Insights"],
-  ["front-office","CSR Agent","Dispatch · support"],
-  ["field-technician","Field Agent","On the job"],
-  ["review-analyser","Review Analyser","Reputation"],
-  ["sales-coach","Sales Coach","Training officer"],
-  ["weather","Weather Forecast","Scheduling"]
+  ["ar-agent","AR Agent","Collections","Max"],
+  ["business-analyst","Business Analyst","Insights","Mark"],
+  ["front-office","CSR Agent","Dispatch · support","Nova"],
+  ["field-technician","Field Agent","On the job","Bob"],
+  ["review-analyser","Review Analyser","Reputation","Ruby"],
+  ["sales-coach","Sales Coach","Training officer","Ted"],
+  ["weather","Weather Forecast","Scheduling","Skye"]
 ];
-/* the app's custom-agent avatars: 36 faces a customer picks from when they create an agent in Agent Studio */
-const CUSTOM_AGENTS=Array.from({length:36},(_,i)=>"agent-"+String(i+1).padStart(2,"0"));
-function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
+/* the app's custom-agent avatars: 33 faces a customer picks from when they create an agent in Agent Studio */
+const CUSTOM_AGENTS=Array.from({length:33},(_,i)=>"agent-"+String(i+1).padStart(2,"0"));
+function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[3]?a[3]+", "+a[1]:a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){
   stage.style.cssText=foundTheme();
-  const card=(a)=>`<div class="acard">${agentFrame(a)}<div class="bd"><div class="meta"><div class="nm">${a[1]}</div><div class="role">${a[2]}</div></div><button class="dl-btn agdl" data-href="assets/agents/${a[0]}.png" data-name="zuper-${a[0]}.png" aria-label="Download ${a[1]}">${icon("download",16)}</button></div></div>`;
+  const card=(a)=>`<div class="acard">${agentFrame(a)}<div class="bd"><div class="meta"><div class="nm">${a[3]||a[1]}</div><div class="role">${a[3]?a[1]+" · "+a[2]:a[2]}</div></div><button class="dl-btn agdl" data-href="assets/agents/${a[0]}.png" data-name="zuper-${a[0]}.png" aria-label="Download ${a[1]}">${icon("download",16)}</button></div></div>`;
   const rule=(t)=>`<div style="display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--brand-default);flex:0 0 auto;margin-top:1px">${icon("check",18)}</span><span style="font-size:14.5px;line-height:1.5;color:var(--text-secondary)">${t}</span></div>`;
   stage.innerHTML=`
   <header class="sys-hero has-art">
