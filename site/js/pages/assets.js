@@ -30,7 +30,8 @@ function buildAssets(){
         </div></div></div>`;
   const zoom=[
     socCard("assets/zoom/zuper-zoom-wordmark.png","Zoom background, wordmark","1920 × 1080 · 16:9"),
-    socCard("assets/zoom/zuper-zoom-logomark.png","Zoom background, logomark","1920 × 1080 · 16:9")
+    socCard("assets/zoom/zuper-zoom-logomark.png","Zoom background, logomark","1920 × 1080 · 16:9"),
+    socCard("assets/zoom/zuper-zoom-roofing.png","Zoom background, roofing street","1920 × 1080 · 16:9")
   ].join("");
   const linkedin=[
     socCard("assets/linkedin/zuper-linkedin-trades.png","Personal cover. Skilled Trades","1584 × 396"),

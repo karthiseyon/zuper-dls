@@ -2,8 +2,11 @@
    What shipped, newest first. Add a new entry at the top whenever the DLS changes;
    VERSION below drives the label in the sidebar footer.
    Keep items short: one line, one change, no trailing explanation. */
-const VERSION="1.8";
+const VERSION="1.9";
 const CHANGELOG=[
+  {v:"1.9",date:"12 Nov 2026",items:[
+    "Zoom backgrounds: roofing street at sunset."
+  ]},
   {v:"1.8",date:"27 Oct 2026",items:[
     "Custom-agent avatars: the 33 faces customers pick in Agent Studio.",
     "Each avatar downloads on its own, or all at once in 640px and 1280px zips.",
