@@ -5,7 +5,8 @@
 const VERSION="1.9";
 const CHANGELOG=[
   {v:"1.9",date:"12 Nov 2026",items:[
-    "Zoom backgrounds: roofing street at sunset."
+    "Zoom backgrounds: roofing street at sunset.",
+    "Brand assets: headshots for customers and the Zuper team, with rooftop shots of Anand, Raghav and Seth."
   ]},
   {v:"1.8",date:"27 Oct 2026",items:[
     "Custom-agent avatars: the 33 faces customers pick in Agent Studio.",

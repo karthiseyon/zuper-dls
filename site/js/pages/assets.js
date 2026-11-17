@@ -37,6 +37,17 @@ function buildAssets(){
     socCard("assets/linkedin/zuper-linkedin-trades.png","Personal cover. Skilled Trades","1584 × 396"),
     socCard("assets/linkedin/zuper-linkedin-sense.png","Personal cover. Zuper Sense","1584 × 396")
   ].join("");
+  const people=[
+    ["anand","Anand Subbaraj","CEO and Co-founder"],["anand-roof","Anand Subbaraj","On the roof"],
+    ["raghav","Raghav G","CTO and Co-founder"],["raghav-roof","Raghav G","On the roof"],
+    ["seth","Seth Nesbitt","Chief Revenue Officer"],["seth-roof","Seth Nesbitt","On the roof"],
+    ["ramya","Ramya Vijaya Ragavan","SVP, Customer Experience"],
+    ["jt-ulyatt","JT Ulyatt","Founder and CEO, Maven Roofing"],
+    ["david-keester","David Keester","CEO, Oklahoma Generator"],
+    ["rosalynn-verges","Rosalynn Verges","CEO, AI Roofing Revolution"],
+    ["chris-little","Chris Little","Office Manager, Dickinson Roofing"],
+    ["noe-madrigal","Noe Madrigal","Founder and CEO, A&amp;A Roofing"]
+  ].map(([f,nm,role])=>socCard(`assets/people/${f}.webp`,nm,role||"Square .webp")).join("");
 
   stage.innerHTML=`
   <header class="sys-hero has-art">
@@ -110,6 +121,11 @@ function buildAssets(){
           <div class="s-btns"><button class="la-dl dl-btn" data-href="assets/zuper-document-template.docx" data-name="Zuper-Document.docx">${dn}Download</button></div>
         </div></div>
     </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <p class="eyebrow">06 · People</p><h2 class="sec">Headshots</h2>
+    <div class="la-soc la-people">${people}</div>
   </div></section>
   <div style="height:60px"></div>`;
 

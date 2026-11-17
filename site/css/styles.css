@@ -1104,6 +1104,9 @@ main{flex:1;min-width:0;overflow-x:clip}
 .s-meta .nm{font:600 14px/1.3 'Inter',sans-serif;color:var(--text-primary)}
 .s-meta .dim{font:500 11px/1 'Geist Mono',monospace;color:var(--text-tertiary);margin-top:4px}
 .s-btns{margin-left:auto;display:flex;gap:8px;flex:0 0 auto}
+.la-people{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.la-people .s-meta{flex-direction:column;align-items:flex-start;padding:12px 14px}
+.la-people .s-btns{margin-left:0}
 .cd-open{display:inline-flex;align-items:center;gap:11px;background:var(--brand-default);color:#fff;font:700 16px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:17px 28px;border-radius:13px;text-decoration:none;box-shadow:0 16px 38px rgba(253,80,0,.28);transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
 .cd-open:hover{background:var(--brand-hover);transform:translateY(-2px);box-shadow:0 20px 48px rgba(253,80,0,.34)}
 .cd-open svg{width:18px;height:18px}
