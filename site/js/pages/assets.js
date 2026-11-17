@@ -46,7 +46,10 @@ function buildAssets(){
     ["david-keester","David Keester","CEO, Oklahoma Generator"],
     ["rosalynn-verges","Rosalynn Verges","CEO, AI Roofing Revolution"],
     ["chris-little","Chris Little","Office Manager, Dickinson Roofing"],
-    ["noe-madrigal","Noe Madrigal","Founder and CEO, A&amp;A Roofing"]
+    ["noe-madrigal","Noe Madrigal","Founder and CEO, A&amp;A Roofing"],
+    ["lisa-crocker","Lisa Crocker","Chief Admin Officer, Roof Doctors"],
+    ["cooper-knutson","Cooper Knutson","Bookkeeper, Russell's Quality Roofing"],
+    ["john-marrah","John Marrah","CEO, Marasun"]
   ].map(([f,nm,role])=>socCard(`assets/people/${f}.webp`,nm,role||"Square .webp")).join("");
 
   stage.innerHTML=`
