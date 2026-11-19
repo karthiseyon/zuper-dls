@@ -10,8 +10,8 @@ const AGENTS=[
   ["sales-coach","Sales Coach","Training officer","Ted"],
   ["weather","Weather Forecast","Scheduling","Skye"]
 ];
-/* the app's custom-agent avatars: 33 faces a customer picks from when they create an agent in Agent Studio */
-const CUSTOM_AGENTS=Array.from({length:33},(_,i)=>"agent-"+String(i+1).padStart(2,"0"));
+/* the app's custom-agent avatars: 41 faces a customer picks from when they create an agent in Agent Studio */
+const CUSTOM_AGENTS=Array.from({length:41},(_,i)=>"agent-"+String(i+1).padStart(2,"0"));
 function agentFrame(a){return `<div class="frame"><img src="assets/agents/${a[0]}.png" alt="${a[3]?a[3]+", "+a[1]:a[1]}" loading="lazy" onerror="this.remove()"></div>`;}
 function buildAgents(){
   stage.style.cssText=foundTheme();
